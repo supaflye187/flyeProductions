@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>BRSRO-Winterize-V2</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+		
+			/*--------------------------CONTENT-------------------------------------*/
+		#TEMP { position: absolute; opacity:0; }
+		#carBG { position:absolute; opacity:1; }
+		#ice { position:absolute; opacity:0; }
+		#iceOverlay { position:absolute; opacity:0; }
+
+		#whtBG { position:absolute; background-color: #fff; opacity:0; }
+
+		#snow {
+			position:absolute;
+			opacity:0.4;
+		}
+
+		#whtOverlay { 
+			position:absolute; 
+			width:300px;
+			height:250px;
+			background-color: #fff; 
+			opacity:1;
+		}
+
+		#holder { 
+			position:absolute; 
+			width:300px;
+			height:250px;
+			top:250px; 
+			opacity:1;
+		}
+
+		#bottle {
+			position:relative;
+			top: 18px; 
+			left: 20px;
+		}
+
+		#price {
+			position:relative;
+			top: -152px; 
+			left: 116px; 
+		}
+
+		#txt_when {
+			position: absolute;
+			clip: rect(0px, 400px, 20px, 0px);
+			top: 64px;
+			left: 25px;
+			opacity: 0;
+		}
+
+		#txt_driving {
+			position: absolute;
+			clip: rect(22px, 400px, 50px, 0px);
+			top: 64px;
+			left: 25px;
+			opacity: 0;
+		}
+
+		#txt_winter {
+			position: absolute;
+			clip: rect(47px, 400px, 89px, 0px);
+			top: 64px;
+			left: 25px;
+			opacity: 0;
+		}
+
+		#txt_wonderland {
+			position: absolute;
+			clip: rect(92px, 400px, 130px, 0px);
+			top: 84px;
+			left: 25px;
+			opacity: 0;
+		}
+
+		/*===================================================*/
+		/*===================================================*/
+
+
+		#txt_dont {
+			position: absolute;
+			clip: rect(132px, 400px, 150px, 0px);
+			top: -70px;
+			left: 30px;
+			opacity: 0;
+		}
+
+
+		#txt_stuck {
+			position: absolute;
+			clip: rect(152px, 400px, 176px, 0px);
+			top: -70px;
+			left: 30px;
+			opacity: 0;		
+		}
+
+		#txt_wipesOut {
+			position: absolute;
+			clip: rect(152px, 400px, 224px, 0px);
+			top: -70px;
+			left: 30px;
+			opacity: 0;		
+		}
+
+
+		#txt_cold {
+			position: absolute;
+			clip: rect(222px, 400px, 250px, 0px);
+			top: -50px;
+			left: 30px;
+			opacity: 0;
+		}
+
+
+		#Logo {
+		 position: absolute;
+		 top: 0px; 
+		 left: 0px; 
+		 opacity: 0;  
+		}
+
+		#ctaBtn {
+			 position: absolute;
+			 top: 190px; 
+			 left: 116px;
+			 cursor: pointer;
+			 opacity:0;
+		}
+
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000;
+			background:#000;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+/*#ctaBtn:hover {
+	background-position: 0 -28px;
+}*/
+
+
+	</style>
+    
+    <script language="javascript">
+
+    var clickTag = "http://www.google.com";
+
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			}
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function politeInit(){	
+
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+
+			function startAni(){
+				var whtBG = document.getElementById('whtBG'),
+					carBG = document.getElementById('carBG'),
+					ice = document.getElementById('ice'),
+					iceOverlay = document.getElementById('iceOverlay'),
+
+					txt_when = document.getElementById('txt_when'),
+					txt_driving = document.getElementById('txt_driving'),
+					txt_winter = document.getElementById('txt_winter'),
+					txt_dont = document.getElementById('txt_dont'),
+					txt_wonderland = document.getElementById('txt_wonderland'),
+					txt_stuck = document.getElementById('txt_stuck'),
+					txt_cold = document.getElementById('txt_cold'),
+
+					Logo = document.getElementById('Logo'),
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_main = new TimelineLite();
+
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 tl_main.to(Logo, 0.5, {opacity:1, ease: Power1.easeOut})
+
+				 .to(txt_when, 0.5, {opacity:1, ease: Power1.easeOut})
+				 .to(txt_driving, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.4")
+				 .to(txt_winter, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.2")
+				 .to(txt_wonderland, 0.3, {opacity:1, top:"64px", ease: Power1.easeOut},"-=0.1")
+
+
+				 .to(txt_when, 0.5, {opacity:0, ease: Power1.easeOut},"+=2.0")
+				 .to(txt_driving, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+				 .to(txt_winter, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+				 .to(txt_wonderland, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+
+				 .to(whtBG, 1, {opacity:0.3, ease: Power1.easeOut},"-=0.5")
+				 .to(ice, 1, {opacity:1, ease: Power1.easeOut},"-=0.6")
+				 .to(iceOverlay, 1, {opacity:1, ease: Power1.easeOut},"-=0.6")
+
+
+				 ///////
+				 .to(txt_dont, 0.5, {opacity:1, ease: Power1.easeOut})
+				 .to(txt_stuck, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.4")
+				 .to(txt_wipesOut, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.4")
+				 .to(txt_cold, 0.3, {opacity:1, top:"-70px", ease: Power1.easeOut},"-=0.2")
+
+				 .to(holder, 0.5, {top:"40px", ease: Power1.easeOut},"+=2.0")
+
+				 .to(ctaBtn, 0.5, {opacity:1, ease: Power1.easeOut})
+
+				 .to(ctaBtn, 0.3, {scaleX:1.1, scaleY:1.1, ease: Power1.easeOut})
+				 .to(ctaBtn, 0.2, {scaleX:1, scaleY:1, ease: Power1.easeOut})
+				 
+				 .to(whtBG, 1, {opacity:0, ease: Power1.easeOut})
+				 .to(ice, 1, {opacity:0, ease: Power1.easeOut})
+				 .to(iceOverlay, 1, {opacity:0, ease: Power1.easeOut})	
+
+				 .to(snow, 0.5, {opacity:0, ease: Power1.easeOut})	 	
+
+			}
+
+
+
+			function clickTag() {
+				Enabler.exit('HTML5_Background_Clickthrough');
+			}
+
+			function removeElement() {
+				
+			}
+
+	</script>
+    
+</head>
+
+<body>
+
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	       	<!--Background Image -->
+    	       	<div id="carBG"><img src="carBG.jpg"></div> 
+    	       	<div id="iceOverlay"><img src="iceOverlay.png"></div> 
+    	       	<div id="snow"><img src="snow.gif"></div>
+    	       	<div id="whtBG"></div>
+    	       	<div id="ice"><img src="ice_01.png"></div>	       
+    	       	
+    	       	<div id="txt_when"><img src="txt_Sheet.png"></div>
+    	       	<div id="txt_driving"><img src="txt_Sheet.png"></div>
+    	       	<div id="txt_winter"><img src="txt_Sheet.png"></div>
+    	       	<div id="txt_wonderland"><img src="txt_Sheet.png"></div>
+
+    	       	<div id="txt_dont"><img src="txt_Sheet.png"></div>
+    	       	<div id="txt_stuck"><img src="txt_Sheet.png"></div>
+
+    	       	<div id="txt_wipesOut"><img src="txt_Sheet.png"></div>
+    	       	<div id="txt_cold"><img src="txt_Sheet.png"></div>    	       
+
+    	       	<div id="holder">
+    	       	<div id="whtOverlay"></div>
+    	       	<div id="bottle"><img src="bottle.jpg"></div>
+    	       	<div id="price"><img src="priceTxt.png"></div>
+    	       </div>
+
+				<div id="Logo"><img src="fsLogo.png"></div>
+          		<!--ClickTag-->
+
+          		<!--CTA-->
+          		
+          		<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div id="ctaBtn"><img src="ctaBtn.png"></div></a>
+        </div>
+</body>
+</html>
+

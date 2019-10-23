@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>RAC-Magic</title>
+
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+   
+   <script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script>
+
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  
+    <style type="text/css">
+		
+	/*--------------------------CONTENT-------------------------------------*/
+
+		#holder {
+			position: absolute;
+			width: 600px;
+			height: 250px;
+			top:0px;
+			left:0px;
+		}
+
+		#banner {
+			position:absolute;
+			top: -100px;
+			left: 0px;
+			opacity: 1;
+		}
+
+		#fire_LT {
+			position:absolute;
+			top: -13px;
+			left: -35px;
+			opacity: 0;
+			transform: scale(0.15,0.15);
+			-webkit-transform: scale(0.15,0.15);
+			-moz-transform: scale(0.15,0.15);
+			-o-transform: scale(0.15,0.15);
+		}
+
+		#fire_RT {
+			position:absolute;
+			top: -13px;
+			left: 230px;
+			opacity: 0;
+			transform: scale(0.15,0.15);
+			-webkit-transform: scale(0.15,0.15);
+			-moz-transform: scale(0.15,0.15);
+			-o-transform: scale(0.15,0.15);
+		}
+
+		/************TEXT***********/
+
+		#txt_date {
+			position:absolute;
+			clip: rect(0px, 600px, 30px, 0px);
+			top: 10px;
+			left: 10px;
+			opacity: 0;
+		}
+
+		#txt_startingAt {
+			position:absolute;
+			clip: rect(30px, 600px, 135px, 0px);
+			top: 75px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#txt_withoutCredit {
+			position:absolute;
+			clip: rect(120px, 600px, 170px, 0px);
+			top: 75px;
+			left: 20px;
+			opacity: 0;
+		}
+
+		#txt_bigBrands {
+			position:absolute;
+			top: -156px;
+			left: 310px;
+			opacity: 1;
+		}
+
+
+
+		#disclaimer {
+			position:absolute;
+			font-family: 'arial', sans-serif;
+			font-size: 8px;
+			color: #fff;
+			top: 230px; 
+			left: 98px;
+			opacity: 0;
+		}
+
+		#disclaimer:hover {
+			text-decoration: underline;
+			cursor: pointer; cursor: hand;
+		}
+		
+
+		/***********************/
+		/***********************/
+
+
+		#Logo {
+		 position: absolute;
+		 top: 53px; 
+		 left: 410px; 
+		 opacity: 1;  
+		}
+
+
+		#ctaBtn {
+			 position: absolute;
+			 top: 173px; 
+			 left: 388px;
+			 cursor: pointer;
+			 opacity:1;
+		}
+
+		/***********************/
+		/***********************/
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+/*#ctaBtn:hover {
+	background-position: 0 -28px;
+}*/
+
+
+	</style>
+    
+    <script language="javascript">
+
+    var clickTag = "http://www.google.com";
+
+    // function checkInit() {
+    //           if (!EB.isInitialized()) {
+    //              EB.addEventListener(EBG.EventName.EB_INITIALIZED, onInit); 
+    //              // This code checks whether the EB object is initialized, if the object is initialized, it launches the function "onInit", otherwise "EB_INITIALIZED" event. 
+    //           }
+    //           else {
+    //                   onInit();
+    //                   console.log("EB Initialized");
+    //            }         
+    //           //  function onInit() {
+    //           //        // Place your code to start the ad flow here
+    //           // } 
+    //  }
+    //  window.addEventListener('load', checkInit);
+
+
+     //DOUBLECLICK
+    //Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				onInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, onInit);	
+			}
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function onInit(){	
+
+			// document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			addListeners();
+			}
+	
+			function startAni(){
+				var Logo = document.getElementById('Logo'),
+					banner = document.getElementById('banner'),
+					fire_LT = document.getElementById('fire_LT'),
+					fire_RT = document.getElementById('fire_RT'),
+
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_01 = new TimelineLite();
+
+
+				 //Frame animations start
+				 tl_01.to(banner, 0.5, {top:"50px", ease:Power1.easeOut})
+				 .to(txt_date, 0.5, {opacity:1, ease:Power1.easeOut})
+				 .to(fire_LT, 0.5, {opacity:1, ease:Power1.easeOut})
+				 .to(fire_RT, 0.5, {opacity:1, ease:Power1.easeOut},"-=0.5")
+
+				 .to(txt_startingAt, 0.5, {left:"10px", opacity:1, ease:Elastic.easeOut.config(1, 0.75), y: 0 },"-=0.2")
+
+				 .to(txt_withoutCredit, 0.5, {left:"10px", opacity:1, ease:Elastic.easeOut.config(1, 0.75), y: 0 },"-=0.5")
+
+				 .to(holder, 1.0, {left:"-300px", ease:Elastic.easeOut.config(1, 0.75), y: 0 },"+=7.0")
+
+				 .to(ctaBtn, 0.3, {scaleX:1.1, scaleY:1.1, ease: Power1.easeOut})
+				 .to(ctaBtn, 0.2, {scaleX:1, scaleY:1, ease: Power1.easeOut})
+
+				 .to(disclaimer, 0.5, {opacity:1, ease:Power1.easeOut})
+
+			}
+
+			function clickTagHandler() {
+				Enabler.exit('HTML5_Background_Clickthrough');
+				//EB.clickthrough(); 
+				console.log("EB Clicked");
+			}
+
+			addListeners = function (){
+				
+				linkLayer.addEventListener('click', clickTagHandler, false);
+				// ctaBtn.addEventListener('click', ctaExitHandler, false);
+			
+			}
+
+	</script>
+    
+</head>
+
+<body>
+
+    <div id="container">
+    	       	<!--Background Image -->  
+    	       	<div id="brickBG"><img src="redBrick.jpg"></div>
+    	       	
+    	       	<!--OTHER ELEMENTS-->
+    	  
+    	       	<!--Carousel-->
+    	       	<div id="holder">
+    	       		<div id="txt_date"><img src="txt_sheet.png"></div>
+    	       		<div id="txt_startingAt"><img src="txt_sheet.png"></div>
+    	       		<div id="txt_withoutCredit"><img src="txt_sheet.png"></div>
+
+    	       		<div id="banner"><img src="redHotBanner.png"></div>
+    	       		<div id="fire_LT"><img src="fireGif.gif"></div>
+    	       		<div id="fire_RT"><img src="fireGif.gif"></div>
+    	       		<div id='Logo'><img src="RAC_Logo.png"></div>
+    	       		<div id="ctaBtn"><img src="ctaBtn.png"></div>
+
+    	       		<div id="txt_bigBrands"><img src="txt_sheet.png"></div>       		
+    	       	</div>
+
+          		<!--ClickTag-->
+          		<!--CTA--> 		
+          		<div id="linkLayer"></div>
+          		<div id='disclaimer'>Terms and Conditions Apply</div>
+          		
+        </div>
+
+</body>
+
+</html>
+

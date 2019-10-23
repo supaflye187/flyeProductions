@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>L&#39;Oreal - Retro</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+     <link rel="stylesheet" type="text/css" href="slick.css" />
+       <script type="text/javascript" src="jquery-1.12.0.min.js"></script>
+  		<script type="text/javascript" src="jquery-migrate-1.2.1.min.js"></script>
+  		<script type="text/javascript" src="slick.min.js"></script>
+
+         <script type="text/javascript">
+         var counter = 0;
+         var speedNew = 1100;
+         var currentSlide = $('.Slider').slick('slickCurrentSlide');
+    $(document).ready(function(){
+      $('.Slider').slick({
+  		infinite: true,
+  		slidesToShow: 3,
+  		slidesToScroll: 1,
+  		arrows: false,
+  		speed: speedNew
+});
+// Next Button
+$( ".control_next" ).click(function() {
+	//$('.Slider').slick({ speed: 1200 });
+
+	$(".control_next").prop('disabled', true);
+	$(".control_prev").prop('disabled', true);
+
+  	$('.Slider').slick('slickNext');
+      setTimeout(
+            function() {
+             	$('.control_next').prop( "disabled", false);
+             	$('.control_prev').prop( "disabled", false);
+                 console.log("Button Active Again");
+             },
+             500);
+  console.log("Next Slide");
+  if(counter == 0)
+  	 {
+  	 	$('#sequin').css({ opacity: 0 });
+  	 	$('#party').css({ opacity: 1 });
+  	 	counter = 1;
+
+  	 }else
+  	 	if (counter == 1)
+  	 {
+  	 	$('#party').css({ opacity: 0 });
+  	 	$('#starryNight').css({ opacity: 1 });
+  	 	counter = 2;
+
+  	 } else
+  	 	if (counter == 2)
+  	 {
+  	 	$('#starryNight').css({ opacity: 0 });
+  	 	$('#birthday').css({ opacity: 1 });
+  	 	counter = 3;
+
+  	 } else
+  	 	if (counter == 3)
+  	 {
+  	 	$('#birthday').css({ opacity: 0 });
+  	 	$('#bikini').css({ opacity: 1 });
+  	 	counter = 4;
+
+  	 } else
+  	 	if (counter == 4)
+  	 {
+  	 	$('#bikini').css({ opacity: 0 });
+  	 	$('#cabana').css({ opacity: 1 });
+  	 	counter = 5;
+
+  	 } else
+  	 	if (counter == 5)
+  	 {
+
+  	 	$('#cabana').css({ opacity: 0 });
+  	 	$('#sequin').css({ opacity: 1 });
+  	 	counter = 0;
+
+  	 } 
+
+  console.log(counter);
+});
+// Previous Button
+$( ".control_prev" ).click(function(e) {
+	//disable button after click
+	$('.control_prev').prop('disabled',true); //disable
+	$('.control_next').prop('disabled',true); //disable further clicks
+  	$('.Slider').slick('slickPrev');
+
+  	//Re-Enable Button after 800ms
+  	setTimeout(function(){
+  $('.control_prev').prop('disabled',false); //disable
+  $('.control_next').prop('disabled',false); //disable further clicks
+  console.log("Button Active Again");
+}, 500);
+
+  console.log("Previous Slide");
+  console.log(counter);
+  if(counter == 1)
+  	 {
+  	 	$('#sequin').css({ opacity: 1 });
+  	 	$('#party').css({ opacity: 0 });
+  	 	counter = 0;
+
+  	 }else
+  	 	if (counter == 0)
+  	 {
+  	 	$('#cabana').css({ opacity: 1 });
+  	 	$('#sequin').css({ opacity: 0 });
+  	 	counter = 5;
+
+  	 } else
+  	 	if (counter == 5)
+  	 {
+  	 	$('#bikini').css({ opacity: 1 });
+  	 	$('#cabana').css({ opacity: 0 });
+  	 	counter = 4;
+
+  	 } else
+  	 	if (counter == 4)
+  	 {
+  	 	$('#birthday').css({ opacity: 1 });
+  	 	$('#bikini').css({ opacity: 0 });
+  	 	counter = 3;
+
+  	 } else
+  	 	if (counter == 3)
+  	 {
+  	 	$('#starryNight').css({ opacity: 1 });
+  	 	$('#birthday').css({ opacity: 0 });
+  	 	counter = 2;
+
+  	 } else
+  	 	if (counter == 2)
+  	 {
+
+  	 	$('#party').css({ opacity: 1 });
+  	 	$('#starryNight').css({ opacity: 0});
+  	 	counter = 1;
+
+  	 } 
+});
+    });
+
+  </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+
+    <style type="text/css">
+	
+		body, body * {
+			vertical-align: baseline;
+			border: 0;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+		}
+		
+			/*--------------------------CONTENT-------------------------------------*/
+
+   .Slider {
+        position: absolute;
+        left: 108px;
+        top: -10px;
+        width: 300px;
+        margin: 20px auto;
+        -webkit-transform: rotate(45deg);
+        opacity: 0;
+    }
+
+		#logo {
+		 position: absolute;
+		 top: 40px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#cabana {
+		 position: absolute;
+		 clip: rect(230px, 290px, 280px, 0px);
+		 top: -86px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#bikini {
+		 position: absolute;
+		 clip: rect(180px, 290px, 220px, 0px);
+		 top: -40px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#birthday {
+		 position: absolute;
+		 clip: rect(130px, 290px, 180px, 0px);
+		 top: 6px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#starryNight {
+		 position: absolute;
+		 clip: rect(80px, 290px, 130px, 0px);
+		 top: 53px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#party {
+		 position: absolute;
+		 clip: rect(40px, 250px, 90px, 0px);
+		 top: 100px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#sequin {
+		 position: absolute;
+		 clip: rect(0px, 290px, 30px, 0px);
+		 top: 145px;
+		 left: 21px;
+		 opacity:0;
+		}
+
+		#txt_seeColors { position: absolute; top: 203px; left: 70px; opacity: 0; }
+
+		#txt_retroRevived {
+		 position: absolute;
+		 clip: rect(120px, 290px, 400px, 0px);
+		 top: -36px;
+		 left: 0px;
+		 opacity: 0;
+		}
+
+		#txt_fabulous {
+		position: absolute;
+		clip: rect(50px, 290px, 120px, 0px);
+		top: 26px; 
+		left: 0px; 
+		opacity: 0; 
+		}
+
+		#txt_yourInvited {
+		 position: absolute;
+		 clip: rect(0px, 290px, 60px, 0px);
+		 top: 88px; 
+		 left: 0px;
+		 opacity: 0;
+		}
+
+		#arrowRT { position: absolute; background: transparent; top: 206px; left: 46px; opacity: 0; cursor: pointer; cursor: hand; z-index: 2000000}
+
+		#arrowLT { position: absolute; background: transparent; top: 206px; left: 21px; opacity: 0; cursor: pointer; cursor: hand; z-index: 1000000;}
+
+		#ctaBtn { position: absolute; top: 198px; left: 185px; cursor: pointer; opacity:0 }
+	
+			#linkLayer {
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc {
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc {
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		#container {
+			border:1px solid #000000;
+			background:#FFF;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+.ctaAnim
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+}
+.ctaAnim:hover
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.3);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.3);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.3);
+    transition: all 200ms ease-in;
+    transform: scale(1.3);
+}
+
+
+	</style>
+
+    
+    <script language="javascript">
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			}
+			sliderFunction_01();
+			//addListeners(); 
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function politeInit(){	
+
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var BG =  document.getElementById('background'),
+					overlay = document.getElementById('overlay'),
+					logo = document.getElementById('logo'), 
+					txt_seeColors = document.getElementById('txt_seeColors'), 
+					txt_retroRevived = document.getElementById('txt_retroRevived'), 
+					txt_fabulous = document.getElementById('txt_fabulous'),
+					txt_yourInvited = document.getElementById('txt_yourInvited'),
+					slider = document.getElementById('slider'),
+
+					cabana = document.getElementById('cabana'),
+					bikini = document.getElementById('bikini'),
+					birthday = document.getElementById('birthday'),
+					starryNight = document.getElementById('starryNight'),
+					party = document.getElementById('party'),
+					sequin = document.getElementById('sequin'),
+
+					arrowRT = document.getElementById('arrowRT'),
+					arrowLT = document.getElementById('arrowLT'),
+
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_01 = new TimelineLite();
+				
+
+				//Frame animations start
+				//Frame 01
+				tl_01.to(logo, 1, {opacity:1, ease:Power1.easeOut})
+
+				.to(slider, 1, {opacity:1, ease:Sine.easeOut}, "-=1.0")
+				.to(txt_yourInvited, 1, {opacity:1, left: "20px", ease:Sine.easeOut, })
+
+				//
+				.to(txt_yourInvited, 1, {opacity:0, left: "40px", ease:Sine.easeOut},"+=1.0")
+				 
+				//Frame 02
+				.to(txt_fabulous, 1, {opacity:1, left: "20px", ease:Sine.easeOut}, "+=0.2")
+				
+
+				//
+				.to(txt_fabulous, 1, {opacity:0, left: "40px", ease:Sine.easeOut,onComplete:sliderFunction_02},"+=1.5")
+
+				//Frame 04
+				.to(txt_retroRevived, 1, {opacity:1, left: "20px", ease:Sine.easeOut}, "+=0.2")
+				.to(ctaBtn, 1, {opacity:1, ease:Sine.easeOut}, "-=0.2")
+				.to(sequin, 1, {opacity:1, ease:Sine.easeOut})
+				.to(arrowRT, 1, {opacity:1, ease:Sine.easeOut})
+				.to(arrowLT, 1, {opacity:1, ease:Sine.easeOut}, "-=1.0")
+				.to(txt_seeColors, 1, {opacity:1, ease:Sine.easeOut}, "-=1.0")
+
+				//
+				.to(arrowRT, 0.3, {left: "41px", ease:Sine.easeOut})
+				.to(arrowLT, 0.3, {left: "25px", ease:Sine.easeOut}, "-=0.3")
+
+				.to(arrowRT, 0.3, {left: "46px", ease:Sine.easeOut})
+				.to(arrowLT, 0.3, {left: "21px", ease:Sine.easeOut}, "-=0.3")
+
+				}
+
+sliderFunction_01 = function() {
+$('.Slider').slick('slickGoTo', 1);
+}
+
+sliderFunction_02 = function() {
+$('.Slider').slick('slickGoTo', 5);
+sliderReset();
+}
+
+sliderReset = function() {
+	$(".Slider").slick("slickSetOption", "speed", 400);
+	console.log("speed reset");
+}
+
+
+hitArea_clickThrough = function () {
+	//Call Exits
+	Enabler.exit('HTML5_Background_Clickthrough');
+}
+
+var clickTag = "http://www.google.com";
+			
+//============================================================================================//		
+			
+	</script>
+    
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+
+
+    <div id="container">
+    	       	
+          		<div id="background"></div>
+
+          		<div id="logo"><img src="essie_Logo.png" /></div>
+
+          		<!--Name -->
+          		<div id="sequin"><img src="product_label_Sheet.png" /></div>
+          		<div id="party"><img src="product_label_Sheet.png" /></div>
+          		<div id="starryNight"><img src="product_label_Sheet.png" /></div>
+          		<div id="birthday"><img src="product_label_Sheet.png" /></div>
+          		<div id="bikini"><img src="product_label_Sheet.png" /></div>
+          		<div id="cabana"><img src="product_label_Sheet.png" /></div>
+
+
+ 		<div id="slider" class="Slider">
+            <div id="bottle_06"><img src="sequinSash_Bottle.jpg" alt="sequin" /></div>
+            <div id="bottle_05"><img src="lifeOfParty_Bottle.jpg" alt="lifeOfParty" /></div>
+            <div id="bottle_04"><img src="starryNight_Bottle.jpg" alt="starryNight" /></div>
+            <div id="bottle_03"><img src="birthday_suit_Bottle.jpg" alt="birthdaySuit" /></div>
+            <div id="bottle_02"><img src="bikiniMartini_Bottle.jpg" alt="bikini" /></div>
+            <div id="bottle_01"><img src="cabanaBoy_Bottle.jpg" alt="cabana" /></div>
+        </div>
+
+
+          		<!--Text -->
+          		<div id="txt_seeColors"><img src="seeColors_Text.png" /></div>
+          		<div id="txt_retroRevived"><img src="main_text_Sheet.png" /></div>
+          		<div id="txt_fabulous"><img src="main_text_Sheet.png" /></div>
+          		<div id="txt_yourInvited"><img src="main_text_Sheet.png" /></div>
+
+          		<button id="arrowRT" class="control_next ctaAnim"><img src="arrow.png" /></button>
+          		<button id="arrowLT" class="control_prev ctaAnim"><img src="arrow_LT.png" /></button>
+
+          		<div><img src="cta_btn.png" id="ctaBtn" /></div>
+
+          		 <!--Main ClickTAG Layer-->
+          		<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+        </div>
+
+</body>
+
+</html>
+

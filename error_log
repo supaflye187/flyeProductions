@@ -1,0 +1,9 @@
+[02-Jun-2018 14:18:27 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16
+[02-Jun-2018 14:18:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16
+[02-Jun-2018 14:18:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16
+[02-Jun-2018 14:18:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16
+[02-Jun-2018 14:18:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16
+[18-Jun-2019 02:43:04 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 3
+[18-Jun-2019 02:43:04 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16
+[18-Jun-2019 02:43:06 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 3
+[18-Jun-2019 02:43:06 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/craftbs2/public_html/flyeproductions/resources/templates/gallery.php on line 16

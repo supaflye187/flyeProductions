@@ -1,0 +1,202 @@
+<!-- HTML 5 Ad Template from DoubleClick by Google -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Studio Enabler Required -->
+	<script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!--<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />-->
+
+<!-- === INITIAL LOADING STYLE === -->
+    <style type="text/css">
+
+/*RESETS USER AGENT STYLESHEET BODY STYLE */
+body, body * {
+	vertical-align: baseline;
+	border: 0px;
+	outline: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+		/* INITIALIZED LOADING CONTAINER PRE-LOADER */
+		#loading_dc{
+			width:298px;
+			height:248px;
+			background-color:white;
+			z-index:10;
+			border:1px solid #000;
+			top: 0px;
+			left: 0px;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;
+		}
+		
+		/* HIDES MAIN CONTENT DIV */
+		#container_dc{display:none;z-index:20}
+
+    </style>
+
+<!--POLITE LOAD CODE-->
+<script language="javascript">
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//Load in Javascript
+			
+			if(Enabler.isPageLoaded()){
+				//politeInit();
+				pageLoadedHandler();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+			} 
+		}
+
+		function pageLoadedHandler() {
+			//Checks for Visiblitiy on Page
+			if(Enabler.isVisible()) {
+				politeInit();
+			}else {
+				Enabler.addEventListener(studio.events.StudioEvent.VISIBLE, adVisibilityHandler);
+			}
+		}
+		
+		function politeInit(){	
+
+			//Load in Javascript
+			var extJavascript = document.createElement('script');
+			extJavascript.setAttribute('type', 'text/javascript');
+			extJavascript.setAttribute('src', Enabler.getUrl('HTML5_inPage_Polite_300x250.js')); 
+			document.getElementsByTagName('head')[0].appendChild(extJavascript);
+			
+			//Load in CSS
+			var extCSS=document.createElement('link');
+			extCSS.setAttribute("rel", "stylesheet");
+			extCSS.setAttribute("type", "text/css");
+			extCSS.setAttribute("href", Enabler.getUrl("HTML5_inPage_Polite_300x250.css")); 
+			document.getElementsByTagName("head")[0].appendChild(extCSS);
+			document.getElementById("container_dc").style.opacity=1; //Reveals Main container for content.
+			document.getElementById("loading_image_dc").style.opacity=0; // hides loading image.
+			document.getElementById("container_dc").style.display = "block"; // sets container div style to "block".
+			
+			startAni();
+		}
+		
+		//jquery animation
+		function startAni(){
+			/*Frame 01 Animation*/ 
+			$("#txt_fall").delay(600).animate({opacity: 1, top:'52px'}, 900, "swing"); 
+
+			$("#txt_love").delay(1500).animate({opacity: 1, left:'60px'}, 900, "swing"); 
+
+			$("#txt_essie").delay(1800).animate({opacity: 1, left:'122px'}, 900, "swing"); 
+
+
+			$("#txt_fall").delay(1600).animate({opacity: 0 }, 600, "swing"); 
+
+			$("#txt_love").delay(900).animate({opacity: 0 }, 500, "swing"); 
+
+			$("#txt_essie").delay(1000).animate({opacity: 0 }, 400, "swing");
+
+			/*Frame 02 Animation*/
+			$("#txt_youCould").delay(3500).animate({opacity: 1, left:'60px'}, 900, "swing"); 
+
+			$("#txt_win").delay(4000).animate({opacity: 1 , height:'29px'}, 1200, "swing");
+
+			$("#txt_100").delay(5000).animate({opacity: 1, left:'95px'}, 900, "swing");
+
+
+
+			$("#txt_youCould").delay(3000).animate({opacity: 0 }, 600, "swing"); 
+
+			$("#txt_win").delay(2500).animate({opacity: 0 }, 600, "swing"); 
+
+			$("#txt_100").delay(2000).animate({opacity: 0 }, 600, "swing");
+
+			/*Frame 03 Animation*/
+			$("#background").delay(8800).animate({opacity: 1 }, 600);
+
+			$("#txt_rollOver").delay(9800).animate({opacity: 1 }, 600, hitArea_Reveal = function () {
+				hitArea_01.setAttribute("style","visibility:visible");
+				hitArea_02.setAttribute("style","visibility:visible");
+				hitArea_03.setAttribute("style","visibility:visible");
+				hitArea_04.setAttribute("style","visibility:visible");
+				bgExit.setAttribute("style","visibility:hidden");
+			}); 
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+        <div id="loading_image_dc">
+               <img src="loading.gif"><!-- LOADER IMAGE -->
+        </div>    
+    </div>
+    <div id="container_dc">
+        <div id="content_dc">
+        	<!-- ============ALL YOUR CONTENT HERE============== -->
+            <!-- =============================================== -->
+            	
+            	<!--Background Image -->
+          		<div id="background"><img src="LO_300_Heart_BG.jpg" /></div>
+          		
+
+          		<!--Bottles -->
+         	 	<div id="bottle_04"><img src="LO_300_RedBottle_OPT.png" />
+         	 		<div id="name_04"><img src="LO_300_RedBottle_Name.png" /></div></div>
+         	 	</div>
+          		<div id="bottle_03"><img src="LO_300_RoseBottle_OPT.png" />
+          			<div id="name_03"><img src="LO_300_RoseBottle_Name.png" /></div></div>
+
+          		<div id="bottle_02"><img src="LO_300_BlueBottle_OPT.png" />
+          			<div id="name_02"><img src="LO_300_BlueBottle_Name.png" /></div></div>
+
+          		<div id="bottle_01"><img src="LO_300_PurpleBottle_OPT.png" />
+          			<div id="name_01"><img src="LO_purpleBottle_Name.png" /></div></div>
+
+          		<!--Text -->
+          		<div id="txt_fall"><img src="LO_txt_Fall.png" /></div>
+          		<div id="txt_love"><img src="LO_txt_inLoveWith.png" /></div>
+          		<div id="txt_essie"><img src="LO_txt_Essie.png" /></div>
+          		<div id="txt_youCould"><img src="LO_txt_andYouCould.png" /></div>
+          		<div id="txt_win"><img src="LO_txt_win.png" /></div>
+          		<div id="txt_100"><img src="LO_txt_100Shades.png" /></div>
+          		<div id="txt_rollOver"><img src="LO_txt_discoverShade.png" /></div>
+
+          		<!--Hit Areas -->
+				<div id="hitArea_01">1</div>
+          		<div id="hitArea_02">2</div>
+          		<div id="hitArea_03">3</div>
+          		<div id="hitArea_04">4</div>
+
+
+          		<!--CTA -->
+          		<div><img src="LO_300_CTA.png" id="ctaBtn" /></div>
+          		<!--<div id="border_img"><img src="300x250_Border.png" /></div>-->
+
+               <!-- =============END CONTENT===================== -->
+        
+        <!--========CLICKTAG BUTTON===========-->
+        <div id="background_exit_dc"></div>
+        <!--==================================-->
+        
+    </div>
+</div>
+</body>
+
+</html>

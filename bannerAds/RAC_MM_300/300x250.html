@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>RAC-Magic</title>
+
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+   
+   <!--<script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script>-->
+
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  
+    <style type="text/css">
+		
+	/*--------------------------CONTENT-------------------------------------*/
+
+		/************TEXT***********/
+
+		#txt_Gifts {
+			position:absolute;
+			clip: rect(0px, 600px, 35px, 0px);
+			top: -50px;
+			left: 50px;
+			opacity: 1;
+		}
+
+		#txt_Payments {
+			position:absolute;
+			clip: rect(35px, 600px, 80px, 0px);
+			top: -100px;
+			left: -10px;
+			opacity: 1;
+		}
+
+		#txt_noCredit {
+			position:absolute;
+			clip: rect(80px, 600px, 135px, 0px);
+			top: -150px;
+			left: -5px;
+			opacity: 1;
+		}
+
+		#txt_wreath {
+			position: absolute;
+			clip: rect(130px, 600px, 300px, 0px);
+			top:-38px;
+			left:140px;
+			-ms-transform:scale(1.62,1.62);
+			-o-transform:scale(1.62,1.62);
+			-moz-transform:scale(1.62,1.62);
+			-webkit-transform:scale(1.62,1.62);
+			transform:scale(1.62,1.62);
+		}
+
+		#bigGifts {
+			position:absolute;
+			clip: rect(298px, 600px, 373px, 0px);
+			top: -250px;
+			left: 15px;
+			opacity: 0;
+		}
+
+		#smallPayments {
+			position:absolute;
+			clip: rect(370px, 600px, 450px, 0px);
+			top: -250px;
+			left: 15px;
+			opacity: 0;
+		}
+
+		#disclaimer {
+			position:absolute;
+			font-family: 'arial', sans-serif;
+			text-decoration: underline;
+			font-size: 8px;
+			color: #fff;
+			top: 165px; 
+			left: 177px;
+			opacity: 0;
+		}
+
+		/***********************/
+		/***********************/
+
+		#redBG {
+			position:absolute;
+			top:0px;
+			left:300px;
+			width:300px;
+			height:250px;
+			background-color: #d71920;
+		}
+
+		#brickBG {
+			position: absolute;
+			width:300px;
+			height: 250px;
+			opacity: 1;
+		}
+
+		#boxTop {
+			position: absolute;
+			top: 40px;
+			left: 51px;
+			opacity: 1;
+		}
+
+		#box_01 {
+			position: absolute;
+			top: 60px;
+			left: 60px;
+			opacity: 1;
+		}
+
+		#box_02 {
+			position: absolute;
+			top: 114px;
+			left: 12px;
+			opacity: 0;
+		}
+
+		#boxOpen {
+			position: absolute;
+			top: 120px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#boxOpen_01 {
+			position: absolute;
+			top: 45px;
+			left: -43px;
+			opacity: 0;
+		}
+
+		#boxOpen_02 {
+			position: absolute;
+			top: 45px;
+			left: -43px;
+			opacity: 1;
+		}
+
+		#boxOpen_03 {
+			position: absolute;
+			top: 45px;
+			left: -43px;
+			opacity: 1;
+		}
+
+
+		#boxRef {
+			position: absolute;
+			top: 160px;
+			left: 65px;
+			opacity: 1;
+		}
+
+
+		#laptop {
+			position: absolute;
+			top: 75px;
+			left: 40px;
+			opacity: 0;
+			
+		}
+
+		#xbox {
+			position: absolute;
+			top: 80px;
+			left: 360px;
+			opacity: 1;
+			
+		}
+
+		#TV {
+			position: absolute;
+			top: 75px;
+			left: 360px;
+			opacity: 1;	
+		}
+
+
+		#TVImg {
+			position: absolute;
+
+		}
+
+		#xboxImg {
+			position: absolute;
+			
+		}
+
+		#lapTopImg {
+			position: absolute;
+			
+		}
+		
+		#wreath {
+			position: absolute;
+			top: -200px;
+			left: 300px;
+			opacity: 1;
+		}
+
+
+		#wreath_02 {
+			position: absolute;
+			top: -76px;
+			left: -330px;
+			opacity: 1;
+			transform:rotateY(90deg);
+			transform:scale(0.62,0.62);
+			-ms-transform:rotateY(90deg);
+			-ms-transform:scale(0.62,0.62);
+			-o-transform:rotateY(90deg);
+			-o-transform:scale(0.62,0.62);
+			-webkit-transform:rotateY(90deg);
+			-webkit-transform:scale(0.62,0.62);
+			-moz-transform:rotateY(90deg);
+			-moz-transform:scale(0.62,0.62);
+		}
+
+		#Logo {
+		 position: absolute;
+		 top: -15px; 
+		 left: 10px; 
+		 opacity: 0;
+		 -ms-transform:rotateY(180deg);
+		 -o-transform:rotateY(180deg);
+		 -webkit-transform:rotateY(180deg);
+		 -moz-transform:rotateY(180deg);
+		 transform:rotateY(180deg);  
+		}
+
+		#star {
+			position:absolute;
+			top: 5px;
+			left: 60px;
+			opacity: 0;
+			-ms-transform:scale(0.2,0.2);
+			-o-transform:scale(0.2,0.2);
+			-webkit-transform:scale(0.2,0.2);
+			-moz-transform:scale(0.2,0.2);
+			transform:scale(0.2,0.2);
+		}
+
+		#ctaBtn {
+			 position: absolute;
+			 top: 115px; 
+			 left: 175px;
+			 cursor: pointer;
+			 opacity:0;
+		}
+
+		#footer {
+			 position: absolute;
+			 top: 400px; 
+			 left: 0px;
+			 opacity:1;
+		}
+
+		/***********************/
+		/***********************/
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+/*#ctaBtn:hover {
+	background-position: 0 -28px;
+}*/
+
+
+	</style>
+    
+    <script language="javascript">
+
+    var clickTag = "http://www.google.com";
+
+    // function checkInit() {
+    //           if (!EB.isInitialized()) {
+    //              EB.addEventListener(EBG.EventName.EB_INITIALIZED, onInit); 
+    //              // This code checks whether the EB object is initialized, if the object is initialized, it launches the function "onInit", otherwise "EB_INITIALIZED" event. 
+    //           }
+    //           else {
+    //                   onInit();
+    //                   console.log("EB Initialized");
+    //            }         
+    //           //  function onInit() {
+    //           //        // Place your code to start the ad flow here
+    //           // } 
+    //  }
+    //  window.addEventListener('load', checkInit);
+    
+//DOUBLECLICK
+    //Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				onInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, onInit);	
+			}
+		}
+
+var tl = new TimelineLite();
+
+		
+		function onInit(){	
+
+			// document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			addListeners();
+			}
+	
+			function startAni(){
+				var Logo = document.getElementById('Logo'),
+					boxTop = document.getElementById('boxTop'),
+					box_01 = document.getElementById('box_01'),
+					box_02 = document.getElementById('box_02'),
+					
+					boxRef = document.getElementById('boxRef'),
+					boxOpen = document.getElementById('boxOpen'),
+					laptop = document.getElementById('laptop'),
+					TV = document.getElementById('TV'),
+					xbox = document.getElementById('xbox'),
+					whiteBox = document.getElementById('whiteBox'),
+					wreath = document.getElementById('wreath'),
+					wreath_02 = document.getElementById('wreath_02'),
+					ctaBtn = document.getElementById('ctaBtn'),
+					star = document.getElementById('star'),
+					footer = document.getElementById('footer'),
+					bigGifts = document.getElementById('bigGifts'),
+					smallPayments = document.getElementById('smallPayments')
+					tl_01 = new TimelineLite();
+
+
+				 //Frame animations start
+				 tl_01.to(boxTop, 0.8, {top:"-110px", ease:Elastic.easeOut.config(1, 0.75), y: 0 },"+=0.8")
+				 	.to(box_01, 0.1, {opacity:0, ease:Power0.easeOut},'-=0.6')
+
+				 	.to(box_02, 0.1, {opacity:1, ease:Power0.easeOut},"-=0.6")
+				 	.to(box_02, 0.1, {opacity:0, ease:Power0.easeOut},'-=0.6')
+				 	.to(boxOpen, 0.1, {opacity:1, ease:Power0.easeOut},'-=0.6')
+				 	.to(boxOpen_01, 0.1, {opacity:1, ease:Power0.easeOut},'-=0.6')
+				 	.to(boxOpen, 0.1, {opacity:0, ease:Power0.easeOut},'-=0.6')
+
+				 	.to(laptop, 0.1, {opacity:1, ease:Power0.easeOut},'-=0.6')
+
+				 	//Frame 03
+				 	.to(laptop, 0.8, {left:"-280px", ease: Back.easeInOut.config(1.7),y: 0})
+				 	.to(xbox, 0.8, {left:"40px", ease: Back.easeInOut.config(1.7),y: 0},'-=0.8')
+
+				 	//Frame 04
+				 	.to(xbox, 0.8, {left:"-280px", ease: Back.easeInOut.config(1.7),y: 0},'+=1.8')
+				 	.to(TV, 0.8, {left:"40px", ease: Back.easeInOut.config(1.7),y: 0},'-=0.8')
+
+				 	//Frame 05
+				 	.to(wreath, 0.8, {left:"-500px", ease: Power1.easeOut},'+=1.8')
+				 	.to(wreath, 0.8, {top:"50px", ease: Power1.easeOut},'-=0.8')
+				 	.to(redBG, 0.3, {left:"0px", ease: Power1.easeOut},'-=0.8')
+
+				 	//Frame 06
+				 	.to(wreath_02, 0.6, {left:"-50px", ease: Power1.easeOut},'-=0.5')
+				 	.to(wreath_02, 0.6, {rotationY:360, ease: Power1.easeOut},'-=0.8')
+
+				 	//Frame 07
+				 	.to(wreath_02, 0.5, {rotationY:720,opacity:0, ease: Power1.easeOut},'+=1.5')
+
+				 	//Frame 08
+				 	.to(Logo, 0.5, {rotationY:360, opacity:1, ease: Power1.easeOut},'-=0.5')
+				 	//.to(Logo, 1.0, {rotationY:360, ease: Power1.easeOut},'-=1.1')
+
+				 	//Frame 09
+				 	.to(Logo, 0.5, {left:"90px", ease: Power1.easeOut},'+=1.0')
+				 	.to(Logo, 0.5, {top:"-85px", ease: Power1.easeOut},'-=0.5')
+				 	.to(Logo, 0.5, {scaleY:0.48, scaleX:0.48, ease: Back.easeInOut.config(1.7),y: 0},'-=0.5')
+				 	
+
+				 	//finalFrame
+				 	.to(star, 0.3, {opacity:1, ease:Power1.easeOut},'-=0.5')
+				 	.to(star, 0.5, {scaleY:1, scaleX:1, ease: Back.easeInOut.config(1.7),y: 0},'-=0.5')
+
+				 	.to(bigGifts, 0.5, {opacity:1, ease:Power1.easeOut})
+				 	.to(smallPayments, 0.5, {opacity:1, ease:Power1.easeOut})
+				 	.to(footer, 1.0, {top:"205px", ease:Back.easeInOut.config(1.7),y: 0},'-=0.2')
+				 	.to(ctaBtn, 0.5, {opacity:1, ease:Power1.easeOut})
+				 	.to(disclaimer, 0.5, {opacity:1, ease:Power1.easeOut},'-=0.5')
+				 	.to(star, 0.3, {scaleY:1.6, scaleX:1.6, ease:Power1.easeOut})
+				 	.to(star, 0.2, {scaleY:1.0, scaleX:1.0, ease:Power1.easeOut})
+				 	//.to(star, 0.5, { ease:Back.easeInOut.config(1.7),y: 0},'-=0.3')
+
+			}
+
+			function clickTagHandler() {
+				//Enabler.exit('HTML5_Background_Clickthrough');
+				//EB.clickthrough(); 
+				console.log("EB Clicked");
+			}
+
+			addListeners = function (){
+				
+				linkLayer.addEventListener('click', clickTagHandler, false);
+				// ctaBtn.addEventListener('click', ctaExitHandler, false);
+			
+			}
+
+	</script>
+    
+</head>
+
+<body>
+
+    <div id="container">
+    	       	<!--Background Image -->  
+    	       	<div id="brickBG"><img src="brickBG.jpg"></div>
+    	       	
+    	       	<!--OTHER ELEMENTS-->
+    	       	
+    	       	<div id="boxRef"><img src="box_reflection.png"></div>
+    	       	<div id="boxOpen"><img src="box_open.png"></div>
+    	       	<!-- <div id="boxPres"><img src="boxPresent.png"></div> -->
+    	       	<div id="box_02"><img src="box_02.png"></div>
+    	       	<div id="box_01"><img src="box_01.png"></div>
+    	       	<div id="boxTop"><img src="box_top.png"></div>
+
+    	       	<!--Carousel-->
+    	       	<div id="laptop">
+    	       		<div id="boxOpen_01"><img src="box_open.png"></div>
+    	       		<div id="txt_Gifts"><img src="txt_Sheet.png"></div>
+    	       		<div id="lapTopImg"><img src="laptop.png"></div>
+    	       	</div>
+
+    	       	<div id="TV">
+    	       		<div id="boxOpen_02"><img src="box_open.png"></div>
+    	       		<div id="TVImg"><img src="TVScreen.png"></div>
+    	       		<div id="txt_noCredit"><img src="txt_Sheet.png"></div>
+    	       	</div>
+
+    	       	<div id="xbox">
+    	       		<div id="boxOpen_03"><img src="box_open.png"></div>
+    	       		<div id="xboxImg"><img src="xbox.png"></div>
+    	       		<div id="txt_Payments"><img src="txt_Sheet.png"></div>
+    	       		
+    	       	</div>
+    	       	<div id="redBG"></div>
+    	       	<div id="wreath"><img src="wreath.gif"></div>
+    	       	<div id="wreath_02">
+    	       		<img src="wreath.gif">
+    	       		<div id="txt_wreath"><img src="txt_Sheet.png"></div>
+    	       	</div>
+
+    	       	<!--EndFrame-->
+    	       	<div id='Logo'><img src="RAC_Logo.png"></div>
+
+    	       	<div id='star'><img src="star_icon.png"></div>
+    	       	<div id='bigGifts'><img src="txt_Sheet.png"></div>
+    	       	<div id='smallPayments'><img src="txt_Sheet.png"></div>
+    	       	<div id='footer'><img src="footer.png"></div>
+
+          		<!--ClickTag-->
+          		<!--CTA-->
+          		
+          		<div id="ctaBtn"><img src="ctaBtn.png"></div>
+          		<div id='disclaimer'>Terms and Conditions Apply</div>
+          		<div id="linkLayer"></div>
+          		
+        </div>
+
+</body>
+
+</html>
+

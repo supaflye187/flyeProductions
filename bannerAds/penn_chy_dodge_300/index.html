@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>Pennzoil - Oil Change</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+	
+		body, body * {
+			vertical-align: baseline;
+			border: 0;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+		}
+		
+			/*--------------------------CONTENT-------------------------------------*/
+			#BG { opacity:1; position:absolute; width:300px; height:250px; top:0px; left:0px; background-color:#eee; }
+			#lines { opacity:0; position: absolute; }
+			
+			#blueBG { opacity:0; position:absolute; width:300px; height:250px; top:0px; left:0px; background-color:#0066cc;}
+			#temp { opacity:0; position:absolute; }
+			#oilPour { opacity:0; position: absolute; left:-3px; }
+
+			#pennLogo { opacity:1; position:absolute; top:15px; left:230px; }
+			#logo { position:absolute; top:0px; left:-120px; }
+			#rightEdge { opacity:1; position:absolute; top:0px; left:290px; }
+
+			#theCar { opacity:1; position:absolute; top:90px; left:710px; }
+			
+			#txt1A { opacity:0;
+					 position:absolute;
+					 clip: rect(0px, 250px, 25px, 0px);
+					 top:87px; 
+					 left:20px; 
+					 height:auto; 
+					 overflow:hidden; 
+				}
+
+			#txt1B { opacity:0;
+					 position:absolute;
+					 clip: rect(25px, 250px, 50px, 0px);
+					 top:87px; 
+					 left:75px; 
+					 overflow:hidden; 
+				}
+
+			#txt1C { opacity:0;
+					 position:absolute;
+					 clip: rect(53px, 250px, 100px, 0px);
+					 top:87px; 
+					 left:20px;  
+					 overflow:hidden; 
+				}
+
+			#txt2A { opacity:0;
+					 position:absolute;
+					 clip: rect(100px, 250px, 130px, 0px);
+					 top:84px; 
+					 left:0px;  
+				 	 overflow:hidden; 
+				 }
+
+			#txt2B { opacity:0;
+					position:absolute;
+					clip: rect(130px, 250px, 160px, 0px);
+					top:84px; 
+					left:25px;   
+					overflow:hidden; 
+				}
+
+			#txt3A { 
+				opacity:0; 
+				clip: rect(160px, 250px, 198px, 0px);
+				position:absolute; 
+				top:23px; 
+				left:0px; 
+				overflow:hidden; 
+			}
+
+			#txt3B { 
+				opacity:0; 
+				clip: rect(195px, 250px, 230px, 0px);
+				position:absolute; 
+				top:23px; 
+				left:46px; 
+				overflow:hidden;  
+			}
+
+			#prod { 
+				opacity:0; 
+				position:absolute; 
+				top:21px; 
+				left:20px; 
+			}
+
+			#tire { 
+				opacity:0; 
+				position:absolute; 
+				top:36px; 
+				left:143px; 
+			}
+			
+			#tagline { 
+				opacity:0;
+			 	position:absolute; 
+				clip: rect(225px, 300px, 265px, 0px);
+				top:-62px; 
+				left:25px;
+			}
+
+			#offer { 
+				opacity:0; 
+				position:absolute; 
+				clip: rect(263px, 300px, 350px, 0px);
+				top:-62px; 
+				left:25px;
+			}
+
+
+			#btn_cta { 
+				opacity:0;
+			 	left:116px; 
+			 	top:205px; 
+			 	z-index:1; 
+			 	position:absolute; 
+			 	width:117px; 
+			 	
+			}
+	
+		
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+				background-color: rgba(255,255,255,0);
+				z-index:100000000000000;
+				
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000;
+			background:#eee;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+	}
+	</style>
+    
+    <script language="javascript">
+    var clickTag = "https://www.honda.com/";
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			} 
+			addListeners();
+		}
+		
+		function politeInit(){		
+			//Load in Javascript
+			//var extJavascript = document.createElement('script');
+			//extJavascript.setAttribute('type', 'text/javascript');
+			 //extJavascript.setAttribute('src', Enabler.getUrl('main.js'));
+			//extJavascript.setAttribute('src', Enabler.getFilename('main.js')); 
+			//document.getElementsByTagName('head')[0].appendChild(extJavascript);
+			
+			//Load in CSS
+			
+			//var extCSS=document.createElement('link');
+			//extCSS.setAttribute("rel", "stylesheet");
+			//extCSS.setAttribute("type", "text/css");
+			//extCSS.setAttribute("href", Enabler.getUrl("style.css")); 
+			//extCSS.setAttribute("href", Enabler.getFilename("style.css"));
+			//document.getElementsByTagName("head")[0].appendChild(extCSS);
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var bg_img =  document.getElementById('bg_img'),
+					theCar = document.getElementById('theCar'), 
+					mycar = document.getElementById('mycar'), 
+					txt1A = document.getElementById('txt1A'), 
+					txt1B = document.getElementById('txt1B'),
+					txt1C = document.getElementById('txt1C'),
+					txt2A = document.getElementById('txt2A'), 
+					txt2B = document.getElementById('txt2B'),
+					txt3A = document.getElementById('txt3A'), 
+					txt3B = document.getElementById('txt3B'),
+					lines = document.getElementById('lines'),
+					blueBG = document.getElementById('blueBG'),
+					prod = document.getElementById('prod'), 
+					offer = document.getElementById('offer'),
+					tagline = document.getElementById('tagline'),
+					btn_cta = document.getElementById('btn_cta'), 
+
+					tire = document.getElementById('tire'),
+					pennLogo = document.getElementById('pennLogo'),
+					logo = document.getElementById('logo'),
+					rightEdge = document.getElementById('rightEdge'),
+					tl = new TimelineLite();
+					
+					
+				// Frame animations start
+				  tl.to(rightEdge, 0.25, {left:"270px", ease:Power1.easeOut})
+				  	.to(logo, 0.25, {left:"0px", ease:Power1.easeOut}, "-=0.25")
+				  	.to(pennLogo, 0.25, {opacity:1, ease:Power1.easeOut}, "-=0.25")
+				  
+				  .to(txt1A, 0.5, {opacity:1, left:"50px", ease:Power1.easeOut})
+				  .to(txt1B, 0.5, {opacity:1, left:"50px", ease:Power1.easeOut}, "-=0.25")
+				  .to(txt1C, 0.5, {opacity:1, left:"50px", ease:Power1.easeOut}, "-=0.5")
+
+				  //
+				  .to(blueBG, 0.25, {opacity:1, ease:Power1.easeOut}, "+=2.0")
+				  .to(lines, 0.25, {opacity:1, ease:Power1.easeOut}, "-=0.5")
+				  .to(theCar, 0.0, {scaleX:0.75, scaleY:0.75, ease:Power1.easeOut}, "-=0.5")
+				  .to(theCar, .85, {left:"70px", top:"66px", scaleX:1.0, scaleY:1.0, ease:Circ.easeOutIn}, "-=0.5")
+				  .to(txt2A, 0.5, {opacity:1, left:"24px", ease:Power1.easeOut}, "-=0.25")
+				  .to(txt2B, 0.5, {opacity:1, left:"24px", ease:Power1.easeOut}, "-=0.25")
+
+				  .to(txt1A, 0.5, {opacity:0}, "+=2.0")
+				  .to(txt1B, 0.5, {opacity:0}, "-=0.5")
+				  .to(txt1C, 0.5, {opacity:0}, "-=0.5")
+				  .to(txt2A, 0.5, {opacity:0}, "-=0.5")
+				  .to(txt2B, 0.5, {opacity:0}, "-=0.5")
+				  .to(pennLogo, 0.5, {opacity:0}, "-=0.5")
+				  .to(lines, 0.5, {opacity:0}, "-=0.5")
+				  .to(theCar, 0.75, {opacity:0, ease:Power1.easeOut}, "-=0.5")
+				  //
+
+				  .to(oilPour, 0.25, {opacity:1, ease:Power1.easeOut})
+				  .to(txt3A, 0.5, {opacity:1, left:"23px", ease:Power1.easeOut}, "-=0.25")
+				  .to(txt3B, 0.5, {opacity:1, left:"23px", ease:Power1.easeOut}, "-=0.25")
+				  
+				  //
+				  .to(txt3A, 0.25, {opacity:0}, "+=2.5")
+				  .to(txt3B, 0.25, {opacity:0}, "-=0.25")
+				  .to(oilPour, 0.25, {opacity:0, ease:Power1.easeOut}, "-=0.25")
+				  .to(blueBG, 0.25, {opacity:0, ease:Power1.easeOut}, "-=0.25")
+				  
+				  //
+
+				  
+				  
+				  .to(prod, 0.75, {opacity:1, left:"109px", ease:Power1.easeOut})
+				  .to(tire, 0.75, {opacity:1, left:"143px", ease:Power1.easeOut}, "-=0.5")
+
+				  .to(offer, 0.75, {opacity:1, left:"25px", ease:Power1.easeOut}, "-=0.5")
+				  .to(tagline, 0.75, {opacity:1, left:"25px", ease:Power1.easeOut}, "-=0.5")
+
+				  .to(btn_cta, 0.75, {opacity:1, left:"116px", ease:Power1.easeOut}, "-=0.5")
+				  .to(btn_cta, 0.5, {scaleX:1.1, scaleY:1.1, ease:Power1.easeOut}, "-=0.0")
+				  .to(btn_cta, 0.5, {scaleX:1.0, scaleY:1.0, ease:Power1.easeOut}, "-=0.1")
+
+
+				  
+
+				  
+				  
+				  ;
+				
+			}
+			
+			// =============================================================================================			
+
+		addListeners = function() {
+	document.getElementById('linkLayer').addEventListener("click", clickTag);
+	// document.getElementById('ctaBtn').addEventListener("click", clickTag);
+}
+
+clickTag = function() {
+	Enabler.exit('HTML5_Background_Clickthrough');
+}
+		
+			
+	</script>
+    
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	<div id="temp"><img src="TEMP_05.jpg" /></div>
+        <!-- FRAME 1 -->
+        
+    	<div id="txt1A"><img src="300_txt.png" /></div>
+        <div id="txt1B"><img src="300_txt.png" /></div>
+        <div id="txt1C"><img src="300_txt.png" /></div>
+        
+        
+        <!-- END F1 -->
+        <!-- FRAME 2 -->
+         <div id="blueBG"></div>
+        <div id="theCar"><img id="mycar" src="car_dodge.png" /></div>
+    	<div id="txt2A"><img src="300_txt.png" /></div>
+        <div id="txt2B"><img src="300_txt.png" /></div>
+        <div id="lines"><img src="lines.png" /></div>
+        <!-- END F2 -->
+
+        <!-- FRAME 3 -->
+        <div id="oilPour"><img src="oilPour.jpg" /></div>
+    	<div id="txt3A"><img src="300_txt.png" /></div>
+        <div id="txt3B"><img src="300_txt.png" /></div>
+        <!-- END F3 -->
+ 
+        <!-- FRAME 4 -->
+        <div id="tire"><img src="tires.png" /></div>
+    	<div id="prod"><img src="oilProduct.png" /></div>
+    	
+        <div id="offer"><img src="300_txt.png" /></div>
+        <div id="tagline"><img src="300_txt.png" /></div>
+        <div id="btn_cta"><img src="cta_btn.png" /></div>
+        <!-- END F4 -->
+        <!-- <a href="javascript:window.open(window.clickTag, '_blank');void(0);"><div id='linkLayer'></div></a> -->
+        <div id="pennLogo"><img src="pennLogo.png" /></div>
+        <div id="logo"><img src="Logo.png" /></div>
+        <div id="rightEdge"><img src="right_edge.png" /></div>
+        
+        <div id="linkLayer"></div>
+    </div> 
+</body>
+
+</html>
+

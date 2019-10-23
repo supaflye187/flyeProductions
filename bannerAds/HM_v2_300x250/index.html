@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>AutoCare</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+	
+		body, body * {
+			vertical-align: baseline;
+			border: 0;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+			font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+			font-size:12px;
+		}
+		
+			/*--------------------------CONTENT-------------------------------------*/
+			#temp{position:absolute;}
+
+			#bg { opacity:0; position:absolute; top:0px; left:-50px; width: 300px; height:250px; background:#fff457; }
+			#bg_02 { opacity:0; position:absolute; top:0px; left:-50px; width: 300px; height:250px; background:#fff457; }
+			#cta { opacity:0; position:absolute; top:214px; left:305px; }
+			#light { opacity:0; position:absolute; top:214px; left:108px; }
+			#bottle { opacity:1; position:absolute; top:17px; left:305px; }
+			#wm_right { opacity:0; position:absolute; top:10px; left:100px; }
+			#wm_left { opacity:0; position:absolute; top:10px; left:-1px; }
+			#date { opacity:0; position:absolute; top:220px; left:-100px; }
+			#offer { opacity:0; position:absolute; top:69px; left:-140px; }
+
+			#t1a { opacity:0; position:absolute; clip: rect(0px, 230px, 20px, 0px); top:113px; left: 0px; }
+			#t1b { opacity:0; position:absolute; clip: rect(20px, 230px, 43px, 0px); top:113px; left: 0px; }
+			#t1c { opacity:0; position:absolute; clip: rect(45px, 230px, 75px, 0px); top:118px; left: 0px; }
+
+			#t2 { opacity:0; position:absolute; top:165px; left: 0px; }
+
+			#t3a { opacity:1; position:relative; top:11px; left:0px; width: 0px; height:37px; overflow:hidden; }
+			#t3b { opacity:1; position:relative; top:19px; left:0px; width: 0px; height:22px; overflow:hidden; }
+			#t3b img { position:relative; top:-42px; }
+			#t3c { opacity:1; position:relative; top:33px; left:0px; width: 0px; height:37px; overflow:hidden; }
+			#t3c img { position:relative; top:-75px; }
+			#t4a { opacity:0; position:absolute; top:140px; left:-165px; width: 162px; height:21px; overflow:hidden; }
+			#t4b { opacity:0; position:absolute; top:162px; left:-162px; width: 162px; height:21px; overflow:hidden; }
+			#t4b img { position:relative; top:-21px; }
+			#t4c { opacity:0; position:absolute; top:184px; left:-162px; width: 162px; height:21px; overflow:hidden; }
+			#t4c img { position:relative; top:-42px; }
+			#tborder1 { opacity:1; position:absolute; top:102px; left:200px; width: 0px; height:88px; border-top:1px solid #000; border-bottom:1px solid #000; overflow:hidden; }
+			#tborder2 { opacity:1; position:absolute; top:88px; left:97px; width: 0px; height:132px; border-top:1px solid #000; border-bottom:1px solid #000; overflow:hidden; }
+			#tborder3top { opacity:1; position:absolute; top:136px; left:97px; width: 0px; height:4px; border-top:1px solid #000; }
+			#tborder3bot { opacity:1; position:absolute; top:209px; left:97px; width: 0px; height:4px; border-top:1px solid #000; }
+
+			
+			
+			
+		
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+				background-color: rgba(255,255,255,0);
+				z-index:10000000;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-120px;
+			top:50%;
+			margin-top:-30px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000000;
+			background:#fff457;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+	}
+	</style>
+    
+    <script language="javascript">
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			} 
+		}
+		
+		function politeInit(){		
+			
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			dcrmInit();
+			}
+			
+			dcrmInit = function(){
+				
+				
+				ctaBtn = document.getElementById('cta');
+				bgExit = document.getElementById('linkLayer');
+				
+				console.log('dcrmInit');
+				// Added Listeners
+				addListeners();
+
+				startAni();
+			}
+
+			addListeners = function (){
+				
+				bgExit.addEventListener('click', bgExitHandler, false);
+				ctaBtn.addEventListener('click', ctaExitHandler, false);
+			
+
+			}
+				
+			
+			bgExitHandler = function(e) {
+				//Call Exits
+				Enabler.exit('Background_Clickthrough'); // For Studio
+				//window.open(window.clickTag, '_blank') // Use this for site served and/or DCM
+				console.log("BACKGROUND EXIT CLICKED");
+			}
+			ctaExitHandler = function(e) {
+				//Call Exits
+				Enabler.exit('CTA_Button_Clickthrough'); // For Studio
+				//window.open(window.clickTag, '_blank') // Use this for site served and/or DCM
+				console.log("CTA BUTTON EXIT CLICKED");
+			}
+			
+			
+	
+			function startAni(){
+				
+
+				var tl = new TimelineLite();
+					
+					
+				// Frame animations start
+				  tl.to(bg, .75, {opacity:1, left:"0px", ease:Power1.easeOut}, "-=0.0")
+				  .to(wm_right, .5, {opacity:1, ease:Power1.easeOut}, "-=0.15")
+				  
+				  .to(tborder1, .5, {width:"165px", left:"120px", ease:Power1.easeOut}, "-=0.15")
+				  .to(t1a, .3, {opacity:1, left: "122px", ease:Power1.easeOut}, "+=0.0")
+				  .to(t1b, .3, {opacity:1, left: "122px", ease:Power1.easeOut}, "-=0.2")
+				  .to(t1c, .3, {opacity:1, left: "122px", ease:Power1.easeOut}, "-=0.2")
+				  .to(t1c, .3, {opacity:0, left: "122px", ease:Power1.easeOut}, "+=1.5")
+				  .to(t2, .3, {opacity:1, left: "130px", ease:Power1.easeOut}, "-=0.2")
+		
+				  .to(t1a, .3, {opacity:0, ease:Power1.easeOut}, "+=1.5")
+				  .to(t1b, .3, {opacity:0, ease:Power1.easeOut}, "-=0.2")
+				  .to(t2, .3, {opacity:0, ease:Power1.easeOut}, "-=0.2")
+				  .to(tborder1, .5, {opacity:0, ease:Power1.easeOut}, "-=0.5")
+				  .to(wm_right, .75, {opacity:0, ease:Power1.easeOut} , "-=0.5")
+				  .to(bg, .75, {opacity:0, ease:Power1.easeOut}, "-=0.0")
+				  
+				  // .to(tborder2, .5, {width:"176px", left:"8px", ease:Power1.easeOut}, "-=0.1")
+				  // .to(t3a, .5, {width: "176px", ease:Power1.easeOut}, "+=0.0")
+				  // .to(t3b, .5, {width: "176px", ease:Power1.easeOut}, "-=0.0")
+				  // .to(t3c, .5, {width: "176px", ease:Power1.easeOut}, "-=0.0")
+				  // .to(tborder2, .5, {width:"0px", ease:Power1.easeOut}, "+=1.5")
+				  .to(wm_left, .5, {opacity:1, ease:Power1.easeOut}, "-=0.15")
+				  .to(offer, .5, {opacity:1, left: "17px", ease:Power1.easeOut}, "-=0.0")
+				  .to(tborder3top, .5, {width:"132px", left: "18px", ease:Power1.easeOut}, "-=.25")
+				  .to(tborder3bot, .57, {width:"162px", left: "18px", ease:Power1.easeOut}, "-=.5")
+				  
+
+				  .to(bottle, .3, {left: "195px", ease:Power1.easeOut}, "-=0.25")
+				  .to(t4a, .5, {opacity:1, left: "19px", ease:Power1.easeOut}, "+=0.0")
+				  .to(t4b, .5, {opacity:1, left: "19px", ease:Power1.easeOut}, "-=0.25")
+				  .to(t4c, .5, {opacity:1, left: "19px", ease:Power1.easeOut}, "-=0.25")
+				  .to(date, .5, {opacity:1, left: "20px", ease:Power1.easeOut}, "-=0.25")
+				  .to(cta, .5, {opacity:1, left: "158px", ease:Power1.easeOut}, "-=0.25")
+				  .to(light, .15, {opacity:.5, left: "178px", ease:Power0.easeOut}, "-=0.05")
+				  .to(light, .25, {left: "305px", ease:Power0.easeOut}, "-=0.05")
+				  
+				  
+				  ;
+				
+				//$('#linkLayer').click(function(){ clickThrough();});
+			}
+			
+			// =============================================================================================			
+
+		
+		var clickTag = ""; // Set URL when being site served or DCM
+		
+		
+			
+	</script>
+    
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		
+	</div>    
+</div>
+    <div id="container">
+    	<div id="bg_02"><img src="BGmain_02.jpg" /></div>
+    	<div id="bg"><img src="BGmain.jpg" /></div>
+    	<!-- <div id="temp"><img src="TEMP_v2_03.jpg" /></div> -->
+        <!-- FRAME 1 -->
+    	<div id="wm_left"><img src="aac_Logo_Left.png" /></div>
+    	<div id="wm_right"><img src="aac_Logo_Right.png" /></div>
+        <div id="tborder1"></div>
+        	<div id="t1a"><img src="txt1.png" /></div>
+            <div id="t1b"><img src="txt1.png" /></div>
+            <div id="t1c"><img src="txt1.png" /></div>
+            <div id="t2"><img src="txt2.png" /></div>
+        <div id="bottle"><img src="bottle.png" /></div>
+        <!-- END F1 -->
+       
+        <!-- FRAME 4 -->
+        <div id="offer"><img src="offer.png" /></div>
+        <div id="tborder3top"></div>
+        <div id="tborder3bot"></div>
+        <div id="t4a"><img src="txt4.png" /></div>
+        <div id="t4b"><img src="txt4.png" /></div>
+        <div id="t4c"><img src="txt4.png" /></div>
+        <div id="date"><!--<img src="date.png" />-->June 15 - Sept. 28, 2016</div>
+        <div id="cta"><img src="cta.png" /></div>
+        <div id="light"><img src="light.png" /></div>
+        <!-- END F4 -->
+        <div id="linkLayer"></div>
+        
+    </div> 
+</body>
+
+</html>
+
