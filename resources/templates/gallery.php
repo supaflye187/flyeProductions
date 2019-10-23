@@ -1,8 +1,3 @@
-
-<?php
-  $data = file_get_contents($url);
-  $portfolios = json_decode($data);
-?>
 <div class="title-container">
     <div class="image-container center-text">
       <!-- <img id="portfolio-gallery--title" src="./img/video_Animation_title_gray.png" alt=""> -->
@@ -33,11 +28,11 @@
         
         <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/art-of-beer.php"><div class="image-overlay">
+              <a href="./projects/art-of-beer.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>The Art of Beer Making</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Social Media Animation</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -47,11 +42,11 @@
 
         <!-- SECTION -->
         <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/ball-animation.php"><div class="image-overlay">
+              <a href="./projects/ball-animation.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Retro Ball Animation</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Experimental Animation</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -61,11 +56,11 @@
 
           <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/rad.php"><div class="image-overlay">
+              <a href="./projects/rad.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>RAD Explainer Video</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Explainer Video</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -75,11 +70,11 @@
 
           <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="/projects/usmj.php"><div class="image-overlay">
+              <a href="/projects/usmj.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>USMJ Animated Assets</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Social Media Animations</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -89,11 +84,11 @@
 
              <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="/projects/everx.php"><div class="image-overlay">
+              <a href="/projects/everx.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>EverX Animated Assets</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Social Media Animations</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -103,11 +98,11 @@
 
           <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/hankDarby.php"><div class="image-overlay">
+              <a href="./projects/hankDarby.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Hank Darby animated assets</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Social Media Animations</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -117,7 +112,7 @@
 
              <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Display">
-              <a href="./projects/essie.php"><div class="image-overlay">
+              <a href="./projects/essie.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Essie Display Ads</h4> 
                                 <div class="gallery-categories">
@@ -130,7 +125,7 @@
             <!-- SECTION END -->
 
             <!-- SECTION -->
-          <div class="gallery-image filter-item all image-inner Animation">
+          <!-- <div class="gallery-image filter-item all image-inner Animation">
               <a href="./projects/"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Zoe Explainer Video</h4> 
@@ -140,12 +135,12 @@
                         </div>
                     </div></a>
                 <img src="./img/zoe.jpg" alt="">
-            </div>
+            </div> -->
             <!-- SECTION END -->
 
          <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Display">
-              <a href="./projects/gold.php"><div class="image-overlay">
+              <a href="./projects/gold.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>One Piece Gold Display Ads</h4> 
                                 <div class="gallery-categories">
@@ -159,7 +154,7 @@
 
             <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Display">
-              <a href="./projects/firestone.php"><div class="image-overlay">
+              <a href="./projects/firestone.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Firestone Display Ads</h4> 
                                 <div class="gallery-categories">
@@ -174,7 +169,7 @@
 
             <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Display">
-              <a href="./projects/rac-display.php"><div class="image-overlay">
+              <a href="./projects/rac-display.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>RAC Display Ads</h4> 
                                 <div class="gallery-categories">
@@ -202,11 +197,11 @@
 
             <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/flyeintro.php"><div class="image-overlay">
+              <a href="./projects/flyeintro.html"><div class="image-overlay">
                             <div class="post-title">
-                                <h4>Intro Animation</h4> 
+                                <h4>Flye Productions Animation</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Website Reel Animation</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -216,7 +211,7 @@
 
             <!-- SECTION -->
           <!-- <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/datingUX.php"><div class="image-overlay">
+              <a href="./projects/datingUX.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Dating App UX Animation</h4> 
                                 <div class="gallery-categories">
@@ -230,11 +225,11 @@
 
             <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/searchUX.php"><div class="image-overlay">
+              <a href="./projects/searchUX.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Search UX Animation</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>UX Prototype Animation</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -244,11 +239,11 @@
 
              <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/cowts.php"><div class="image-overlay">
+              <a href="./projects/cowts.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>Cowts Logo Animation</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Logo Animation</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -258,11 +253,11 @@
 
              <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Video">
-              <a href="./projects/whiterock.php"><div class="image-overlay">
+              <a href="./projects/whiterock.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>White Rock Artists Promo Video</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Video</li></ul>
+                                    <ul class="gallery-list"><li>Videography</li></ul>
                                  </div>
                         </div>
                     </div></a>
@@ -272,11 +267,11 @@
 
              <!-- SECTION -->
           <div class="gallery-image filter-item all image-inner Animation">
-              <a href="./projects/big-mail-project.php"><div class="image-overlay">
+              <a href="./projects/big-mail-project.html"><div class="image-overlay">
                             <div class="post-title">
                                 <h4>The Big Mail Project Explainer Video</h4> 
                                 <div class="gallery-categories">
-                                    <ul class="gallery-list"><li>Animation</li></ul>
+                                    <ul class="gallery-list"><li>Explainer Video</li></ul>
                                  </div>
                         </div>
                     </div></a>
