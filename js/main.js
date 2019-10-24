@@ -1,20 +1,28 @@
-// var line_01 = $('#line_01'),
-//     line_02 = $('#line_02'),
-//     line_03 = $('#line_03')
-//
-//
-//     document.getElementById("hb-icon").addEventListener("mouseover", function() {
-//         onAnimation();
-//         console.log('rolled over');
-//     });
-//
-//
-//     function onAnimation() {
-//     tl = new TimelineMax();
-//
-//     tl.to('#line_01', 0.1, {scaleX:200, ease: Power4.easeOut});
-//     tl.to('#line_02', 0.5, {scaleX:200, ease: Power4.easeOut});
-//     tl.to('#line_03', 0.5, {scaleX:200, ease: Power4.easeOut});
-//
-//     }
-//
+window.onload = function() {
+
+    var src = "../img/flyeLogo.gif?p" + new Date().getTime();
+    $("#logo").attr("src", src);
+
+    // $('.content-holder').css('display', 'none');
+    // $('.content-holder').fadeIn(300);
+    // $('.content-holder').addClass('fade-in');
+    // $('.cowts-navbar').addClass('slide-in');
+
+ };
+
+    function logoGif() {
+        $("#logo").hover(
+            function() {
+                $(this).attr("src", "../img/flyeLogo.gif");
+            },
+            function() {
+                $(this).attr("src", "../img/flyeLogo_static.png");
+            }                         
+        );                  
+    }
+
+    function init() {
+        logoGif();
+    }
+
+    init();
