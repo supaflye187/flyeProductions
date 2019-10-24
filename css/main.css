@@ -125,6 +125,7 @@ textarea {
   position: fixed;
   width: 100%;
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
   z-index: 1000;
 }
 
@@ -676,6 +677,10 @@ border-bottom: 3px solid #146891;
 
 .gif-inner {
   padding: 10px;
+}
+
+.content-holder {
+  display:none;
 }
 
 
