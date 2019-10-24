@@ -20,7 +20,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -323,67 +322,6 @@
         </section>
         </div>
         </div>
-        
-        
-        <script>
-        function filterMe() {
-          var filterVars = ['Animation', 'Display', 'Video']; // define filter categories here
-          var filterItems = document.querySelectorAll('.filter-wrap .filter-item');
-          
-              for (var i = 0; i < filterVars.length; ++i){
-                      window['btn' + filterVars[i]] = document.getElementById(filterVars[i]);
-                      window['get' + filterVars[i]] = document.querySelectorAll('.filter-wrap .' + filterVars[i]);
-          
-                      window['btn' + filterVars[i]].onclick = (function(i){
-                         
-                          
-                          return function(e){
-                              console.log(filterVars[i] + ' was clicked!!!!');
-                              e.preventDefault();
-                              filterMask();
-                              setTimeout(function(){
-                                  filterHide(filterItems);
-                                  filterShow(window['get' + filterVars[i]]);
-                                  }, 500);
-                              }
-                          }(i));
-                  }
-          
-          
-                  document.getElementById('filter-all').onclick = function(e){
-                  console.log('All button clicked!!!!');
-                  e.preventDefault();
-                  filterMask();
-                  setTimeout(function(){ filterShow(filterItems); }, 500);
-                  }
-          
-          
-                  function filterHide(el){
-                  for (var i = 0; i < el.length; ++i){
-                      el[i].style.display = 'none';
-                      }
-                  }
-                  function filterShow(el){
-                      for (var i = 0; i < el.length; ++i){
-                          el[i].style.display = 'block';
-                          }
-                      }
-                  function filterMask(){
-                      var mask = document.getElementById('filter-mask');
-                      mask.className = 'filter-mask';
-                      setTimeout(function(){ mask.className = '' }, 1000);
-                      }
-          
-          }
-          
-          filterMe();
-                 
-                  function runMe() {
-                       filterMe();
-                  }
-                  
-          document.addEventListener('swup:contentReplaced', runMe);
-          </script>
 </div>
 <footer id="myFooter">
   <div class="second-bar">
@@ -401,5 +339,6 @@
     <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
-    <script type="text/javascript" src="./js/FPmodal.js"></script>  
+    <script type="text/javascript" src="./js/FPmodal.js"></script>
+    <script type="text/javascript" src="./js/gallery-filter.js"></script>
 </html>      
