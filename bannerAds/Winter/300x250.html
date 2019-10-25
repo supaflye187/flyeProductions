@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>L'Oreal - WinterTrends</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+	
+		body, body * {
+			vertical-align: baseline;
+			border: 0;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+		}
+		
+			/*--------------------------CONTENT-------------------------------------*/
+			
+
+		#Overlay { position: absolute; top: 0px; left: 0px; opacity: 1; z-index: 9000; }
+
+		/*#bottle_01 { position: absolute; top: 75px; left: 19px; opacity: 1; z-index: 8000; }
+		#bottle_02 { position: absolute; top: 75px; left: 61px; opacity: 1; z-index: 7000; }
+		#bottle_03 { position: absolute; top: 75px; left: 100px; opacity: 1; z-index: 6000; }
+		#bottle_04 { position: absolute; top: 75px; left: 144px; opacity: 1; z-index: 5000; }
+		#bottle_05 { position: absolute; top: 75px; left: 185px; opacity: 1; z-index: 4000; }
+		#bottle_06 { position: absolute; top: 75px; left: 227px; opacity: 1; z-index: 3000; }*/
+
+		#bottle_01 { position: absolute; top: 75px; left: 19px; opacity: 1; }
+		#bottle_02 { position: absolute; top: 75px; left: 61px; opacity: 1; }
+		#bottle_03 { position: absolute; top: 75px; left: 100px; opacity: 1; }
+		#bottle_04 { position: absolute; top: 75px; left: 144px; opacity: 1; }
+		#bottle_05 { position: absolute; top: 75px; left: 185px; opacity: 1; }
+		#bottle_06 { position: absolute; top: 75px; left: 227px; opacity: 1; }
+
+		#txt_Cozy {position: absolute; width: 150px; height: 125px; top: 34px; left: 10px; opacity: 0;  }
+
+		#txt_inTheChalet { position: absolute; width: 150px; height: 125px; top: 52px; left: 118px; opacity: 0; }
+
+		#txt_New { position: absolute; width: 150px; height: 125px; top: 14px; left: 43px; opacity: 0; }
+
+		#txt_WinterCollection { position: absolute; width: 150px; height: 125px; top: 51px; left: 58px; opacity: 0;}
+
+		#Logo { position: absolute; width: 150px; height: 10px; top: 10px; left: 123px; opacity: 0; z-index: 9798; }
+
+		#arrow { position: absolute; width: 10px; height: 10px; top: 54px; left: 141px; opacity: 0;}
+
+		#txt_RollOver { position: absolute; width: 150px; height: 10px; top: 38px; left: 98px; opacity: 0;}
+
+		#name_01 { position: absolute; width: 89px; height: 19px; top: 38px; left: 78px;  opacity:0;}
+		#name_02 { position: absolute; width: 140px; height: 17px; top: 38px; left: 75px; opacity:0;}
+		#name_03 { position: absolute; width: 131px; height: 19px; top: 38px; left: 65px; opacity:0;}
+		#name_04 { position: absolute; width: 141px; height: 17px; top: 38px; left: 75px; opacity:0;}
+		#name_05 { position: absolute; width: 141px; height: 17px; top: 38px; left: 26px; opacity:0;}
+		#name_06 { position: absolute; width: 141px; height: 17px; top: 38px; left: 30px; opacity:0;}
+
+		#ctaBtn { position: absolute; top: 215px; left: 84px; cursor: pointer; z-index: 8000; opacity:1 }
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000000;
+			background:#262225;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+.style_prevu_kit
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+.style_prevu_kit:hover
+{
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+	</style>
+
+    
+    <script language="javascript">
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			}
+
+			addListeners(); 
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function politeInit(){	
+
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var BG =  document.getElementById('background'),
+					overlay = document.getElementById('Overlay'),
+					Logo = document.getElementById('Logo'), 
+					txt_Cozy = document.getElementById('txt_Cozy'), 
+					txt_inTheChalet = document.getElementById('txt_inTheChalet'), 
+					txt_New = document.getElementById('txt_New'),
+					txt_WinterCollection = document.getElementById('txt_WinterCollection'), 
+					bottle_01 = document.getElementById('bottle_01'),  
+					bottle_02 = document.getElementById('bottle_02'), 
+					bottle_03 = document.getElementById('bottle_03'),
+					bottle_04 = document.getElementById('bottle_04'), 
+					bottle_05 = document.getElementById('bottle_05'),
+					bottle_06 = document.getElementById('bottle_06'),
+					name_01 = document.getElementById('name_01'),
+					name_02 = document.getElementById('name_02'),
+					name_03 = document.getElementById('name_03'),
+					name_04 = document.getElementById('name_04'),
+					name_05 = document.getElementById('name_05'),
+					name_06 = document.getElementById('name_06'),
+					txt_rollOver = document.getElementById('txt_RollOver'),
+					arrow = document.getElementById('arrow'),
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_01 = new TimelineLite();
+				
+
+				// Frame animations start
+				tl_01.to(Logo, 1, {opacity:1, ease:Power1.easeOut},"+=1.0")
+				.to(overlay, 0.8, {opacity:0, ease:Power1.easeOut})
+				.to(txt_Cozy, 1, {opacity:1, left: "42px", ease:Power1.easeOut},"-=1.0")
+				.to(txt_inTheChalet, 1, {opacity:1, left: "98px", ease:Power1.easeOut})
+
+				//
+				.to(txt_Cozy, 1, {opacity:0, ease:Power1.easeOut},"+=1.5")
+				.to(txt_inTheChalet, 1, {opacity:0, ease:Power1.easeOut}, "-=1.5")
+				 
+				//
+				.to(txt_New, 1, {opacity:1, top: "34px", ease:Power1.easeOut}, "+=0.2")
+				.to(txt_WinterCollection, 1, {opacity:1, ease:Power1.easeOut})
+
+				//
+				.to(txt_New, 1, {opacity:0, ease:Power1.easeOut},"+=1.5")
+				.to(txt_WinterCollection, 1, {opacity:0, ease:Power1.easeOut}, "-=1.5")
+
+				//
+				.to(overlay, 0, {left: "1000px", ease:Power1.easeOut},"-=0.3")
+				.to(txt_rollOver, 1, {opacity:1, ease:Power1.easeOut})
+				.to(arrow, 1, {opacity:1, ease:Power1.easeOut}, "-=1.0")	  
+
+			}
+
+addListeners = function() {
+	//document.getElementById('linkLayer').addEventListener('click', hitArea_clickThrough, false);
+	//HitArea 1 Events
+	document.getElementById('bottle_01').addEventListener('mouseover', hitArea_01_MouseOver, false);
+	document.getElementById('bottle_01').addEventListener('mouseout', hitArea_01_MouseOut, false);
+	//document.getElementById('bottle_01').addEventListener('click', hitArea_clickThrough, false);
+
+	//HitArea 2 Events
+	document.getElementById('bottle_02').addEventListener('mouseover', hitArea_02_MouseOver, false);
+	document.getElementById('bottle_02').addEventListener('mouseout', hitArea_02_MouseOut, false);
+	//document.getElementById('bottle_02').addEventListener('click', hitArea_clickThrough, false);
+
+	//HitArea 3 Events
+	document.getElementById('bottle_03').addEventListener('mouseover', hitArea_03_MouseOver, false);
+	document.getElementById('bottle_03').addEventListener('mouseout', hitArea_03_MouseOut, false);
+	//document.getElementById('bottle_03').addEventListener('click', hitArea_clickThrough, false);
+
+	//HitArea 4 Events
+	document.getElementById('bottle_04').addEventListener('mouseover', hitArea_04_MouseOver, false);
+	document.getElementById('bottle_04').addEventListener('mouseout', hitArea_04_MouseOut, false);
+	//document.getElementById('bottle_04').addEventListener('click', hitArea_clickThrough, false);
+
+	//HitArea 5 Events
+	document.getElementById('bottle_05').addEventListener('mouseover', hitArea_05_MouseOver, false);
+	document.getElementById('bottle_05').addEventListener('mouseout', hitArea_05_MouseOut, false);
+	//document.getElementById('bottle_05').addEventListener('click', hitArea_clickThrough, false);
+
+	//HitArea 6 Events
+	document.getElementById('bottle_06').addEventListener('mouseover', hitArea_06_MouseOver, false);
+	document.getElementById('bottle_06').addEventListener('mouseout', hitArea_06_MouseOut, false);
+	//document.getElementById('bottle_06').addEventListener('click', hitArea_clickThrough, false);
+
+}
+
+hitArea_clickThrough = function () {
+	//Call Exits
+	//Enabler.exit('HTML5_Background_Clickthrough');
+}
+//
+hitArea_01_MouseOver = function() { document.getElementById("name_01").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="0";
+document.getElementById("arrow").style.opacity="0";
+}
+hitArea_01_MouseOut = function() { document.getElementById("name_01").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+document.getElementById("arrow").style.opacity="1";
+}
+//
+hitArea_02_MouseOver = function() { document.getElementById("name_02").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="0";
+document.getElementById("arrow").style.opacity="0";
+}
+hitArea_02_MouseOut = function() { document.getElementById("name_02").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+document.getElementById("arrow").style.opacity="1";
+}
+//
+hitArea_03_MouseOver = function() { document.getElementById("name_03").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="0";
+document.getElementById("arrow").style.opacity="0";
+}
+
+hitArea_03_MouseOut = function() { document.getElementById("name_03").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+document.getElementById("arrow").style.opacity="1";
+}
+
+//
+hitArea_04_MouseOver = function() { document.getElementById("name_04").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="0";
+document.getElementById("arrow").style.opacity="0";
+}
+hitArea_04_MouseOut = function() { document.getElementById("name_04").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+document.getElementById("arrow").style.opacity="1";
+}
+
+//
+hitArea_05_MouseOver = function() { document.getElementById("name_05").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="0";
+document.getElementById("arrow").style.opacity="0";
+}
+hitArea_05_MouseOut = function() { document.getElementById("name_05").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+document.getElementById("arrow").style.opacity="1";
+}
+//
+hitArea_06_MouseOver = function() { document.getElementById("name_06").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="0";
+document.getElementById("arrow").style.opacity="0";
+}
+
+hitArea_06_MouseOut = function() { document.getElementById("name_06").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+document.getElementById("arrow").style.opacity="1";
+}
+
+var clickTag = "http://www.google.com";
+			
+//============================================================================================//		
+			
+	</script>
+    
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	       	<!--Background Image -->
+          		<!--<div id="background"><img src="300_Winter_Background.jpg" /></div>-->
+          		<div id="background"><img src="300_Winter_Background.jpg" /></div>
+
+          		<!--Bottles -->
+          		
+          		<div id="name_06"><img src="300_Winter_Chalet_Txt.png" /></div>
+          		<div id="name_05"><img src="300_Winter_Altitude_Txt.png" /></div>
+          		<div id="name_04"><img src="300_Winter_Peak_Txt.png" /></div>
+          		<div id="name_03"><img src="300_Winter_Virgin_Txt.png" /></div>
+          		<div id="name_02"><img src="300_Winter_Apres_Txt.png" /></div>
+          		<div id="name_01"><img src="300_Winter_Haute_Txt.png" /></div>
+
+          		<!--Text -->
+          		<a href="javascript:window.open(window.clickTag)"><div id="Logo"><img src="300_Winter_Logo.png" /></div></a>
+          		<div id="txt_Cozy"><img src="300_headline_LetsGetCozy_Txt.png" /></div>
+          		<div id="txt_inTheChalet"><img src="300_headline_InTheChalet_Txt.png" /></div>
+          		<div id="txt_New"><img src="300_headline_New_Txt.png" /></div>
+          		<div id="txt_WinterCollection"><img src="300_headline_WinterCollection_Txt.png" /></div>
+
+          		<div id="txt_RollOver"><img src="300_rollOver_Txt.png" /></div>
+          		<div id="arrow"><img src="300_Winter_Arrow.png" /></div>
+
+          		<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+          		<!--CTA -->
+          		<a href="javascript:window.open(window.clickTag)"><div><img src="300_Winter_CTA.png" id="ctaBtn" /></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div id="Overlay"><img src="300_iceOverlay.png" /></div></a>
+
+          		<a href="javascript:window.open(window.clickTag)"><div id="bottle_06" class="style_prevu_kit"><img src="300_Winter_Chalet_bottle.png" width="55" height="139" /></div></a>
+         	 	
+          		<a href="javascript:window.open(window.clickTag)"><div id="bottle_05" class="style_prevu_kit"><img src="300_Winter_Altitude_bottle.png" width="55" height="139" /></div></a>
+
+         	 	<a href="javascript:window.open(window.clickTag)"><div id="bottle_04" class="style_prevu_kit"><img src="300_Winter_Peak_bottle.png" width="55" height="139" /></div></a>
+
+          		<a href="javascript:window.open(window.clickTag)"><div id="bottle_03" class="style_prevu_kit"><img src="300_Winter_Virgin_bottle.png" width="55" height="139" /></div></a>
+
+          		<a href="javascript:window.open(window.clickTag)"><div id="bottle_02" class="style_prevu_kit"><img src="300_Winter_Apres_bottle.png" width="55" height="139" /></div></a>
+
+          		<a href="javascript:window.open(window.clickTag)"><div id="bottle_01" class="style_prevu_kit"><img src="300_Winter_Haute_bottle.png" width="55" height="139" /></div></a>
+
+        </div>
+      <!-- <div id="linkLayer"></div>-->
+
+</body>
+
+</html>
+

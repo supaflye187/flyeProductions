@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>ThinkEnergy</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+		
+			/*--------------------------CONTENT-------------------------------------*/
+
+		#background {background-color: #BEBEBE;}
+
+		#txt_01 {
+			position: absolute;
+			clip: rect(0px, 200px, 140px, 0px);
+			top: 58px;
+			left: 29px;
+			opacity: 0;
+		}
+
+		#txt_02 {
+			position: absolute;
+			clip: rect(170px, 200px, 288px, 0px);
+			top: -115px;
+			left: 29px;
+			opacity: 0;
+		}
+
+		#txt_03 {
+			position: absolute;
+			clip: rect(125px, 220px, 200px, 0px);
+			top: -45px;
+			left: 29px;
+			opacity: 1;
+		}
+
+		#txt_unsurprise {
+			position: absolute;
+			clip: rect(280px, 600px, 400px, 0px);
+			top: -190px;
+			left: 29px;
+			opacity: 0;
+		}
+
+		#Logo {
+		 position: absolute;
+		 top: 50px; 
+		 left: 29px; 
+		 opacity: 0;  
+		}
+
+		#PUCT {
+			 position: absolute;
+			 top: 223px; 
+			 left: 233px;
+			 opacity:1;
+		}
+
+		#ctaBtn {
+			 position: absolute;
+			 display: block;
+			 width: 154px;
+			 height: 27px;
+			 background: url(300_ctaBtn.png) no-repeat 0 0;
+			 overflow: hidden;
+			 top: 183px; 
+			 left: 29px;
+			 cursor: pointer;
+			 opacity:0;
+		}
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+		.cardWrapper{
+		  width:300px;
+		  height:250px;
+		  position:relative;
+		  /*background-color:#333;*/
+		  float:left;
+		  margin-right:10px;
+		  cursor:pointer;
+		  -webkit-font-smoothing:antialiased;
+}
+
+.cardFace{
+  position:absolute;
+  width:300px;
+  height:250px;
+  overflow:hidden;
+}
+
+.front{
+  background-color:#fff;
+  /*border: 1px solid;*/ 
+}
+
+.back{
+  background-color:#711A84; 
+}
+
+
+#ctaBtn:hover {
+	background-position: 0 -26px;
+}
+
+
+	</style>
+    
+    <script language="javascript">
+
+    var clickTag = "http://www.google.com";
+	var Enabled = true;
+
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			}
+
+			addListeners();
+			//addClickTag();
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function politeInit(){	
+
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var Logo = document.getElementById('Logo'),
+					card = document.getElementById('card'),
+					txt_01 = document.getElementById('txt_01'),
+					txt_02 = document.getElementById('txt_02'),
+					txt_03 = document.getElementById('txt_03'),
+					txt_unsurprise = document.getElementById('txt_unsurprise'),
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_01 = new TimelineLite();
+
+					TweenLite.set(".cardWrapper", {perspective:800});
+					TweenLite.set("#card", {transformStyle:"preserve-3d"});
+					TweenLite.set(".back", {rotationY:-180});
+					TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
+
+				 //Frame animations start
+				 tl_01.to(txt_01, 1.2, {opacity:1, ease:Back.easeOut})
+				 	.to(card, 1.2, {rotationY:180, ease:Back.easeOut},'+=2.0')
+				 	.to(txt_01, 1.2, {opacity:0, ease:Back.easeOut},'-=1.2')
+
+				 	.to(card, 1.2, {rotationY:0, ease:Back.easeOut},'+=1.5')
+				 	.to(txt_02, 1.2, {opacity:1, ease:Back.easeOut},'-=1.2')
+
+				 	.to(txt_02, 1.0, {opacity:0, ease:Power1.easeOut},'+=0.8')
+				 	.to(txt_unsurprise, 1.0, {opacity:1, ease:Power1.easeOut},'+=0.2')
+				 	.to(Logo, 1.0, {opacity:1, ease:Power1.easeOut},'+=0.5')
+				 	.to(ctaBtn, 1.0, {opacity:1, ease:Power1.easeOut})
+
+			}
+
+addListeners = function() {
+	document.getElementById('linkLayer').addEventListener("click", clickTag);
+	document.getElementById('ctaBtn').addEventListener("click", clickTag);
+}
+
+clickTag = function() {
+	Enabler.exit('HTML5_Background_Clickthrough');
+}
+
+// addClickTag = function () {
+// 	//Call Exits
+// 	//Enabler.exit('HTML5_Background_Clickthrough');
+// 	if(Enabled) {
+// 	var jsLink = 'javascript:window.open(window.clickTag)';
+// 	var link = document.querySelectorAll('.clickTag');
+// 	for(j=0; j < link.length; j++) {
+// 		link[j].setAttribute('href', jsLink);
+// 	}
+// 	console.log('CLICKTAG');
+// 	//Enabled = false;
+// 	}
+// }
+	</script>
+    
+</head>
+
+<body>
+
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	       	<!--Background Image -->
+    	       
+    	       	<div id="background" class="cardWrapper">
+  <div id="card">
+    <div class="cardFace front"><img id="txt_01" src="300_Text.png"><img id="txt_02" src="300_Text.png"></div>
+    <div class="cardFace back"><img id="txt_03" src="300_Text.png"></div>
+  </div>
+  <!--OTHER ELEMENTS-->
+  <div id="Logo"><img src="think_Logo.png"></div>
+  <div id="txt_unsurprise"><img src="300_Text.png"></div>
+  <div id="PUCT"><img src="300_puct.png"></div>
+</div>
+          		<!--ClickTag-->
+          		<div id="linkLayer"></div>
+
+          		<!--CTA-->
+          		<div id="ctaBtn"></div>
+        </div>
+
+</body>
+
+</html>
+

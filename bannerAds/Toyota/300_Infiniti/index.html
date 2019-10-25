@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>Infiniti</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+	
+		body, body * {
+			vertical-align: baseline;
+			border: 0;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+		}
+		
+			/*--------------------------CONTENT-------------------------------------*/
+			
+			#bg { opacity:1; position:absolute; top:0px; left:0px; background:#000; }
+			#bg_img { opacity:0; position:absolute; top:-1px; left:-1px; }
+			#bg_img2 { opacity:0; position:absolute; top:-1px; left:-1px; }
+			#theCar { opacity:1; position:absolute; top:115px; left:710px; }
+			#theblur { opacity:1; position:absolute; top:-80px; left:-80px; }
+			#theblur2 { opacity:1; position:absolute; top:-80px; left:-80px; }
+			#txt1A { opacity:1; position:absolute; top:30px; left:64px; width:0px; height:auto; overflow:hidden; }
+			#txt1B { opacity:1; position:absolute; top:57px; left:41px; width:0px; height:auto; overflow:hidden; }
+			#txt2A { opacity:1; position:absolute; top:30px; left:74px; width:0px; height:auto; overflow:hidden; }
+			#txt2B { opacity:1; position:absolute; top:57px; left:66px; width:0px; height:auto; overflow:hidden; }
+			#txt3A { opacity:1; position:absolute; top:30px; left:99px; width:0px; height:auto; overflow:hidden; }
+			#txt3B { opacity:1; position:absolute; top:57px; left:54px; width:0px; height:auto; overflow:hidden; }
+			#prod { opacity:0; position:absolute; top:21px; left:-100px; }
+			#sparkle { opacity:0; position:absolute; top:135px; left:-40px; }
+			#legal { opacity:0; position:absolute; top:220px; left:181px;}
+			#offer { opacity:0; position:absolute; top:22px; left:171px;}
+			#tagline { opacity:0; position:absolute; top:85px; left:181px;}
+			#btn_cta { opacity:0; left:181px; top:183px; z-index:1; position:absolute; width:117px; max-height:29px; min-height:29px; background:#fff; border:1px solid #999;
+				-webkit-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.3);
+				-moz-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.3);
+				-ms-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.3);
+				-o-box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.3);
+				box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.3);
+				color:#555757; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:12px;
+				}
+	
+		
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+				background-color: rgba(255,255,255,0);
+				z-index:100000000000000;
+				
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000000;
+			background:#262225;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+	}
+	</style>
+    
+    <script language="javascript">
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			} 
+		addListeners();
+		}
+
+		 addListeners = function() {
+					document.getElementById('linkLayer').addEventListener('click', hitArea_clickThrough, false);
+				}
+
+				hitArea_clickThrough = function () {
+				//Call Exits
+				Enabler.exit('HTML5_Background_Clickthrough');
+				}
+		
+		function politeInit(){		
+			//Load in Javascript
+			//var extJavascript = document.createElement('script');
+			//extJavascript.setAttribute('type', 'text/javascript');
+			 //extJavascript.setAttribute('src', Enabler.getUrl('main.js'));
+			//extJavascript.setAttribute('src', Enabler.getFilename('main.js')); 
+			//document.getElementsByTagName('head')[0].appendChild(extJavascript);
+			
+			//Load in CSS
+			
+			//var extCSS=document.createElement('link');
+			//extCSS.setAttribute("rel", "stylesheet");
+			//extCSS.setAttribute("type", "text/css");
+			//extCSS.setAttribute("href", Enabler.getUrl("style.css")); 
+			//extCSS.setAttribute("href", Enabler.getFilename("style.css"));
+			//document.getElementsByTagName("head")[0].appendChild(extCSS);
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var bg_img =  document.getElementById('bg_img'),
+					theCar = document.getElementById('theCar'), 
+					mycar = document.getElementById('mycar'), 
+					txt1A = document.getElementById('txt1A'), 
+					txt1B = document.getElementById('txt1B'),
+					F2_txt1 = document.getElementById('F2_txt1'), 
+					F2_txt2 = document.getElementById('F2_txt2'),  
+					F3_txt1 = document.getElementById('F3_txt1'), 
+					F3_txt2 = document.getElementById('F3_txt2'),
+					prod = document.getElementById('prod'), 
+					offer = document.getElementById('offer'),
+					tagline = document.getElementById('tagline'),
+					btn_cta = document.getElementById('btn_cta'), 
+					legal = document.getElementById('legal'),
+					theblur = document.getElementById('theblur'),
+					theblur2 = document.getElementById('theblur2'),
+					tl = new TimelineLite();
+					
+					
+				// Frame animations start
+				  tl.to(bg_img, 0.25, {opacity:1, ease:Power1.easeOut})
+				  .to(theCar, 0.0, {scaleX:0.85, scaleY:0.85, ease:Power2.easeOut}, "-=0.0")
+				  .to(theCar, 0.9, {left:"40px", top:"155px", scaleX:1, scaleY:1, ease:Circ.easeOutIn}, "-=0.0")
+				  //
+				  .to(txt1A, 0.75, {width:"200px"}, "-=0.0")
+				  .to(theblur, 0.0, {left:"-80px", top:"-5px"}, "-=0.75")
+				  .to(theblur, 0.7, {left:"150px"}, "-=0.75")
+				  .to(theblur, 0.3, {opacity:0}, "-=0.4")
+				  //
+				  .to(txt1B, 0.75, {width:"260px", ease:Power1.easeOut}, "-=0.5")
+				  .to(theblur2, 0.0, {left:"-100px", top:"25px"}, "-=0.75")
+				  .to(theblur2, 0.75, {left:"190px"}, "-=0.75")
+				  .to(theblur2, 0.3, {opacity:0}, "-=0.4")
+				  //
+				  .to(txt1A, 0.5, {opacity:0}, "+=2.0")
+				  .to(txt1B, 0.5, {opacity:0}, "-=0.5")
+				  .to(txt2A, 0.75, {width:"200px"}, "-=0.4")
+				  .to(theblur, 0.0, {left:"-70px", top:"-5px", opacity:1}, "-=0.75")
+				  .to(theblur, 0.7, {left:"140px"}, "-=0.75")
+				  .to(theblur, 0.3, {opacity:0}, "-=0.4")
+				  //
+				  .to(txt2B, 0.75, {width:"190px", ease:Power1.easeOut}, "-=0.5")
+				  .to(theblur2, 0.0, {left:"-80px", top:"25px", opacity:1}, "-=0.75")
+				  .to(theblur2, 0.75, {left:"155px"}, "-=0.75")
+				  .to(theblur2, 0.3, {opacity:0}, "-=0.4")
+				  //
+				  .to(txt2A, 0.5, {opacity:0}, "+=2.0")
+				  .to(txt2B, 0.5, {opacity:0}, "-=0.5")
+				  .to(txt3A, 0.7, {width:"150px"}, "-=0.5")
+				  .to(theblur, 0.0, {left:"-50px", top:"-5px", opacity:1}, "-=0.7")
+				  .to(theblur, 0.7, {left:"120px"}, "-=0.7")
+				  .to(theblur, 0.3, {opacity:0}, "-=0.4")
+				  //
+				  .to(txt3B, 0.75, {width:"250px", ease:Power1.easeOut}, "-=0.5")
+				  .to(theblur2, 0.0, {left:"-80px", top:"25px", opacity:1}, "-=0.75")
+				  .to(theblur2, 0.75, {left:"180px"}, "-=0.75")
+				  .to(theblur2, 0.3, {opacity:0}, "-=0.4")
+				  //
+				  .to(txt3A, 0.5, {opacity:0, ease:Power1.easeOut}, "+=2.0")
+				  .to(txt3B, 0.5, {opacity:0, ease:Power1.easeOut}, "-=0.5")
+				  .to(theCar, 0.75, {opacity:0, ease:Power1.easeOut}, "-=0.5")
+				  .to(bg_img, 0.75, {opacity:0, ease:Power1.easeOut}, "-=0.75")
+				  .to(bg_img2, 0.5, {opacity:1, ease:Power1.easeOut}, "-=0.25")
+				  
+				  .to(prod, 0.75, {opacity:1, left:"33px", ease:Power1.easeOut}, "-=0.5")
+				  .to(sparkle, 0.0, {top:"153px", left:"-78px", ease:Power1.easeOut}, "-=0.75")
+				  .to(sparkle, 0.75, {opacity:1, top:"158px", ease:Power1.easeOut}, "-=0.0")
+				  .to(offer, 0.75, {opacity:1, left:"151px", ease:Power1.easeOut}, "-=0.5")
+				  .to(tagline, 0.75, {opacity:1, left:"161px", ease:Power1.easeOut}, "-=0.5")
+				  .to(btn_cta, 0.75, {opacity:1, left:"161px", ease:Power1.easeOut}, "-=0.5")
+				  .to(legal, 0.75, {opacity:1, left:"161px", ease:Power1.easeOut}, "-=0.5")
+				  .to(btn_cta, 0.5, {scaleX:1.1, scaleY:1.1, color:"#CCC", ease:Power1.easeOut}, "-=0.0")
+				  .to(btn_cta, 0.5, {scaleX:1.0, scaleY:1.0, color:"#555", ease:Power1.easeOut}, "-=0.1")
+				  
+				  
+				  ;
+				
+				//$('#linkLayer').click(function(){ clickThrough();});
+			}
+			
+			// =============================================================================================			
+
+		
+		//var clickTag = "https://www.infiniti.com/";
+			
+	</script>
+    
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	<div id="bg"><img id="bg_img" src="BG_main.jpg"/></div>
+        <div id="bg2"><img id="bg_img2" src="BG_main2.jpg"/></div>
+        <!-- FRAME 1 -->
+        <div id="theCar"><img id="mycar" src="car.png" /></div>
+    	<div id="txt1A"><img src="txt1_A.png" /></div>
+        <div id="txt1B"><img src="txt1_B.png" /></div>
+        <!-- END F1 -->
+        <!-- FRAME 2 -->
+    	<div id="txt2A"><img src="txt2_A.png" /></div>
+        <div id="txt2B"><img src="txt2_B.png" /></div>
+        <!-- END F2 -->
+        <!-- FRAME 3 -->
+    	<div id="txt3A"><img src="txt3_A.png" /></div>
+        <div id="txt3B"><img src="txt3_B.png" /></div>
+        <!-- END F3 -->
+        <!-- FRAME 4 -->
+    	<div id="prod"><img src="prod_gold.png" /></div>
+        <div id="sparkle"><img src="blur.png" /></div>
+        <div id="offer"><img src="offer_4995.png" /></div>
+        <div id="tagline"><img src="tagline.png" /></div>
+        <div id="legal"><img src="legal.png" /></div>
+        <div id="btn_cta">
+        		<table width="117" height="29" cellspacing="8">
+        			<tr>
+                    	<td align="center" valign="middle">REDEEM NOW</td>
+                    </tr>
+                </table>
+        </div>
+        <!-- END F4 -->
+        <!-- <a href="javascript:window.open(window.clickTag, '_blank');void(0);"><div id='linkLayer'></div></a> -->
+        <div id="linkLayer"></div>
+        <div id="theblur"><img src="blur.png" /></div>
+        <div id="theblur2"><img src="blur.png" /></div>
+    </div> 
+</body>
+
+</html>
+

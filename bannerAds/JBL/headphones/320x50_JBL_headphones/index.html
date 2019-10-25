@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=320,height=50">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>320x50</title>
+		<!--Include for Doubleclick Ads-->
+		<script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; top: 0px; left: 0px; opacity:0;}
+
+		#linkLayer {
+			position:absolute;
+			left:0px;
+			top:0px;
+			width:320px;
+			height:50px;
+			overflow: hidden;
+			cursor: pointer;
+			background-color: #000;
+			z-index: 1000;
+			opacity: 0;
+			}
+
+		#container {
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:318px;
+			height:48px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+		/*YOUR CSS
+		=========================================*/
+		/*
+		*
+		* animation frames - 01
+		*/
+
+		.container {
+			margin-left: -100px;
+			margin-top: 20px;
+			transform: rotate(38deg);
+		}
+
+		#shape_container {
+			position: relative;
+			/* margin-left: 50px; */
+
+			/* margin-left: -200px; */
+			
+			transform: scale(0.5);
+
+		}
+
+		#rectangle_01 {
+			position: absolute;
+			width: 5px;
+			height: 250px;
+			top: -600px;
+			left: 200px;
+			background-color: #ffb400;
+		}
+
+		#rectangle_02 {
+			position: absolute;
+			width: 5px;
+			height: 200px;
+			top: -600px;
+			left: 100px;
+			background-color: #ffb400; 
+		}
+
+		#rectangle_03 {
+			position: absolute;
+			top: -600px;
+			left: 46px;
+
+			width: 5px;
+			height: 250px;
+			background-color: #ffb400; 
+		}
+
+		#rectangle_04 {
+			position: absolute;
+			top: -600px;
+			left: 170px;
+
+			width: 5px;
+			height: 280px;
+			background-color: #ffb400; 
+		}
+
+		#rectangle_lg_01 {
+			position: absolute;
+			width: 130px;
+			height: 440px;
+			top: -800px;
+			left: 0px;
+			background-color: #ffb400; 
+			opacity: 0.46;
+		}
+
+		#rectangle_lg_02 {
+			position: absolute;
+			width: 130px;
+			height: 440px;
+			top: -800px;
+			left: 80px;
+			background-color: #ffb400; 
+			opacity: 0.46;
+		}
+
+		#rectangle_lg_03 {
+			position: absolute;
+			width: 130px;
+			height: 340px;
+			top: 200px;
+			left: 60px;
+			background-color: #ffb400; 
+			opacity: 0.46;
+		}
+
+
+		#arrow_icon_01 {
+			position: absolute;
+			top: -600px;
+			left: 70px;
+			width: 106px;
+			height: 74px;
+			opacity: 0.5;
+			transform-origin: 50% 50%;
+			transform: scale(1.2);
+		}
+
+		#arrow_icon_02 {
+			position: absolute;
+			top: -600px;
+			left: -40px;
+			width: 106px;
+			height: 74px;
+			opacity: 1;
+			transform-origin: 50% 50%;
+			transform: scale(1.5);
+		}
+
+		#arrow_icon_03 {
+			position: absolute;
+			top: -600px;
+			left: 22px;
+			width: 106px;
+			height: 74px;
+			opacity: 0.5;
+			transform-origin: 50% 50%;
+			transform: scale(1.3);
+		}
+
+		#arrow_icon_04 {
+			position: absolute;
+			top: -600px;
+			left: 5px;
+			width: 106px;
+			height: 74px;
+			opacity: 0.5;
+			transform-origin: 50% 50%;
+			transform: scale(1.3);
+		}
+
+		#original_txt {
+			position: absolute;
+			clip: rect(0px,110px,50px,0px);
+			top: 3px;
+			left: 168px;
+			opacity: 0;
+			
+		}
+
+		#dareTxt {
+			position: absolute;
+			top: 6px;
+			left: 175px;
+			opacity: 0;
+		}
+
+		.arrow_fill_01 {
+			fill:#ffff8c;
+			/* fill:#000; */
+			}
+
+		.arrow_fill_02 {
+			fill:#ffc932;
+			}
+
+		.arrow_fill_03 {
+			fill:#ffc932;
+			}
+
+		.arrow_fill_04 {
+			fill:#ffc932;
+			}
+
+		.jbl_logo {
+			position: absolute;
+			top: 6px;
+			left: 14px;
+			width: 30px;
+			height: 20px;
+		}
+
+		#headphones_blk {
+			position: absolute;
+			top: 0px;
+			left: -150px;
+			opacity: 0;
+		}
+
+		#headphones_wht {
+			position: absolute;
+			top: 0px;
+			left: -50px;
+			opacity: 0;
+		}
+
+		#headphones_blk_flash {
+			position: absolute;
+			top: 0px;
+			left: -150px;
+			opacity: 1;
+		}
+
+		#headphones_wht_flash {
+			position: absolute;
+			top: 0px;
+			left: -50px;
+			opacity: 1;
+		}
+
+		#ctaBtn {
+			position: absolute;
+			top: 8px;
+			left: 320px;
+			opacity: 1;
+		}
+
+		.ctaBg {
+			position: relative;
+			width: 80px;
+			height: 25px;
+			border: 3px solid #fff;
+			background-color: #d04a2a;
+		}
+
+		.ctaBg img {
+			position: absolute;
+			clip: rect(0px,250px,300px,120px);
+			top: -10px;
+			left: -118px;
+		}
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+	
+
+    <script language="javascript">
+		var clickTag = "www.google.com";
+
+		// DOUBLECLICK LOADER FUNCTION
+		// //Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+			}
+		}
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			 startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG')
+
+				var headphones_blk = document.getElementById('headphones_blk')
+				var headphones_wht = document.getElementById('headphones_wht')
+				var headphones_blk_flash = document.getElementById('headphones_blk_flash')
+				var headphones_wht_flash = document.getElementById('headphones_wht_flash')
+
+				var dare_txt = document.getElementById('dareTxt')
+
+				var rectangle_lg_01 = document.getElementById('rectangle_lg_01')
+				var rectangle_lg_02 = document.getElementById('rectangle_lg_02')
+				var rectangle_lg_03 = document.getElementById('rectangle_lg_03')
+
+				var rectangle_01 = document.getElementById('rectangle_01')
+				var rectangle_02 = document.getElementById('rectangle_02')
+				var rectangle_03 = document.getElementById('rectangle_03')
+				var rectangle_04 = document.getElementById('rectangle_04')
+
+				var arrow_icon_01 = document.getElementById('arrow_icon_01')
+				var arrow_icon_02 = document.getElementById('arrow_icon_02')
+				var arrow_icon_03 = document.getElementById('arrow_icon_03')
+				var arrow_icon_04 = document.getElementById('arrow_icon_04')
+
+				var original_txt = document.getElementById('original_txt')
+				var percentOff_txt = document.getElementById('percentOff_txt')
+				var cyberMonday_txt = document.getElementById('cyberMonday_txt')
+				var ctaBtn = document.getElementById('ctaBtn')
+
+
+				//Timeline Function - can set multiple Timelines
+					var tl = new TimelineLite();
+					var tl_animate_01 = new TimelineLite();
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 tl.to(headphones_wht, 0.5, {opacity:1, left:"110px", ease: Power3.easeOut})
+				  .to(headphones_wht_flash, 1.2, {opacity:0, ease: Power3.easeOut},"-=0.5")
+				  .to(headphones_wht_flash, 0.5, {left:"110px", ease: Power3.easeOut},"-=1.2")
+
+				.to(headphones_blk, 0.5, {opacity:1, left:"72px", ease: Power3.easeOut},"-=1.0")
+				  .to(headphones_blk_flash, 1.2, {opacity:0, ease: Power3.easeOut},"-=1.0")
+				  .to(headphones_blk_flash, 0.5, {left:"72px", ease: Power3.easeOut},"-=1.2")
+
+				  
+
+				  .to(dare_txt, 0.5, {opacity:1, left:"173px", ease: Power3.easeOut},"-=0.7")
+
+
+					//FRAME 01 - OUT
+				 //============================================================
+				  .to(dare_txt, 0.5, {opacity:0, left:"180px", ease: Power3.easeOut},"+=2.5")
+
+				  .to(original_txt, 0.5, {opacity:1, left:"168px",  ease: Power3.easeOut},"-=0.5")
+
+				 .to(headphones_wht, 0.5, {opacity:0, left:"-150px", ease: Power3.easeOut},"+=2.5")
+				 .to(headphones_blk, 0.5, {opacity:0, left:"-150px", ease: Power3.easeOut},"-=0.5")
+
+				 .to(original_txt, 0.5, {left:"60px", scale: 1, ease: Power3.easeOut},"-=0.5")
+
+				   .to(ctaBtn, 0.5, {opacity:1, left:'190px', ease: Power3.easeOut})
+
+				   tl_animate_01.to(rectangle_lg_01, 8, {top: '200px', ease: Power3.easeOut})
+								 .to(rectangle_01, 7, {top: '350px', ease: Power3.easeOut},"-=8.0")
+								 .to(rectangle_02, 8, {top: '350px', ease: Power3.easeOut},"-=7.5")
+								 .to(rectangle_03, 7, {top: '350px', ease: Power3.easeOut},"-=7.0")
+
+								 .to(arrow_icon_01, 10, {top: '300px', ease: Power3.easeOut},"-=8.0")
+								 .to(arrow_icon_02, 7, {top: '350px', ease: Power3.easeOut},"-=9.0")
+
+								//animation frame 02
+								 .to(rectangle_01, 7, {top: '-600px', ease: Power3.easeOut},"-=8.0")
+								 .to(rectangle_02, 8, {top: '-600px', ease: Power3.easeOut},"-=7.5")
+								 .to(rectangle_03, 7, {top: '-600px', ease: Power3.easeOut},"-=7.0")
+								 .to(arrow_icon_01, 10, {top: '-600px', ease: Power3.easeOut},"-=8.0")
+								 .to(arrow_icon_02, 7, {top: '-600px', ease: Power3.easeOut},"-=9.0")
+								 .to(rectangle_02, 8, {top: '-600px', ease: Power3.easeOut},"-=7.5")
+								 .to(rectangle_lg_02, 8, {top: '-800px', ease: Power3.easeOut},"-=10.0")
+
+		
+								 //animation frame 03
+								 .to(rectangle_lg_02, 8, {top: '200px', ease: Power3.easeOut},"-=10.0")
+								//  .to(arrow_icon_01, 10, {top: '100px', ease: Power3.easeOut},"-=8.0")
+								//  .to(arrow_icon_02, 5, { opacity: 0, top: '100px', ease: Power3.easeOut},"-=9.0")
+								//  .to(rectangle_02, 5, {top: '100px', ease: Power3.easeOut},"-=7.5")
+								
+
+								 //animation frame 3 - endframe shapes
+								 .to(arrow_icon_03, 3, {top: '5px', ease: Power0.linear},"-=8.0")
+								 .to(arrow_icon_04, 3, {top: '-60px', ease: Power0.linear},"-=8.0")
+
+								 .to(rectangle_04, 3, {top: '-425px', ease: Power0.linear},"-=8.0")
+								 .to(rectangle_lg_03, 3, {top: '-250px', ease: Power0.linear},"-=8.0")  			
+			}
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <div id="BG"><img src="320x50_colorBG.jpg" ></div>
+					<div class="container">
+				   <div id="shape_container">
+					<div id="rectangle_01"></div>
+					<div id="rectangle_02"></div>
+					<div id="rectangle_03"></div>
+					<div id="rectangle_04"></div>
+
+					<div id="rectangle_lg_01"></div>
+					<div id="rectangle_lg_02"></div>
+					<div id="rectangle_lg_03"></div>
+
+					<svg id="arrow_icon_01" x="0px" y="0px" viewBox="0 0 168.5 138" style="enable-background:new 0 0 168.5 138;" xml:space="preserve">
+						<path class="arrow_fill_01" d="M68.4,73.5c-4.6,0-8.3,3.7-8.3,8.3c0,4.6,3.7,8.3,8.3,8.3c4.6,0,8.3-3.7,8.3-8.3C76.7,77.2,72.9,73.5,68.4,73.5  "></path>
+						<polygon class="arrow_fill_01" points="55.1,40.1 68.4,70.3 81.6,40.1 "></polygon>
+					</svg>
+					<svg id="arrow_icon_02" x="0px" y="0px" viewBox="0 0 168.5 138" style="enable-background:new 0 0 168.5 138;" xml:space="preserve">
+						<path class="arrow_fill_02" d="M68.4,73.5c-4.6,0-8.3,3.7-8.3,8.3c0,4.6,3.7,8.3,8.3,8.3c4.6,0,8.3-3.7,8.3-8.3C76.7,77.2,72.9,73.5,68.4,73.5  "></path>
+						<polygon class="arrow_fill_02" points="55.1,40.1 68.4,70.3 81.6,40.1 "></polygon>
+					</svg>
+					<svg id="arrow_icon_03" x="0px" y="0px" viewBox="0 0 168.5 138" style="enable-background:new 0 0 168.5 138;" xml:space="preserve">
+						<path class="arrow_fill_03" d="M68.4,73.5c-4.6,0-8.3,3.7-8.3,8.3c0,4.6,3.7,8.3,8.3,8.3c4.6,0,8.3-3.7,8.3-8.3C76.7,77.2,72.9,73.5,68.4,73.5  "></path>
+						<polygon class="arrow_fill_03" points="55.1,40.1 68.4,70.3 81.6,40.1 "></polygon>
+					</svg>
+					<svg id="arrow_icon_04" x="0px" y="0px" viewBox="0 0 168.5 138" style="enable-background:new 0 0 168.5 138;" xml:space="preserve">
+						<path class="arrow_fill_04" d="M68.4,73.5c-4.6,0-8.3,3.7-8.3,8.3c0,4.6,3.7,8.3,8.3,8.3c4.6,0,8.3-3.7,8.3-8.3C76.7,77.2,72.9,73.5,68.4,73.5  "></path>
+						<polygon class="arrow_fill_03" points="55.1,40.1 68.4,70.3 81.6,40.1 "></polygon>
+					</svg>
+				</div>
+			</div>
+				   
+				   <!--HTML ELEMENTS HERE-->
+				   <div class="jbl_logo"><img src="jbl_logo.svg"></div>
+				   <div id="headphones_blk"><img src="320x50_headphones_blk.png"></div>
+				   <div id="headphones_wht"><img src="320x50_headphones_wht.png"></div>
+				   <div id="original_txt"><img src="320x50_txt.png"></div>
+				   <div id="dareTxt"><img src="dare_logo.png"></div>
+				   <div id="headphones_blk_flash"><img src="320x50_headphones.gif"></div>
+				   <div id="headphones_wht_flash"><img src="320x50_headphones.gif"></div>
+				   
+					<!--CTA-->
+					<div id="ctaBtn">
+						<div class="ctaBg"><img src="320x50_txt.png"></div>
+					</div>
+					<!--===============================CLICKTAGS=========================-->
+					<!--=============DC Clicktag==============-->
+					<div id="linkLayer"></div>
+    </div>
+</body>
+
+<script>
+
+	//DC STUDIO clickTag Event Handler
+		window.document.getElementById('linkLayer').addEventListener('click', clickTag, false);
+			
+
+			/*Clicktag for DC Studio*/
+			function clickTag() {
+				Enabler.exit('HTML5_Background_Clickthrough');
+				console.log('clicked!');
+			}
+</script>
+</html>

@@ -1,0 +1,281 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>ThinkEnergy</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+		
+			/*--------------------------CONTENT-------------------------------------*/
+
+		#background {background-color: #fff;}
+
+		#TEMP_01 {opacity:0;}
+
+
+		#txt_switch {
+			position: absolute;
+			clip: rect(0px, 250px, 55px, 0px);
+			top: 109px;
+			left: 19px;
+			opacity: 0;
+		}
+
+		#txt_better {
+			position: absolute;
+			clip: rect(60px, 230px, 120px, 0px);
+			top: 50px;
+			left: 18px;
+			opacity: 0;
+		}
+
+		#txt_easy {
+			position: absolute;
+			clip: rect(120px, 220px, 150px, 0px);
+			top: -33px;
+			left: 21px;
+			opacity: 0;
+		}
+
+		#txt_transparent {
+			position: absolute;
+			clip: rect(150px, 250px, 180px, 0px);
+			top: -32px;
+			left: 21px;
+			opacity: 0;
+		}
+
+		#txt_simple {
+			position: absolute;
+			clip: rect(180px, 220px, 220px, 0px);
+			top: -33px;
+			left: 21px;
+			opacity: 0;
+		}
+
+
+		#txt_getThink {
+			position: absolute;
+			clip: rect(150px, 220px, 210px, 0px);
+			top: -59px;
+			left: 30px;
+			opacity: 0;
+		}
+
+		#txt_unsurprise {
+			position: absolute;
+			clip: rect(210px, 600px, 400px, 0px);
+			top: -118px;
+			left: 21px;
+			opacity: 0;
+		}
+
+		#Logo {
+		 position: absolute;
+		 top: 55px; 
+		 left: 22px; 
+		 opacity: 0;  
+		}
+
+		#PUCT {
+			 position: absolute;
+			 top: 226px; 
+			 left: 233px;
+			 opacity:1;
+		}
+
+		#ctaBtn {
+			 position: absolute;
+			 display: block;
+			 width: 154px;
+			 height: 27px;
+			 background: url(300_ctaBtn.png) no-repeat 0 0;
+			 overflow: hidden;
+			 top: 191px; 
+			 left: 23px;
+			 cursor: pointer;
+			 opacity:0;
+		}
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+#ctaBtn:hover {
+	background-position: 0 -27px;
+}
+
+
+	</style>
+    
+    <script language="javascript">
+
+    var clickTag = "http://www.google.com";
+	var Enabled = true;
+
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			}
+
+			addListeners();
+			//addClickTag();
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function politeInit(){	
+
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var Logo = document.getElementById('Logo'),
+					txt_getThink = document.getElementById('txt_getThink'),
+					txt_switch = document.getElementById('txt_switch'),
+					txt_better = document.getElementById('txt_better'),
+					animation = document.getElementById('animation'),
+					txt_easy = document.getElementById('txt_easy'),
+					txt_transparent = document.getElementById('txt_transparent'),
+					txt_simple = document.getElementById('txt_simple'),
+					txt_unsurprise = document.getElementById('txt_unsurprise'),
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_01 = new TimelineLite();
+
+
+				 //Frame animations start
+				 tl_01.to(txt_switch, 1.0, {opacity:1, ease:Power1.easeOut})
+				 	.to(txt_switch, 0.2, {opacity:0, ease:Power1.easeOut},'+=2.0')
+
+				 	.to(txt_better, 1.0, {opacity:1, ease:Power1.easeOut})
+				 	.to(txt_better, 0.2, {opacity:0, ease:Power1.easeOut},'+=0.8')
+
+				 	.to(txt_easy, 1.0, {opacity:1, ease:Power1.easeOut}, '+=0.2')
+				 	.to(txt_transparent, 1.0, {opacity:1, ease:Power1.easeOut}, '+=0.2')
+				 	.to(txt_simple, 1.0, {opacity:1, ease:Power1.easeOut}, '+=0.2')
+
+				 	.to(txt_easy, 0.2, {opacity:0, ease:Power1.easeOut},'+=1.0')
+				 	.to(txt_transparent, 0.2, {opacity:0, ease:Power1.easeOut})
+				 	.to(txt_simple, 0.2, {opacity:0, ease:Power1.easeOut})
+
+				 	.to(animation, 0.5, {opacity:0, ease:Power1.easeOut} ,'-=0.2')
+
+				 	//finalFrame
+				 	.to(txt_unsurprise, 1.0, {opacity:1, ease:Power1.easeOut})
+				 	.to(Logo, 1.0, {opacity:1, ease:Power1.easeOut},'+=0.5')
+				 	.to(ctaBtn, 1.0, {opacity:1, ease:Power1.easeOut})
+
+			}
+
+addListeners = function() {
+	document.getElementById('linkLayer').addEventListener("click", clickTag);
+	document.getElementById('ctaBtn').addEventListener("click", clickTag);
+}
+
+clickTag = function() {
+	Enabler.exit('HTML5_Background_Clickthrough');
+}
+
+	</script>
+    
+</head>
+
+<body>
+
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	       	<!--Background Image -->  	       
+    	       	<div id="background"></div>
+    	       	<img id="animation" src="Concept2_v2_300_ANIM.gif" width="300" height="250" />
+    	       	<!-- <img id="TEMP_01" src="TEMP_06.jpg" width="300" height="250" /> -->
+    	       	<!--OTHER ELEMENTS-->
+    	       	<div id="txt_switch"><img src="300_Text.png"></div>
+    	       	<div id="txt_better"><img src="300_Text.png"></div>
+    	       	<div id="txt_easy"><img src="300_Text.png"></div>
+    	       	<div id="txt_transparent"><img src="300_Text.png"></div>
+    	       	<div id="txt_simple"><img src="300_Text.png"></div>
+
+				  <div id="Logo"><img src="think_Logo.png"></div>
+				  <div id="txt_unsurprise"><img src="300_Text.png"></div>
+				  <div id="PUCT"><img src="300_puct.png"></div>
+          		<!--ClickTag-->
+          		<div id="linkLayer"></div>
+
+          		<!--CTA-->
+          		<div id="ctaBtn"></div>
+        </div>
+
+</body>
+
+</html>
+
