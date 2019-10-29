@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+	<title>300x250 Epson - Supertank</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		html {
+			background-color: #fff;
+		}
+
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {background-color: #fff;}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:250px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+		#logo {
+			position: absolute;
+			top: 168px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}	
+
+		#ctaBtn {
+			position: absolute;
+			top: 203px;
+			left: 155px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		/*YOUR CSS
+		=========================================*/
+
+		#shaq {
+			position: absolute;
+			top: 3px;
+			left: -100px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#printer {
+			position: absolute;
+			top: 95px;
+			left: 250px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#cartridges {
+			position: absolute;
+			top: 128px;
+			left: 250px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_01a {
+			position: absolute;
+			clip: rect(0px,200px,20px,0px);
+			top: 35px;
+			left: 129px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_01b {
+			position: absolute;
+			clip: rect(20px,200px,50px,0px);
+			top: 35px;
+			left: 149px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_02 {
+			position: absolute;
+			clip: rect(50px,200px,100px,0px);
+			top: -35px;
+			left: 131px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_02a {
+			position: absolute;
+			clip: rect(100px,200px,130px,0px);
+			top: -35px;
+			left: 151px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;	
+		}
+
+		#text_02b {
+			position: absolute;
+			clip: rect(130px,200px,190px,0px);
+			top: -69px;
+			left: 141px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;			
+		}
+
+		/* #text_03 {
+			position: absolute;
+			clip: rect(185px,200px,300px,0px);
+			top: -161px;
+			left: 138px;
+			opacity: 0;			
+		} */
+
+		#text_03a {
+			position: absolute;
+			clip: rect(185px,200px,220px,0px);
+			top: -161px;
+			left: 128px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;		
+		}
+
+		#text_03b {
+			position: absolute;
+			clip: rect(220px,200px,300px,0px);
+			top: -161px;
+			left: 148px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;		
+		}
+
+		#purple_shape {
+			position: absolute;
+			top: 150px;
+			left: 90px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;		
+		}
+
+		#shapes_bg_01 {
+			position: absolute;
+			clip: rect(0px,200px,50px,0px);
+			top: 0px;
+			left: 0px;
+			opacity: 0;		
+		}
+
+		#shapes_bg_02 {
+			position: absolute;
+			clip: rect(0px,500px,50px,50px);
+			top: 0px;
+			left: 0px;
+			opacity: 0;		
+		}
+
+		#shapes_bg_03 {
+			position: absolute;
+			clip: rect(100px,300px,300px,0px);
+			top: 0px;
+			left: 0px;
+			opacity: 0;		
+		}
+
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		// DOUBLECLICK LOADER FUNCTION
+		// //Initialize Enabler
+		// if (Enabler.isInitialized()) {
+		// 	init();
+		// } else {
+		// 	Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		// }
+		// //Run when Enabler is ready
+		// function init(){
+		// 	//politeInit();
+		// 	//Load in Javascript
+		// 	if(Enabler.isPageLoaded()){
+		// 		politeInit();
+		// 	}else{
+		// 		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		// 	}
+		// }
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var ctaBtn = document.getElementById('ctaBtn');
+				var logo = document.getElementById('logo');
+				var text_01a = document.getElementById('text_01a');
+				var text_01b = document.getElementById('text_01b');
+				var text_02 = document.getElementById('text_02');
+				var text_02a = document.getElementById('text_02a');
+				var text_02b = document.getElementById('text_02b');
+				var text_03a = document.getElementById('text_03a');
+				var text_03b = document.getElementById('text_03b');
+
+				var shaq = document.getElementById('shaq');
+				var cartridges = document.getElementById('cartridges');
+				var printer = document.getElementById('printer');
+
+				var shapes_bg_01 = document.getElementById('shapes_bg_01');
+				var shapes_bg_02 = document.getElementById('shapes_bg_02');
+				var shapes_bg_03 = document.getElementById('shapes_bg_03');
+			
+
+				var purple_shape = document.getElementById('purple_shape');
+				var printer = document.getElementById('printer');
+
+				
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != 1 && looping == true) {
+						counter ++;
+						this.restart();
+						} else {
+							return;
+						}
+						}});
+					
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 tl_main.to(shapes_bg_01, 1, {opacity:1, ease: Power1.easeOut})
+						.to(shapes_bg_02, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						.to(shapes_bg_03, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
+				 		.to(purple_shape, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						 .to(logo, 1, {opacity:1, top:"168px", ease: Power1.easeOut},"-=0.8")
+				 		.to(shaq, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.6")
+						 .to(printer, 0.5, {opacity:1, left:"145px", ease: Power1.easeOut},"-=0.5")
+						 .to(text_01a, 0.5, {opacity:1, left:"139px", ease: Power1.easeOut})
+						 .to(text_01b, 0.5, {opacity:1, left:"139px",  ease: Power1.easeOut},"-=0.5")
+						 .to(ctaBtn, 0.5, {opacity:1,  ease: Power1.easeOut})
+
+						//FRAME 01 - OUT
+						//=========================================================
+
+						 .to(text_01a, 0.5, {opacity:0, ease: Power1.easeOut},"+=2.0")
+						 .to(text_01b, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+
+						//FRAME 02 - IN
+						//=========================================================
+						
+						.to(text_02, 0.5, {opacity:1, left:"141px", ease: Power1.easeOut})
+						.to(text_02a, 0.5, {opacity:1, left:"141px", ease: Power1.easeOut},"-=0.5")
+
+						//FRAME 02 - OUT
+						//========================================================
+				
+						.to(text_02a, 0.5, {opacity:0, ease: Power1.easeOut},"+=2.5")
+						.to(printer, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+
+						//FRAME 03 - IN
+						//========================================================
+
+						.to(text_02b, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(cartridges, 0.5, {opacity:1, left:"165px", ease: Power1.easeOut},"-=0.5")
+
+						//FRAME 03 - OUT
+						//========================================================
+						
+						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut},"+=2.5")
+						.to(text_02b, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(cartridges, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+
+
+						//FRAME 04 - IN
+						//========================================================
+
+						.to(printer, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(text_03a, 0.5, {opacity:1, left:"138px", ease: Power1.easeOut},"-=0.5")
+						.to(text_03b, 0.5, {opacity:1, left:"138px", ease: Power1.easeOut},"-=0.3")
+
+
+			}
+
+
+			/*Clicktag for DC Studio*/
+			// function clickTag() {
+			// 	Enabler.exit('HTML5_Background_Clickthrough');
+			// }
+
+			//DC STUDIO clickTag Event Handler
+			//document.getElementById('linkLayer').addEventListener('click', clickTag, false);
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <div id="BG"></div>
+				   <!-- <div id="TEMP"><img src="temp_04.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->	
+				   <div id="shapes_bg_01"><img src="shapes_bg.jpg"></div> 
+				   <div id="shapes_bg_02"><img src="shapes_bg.jpg"></div> 
+				   <div id="shapes_bg_03"><img src="shapes_bg.jpg"></div>    
+				   <div id="shaq"><img src="shaq.png"></div>
+				   <div id="logo"><img src="epson_logo.png"></div>
+
+				   <div id="purple_shape"><img src="purple_shape.png"></div>
+				   <div id="text_01a"><img src="text_sheet.png"></div>
+				   <div id="text_01b"><img src="text_sheet.png"></div>
+				   <div id="text_02"><img src="text_sheet.png"></div>
+				   <div id="text_02a"><img src="text_sheet.png"></div>
+				   <div id="text_02b"><img src="text_sheet.png"></div>
+				   <div id="text_03a"><img src="text_sheet.png"></div>
+				   <div id="text_03b"><img src="text_sheet.png"></div>
+
+				   <div id="cartridges"><img src="cartridges.png"></div>
+				   <div id="printer"><img src="printer.png"></div>		   
+				   
+					<!--CTA-->
+					<div id="ctaBtn"><img src="ctaBtn.png"></div>
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
