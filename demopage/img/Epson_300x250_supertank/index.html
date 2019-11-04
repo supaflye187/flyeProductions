@@ -110,6 +110,14 @@
 			-webkit-font-smoothing: antialiased;
 		}
 
+		#shaq_02 {
+			position: absolute;
+			top: 3px;
+			left: -160px;
+			opacity: 1;
+			-webkit-font-smoothing: antialiased;
+		}
+
 		#printer {
 			position: absolute;
 			top: 95px;
@@ -323,6 +331,7 @@
 				var text_03b = document.getElementById('text_03b');
 
 				var shaq = document.getElementById('shaq');
+				var shaq_02 = document.getElementById('shaq_02');
 				var cartridges_01 = document.getElementById('cartridges_01');
 				var cartridges_02 = document.getElementById('cartridges_02');
 				var cartridges_03 = document.getElementById('cartridges_03');
@@ -399,6 +408,7 @@
 						
 						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.8")
 						.to(text_02b, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(shaq, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(cartridges_01, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(cartridges_02, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(cartridges_03, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
@@ -408,7 +418,8 @@
 						//FRAME 04 - IN
 						//========================================================
 
-						.to(printer, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(shaq_02, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.5")
+						.to(printer, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(text_03a, 0.5, {opacity:1, ease: Power1.easeOut})
 						.to(text_03b, 0.5, {opacity:1, ease: Power1.easeOut})
 
@@ -455,6 +466,7 @@
 				   <div id="text_03a"><img src="text_sheet.png"></div>
 				   <div id="text_03b"><img src="text_sheet.png"></div>  
 				   <div id="shaq"><img src="shaq.png"></div>
+				   <div id="shaq_02"><img src="shaq_02.png"></div>
 				   <div id="logo"><img src="epson_logo.png"></div>
 
 				   
