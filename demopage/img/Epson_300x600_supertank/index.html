@@ -51,8 +51,8 @@
 
 		#logo {
 			position: absolute;
-			top: 393px;
-			left: 88px;
+			top: 335px;
+			left: 0px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
 		}	
@@ -104,8 +104,8 @@
 
 		#shaq {
 			position: absolute;
-			top: 170px;
-			left: -325px;
+			top: 173px;
+			left: -375px;
 			opacity: 1;
 			-webkit-font-smoothing: antialiased;
 		}
@@ -166,7 +166,7 @@
 		#text_01a {
 			position: absolute;
 			clip: rect(0px,300px,30px,0px);
-			top: 63px;
+			top: 73px;
 			left: -200px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
@@ -175,7 +175,7 @@
 		#text_01b {
 			position: absolute;
 			clip: rect(30px,300px,68px,0px);
-			top: 63px;
+			top: 73px;
 			left: -200px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
@@ -184,8 +184,9 @@
 		#text_02a {
 			position: absolute;
 			clip: rect(120px,300px,210px,0px);
-			top: -80px;
+			top: -84px;
 			left: -200px;
+
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;
 		}
@@ -193,16 +194,17 @@
 		#text_02b {
 			position: absolute;
 			clip: rect(210px,300px,250px,0px);
-			top: -80px;
+			top: -90px;
 			left: -200px;
+		
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;	
 		}
 
 		#text_02c {
 			position: absolute;
-			clip: rect(50px,300px,110px,0px);
-			top: -80px;
+			clip: rect(80px,300px,110px,0px);
+			top: 64px;
 			left: 29px;
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;			
@@ -211,7 +213,7 @@
 		#text_02d {
 			position: absolute;
 			clip: rect(240px,300px,300px,0px);
-			top: -125px;
+			top: -130px;
 			left: -200px;
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;		
@@ -237,7 +239,7 @@
 
 		#purple_shape {
 			position: absolute;
-			top: 248px;
+			top: 243px;
 			left: 0px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;		
@@ -245,7 +247,7 @@
 
 		#shapes_bg_01 {
 			position: absolute;
-			clip: rect(0px,100px,60px,0px);
+			clip: rect(0px,155px,60px,0px);
 			top: 0px;
 			left: 0px;
 			opacity: 0;		
@@ -253,9 +255,9 @@
 
 		#shapes_bg_02 {
 			position: absolute;
-			clip: rect(0px,300px,130px,180px);
+			clip: rect(0px,400px,130px,155px);
 			top: 0px;
-			left: 0px;
+			left: -45px;
 			opacity: 0;		
 		}
 
@@ -359,7 +361,7 @@
 						.to(shapes_bg_02, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
 				 		.to(purple_shape, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
 						 .to(logo, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
-				 		.to(shaq, 0.5, {opacity:1, left:"-13px", ease: Power1.easeOut},"-=0.6")
+				 		.to(shaq, 0.5, {opacity:1, left:"-45px", ease: Power1.easeOut},"-=0.6")
 						 .to(printer, 0.5, {opacity:1, left:"65px", ease: Power1.easeOut})
 						 .to(text_01a, 0.5, {opacity:1, left:"29px", ease: Power1.easeOut})
 						 .to(text_01b, 0.5, {opacity:1, left:"28px",  ease: Power1.easeOut}, "+=0.3")
@@ -409,7 +411,7 @@
 						//FRAME 04 - IN
 						//========================================================
 
-						.to(shaq_02, 0.5, {opacity:1, left:"-13px", ease: Power1.easeOut},"-=0.5")
+						.to(shaq_02, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.5")
 						.to(printer, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(text_03a, 0.5, {opacity:1, ease: Power1.easeOut})
 						.to(text_03b, 0.5, {opacity:1, ease: Power1.easeOut})
@@ -438,7 +440,7 @@
     <div id="container">
 				   <!--Background Image -->
 				   <div id="BG"></div>
-				   <!-- <div id="TEMP"><img src="temp_04.jpg"></div> -->
+				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->	
 				   <div id="shapes_bg_01"><img src="shapes_bg.jpg"></div> 
 				   <div id="shapes_bg_02"><img src="shapes_bg.jpg"></div> 

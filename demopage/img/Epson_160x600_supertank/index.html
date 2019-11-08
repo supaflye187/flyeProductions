@@ -112,7 +112,7 @@
 
 		#shaq_02 {
 			position: absolute;
-			top: 273px;
+			top: 283px;
 			left: -200px;
 			opacity: 1;
 			-webkit-font-smoothing: antialiased;
@@ -136,8 +136,8 @@
 
 		#cartridges_01 {
 			position: absolute;
-			clip: rect(0px,55px,160px,37px);
-			top: 485px;
+			clip: rect(0px,28px,150px,0px);
+			top: 418px;
 			left: -200px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
@@ -145,8 +145,8 @@
 
 		#cartridges_02 {
 			position: absolute;
-			clip: rect(0px,37px,160px,25px);
-			top: 485px;
+			clip: rect(0px,58px,150px,25px);
+			top: 418px;
 			left: -200px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
@@ -154,8 +154,8 @@
 
 		#cartridges_03 {
 			position: absolute;
-			clip: rect(0px,25px,160px,13px);
-			top: 485px;
+			clip: rect(0px,83px,150px,57px);
+			top: 418px;
 			left: -200px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
@@ -163,8 +163,8 @@
 
 		#cartridges_04 {
 			position: absolute;
-			clip: rect(0px,14px,160px,0px);
-			top: 485px;
+			clip: rect(0px,120px,150px,83px);
+			top: 418px;
 			left: -200px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
@@ -192,18 +192,30 @@
 		#text_02a {
 			position: absolute;
 			clip: rect(140px,200px,180px,0px);
-			top: -52px;
+			top: 15px;
 			left: -200px;
+			/* left: 12px; */
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;
 		}
 
 		#text_02b {
 			position: absolute;
-			clip: rect(180px,200px,330px,0px);
-			top: -52px;
+			clip: rect(180px,200px,266px,0px);
+			top: -90px;
 			left: -200px;
+			/* left: 12px; */
 			opacity: 0;	
+			-webkit-font-smoothing: antialiased;	
+		}
+
+		#text_02d {
+			position: absolute;
+			clip: rect(266px,200px,330px,0px);
+			top: -93px;
+			left: -200px;
+			/* left: 12px; */
+			opacity: 1;	
 			-webkit-font-smoothing: antialiased;	
 		}
 
@@ -233,6 +245,15 @@
 			left: 10px;
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;		
+		}
+
+
+		#purple_shape {
+			position: absolute;
+			/* clip: rect(0px,200px,90px,0px); */
+			top: 360px;
+			left: 0px;
+			opacity: 0;		
 		}
 
 
@@ -314,6 +335,7 @@
 				var text_02a = document.getElementById('text_02a');
 				var text_02b = document.getElementById('text_02b');
 				var text_02c = document.getElementById('text_02c');
+				var text_02d = document.getElementById('text_02d');
 
 				var text_03a = document.getElementById('text_03a');
 				var text_03b = document.getElementById('text_03b');
@@ -330,7 +352,7 @@
 				var shapes_bg_02 = document.getElementById('shapes_bg_02');
 				var shapes_bg_03 = document.getElementById('shapes_bg_03');
 			
-				// var purple_shape = document.getElementById('purple_shape');
+				var purple_shape = document.getElementById('purple_shape');
 				var printer = document.getElementById('printer');
 				
 				//Timeline Function - can set multiple Timelines
@@ -352,7 +374,8 @@
 				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
 				 tl_main.to(shapes_bg_01, 1, {opacity:1, ease: Power1.easeOut})
 						.to(shapes_bg_02, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
-						.to(shapes_bg_03, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						// .to(shapes_bg_03, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						.to(purple_shape, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
 						 .to(logo, 1, {opacity:1, ease: Power1.easeOut},"-=0.8")
 				 		.to(shaq, 0.5, {opacity:1, left:"-18px", ease: Power1.easeOut},"-=0.6")
 						 .to(printer, 0.5, {opacity:1, left:"22px", ease: Power1.easeOut})
@@ -369,20 +392,25 @@
 						//FRAME 02 - IN
 						//=========================================================
 						
-						.to(text_02a, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut})
 						.to(text_02b, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut})
+						.to(text_02a, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut})
 						.to(text_02c, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
-						.to(cartridges_01, 0.5, {opacity:1, left:"95px", ease: Power1.easeOut})
-						.to(cartridges_02, 0.5, {opacity:1, left:"95px", ease: Power1.easeOut},"-=0.4")
-						.to(cartridges_03, 0.5, {opacity:1, left:"95px", ease: Power1.easeOut},"-=0.4")
-						.to(cartridges_04, 0.5, {opacity:1, left:"95px", ease: Power1.easeOut},"-=0.4")
+
+
+						.to(text_02a, 0.5, {opacity:0, left:"12px", ease: Power1.easeOut},"+=1.8")
+						.to(text_02c, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(text_02d, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut},"-=0.5")
+						.to(printer, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(cartridges_01, 0.5, {opacity:1, left:"22px", ease: Power1.easeOut})
+						.to(cartridges_02, 0.5, {opacity:1, left:"22px", ease: Power1.easeOut},"-=0.4")
+						.to(cartridges_03, 0.5, {opacity:1, left:"22px", ease: Power1.easeOut},"-=0.4")
+						.to(cartridges_04, 0.5, {opacity:1, left:"22px", ease: Power1.easeOut},"-=0.4")
 
 						//FRAME 02 - OUT
 						//========================================================
 				
-						.to(text_02a, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.8")
-						.to(text_02b, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
-						.to(text_02c, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(text_02b, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.8")
+						.to(text_02d, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(cartridges_01, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(cartridges_02, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(cartridges_03, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
@@ -435,11 +463,12 @@
     <div id="container">
 				   <!--Background Image -->
 				   <div id="BG"></div>
-				   <!-- <div id="TEMP"><img src="temp_01.jpg"></div> -->
+				   <!-- <div id="TEMP"><img src="temp_04.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->	
 				   <div id="shapes_bg_01"><img src="shapes_bg.jpg"></div> 
 				   <div id="shapes_bg_02"><img src="shapes_bg.jpg"></div> 
-				   <div id="shapes_bg_03"><img src="shapes_bg.jpg"></div> 
+				   <!-- <div id="shapes_bg_03"><img src="shapes_bg.jpg"></div>  -->
+				   <div id="purple_shape"><img src="purple_shape.png"></div> 
 				   <div id="shaq"><img src="shaq.png"></div>
 				   <div id="shaq_02"><img src="shaq_02.png"></div>
 				   <div id="printer"><img src="printer.png"></div> 
@@ -449,9 +478,12 @@
 				   <div id="cartridges_04"><img src="cartridges.png"></div>
 				   <div id="text_01a"><img src="text_sheet.png"></div>
 				   <div id="text_01b"><img src="text_sheet.png"></div>
+
 				   <div id="text_02a"><img src="text_sheet.png"></div>
 				   <div id="text_02b"><img src="text_sheet.png"></div>
 				   <div id="text_02c"><img src="text_sheet.png"></div>
+				   <div id="text_02d"><img src="text_sheet.png"></div>
+
 				   <div id="text_03a"><img src="text_sheet.png"></div>
 				   <div id="text_03b"><img src="text_sheet.png"></div>  
 				   <div id="logo"><img src="epson_logo.png"></div>
