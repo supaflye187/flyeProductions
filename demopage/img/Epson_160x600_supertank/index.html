@@ -222,9 +222,9 @@
 		#text_02c {
 			position: absolute;
 			clip: rect(420px,200px,650px,0px);
-			top: 150px;
-			left: 12px;
-			opacity: 0;	
+			top: -230px;
+			left: -200px;
+			opacity: 1;	
 			-webkit-font-smoothing: antialiased;			
 		}
 
@@ -240,7 +240,7 @@
 
 		#text_03b {
 			position: absolute;
-			clip: rect(360px,200px,500px,0px);
+			clip: rect(360px,200px,420px,0px);
 			top: -190px;
 			left: 10px;
 			opacity: 0;	
@@ -394,7 +394,7 @@
 						
 						.to(text_02b, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut})
 						.to(text_02a, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut})
-						.to(text_02c, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(text_02c, 0.5, {opacity:1, left:"12px", ease: Power1.easeOut},"-=0.5")
 
 
 						.to(text_02a, 0.5, {opacity:0, left:"12px", ease: Power1.easeOut},"+=1.8")
