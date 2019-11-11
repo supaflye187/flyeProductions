@@ -105,8 +105,8 @@
 
 		#shaq {
 			position: absolute;
-			top: 0px;
-			left: -160px;
+			top: -2px;
+			left: -140px;
 			opacity: 1;
 			-webkit-font-smoothing: antialiased;
 		}
@@ -205,6 +205,15 @@
 			clip: rect(120px,200px,500px,0px);
 			top: -95px;
 			left: -200px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;			
+		}
+
+		#limitations {
+			position: absolute;
+			clip: rect(80px,200px,500px,0px);
+			top: -50px;
+			left: 0px;
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;			
 		}
@@ -309,6 +318,9 @@
 				var text_02 = document.getElementById('text_02');
 				var text_02a = document.getElementById('text_02a');
 				var text_02b = document.getElementById('text_02b');
+
+				var limitations = document.getElementById('limitations');
+
 				var text_03a = document.getElementById('text_03a');
 				var text_03b = document.getElementById('text_03b');
 
@@ -369,12 +381,15 @@
 						
 						.to(text_02, 0.5, {opacity:1, left:"59px", ease: Power1.easeOut})
 						.to(text_02a, 0.5, {opacity:1, left:"59px", ease: Power1.easeOut})
+						.to(limitations, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+
 
 						//FRAME 02 - OUT
 						//========================================================
 				
 						.to(text_02a, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.8")
 						.to(printer, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(limitations, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 
 						//FRAME 03 - IN
 						//========================================================
@@ -446,10 +461,14 @@
 				   <div id="text_02"><img src="text_sheet.png"></div>
 				   <div id="text_02a"><img src="text_sheet.png"></div>
 				   <div id="text_02b"><img src="text_sheet.png"></div>
+
+				 
+
 				   <div id="text_03a"><img src="text_sheet.png"></div>
 				   <div id="text_03b"><img src="text_sheet.png"></div>  
 				   <div id="shaq"><img src="shaq.png"></div>
 				   <div id="shaq_02"><img src="shaq_02.png"></div>
+				   <div id="limitations"><img src="text_sheet.png"></div>
 			   
 					<!--CTA-->
 					<!-- <div id="ctaBtn"></div> -->
