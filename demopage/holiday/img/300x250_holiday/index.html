@@ -204,6 +204,13 @@
 			opacity: 1;
 		}
 
+		#catridges_d {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 1;
+		}
+
 		#whiteBG {
 			position: absolute;
 			background-color: #fff;
@@ -288,6 +295,7 @@
 				var cartridges_a = document.getElementById('catridges_a');
 				var cartridges_b = document.getElementById('catridges_b');
 				var cartridges_c = document.getElementById('catridges_c');
+				var cartridges_d = document.getElementById('catridges_d');
 				
 				// var arrow = document.getElementById('arrow');
 				var whiteBG = document.getElementById('whiteBG');
@@ -306,6 +314,7 @@
 						 .to(catridges_a, 0.4, {opacity:0, ease: Power1.easeOut})
 				 		 .to(catridges_b, 0.4, {opacity:0, ease: Power1.easeOut})
 				 		 .to(catridges_c, 0.4, {opacity:0, ease: Power1.easeOut})
+						  .to(catridges_d, 0.4, {opacity:0, ease: Power1.easeOut})
 						  .to(catridges_03, 0.4, {opacity:0, ease: Power1.easeOut})
 
 				 	//FRAME 01 - OUT
@@ -397,7 +406,7 @@
 				   <div id="txt_bigTank"><img src="spriteSheet.png"></div> 
 				   
 				   <div id="catridges_03"><img src="cartridges_03.jpg"></div>
-				   <!-- <div id="catridges_02"><img src="cartridges_02.jpg"></div> -->
+				   <div id="catridges_d"><img src="cartridges_d.jpg"></div>
 				   <div id="catridges_c"><img src="cartridges_c.jpg"></div>
 				   <div id="catridges_b"><img src="cartridges_b.jpg"></div>
 				   <div id="catridges_a"><img src="cartridges_a.jpg"></div> 
