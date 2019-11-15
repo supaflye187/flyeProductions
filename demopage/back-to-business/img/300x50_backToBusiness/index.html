@@ -86,6 +86,42 @@
 			opacity: 0;
 		}
 
+			/*pink */
+			#cartridge_01 {
+			position: absolute;
+			clip: rect(0px,100px,180px,62px);
+			left: -100px;
+			top: 0px;
+			opacity: 0;
+		}
+
+		/*yellow */
+		#cartridge_02 {
+			position: absolute;
+			clip: rect(0px,62px,180px, 51px);
+			left: -100px;
+			top: 0px;
+			opacity: 0;
+		}
+
+		/*blue */
+		#cartridge_03 {
+			position: absolute;
+			clip: rect(0px,51px,180px,39px);
+			left: -100px;
+			top: 0px;
+			opacity: 1;
+		}
+
+		/*black */
+		#cartridge_04 {
+			position: absolute;
+			clip: rect(0px,39px,180px,0px);
+			left: -100px;
+			top: 0px;
+			opacity: 1;
+		}
+
 		#ecoTank_sm {
 			position: absolute;
 			top: 0px;
@@ -243,6 +279,11 @@
 				var shaq_02 = document.getElementById('shaq_02');
 				var epson_lg = document.getElementById('epson_lg');
 				var txt_getEcoTank = document.getElementById('txt_getEcoTank');
+
+				var cartridge_01 = document.getElementById('cartridge_01');
+				var cartridge_02 = document.getElementById('cartridge_02');
+				var cartridge_03 = document.getElementById('cartridge_03');
+				var cartridge_04 = document.getElementById('cartridge_04');
 				
 				
 				var txt_bigTank = document.getElementById('txt_bigTank');
@@ -268,7 +309,17 @@
 
 					.to(txt_expensive, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
 					.to(inkCartridge_frame, 1, {opacity:1, ease: Power1.easeOut})
+					.to(cartridge_01, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut})
+					.to(cartridge_02, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+					.to(cartridge_03, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+					.to(cartridge_04, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+
+
 					.to(inkCartridge_frame, 1, {opacity:0, ease: Power1.easeOut},"+=2.0")
+					.to(cartridge_01, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					.to(cartridge_02, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					.to(cartridge_03, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					.to(cartridge_04, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
 
 				 	
 					.to(shaq_02, 0.5, {opacity:1, left:'0px', ease: Power1.easeOut})
@@ -305,6 +356,11 @@
 				    <div id="epson_lg"><img src="epsonLogoWithTag.png"></div>	   
 				   <div id="txt_getEcoTank"><img src="txt_getEcoTank.png"></div>
 				   <div id="txt_expensive"><img src="txt_expensive.png"></div>
+
+				   <div id="cartridge_01"><img src="cartridge_group.jpg"></div>
+				   <div id="cartridge_02"><img src="cartridge_group.jpg"></div>
+				   <div id="cartridge_03"><img src="cartridge_group.jpg"></div>
+				   <div id="cartridge_04"><img src="cartridge_group.jpg"></div>
 				   
 				   
 					<!--CTA-->
