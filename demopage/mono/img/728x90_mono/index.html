@@ -135,8 +135,8 @@
 		#printer_01 {
 			position: absolute;
 			top: -27px;
-			left: 180px;
-			opacity: 1;
+			left: 150px;
+			opacity: 0;
 			transform: scale(0);
 			-webkit-font-smoothing: antialiased;
 		}
@@ -172,8 +172,8 @@
 		#text_02 {
 			position: absolute;
 			clip: rect(50px,600px,100px,0px);
-			top: -37px;
-			left: 147px;
+			top: -38px;
+			left: 107px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
 		}
@@ -181,8 +181,8 @@
 		#text_02_link {
 			position: absolute;
 			clip: rect(100px,600px,120px,0px);
-			top: -37px;
-			left: 147px;
+			top: -39px;
+			left: 89px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
 		}
@@ -190,8 +190,8 @@
 		#txt_tagline {
 			position: absolute;
 			/* clip: rect(50px,400px,250px,0px); */
-			top: -125px;
-			left: 325px;
+			top: -120px;
+			left: 287px;
 			opacity: 0;	
 			-webkit-font-smoothing: antialiased;
 		}
@@ -216,8 +216,8 @@
 
 		#epson_logo {
 			position: absolute;
-			top: 225px;
-			left: 135px;
+			top: 0px;
+			left: 0px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
 		}
@@ -225,7 +225,7 @@
 		#rays {
 			position: absolute;
 			top: -85px;
-			left: 120px;
+			left: 90px;
 			opacity: 0;
 			transform: scale(0.52);
 			-webkit-font-smoothing: antialiased;
@@ -355,7 +355,8 @@
 						//FRAME 02 - IN
 						//=========================================================
 						
-						.to(shaq_02, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
+						.to(epson_logo, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(shaq_02, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.5")
 						.to(text_02, 0.5, {opacity:1, ease: Power1.easeOut})
 						.to(text_02_link, 0.5, {opacity:1, ease: Power1.easeOut})
 
@@ -394,6 +395,7 @@
 						// .to(shaq_04, 0.5, {opacity:0, left:"-100px",  ease: Power1.easeOut},"+=1.8")
 						// .to(bottom_white, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.3")
 						// .to(logo, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(epson_logo, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(printer_01, 0.5, {opacity:0, scaleX:"0", scaleY:"0", ease: Power1.easeOut},"-=0.5")
 
 
@@ -426,7 +428,7 @@
     <div id="container">
 				   <!--Background Image -->
 				   <div id="BG"></div>
-				   <!-- <div id="TEMP"><img src="temp_02.jpg"></div> -->
+				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
 				   <div id="rays"><img src="rays.jpg"></div> 
 				   <div id="top_white"></div> 

@@ -207,8 +207,8 @@
 
 		#epson_logo {
 			position: absolute;
-			top: 20px;
-			left: 49px;
+			top: 25px;
+			left: 60px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
 		}
@@ -356,7 +356,7 @@
 						//FRAME 02 - IN
 						//=========================================================
 						
-						.to(logo_02, 0.5, {opacity:1,  ease: Power1.easeOut})
+						.to(logo, 0.5, {opacity:1,  ease: Power1.easeOut})
 						.to(top_white, 0.5, {opacity:1,  ease: Power1.easeOut},"-=0.5")
 
 						.to(shaq_02, 0.5, {opacity:1, left:"-15px", ease: Power1.easeOut},"-=0.5")
@@ -377,8 +377,8 @@
 						//========================================================
 
 						.to(shaq_03, 0.5, {opacity:1, top:"300px", ease: Power1.easeOut})
-						.to(logo_02, 0.5, {opacity:0,  ease: Power1.easeOut},"-=0.8")
-						.to(logo, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						// .to(logo_02, 0.5, {opacity:0,  ease: Power1.easeOut},"-=0.8")
+						// .to(logo, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(printer_01, 0.5, {opacity:1, scaleX:"1", scaleY:"1", ease: Power2.easeOut})
 						.to(rays, 3.5, {opacity:1, rotation:70, transformOrigin:"50% 50%", ease: Power1.easeOut},"-=0.3")
 						
