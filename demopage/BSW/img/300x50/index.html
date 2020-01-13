@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=50">
+	<title>300x50 BSW Health</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {position:absolute; opacity:1;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:50px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:48px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		/* #lt_blue {
+			position:absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 1;
+		}
+
+		#dark_blue {
+			position:absolute; 
+			top: 0px;
+			left: -383px;
+			opacity: 1;
+			mix-blend-mode: multiply;
+		} */
+
+		#lt_blue {
+			position:absolute;
+			top: 0px;
+			left: 728px;
+			opacity: 1;
+		}
+
+		#dark_blue {
+			position:absolute; 
+			top: 0px;
+			left: -728px;
+			opacity: 1;
+			mix-blend-mode: multiply;
+		}
+
+
+		#bsw_logo {
+			position: absolute;
+			top: 7px;
+			left: 94px;
+			opacity: 0;
+		}
+
+		#bsw_icon {
+			position: absolute;
+			top: -8px;
+			left: 39px;
+			opacity: 0;
+			transform: scale(0.8);
+			/* mix-blend-mode:screen; */
+		}
+
+		#woh_logo {
+			position: absolute;
+			top: -3px;
+			left: 8px;
+			opacity: 0;
+		}
+
+
+		#text_01_a {
+			position: absolute;
+			clip: rect(0px,500px,20px,0px);
+			top: 6px;
+			left: 73px;
+			opacity: 0;
+		}
+
+		#text_01_b {
+			position: absolute;
+			clip: rect(20px,500px,64px,0px);
+			top: 6px;
+			left: 73px;
+			opacity: 0;
+		}
+
+
+		#text_02_a {
+			position: absolute;
+			clip: rect(0px,500px,63px,0px);
+			top: -39px;
+			left: 55px;
+			opacity: 0;
+		}
+
+		#text_02_b {
+			position: absolute;
+			clip: rect(64px,500px,180px,0px);
+			top: -39px;
+			left: 55px;
+			opacity: 0;
+		}
+	
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		// DOUBLECLICK LOADER FUNCTION
+		// //Initialize Enabler
+		// if (Enabler.isInitialized()) {
+		// 	init();
+		// } else {
+		// 	Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		// }
+		// //Run when Enabler is ready
+		// function init(){
+		// 	//politeInit();
+		// 	//Load in Javascript
+		// 	if(Enabler.isPageLoaded()){
+		// 		politeInit();
+		// 	}else{
+		// 		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		// 	}
+		// }
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var woh_logo = document.getElementById('woh_logo');
+				var bsw_logo = document.getElementById('bsw_logo');
+				var bsw_icon = document.getElementById('bsw_icon');
+			
+				var text_01_a = document.getElementById('text_01_a');
+				var text_01_b = document.getElementById('text_01_b');
+
+				var text_02_a = document.getElementById('text_02_a');
+				var text_02_b = document.getElementById('text_02_b');
+
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != 1 && looping == true) {
+						counter ++;
+						this.restart();
+						} else {
+							return;
+						}
+						}});
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 tl_main.to(lt_blue, 0.8, { left:"0px",  ease: Power2.easeOut},"-=0.8")
+						 .to(dark_blue, 0.8, { left:"-383px", ease: Power2.easeOut},"-=0.8")
+
+
+						 .to(woh_logo, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.7")
+						 .to(text_01_a, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.4")
+						 .to(text_01_b, 0.8, { opacity:1,  ease: Power2.easeOut},"+=0.5")
+						
+
+						
+				 	//FRAME 01 - OUT
+					//=======================================================================
+						.to(woh_logo, 0.8, {opacity:0, ease: Power1.easeOut},"+=2.0")
+						.to(text_01_b, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
+					 	.to(text_01_a, 0.8, { opacity:0, ease: Power2.easeOut},"-=0.7")					 
+
+				 	//FRAME 02 - IN
+				 	//=======================================================================
+	
+					 	 .to(text_02_a, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.3")
+						 .to(text_02_b, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.7")
+
+						 .to(text_02_b, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
+						 .to(text_02_a, 0.8, { opacity:0, ease: Power2.easeOut},"-=0.7")
+
+
+						 .to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						 .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+
+						 .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"+=3.0")
+					 //  .to(woh_logo, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+
+         
+			}
+
+			/*Clicktag for DC Studio*/
+			// function clickTag() {
+			// 	Enabler.exit('HTML5_Background_Clickthrough');
+			// }
+
+			//DC STUDIO clickTag Event Handler
+			//document.getElementById('linkLayer').addEventListener('click', clickTag, false);
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->	 
+				   <div id="lt_blue"><img src="lt_blue.png"></div>
+				   <div id="dark_blue"><img src="dark_blue.png"></div>
+				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
+				   <div id="bsw_logo"><img src="BSW_Logo.png"></div>
+				   <div id="woh_logo"><img src="woh_Logo.png"></div>
+
+				   <div id="text_01_a"><img src="text_sheet.png"></div>
+				   <div id="text_01_b"><img src="text_sheet.png"></div>
+
+				   <div id="text_02_a"><img src="text_sheet.png"></div>
+				   <div id="text_02_b"><img src="text_sheet.png"></div>
+				   
+					<!--CTA-->
+					<!-- <div id="ctaBtn"><img src="ctaBtn.png"></div> -->
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
