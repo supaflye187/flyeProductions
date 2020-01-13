@@ -48,48 +48,6 @@
 			display:none;
 		}
 		
-		/* #ctaBtn {
-			position: absolute;
-			top: 202px;
-			left: 192px;
-			width: 100px;
-			height: 32px;
-			background-color: #d3041f;
-			border-radius: 4px;
-			opacity: 0;
-			-webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
-			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
-			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
-			overflow: hidden;
-		}
-
-		#ctaBtn img {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate(-50%, -50%);
-		}
-
-		#ctaBtn:before,
-		#ctaBtn:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -150px;
-			width: 150%;
-			height: 100%;
-			background: #fff;
-			opacity: 0.2;
-			transform: rotate(45deg);
-			transition: all ease 1s;
-		}
-
-		#ctaBtn:hover:before,
-		#ctaBtn:hover:after {
-			left: 100%;
-		} */
-
 		/*YOUR CSS
 		=========================================*/
 
@@ -348,13 +306,12 @@
 						 .to(text_01_b, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.7")
 						 .to(text_01_c, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.7")
 
-						//  .to(bsw_logo, 0.1, {opacity:0, top:"395px", ease: Power1.easeOut},"-=0.1")
-				 		//  .to(bsw_icon, 0.1, {opacity:0, top:"348px", left:"128px", ease: Power1.easeOut},"-=0.1")
 
 						
 				 	//FRAME 01 - OUT
 					//=======================================================================
-						.to(text_01_c, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
+						.to(grandma, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
+						.to(text_01_c, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
 						.to(text_01_b, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
 					 	.to(text_01_a, 0.8, { opacity:0, ease: Power2.easeOut},"-=0.7")
 						
@@ -362,23 +319,20 @@
 
 				 	//FRAME 02 - IN
 				 	//=======================================================================
+					 	.to(tree, 0.8, { opacity:1, top:"210px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=0.8")
 					 	 .to(text_02_a, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.3")
 						 .to(text_02_b, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.7")
 
 
 				 	//FRAME 02 - OUT
 					//========================================================================
-					.to(grandma, 0.8, { opacity:0,  ease: Power2.easeOut},"+=1.0")
-					.to(text_02_b, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
+					.to(text_02_b, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
 					.to(text_02_a, 0.8, { opacity:0, ease: Power2.easeOut},"-=0.7")
 						 
 						 
 
 					//FRAME 03 - IN
 				 	//=========================================================================
-					 .to(tree, 0.8, { opacity:1, top:"210px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=0.8")
-
-
 					 .to(text_03_aa, 0.8, { opacity:1, ease: Power2.easeOut} ,"-=0.5")
 					 .to(text_03_bb, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.7")
 
@@ -411,11 +365,6 @@
 					 .to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
 				 	 .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
 					 .to(woh_logo, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
-
-					
-
-					
-
 
          
 			}

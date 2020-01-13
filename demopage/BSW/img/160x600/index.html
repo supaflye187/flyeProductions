@@ -333,7 +333,8 @@
 						
 				 	//FRAME 01 - OUT
 					//=======================================================================
-						.to(text_01_c, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
+						.to(grandma, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
+						.to(text_01_c, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
 						.to(text_01_b, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
 					 	.to(text_01_a, 0.8, { opacity:0, ease: Power2.easeOut},"-=0.7")
 						
@@ -341,6 +342,7 @@
 
 				 	//FRAME 02 - IN
 				 	//=======================================================================
+					 	 .to(art, 0.8, { opacity:1, top:"230px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=0.8")
 					 	 .to(text_02_a, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.3")
 						 .to(text_02_b, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.7")
 						 .to(text_02_c, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.7")
@@ -348,15 +350,15 @@
 
 				 	//FRAME 02 - OUT
 					//========================================================================
-					.to(grandma, 0.8, { opacity:0,  ease: Power2.easeOut},"+=1.0")
-					.to(text_02_c, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
+					
+					.to(text_02_c, 0.8, { opacity:0,  ease: Power2.easeOut},"+=2.0")
 					.to(text_02_b, 0.8, { opacity:0,  ease: Power2.easeOut},"-=0.7")
 					.to(text_02_a, 0.8, { opacity:0, ease: Power2.easeOut},"-=0.7")
 						 		 
 
 					//FRAME 03 - IN
 				 	//=========================================================================
-					 .to(art, 0.8, { opacity:1, top:"230px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=0.8")
+					
 
 					 .to(text_03_a, 0.8, { opacity:1, ease: Power2.easeOut} ,"-=0.5")
 					 .to(text_03_b, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.7")			

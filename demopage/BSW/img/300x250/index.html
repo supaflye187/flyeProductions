@@ -153,7 +153,8 @@
 			top: 30px;
 			left: 0;
 			opacity: 0;
-			transform: scale(1.2);
+			transform: scale(1.3);
+			-webkit-font-smoothing: antialiased;
 		}
 
 		#painting {
@@ -162,6 +163,7 @@
 			left: 20px;
 			opacity: 0;
 			transform: scale(1.2);
+			-webkit-font-smoothing: antialiased;
 		}
 
 		#text_01_a {
@@ -316,7 +318,7 @@
 				 tl_main.to(lt_blue, 0.8, { left:"-120px",  ease: Power2.easeOut})
 						 .to(dark_blue, 0.8, { left:"-360px", ease: Power2.easeOut},"-=0.8")
 
-						 .to(lady, 0.8, { opacity:1, top:"10px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=0.5")
+						 .to(lady, 0.8, { opacity:1, top:"10px", scaleX:"1", scaleY:"1", ease:Linear.easeNone, force3D:true},"-=0.5")
 						 .to(woh_logo, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
 
 						 .to(text_01_a, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.7")
