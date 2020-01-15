@@ -198,7 +198,16 @@
 
 		#txt_tagline_02 {
 			position: absolute;
-			/* clip: rect(50px,400px,250px,0px); */
+			clip: rect(50px,400px,250px,0px);
+			top: -205px;
+			left: 100px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#txt_tagline_03 {
+			position: absolute;
+			clip: rect(250px,400px,400px,0px);
 			top: -205px;
 			left: 100px;
 			opacity: 0;	
@@ -306,6 +315,7 @@
 				var text_02_link = document.getElementById('text_02_link');
 				var txt_tagline = document.getElementById('txt_tagline');
 				var txt_tagline_02 = document.getElementById('txt_tagline_02');
+				var txt_tagline_03 = document.getElementById('txt_tagline_03');
 
 				var txt_disclaimer = document.getElementById('txt_disclaimer');
 				var rays = document.getElementById('rays');
@@ -405,6 +415,7 @@
 						
 						.to(printer_03, 0.5, {opacity:1, left:"-15px", ease: Power1.easeOut},"-=0.5")
 						.to(txt_tagline_02, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(txt_tagline_03, 0.5, {opacity:1, ease: Power1.easeOut})
 
 						.to(ctaBtn, 0.5, {opacity:1, ease: Power1.easeOut})
 						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
@@ -448,6 +459,7 @@
 				   <div id="text_02_link"><img src="text_sheet.png"></div>
 				   <div id="txt_tagline"><img src="text_sheet.png"></div>
 				   <div id="txt_tagline_02"><img src="text_sheet.png"></div>
+				   <div id="txt_tagline_03"><img src="text_sheet.png"></div>
 				   <div id="txt_disclaimer"><img src="text_sheet.png"></div>
 				   <div id="epson_logo"><img src="epson_logo.png"></div>
 		  		   
