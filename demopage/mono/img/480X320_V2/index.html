@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=480,height=320">
+	<title>480x320 Epson - Mono Banner</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSRulePlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {background-color: #1798f2;}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:480px;
+			height:320px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#1798f2;;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:478px;
+			height:318px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+		#ctaBtn {
+			position: absolute;
+			top: 248px;
+			left: 290px;
+			width: 132px;
+			height: 42px;
+			background-color: #d3041f;
+			border-radius: 4px;
+			opacity: 0;
+			-webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			overflow: hidden;
+		}
+
+		#ctaBtn img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#ctaBtn:before,
+		#ctaBtn:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -150px;
+			width: 150%;
+			height: 100%;
+			background: #fff;
+			opacity: 0.2;
+			transform: rotate(45deg);
+			transition: all ease 1s;
+		}
+
+		#ctaBtn:hover:before,
+		#ctaBtn:hover:after {
+			left: 100%;
+		}
+
+		/*YOUR CSS
+		=========================================*/
+
+		#shaq_01 {
+			position: absolute;
+			top: 55px;
+			left: 320px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#shaq_02 {
+			position: absolute;
+			top: 30px;
+			left: -80px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#shaq_03 {
+			position: absolute;
+			top: 30px;
+			left: -100px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#shaq_05 {
+			position: absolute;
+			top: 60px;
+			left: 400px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#printer_01 {
+			position: absolute;
+			top: 75px;
+			left: 230px;
+			opacity: 1;
+			transform: scale(0);
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#printer_03 {
+			position: absolute;
+			top: 95px;
+			left: -50px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_01 {
+			position: absolute;
+			clip: rect(0px,600px,130px,0px);
+			top: 83px;
+			left: 43px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_02 {
+			position: absolute;
+			clip: rect(220px,320px,320px,0px);
+			top: -154px;
+			left: 150px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_02_link {
+			position: absolute;
+			clip: rect(170px,300px,230px,0px);
+			top: -185px;
+			left: 210px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#txt_tagline {
+			position: absolute;
+			clip: rect(90px,400px,380px,0px);
+			top: -325px;
+			left: 67px;
+			opacity: 0;	
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#txt_disclaimer{
+			position: absolute;
+			clip: rect(370px,400px,430px,0px);
+			top: -128px;
+			left: 33px;
+			opacity: 0;		
+			-webkit-font-smoothing: antialiased;	
+		}
+
+		#epson_logo {
+			position: absolute;
+			top: 284px;
+			left: 234px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#epson_logo_02 {
+			position: absolute;
+			clip: rect(125px,400px,160px,0px);
+			top: -111px;
+			left: 94px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#rays {
+			position: absolute;
+			top: 15px;
+			left: 180px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#top_white {
+			position: absolute;
+			top: 270px;
+			left: 0px;
+			width: 480px;
+			height: 70px;
+			opacity: 0;
+			background-color: #fff;
+		}
+
+		#top_gray {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 480px;
+			height: 50px;
+			opacity: 0;
+			background-color: #d2d2d2;
+		}
+
+		#popUp_tab {
+			position: absolute;
+			top:50px;
+			left: 0px;
+			opacity: 1;
+			cursor: pointer;
+		}
+
+		#popUp_menu {
+			position: absolute;
+			display: none;
+			top:0px;
+			left: 0px;
+			opacity: 1;
+			cursor: pointer;
+
+		}
+
+		#popUp_menu img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+
+		}
+
+		
+
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		// DOUBLECLICK LOADER FUNCTION
+		// //Initialize Enabler
+		// if (Enabler.isInitialized()) {
+		// 	init();
+		// } else {
+		// 	Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		// }
+		// //Run when Enabler is ready
+		// function init(){
+		// 	//politeInit();
+		// 	//Load in Javascript
+		// 	if(Enabler.isPageLoaded()){
+		// 		politeInit();
+		// 	}else{
+		// 		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		// 	}
+		// }
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var ctaBtn = document.getElementById('ctaBtn');
+				var ctaBtn_shine = document.getElementById('ctaBtn:before');
+
+				var logo = document.getElementById('epson_logo');
+				var logo_02 = document.getElementById('epson_logo_02');
+				var text_01 = document.getElementById('text_01');
+				var text_02 = document.getElementById('text_02');
+				var text_02_link = document.getElementById('text_02_link');
+				var txt_tagline = document.getElementById('txt_tagline');
+				var txt_disclaimer = document.getElementById('txt_disclaimer');
+				var rays = document.getElementById('rays');
+
+				var shaq_01 = document.getElementById('shaq_01');
+				var shaq_02 = document.getElementById('shaq_02');
+				var shaq_02_hand = document.getElementById('shaq_02_hand');
+				var shaq_03 = document.getElementById('shaq_03');
+				var shaq_04 = document.getElementById('shaq_04');
+				var shaq_05 = document.getElementById('shaq_05');
+
+				var printer_01 = document.getElementById('printer_01');
+				// var printer_02 = document.getElementById('printer_02');
+				var printer_03 = document.getElementById('printer_03');
+
+				var top_white = document.getElementById('top_white');
+				var top_gray = document.getElementById('top_gray');
+				var bottom_white = document.getElementById('bottom_white');
+
+				
+				var popUp_tab = document.getElementById('popUp_tab');
+				var popUp_menu = document.getElementById('popUp_menu');
+
+				popUp_tab.addEventListener('click', menuOpen);
+				popUp_menu.addEventListener('click', menuClose);
+
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != 1 && looping == true) {
+						counter ++;
+						this.restart();
+						} else {
+							return;
+						}
+						}});
+
+
+				function menuOpen() {
+						document.getElementById('popUp_menu').style.display="block";
+						tl_main.pause();
+						console.log("Menu Open");
+					}
+
+					function menuClose() {
+						document.getElementById('popUp_menu').style.display="none";
+						tl_main.play();
+						console.log("Menu Closed");
+					}
+					
+					
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
+				 tl_main.to(shaq_01, 0.5, {opacity:1, left:"220px", ease: Power1.easeOut})
+						 .to(text_01, 1, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						
+
+						//FRAME 01 - OUT
+						//=========================================================
+
+						 .to(shaq_01, 0.5, {opacity:0, left:"320px", ease: Power1.easeOut},"+=1.8")
+						 .to(text_01, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+
+						//FRAME 02 - IN
+						//=========================================================
+						
+
+						.to(shaq_02, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.5")
+						.to(text_02, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(popUp_tab, 0.5, {opacity:1, top:"0px", ease: Power1.easeOut},"-=0.5")
+						// .to(text_02_link, 0.5, {opacity:1, ease: Power1.easeOut})
+
+						
+
+						//FRAME 02 - OUT
+						//========================================================
+			
+						.to(shaq_02, 0.5, {opacity:0, left:"-80px", ease: Power1.easeOut},"+=1.8")
+
+						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						// .to(text_02_link, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+
+						//FRAME 03 - IN
+						//========================================================
+
+						.to(shaq_03, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
+						.to(logo, 0.5, {opacity:1,  ease: Power1.easeOut},"-=0.5")
+						.to(top_white, 0.5, {opacity:1,  ease: Power1.easeOut},"-=0.5")
+						// .to(logo_02, 0.5, {opacity:0,  ease: Power1.easeOut},"-=0.8")
+						// .to(logo, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(printer_01, 0.5, {opacity:1, scaleX:"1", scaleY:"1", ease: Power2.easeOut})
+						.to(rays, 3.5, {opacity:1, rotation:70, transformOrigin:"50% 50%", ease: Power1.easeOut},"-=0.3")
+						
+
+						//FRAME 03 - OUT
+						//========================================================
+						
+						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut},"-=1.0")
+						.to(shaq_03, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(top_white, 0.5, {opacity:0,  ease: Power1.easeOut},"-=0.5")
+						.to(logo, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						// .to(shaq_04, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+									
+						//FRAME 04 - IN
+						//========================================================
+
+						// .to(shaq_04, 0.5, {opacity:0, left:"-100px",  ease: Power1.easeOut},"+=1.8")
+						.to(logo, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(printer_01, 0.5, {opacity:0, scaleX:"0", scaleY:"0", ease: Power1.easeOut},"-=0.5")
+
+
+						.to(txt_tagline, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(top_gray, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(shaq_05, 0.5, {opacity:1, left:"300px", ease: Power1.easeOut})
+						
+						.to(printer_03, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
+						// .to(txt_disclaimer, 0.5, {opacity:1, ease: Power1.easeOut})
+
+						.to(ctaBtn, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
+
+			}
+
+
+			/*Clicktag for DC Studio*/
+			// function clickTag() {
+			// 	Enabler.exit('HTML5_Background_Clickthrough');
+			// }
+
+			//DC STUDIO clickTag Event Handler
+			//document.getElementById('linkLayer').addEventListener('click', clickTag, false);
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <div id="BG"></div>
+				   <!-- <div id="TEMP"><img src="temp_01.jpg"></div> -->
+				   <!-- HTML ELEMENTS HERE -->
+				   <div id="rays"><img src="rays.jpg"></div> 
+				   <div id="top_white"></div> 
+				   <div id="epson_logo"><img src="epson_logo.png"></div>
+				   <div id="epson_logo_02"><img src="text_sheet.png"></div>
+				   <div id="top_gray"></div> 
+
+				  
+				   <div id="shaq_01"><img src="shaq_frame_01.jpg"></div> 	
+				   <div id="shaq_02"><img src="shaq_frame_02.jpg"></div>
+				   <div id="shaq_03"><img src="shaq_frame_03.png"></div>
+				   <!-- <div id="shaq_04"><img src="shaq_frame_04.jpg"></div> -->
+				   <div id="shaq_05"><img src="shaq_frame_05.png"></div>
+
+				   <div id="printer_03"><img src="printer_02.jpg"></div> 
+				   <!-- <div id="printer_02"><img src="printer.png"></div>  -->
+				   <div id="printer_01"><img src="printer.png"></div> 
+				   <div id="text_01"><img src="text_sheet.png"></div>
+				   <div id="text_02"><img src="text_sheet.png"></div>
+				   <!-- <div id="text_02_link"><img src="text_sheet.png"></div> -->
+				   <div id="txt_tagline"><img src="text_sheet.png"></div>
+				   <!-- <div id="txt_disclaimer"><img src="text_sheet.png"></div> -->
+				  
+			
+				  
+				   
+					<!--CTA-->
+					<!-- <div id="ctaBtn"></div> -->
+					<div id="ctaBtn"><img src="ctaTxt.png"></div>
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+					<div id="popUp_tab"><img src="popUp_tab.png" alt=""></div>
+
+					<div id="popUp_menu">
+						<img src="popUp_txt.png" alt="">
+					</div>
+    </div>
+</body>
+</html>
