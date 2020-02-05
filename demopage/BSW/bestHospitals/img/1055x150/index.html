@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=1055,height=150">
+	<title>1055x150 BSW Health</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {position:absolute; opacity:1;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:1055px;
+			height:150px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:1053px;
+			height:148px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		#lt_blue {
+			position:absolute;
+			top: 0px;
+			left: -1055px;
+			opacity: 1;
+		}
+
+		#blue {
+			position:absolute;
+			top: 0px;
+			left: -1055px;
+			opacity: 1;
+		}
+
+
+		#drk_blue {
+			position:absolute; 
+			top: 0px;
+			left: 1055px;
+			opacity: 1;
+			/* mix-blend-mode: multiply; */
+		}
+
+
+		#bsw_logo {
+			position: absolute;
+			top: 26px;
+			left: 126px;
+			opacity: 0;
+		}
+
+		#bsw_icon {
+			display:none;
+			position: absolute;
+			top: 12px;
+			left: 40px;
+			opacity: 0;
+		}
+
+
+		#badge {
+			position: absolute;
+			top: 10px;
+			left: 493px;
+			opacity: 0;
+		}
+
+
+		#text_01 {
+			position: absolute;
+			top: 0px;
+			left: -1055px;
+			opacity: 0;
+		}
+
+
+		#learn_more {
+			position: absolute;
+			clip: rect(0px,190px,180px,0px);
+			top: 52px;
+			left: 798px;
+			opacity: 0;
+		}
+
+
+		#learn_more_square {
+			position: absolute;
+			clip: rect(0px,250px,180px,190px);
+			top: 32px;
+			left: 798px;
+			opacity: 0;
+		}
+	
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		// DOUBLECLICK LOADER FUNCTION
+		// //Initialize Enabler
+		// if (Enabler.isInitialized()) {
+		// 	init();
+		// } else {
+		// 	Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		// }
+		// //Run when Enabler is ready
+		// function init(){
+		// 	//politeInit();
+		// 	//Load in Javascript
+		// 	if(Enabler.isPageLoaded()){
+		// 		politeInit();
+		// 	}else{
+		// 		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		// 	}
+		// }
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var blue = document.getElementById('blue');
+				var drk_blue = document.getElementById('drk_blue');
+				var text_01 = document.getElementById('text_01');
+				var lt_blue = document.getElementById('lt_blue');
+				var badge = document.getElementById('badge');
+				var bsw_logo = document.getElementById('bsw_logo');
+				var bsw_icon = document.getElementById('bsw_icon');
+			
+				var learnMore = document.getElementById('learn_more');
+				var learnMore_square = document.getElementById('learn_more_square');
+
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let loopNum = 3; //Number of times to loop
+				let counter = 1;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != loopNum && looping == true) {
+						counter ++;
+						resetGif();
+						this.restart();
+						
+						} else {
+							return;
+						}
+						}});
+
+						function resetGif() {
+							window.onload = "BSW_icon.gif?p" + new Date().getTime();
+						}
+				
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 tl_main .to(bsw_icon, 0.8, { opacity:0, display:"block",  ease: Power2.easeOut},"-=0.8")
+				 		 .to(drk_blue, 0.8, { opacity:1, left:"0px", ease: Power2.easeOut},"-=0.8")
+						 .to(blue, 0.8, { opacity:1, left:"0px",  ease: Power2.easeOut},"-=0.8")
+						 .to(text_01, 0.8, { opacity:1, left:"0px", ease: Power2.easeOut},"-=0.8")
+
+						 .to(lt_blue, 0.8, { opacity:1, left:"0px", ease: Power2.easeOut},"+=3.0")
+						 .to(bsw_logo, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.6")
+						 .to(bsw_icon, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.6")
+						 
+
+						 .to(badge, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.6")
+
+						 .to(learnMore, 0.8, { opacity:1,  ease: Power2.easeOut})
+						 .to(learnMore_square, 1, { opacity:1, top:"52px",  ease: Power2.easeOut},"-=0.8")
+						//  .to(learnMore_square, 0.8, { opacity:1, ease: Power2.easeOut},"+=2.0")
+						
+
+
+				
+         
+			}
+
+			function resetGif(id) {
+				var img = document.getElementById(id);
+				var imageUrl = img.src;
+				img.src = "";
+				img.src = imageUrl;
+					};
+
+			/*Clicktag for DC Studio*/
+			// function clickTag() {
+			// 	Enabler.exit('HTML5_Background_Clickthrough');
+			// }
+
+			//DC STUDIO clickTag Event Handler
+			//document.getElementById('linkLayer').addEventListener('click', clickTag, false);
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <!-- <div id="TEMP"><img src="temp_02.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+				   <div id="drk_blue"><img src="drkBlue.png"></div>
+				  
+				   <div id="blue"><img src="blue.png"></div>	 
+				 
+				   <div id="text_01"><img src="txt_01.png"></div>
+				   <div id="lt_blue"><img src="ltBlue.png"></div>
+
+				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
+				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
+				   <div id="badge"><img src="badge.png"></div>
+
+				   <div id="learn_more"><img src="learnMore.png"></div>
+				   <div id="learn_more_square"><img src="learnMore.png"></div>
+	
+				   
+					<!--CTA-->
+					<!-- <div id="ctaBtn"><img src="ctaBtn.png"></div> -->
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
