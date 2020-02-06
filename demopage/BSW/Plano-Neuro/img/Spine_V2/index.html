@@ -158,8 +158,8 @@
 			position: absolute;
 			clip: rect(0px,95px,480px,0px);
 			top: 533px;
-			left: 88px;
-			opacity: 0;
+			left: 200px;
+			opacity: ;
 		}
 
 		#learn_more_sq {
@@ -168,6 +168,15 @@
 			top: 533px;
 			left: 98px;
 			opacity: 0;
+		}
+
+		#whiteMask {
+			width: 200px;
+			height: 50px;
+			position: absolute;
+			background-color: #fff;
+			top: 510px;
+			left: 202px;
 		}
 
 
@@ -248,23 +257,23 @@
 				 //Frame animations start
 				 //FRAME 01 - IN
 				 //========================================================================
-				 tl_main.to(text_01, 1, { opacity:1,  ease: Power2.easeOut})
-				 		.to(text_02, 1, { opacity:1,  ease: Power2.easeOut},"-=1.0")
-						.to(shoe, 1, { opacity:1, top:"170px", ease: Power2.easeOut},"-=0.4")
-						.to(shoe, 0.8, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
+				 tl_main.to(text_01, 0.3, { opacity:1,  ease: Power2.easeOut})
+				 		.to(text_02, 0.3, { opacity:1,  ease: Power2.easeOut},"-=0.3")
+						.to(shoe, 0.5, { opacity:1, top:"170px", ease: Power2.easeOut},"-=0.4")
+						.to(shoe, 0.4, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
 
-						.to(spoon, 1, { opacity:1, top:"170px", ease: Power2.easeOut})
-						.to(spoon, 0.8, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
+						.to(spoon, 0.5, { opacity:1, top:"170px", ease: Power2.easeOut})
+						.to(spoon, 0.4, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
 
-						.to(fly, 1, { opacity:1, top:"170px", ease: Power2.easeOut})
-						.to(text_03, 1, { opacity:1,  ease: Power2.easeOut})
-						.to(text_04, 1, { opacity:1,  ease: Power2.easeOut})
+						.to(fly, 0.5, { opacity:1, top:"170px", ease: Power2.easeOut})
+						.to(text_03, 0.5, { opacity:1,  ease: Power2.easeOut})
+						.to(text_04, 0.5, { opacity:1,  ease: Power2.easeOut})
 
-						.to(fly, 0.8, { opacity:0, top:"600px", ease: Power2.easeIn},"+=0.5")
+						.to(fly, 0.4, { opacity:0, top:"600px", ease: Power2.easeIn},"+=0.5")
 
 						.to(text_01, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
-				 		.to(text_02, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.4")
-						.to(text_03, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.4")
+				 		.to(text_02, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.45")
+						.to(text_03, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.45")
 						.to(text_04, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
 
 
@@ -272,15 +281,15 @@
 				 		.to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
 
 
-						.to(text_05, 0.8, { opacity:1, left:"36px",  ease: Power2.easeOut})
-						.to(text_06, 0.8, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.4")
+						.to(text_05, 0.5, { opacity:1, left:"36px",  ease: Power2.easeOut})
+						.to(text_06, 0.5, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.45")
 
-						.to(text_07, 0.8, { opacity:1, left:"36px",  ease: Power2.easeOut},"-=0.4")
-						.to(text_08, 0.8, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.4")
+						.to(text_07, 0.5, { opacity:1, left:"36px",  ease: Power2.easeOut},"-=0.45")
+						.to(text_08, 0.5, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.45")
 
 						
-						.to(learn_more_sq, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.8")
-						.to(learn_more, 0.8, { opacity:1,  left:"98px", ease: Power2.easeOut})
+						.to(learn_more_sq, 0.5, { opacity:1,  ease: Power2.easeOut},"-=0.5")
+						.to(learn_more, 0.5, { opacity:1,  left:"98px", ease: Power2.easeOut})
 
          
 			}
@@ -304,10 +313,14 @@
 				   <!--HTML ELEMENTS HERE-->
 				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
 				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
+
+				    <div id="learn_more"><img src="learnMore.png"></div>
+				   <div id="whiteMask"></div>
+				   <div id="learn_more_sq"><img src="learnMore.png"></div>
 				  
-				   <div id="fly"><img src="fly.jpg"></div>
-				   <div id="spoon"><img src="spoon.jpg"></div>
-				   <div id="shoe"><img src="shoe.jpg"></div>
+				   <div id="fly"><img src="fly.png"></div>
+				   <div id="spoon"><img src="spoon.png"></div>
+				   <div id="shoe"><img src="shoe.png"></div>
 
 				   <div id="text_01"><img src="text_sheet.png"></div>
 				   <div id="text_02"><img src="text_sheet.png"></div>
@@ -318,8 +331,7 @@
 				   <div id="text_07"><img src="text_sheet.png"></div>
 				   <div id="text_08"><img src="text_sheet.png"></div>
 
-				   <div id="learn_more"><img src="learnMore.png"></div>
-				   <div id="learn_more_sq"><img src="learnMore.png"></div>
+				  
 				   			   
 					<!--CTA-->
 					<!-- <div id="ctaBtn"><img src="ctaBtn.png"></div> -->
