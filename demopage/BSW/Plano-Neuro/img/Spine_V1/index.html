@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=600">
+	<title>300x600 BSW Health - Neuro</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {position:absolute; opacity:1;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:600px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:598px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		#bsw_logo {
+			position: absolute;
+			top: 324px;
+			left: 47px;
+			opacity: 0;
+		}
+
+		#bsw_icon {
+			position: absolute;
+			top: 248px;
+			left: 105px;
+			opacity: 0;
+			transform: scale(0.9);
+		}
+
+		#guitar {
+			position: absolute;
+			top: 600px;
+			left: 0;
+			opacity: 0;
+		}
+
+		#kayak {
+			position: absolute;
+			top: 600px;
+			left: 0;
+			opacity: 0;
+		}
+
+		#paintbrush {
+			position: absolute;
+			top: 600px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#text_01 {
+			position: absolute;
+			clip: rect(0px,500px,20px,0px);
+			top: 45px;
+			left: 36px;
+			opacity: 0;
+		}
+
+		#text_02 {
+			position: absolute;
+			clip: rect(20px,500px,60px,0px);
+			top: 45px;
+			left: 36px;
+			opacity: 0;
+		}
+
+		#text_03 {
+			position: absolute;
+			clip: rect(60px,100px,90px,0px);
+			top: 45px;
+			left: 36px;
+			opacity: 0;
+		}
+
+		#text_04 {
+			position: absolute;
+			clip: rect(60px,500px,90px,100px);
+			top: 45px;
+			left: 36px;
+			opacity: 0;
+		}
+
+
+		#text_05 {
+			position: absolute;
+			clip: rect(90px,500px,120px,0px);
+			top: -55px;
+			left: -36px;
+			opacity: 0;
+		}
+
+		#text_06 {
+			position: absolute;
+			clip: rect(120px,500px,160px,0px);
+			top: -55px;
+			left: -36px;
+			opacity: 0;
+		}
+
+
+		#learn_more {
+			position: absolute;
+			clip: rect(0px,95px,480px,0px);
+			top: 533px;
+			left: 88px;
+			opacity: 0;
+		}
+
+		#learn_more_sq {
+			position: absolute;
+			clip: rect(0px,200px,480px,95px);
+			top: 533px;
+			left: 98px;
+			opacity: 0;
+		}
+
+
+
+		
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		// DOUBLECLICK LOADER FUNCTION
+		// //Initialize Enabler
+		// if (Enabler.isInitialized()) {
+		// 	init();
+		// } else {
+		// 	Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		// }
+		// //Run when Enabler is ready
+		// function init(){
+		// 	//politeInit();
+		// 	//Load in Javascript
+		// 	if(Enabler.isPageLoaded()){
+		// 		politeInit();
+		// 	}else{
+		// 		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
+		// 	}
+		// }
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var bsw_logo = document.getElementById('bsw_logo');
+				var bsw_icon = document.getElementById('bsw_icon');
+				var guitar = document.getElementById('guitar');
+				var kayak = document.getElementById('kayak');
+				var paintbrush = document.getElementById('paintbrush');
+
+				var text_01 = document.getElementById('text_01');
+				var text_02 = document.getElementById('text_02');
+
+				var text_03 = document.getElementById('text_03');
+				var text_04 = document.getElementById('text_04');
+
+				var text_05 = document.getElementById('text_05');
+				var text_06 = document.getElementById('text_06');
+
+				var learn_more = document.getElementById('learn_more');
+				var learn_more_sq = document.getElementById('learn_more_sq');
+
+
+					//Timeline Function - can set multiple Timelines
+					tl_main = new TimelineLite();
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //========================================================================
+				 tl_main.to(text_01, 1, { opacity:1,  ease: Power2.easeOut})
+				 		.to(text_02, 1, { opacity:1,  ease: Power2.easeOut},"-=1.0")
+						.to(paintbrush, 1, { opacity:1, top:"142px", ease: Power2.easeOut},"-=0.4")
+						.to(paintbrush, 0.8, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
+
+						.to(kayak, 1, { opacity:1, top:"156px", ease: Power2.easeOut})
+						.to(kayak, 0.8, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
+
+						.to(guitar, 1, { opacity:1, top:"160px", ease: Power2.easeOut})
+						.to(text_03, 1, { opacity:1,  ease: Power2.easeOut})
+						.to(text_04, 1, { opacity:1,  ease: Power2.easeOut})
+
+						.to(guitar, 0.8, { opacity:0, top:"600px", ease: Power2.easeIn},"+=0.5")
+
+						.to(text_01, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
+				 		.to(text_02, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.4")
+						.to(text_03, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.4")
+						.to(text_04, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
+
+
+						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
+				 		.to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+
+
+						.to(text_05, 0.8, { opacity:1, left:"36px",  ease: Power2.easeOut})
+						.to(text_06, 0.8, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.2")
+
+
+						
+						.to(learn_more_sq, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.8")
+						.to(learn_more, 0.8, { opacity:1,  left:"98px", ease: Power2.easeOut})
+
+         
+			}
+
+			/*Clicktag for DC Studio*/
+			// function clickTag() {
+			// 	Enabler.exit('HTML5_Background_Clickthrough');
+			// }
+
+			//DC STUDIO clickTag Event Handler
+			//document.getElementById('linkLayer').addEventListener('click', clickTag, false);
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
+				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
+				  
+				   <div id="guitar"><img src="guitar.png"></div>
+				   <div id="kayak"><img src="kayak.png"></div>
+				   <div id="paintbrush"><img src="paintbrush.png"></div>
+
+				   <div id="text_01"><img src="text_sheet.png"></div>
+				   <div id="text_02"><img src="text_sheet.png"></div>
+				   <div id="text_03"><img src="text_sheet.png"></div>
+				   <div id="text_04"><img src="text_sheet.png"></div>
+				   <div id="text_05"><img src="text_sheet.png"></div>
+				   <div id="text_06"><img src="text_sheet.png"></div>
+
+				   <div id="learn_more"><img src="learnMore.png"></div>
+				   <div id="learn_more_sq"><img src="learnMore.png"></div>
+				   			   
+					<!--CTA-->
+					<!-- <div id="ctaBtn"><img src="ctaBtn.png"></div> -->
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
