@@ -86,9 +86,10 @@
 		#bsw_icon {
 			display:none;
 			position: absolute;
-			top: 12px;
-			left: 40px;
+			top: -20px;
+			left: -20px;
 			opacity: 0;
+			transform: scale(0.62);
 		}
 
 
@@ -211,7 +212,7 @@
 						 .to(blue, 0.8, { opacity:1, left:"0px",  ease: Power2.easeOut},"-=0.8")
 						 .to(text_01, 0.8, { opacity:1, left:"0px", ease: Power2.easeOut},"-=0.8")
 
-						 .to(lt_blue, 0.8, { opacity:1, left:"0px", ease: Power2.easeOut},"+=3.0")
+						 .to(lt_blue, 0.8, { opacity:1, left:"0px", ease: Power2.easeOut},"+=2.0")
 						 .to(bsw_logo, 0.8, { opacity:1, ease: Power2.easeOut},"-=0.6")
 						 .to(bsw_icon, 0.8, { opacity:1,  ease: Power2.easeOut},"-=0.6")
 						 
