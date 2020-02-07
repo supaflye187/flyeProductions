@@ -144,17 +144,22 @@
 				var button = document.getElementById('button');
 				var logo = document.getElementById('logo');
 				
-				//Timeline Function - can set multiple Timelines
-				let looping = false;
+			//Timeline Function - can set multiple Timelines
+			let looping = true;
 				let counter = 0;
 				tl_main = new TimelineLite({onComplete:function() {
 					if(counter != 1 && looping == true) {
 						counter ++;
-						this.restart();
+						setTimeout(restartAd, 2000)
 						} else {
 							return;
 						}
-						}});		
+						}});	
+						
+						
+						function restartAd() {
+							tl_main.restart();
+						}		
 
 				//ex.
 				 //Frame animations start
