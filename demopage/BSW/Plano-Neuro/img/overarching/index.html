@@ -54,24 +54,25 @@
 
 		#bsw_logo {
 			position: absolute;
-			top: 324px;
+			top: 55px;
 			left: 47px;
 			opacity: 0;
+			transform: scale(0.9);
 		}
 
 		#bsw_icon {
 			position: absolute;
-			top: 248px;
+			top: -12px;
 			left: 105px;
 			opacity: 0;
-			transform: scale(0.9);
+			transform: scale(0.75);
 		}
 
 		#beater{
 			position: absolute;
 			top: 600px;
 			left: 0;
-			opacity: 0;
+			opacity: 1;
 		}
 
 		#snowboard {
@@ -124,59 +125,65 @@
 		#text_05 {
 			position: absolute;
 			clip: rect(90px,500px,120px,0px);
-			top: -55px;
+			top: 60px;
 			left: -36px;
 			opacity: 0;
+			transform: scale(0.85);
 		}
 
 		#text_06 {
 			position: absolute;
 			clip: rect(120px,500px,160px,0px);
-			top: -55px;
+			top: 60px;
 			left: -36px;
 			opacity: 0;
+			transform: scale(0.85);
 		}
 
 
 		#text_07 {
 			position: absolute;
 			clip: rect(160px,500px,190px,0px);
-			top: -55px;
+			top: 60px;
 			left: -36px;
 			opacity: 0;
+			transform: scale(0.85);
 		}
 
 		#text_08 {
 			position: absolute;
 			clip: rect(190px,500px,220px,0px);
-			top: -55px;
+			top: 60px;
 			left: -36px;
 			opacity: 0;
+			transform: scale(0.85);
 		}
 
 		#learn_more {
 			position: absolute;
 			clip: rect(0px,95px,480px,0px);
-			top: 533px;
+			top: 289px;
 			left: 200px;
-			opacity: ;
+			opacity: 0;
+			transform: scale(0.9);
 		}
 
 		#learn_more_sq {
 			position: absolute;
 			clip: rect(0px,200px,480px,95px);
-			top: 533px;
-			left: 98px;
+			top: 289px;
+			left: 100px;
 			opacity: 0;
+			transform: scale(0.85);
 		}
 
 		#whiteMask {
 			width: 200px;
-			height: 50px;
+			height: 30px;
 			position: absolute;
 			background-color: #fff;
-			top: 510px;
-			left: 202px;
+			top: 280px;
+			left: 196px;
 		}
 
 
@@ -269,7 +276,7 @@
 						.to(text_03, 0.5, { opacity:1,  ease: Power2.easeOut})
 						.to(text_04, 0.5, { opacity:1,  ease: Power2.easeOut})
 
-						.to(beater, 0.4, { opacity:0, top:"600px", ease: Power2.easeIn},"+=0.5")
+						.to(beater, 0.6, { top:"330px", ease: Power2.easeOut},"+=0.5")
 
 						.to(text_01, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
 				 		.to(text_02, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.45")
