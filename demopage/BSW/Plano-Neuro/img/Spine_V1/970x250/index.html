@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="ad.size" content="width=300,height=600">
-	<title>300x600 BSW Health - Neuro</title>
+	<meta name="ad.size" content="width=970,height=250">
+	<title>970x250 BSW Health - Neuro</title>
 	<!--Include for Doubleclick Ads-->
     <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
@@ -25,8 +25,8 @@
 		#linkLayer{
 			left:0px;
 			top:0px;
-			width:300px;
-			height:600px;
+			width:970px;
+			height:250px;
 			display:block;
 			position:absolute;
 			overflow: hidden;
@@ -40,8 +40,8 @@
 			margin-top:0px;
 			position:absolute;
 			overflow:hidden;
-			width:298px;
-			height:598px;
+			width:968px;
+			height:248px;
 			top:0px;
 			left:0px;
 			margin:auto;
@@ -54,118 +54,123 @@
 
 		#bsw_logo {
 			position: absolute;
-			top: 55px;
-			left: 47px;
+			top: 116px;
+			left: 76px;
 			opacity: 0;
-			transform: scale(0.9);
 		}
 
 		#bsw_icon {
 			position: absolute;
-			top: -12px;
-			left: 105px;
+			top: 100px;
+			left: -5px;
 			opacity: 0;
-			transform: scale(0.75);
+			transform: scale(0.77);
 		}
 
 		#guitar {
 			position: absolute;
-			top: 600px;
-			left: 0;
+			top: 0px;
+			left: 970px;
 			opacity: 0;
 		}
 
 		#kayak {
 			position: absolute;
-			top: 600px;
-			left: 0;
+			top: 0px;
+			left: 970px;
 			opacity: 0;
 		}
 
 		#paintbrush {
 			position: absolute;
-			top: 600px;
-			left: 0px;
+			top: 0px;
+			left: 970px;
 			opacity: 0;
 		}
 
 		#text_01 {
 			position: absolute;
-			clip: rect(0px,500px,20px,0px);
-			top: 45px;
-			left: 36px;
+			clip: rect(0px,600px,30px,0px);
+			top: 39px;
+			left: 73px;
 			opacity: 0;
 		}
 
 		#text_02 {
 			position: absolute;
-			clip: rect(20px,500px,60px,0px);
-			top: 45px;
-			left: 36px;
+			clip: rect(30px,180px,90px,0px);
+			top: 39px;
+			left: 73px;
 			opacity: 0;
 		}
 
 		#text_03 {
 			position: absolute;
-			clip: rect(60px,100px,90px,0px);
-			top: 45px;
-			left: 36px;
+			clip: rect(30px,500px,90px,170px);
+			top: 39px;
+			left: 73px;
 			opacity: 0;
 		}
+
+
+
 
 		#text_04 {
 			position: absolute;
-			clip: rect(60px,500px,90px,100px);
-			top: 45px;
-			left: 36px;
+			clip: rect(90px,728px,200px,0px);
+			top: -58px;
+			left: 75px;
 			opacity: 0;
 		}
 
 
-		#text_05 {
+		/* #text_05 {
 			position: absolute;
 			clip: rect(90px,500px,120px,0px);
 			top: 60px;
 			left: -36px;
 			opacity: 0;
 			transform: scale(0.85);
-		}
+		} */
 
-		#text_06 {
+		/* #text_06 {
 			position: absolute;
 			clip: rect(120px,500px,160px,0px);
 			top: 60px;
 			left: -36px;
 			opacity: 0;
 			transform: scale(0.85);
-		}
+		} */
 
 
 		#learn_more {
 			position: absolute;
-			clip: rect(0px,95px,480px,0px);
-			top: 230px;
-			left: 200px;
+			clip: rect(0px,145px,480px,0px);
+			top: 183px;
+			left: 525px;
 			opacity: 0;
-			transform: scale(0.9);
+			/* transform: scale(0.9); */
 		}
+
 
 		#learn_more_sq {
 			position: absolute;
-			clip: rect(0px,200px,480px,95px);
-			top: 230px;
-			left: 100px;
+			clip: rect(0px,200px,480px,145px);
+			top: 183px;
+			left: 425px;
 			opacity: 0;
-			transform: scale(0.85);
+			/* transform: scale(0.85); */
 		}
+
 
 		#whiteMask {
 			width: 200px;
-			height: 30px;
+			height: 50px;
 			position: absolute;
 			background-color: #fff;
-			top: 280px;
-			left: 196px;
+			top: 163px;
+			left: 584px;
+			opacity: 1;
 		}
 
 
@@ -244,38 +249,34 @@
 				 //FRAME 01 - IN
 				 //========================================================================
 				 tl_main.to(text_01, 0.3, { opacity:1,  ease: Power2.easeOut})
-				 		.to(text_02, 0.3, { opacity:1,  ease: Power2.easeOut},"-=1.0")
-						.to(paintbrush, 0.5, { opacity:1, top:"142px", ease: Power2.easeOut},"-=0.4")
-						.to(paintbrush, 0.4, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
+						.to(paintbrush, 0.5, { opacity:1, left:"520px", ease: Power2.easeOut},"-=0.4")
+						.to(paintbrush, 0.4, { opacity:1, left:"970px", ease: Power2.easeIn},"+=0.5")
 
-						.to(kayak, 0.5, { opacity:1, top:"156px", ease: Power2.easeOut})
-						.to(kayak, 0.4, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
+						.to(kayak, 0.5, { opacity:1, left:"520px", ease: Power2.easeOut})
+						.to(kayak, 0.4, { opacity:1, left:"970px", ease: Power2.easeIn},"+=0.5")
 
-						.to(guitar, 0.5, { opacity:1, top:"160px", ease: Power2.easeOut})
-						.to(text_03, 0.5, { opacity:1,  ease: Power2.easeOut})
-						.to(text_04, 0.5, { opacity:1,  ease: Power2.easeOut})
+						.to(guitar, 0.5, { opacity:1, left:"520px", ease: Power2.easeOut})
+						.to(text_02, 0.7, { opacity:1,  ease: Power2.easeOut})
+						.to(text_03, 0.7, { opacity:1,  ease: Power2.easeOut})
 
-						.to(guitar, 0.6, { top:"280px", ease: Power2.easeOut},"+=0.5")
+						.to(guitar, 0.6, { left:"600px", ease: Power2.easeOut},"+=1.0")
 
-						.to(text_01, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
-				 		.to(text_02, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.4")
-						.to(text_03, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.4")
-						.to(text_04, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
+						.to(text_01, 0.5, { opacity:0, left:"-300px", ease: Power2.easeOut},"-=0.5")
+				 		.to(text_02, 0.5, { opacity:0, left:"-300px", ease: Power2.easeOut},"-=0.4")
+						.to(text_03, 0.5, { opacity:0, left:"-300px", ease: Power2.easeOut},"-=0.5")
 
 
 						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
 				 		.to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
 
 
-						.to(text_05, 0.5, { opacity:1, left:"36px",  ease: Power2.easeOut})
-						.to(text_06, 0.5, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.45")
+						.to(text_04, 0.5, { opacity:1, left:"17px",  ease: Power2.easeOut})
+						// .to(text_05, 0.5, { opacity:1,  left:"36px", ease: Power2.easeOut},"-=0.45")
 
 
 						
-						.to(learn_more_sq, 0.5, { opacity:1,  ease: Power2.easeOut},"-=0.5")
-						.to(learn_more, 0.5, { opacity:1,  left:"98px", ease: Power2.easeOut})
-
-         
+						.to(learn_more_sq, 0.5, { opacity:1,  ease: Power2.easeOut})
+						.to(learn_more, 0.5, { opacity:1,  left:"425px", ease: Power2.easeOut})
 			}
 
 			/*Clicktag for DC Studio*/
@@ -293,16 +294,16 @@
 <body>
     <div id="container">
 				   <!--Background Image -->
-				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
+				   <!-- <div id="TEMP"><img src="temp_02.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
 				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
 				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
 
 				  
-				  
-				   <div id="guitar"><img src="guitar.png"></div>
 				   <div id="learn_more"><img src="learnMore.png"></div>
 				   <div id="whiteMask"></div>
+				   <div id="guitar"><img src="guitar.png"></div>
+				  
 				   <div id="learn_more_sq"><img src="learnMore.png"></div>
 				   <div id="kayak"><img src="kayak.png"></div>
 				   <div id="paintbrush"><img src="paintbrush.png"></div>
@@ -311,8 +312,8 @@
 				   <div id="text_02"><img src="text_sheet.png"></div>
 				   <div id="text_03"><img src="text_sheet.png"></div>
 				   <div id="text_04"><img src="text_sheet.png"></div>
-				   <div id="text_05"><img src="text_sheet.png"></div>
-				   <div id="text_06"><img src="text_sheet.png"></div>
+				   <!-- <div id="text_05"><img src="text_sheet.png"></div>
+				   <div id="text_06"><img src="text_sheet.png"></div> -->
 
 				  
 				   			   
