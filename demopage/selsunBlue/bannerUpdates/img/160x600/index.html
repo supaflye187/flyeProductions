@@ -140,13 +140,13 @@
 			-webkit-font-smoothing: antialiased;
 		}
 
-		#bottle {
+		/* #bottle {
 			position: absolute;
 			top: 250px;
 			left: 100px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
-		}
+		} */
 
 		#splashBottle{
 			position: absolute;
@@ -208,7 +208,7 @@
 				var text_01 = document.getElementById('text_01');
 				var text_02 = document.getElementById('text_02');
 				var text_03 = document.getElementById('text_03');
-				var bottle = document.getElementById('bottle');
+				// var bottle = document.getElementById('bottle');
 				var splashBottle = document.getElementById('splashBottle');
 				var disclaimer = document.getElementById('disclaimer');
 				
@@ -236,9 +236,7 @@
 						.to(text_02, 0.8, {opacity:1, left:"0px", ease: Power2.easeOut})
 						.to(text_02, 0.8, {opacity:0, left:"-50px", ease: Power2.easeIn},"+=1.0")
 
-						.to(bottle, 0.8, {opacity:1, left:"0px", ease: Power2.easeOut})
-						.to(splashBottle, 0.2, {opacity:1, top:"0px", ease: Power2.easeOut},"+=1.0")
-						.to(bottle, 0.2, {opacity:0, ease: Power2.easeOut},"-=0.2")
+						.to(splashBottle, 0.2, {opacity:1, top:"0px", ease: Power2.easeOut})
 
 						.to(text_03, 0.3, {opacity:1, top:"0px", ease: Power2.easeOut},"-=0.2")
 						.to(ctaBtn, 0.3, {opacity:1, top:"502px", ease: Power2.easeOut},"-=0.3")
@@ -280,7 +278,7 @@
 				   <div id="background"><img src="background.png"></div> 	
 				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
-				   <div id="bottle"><img src="mainBottle.png"></div> 	
+				   <!-- <div id="bottle"><img src="mainBottle.png"></div> 	 -->
 				   <div id="splashBottle"><img src="splashBottle.png"></div> 	
 				   <div id="text_01"><img src="text_01.png"></div> 	
 				   <div id="text_02"><img src="text_02.png"></div> 	
