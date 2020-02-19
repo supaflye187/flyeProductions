@@ -55,7 +55,7 @@
 		#bsw_logo {
 			position: absolute;
 			top: 0px;
-			left: 0px;
+			left: 46px;
 			opacity: 0;
 		}
 
@@ -69,10 +69,9 @@
 
 		#bsw_icon_02 {
 			position: absolute;
-			top: -22px;
-			left: -25px;
+			top: -1px;
+			left: 265px;
 			opacity: 0;
-			transform: scale(0.50);
 		}
 
 
@@ -81,7 +80,7 @@
 			clip: rect(0px,500px,15px,0px);
 			top: 5px;
 			left: 7px;
-			opacity: 0;
+			opacity: 1;
 		}
 
 		#text_02 {
@@ -101,35 +100,22 @@
 		}
 
 
-
-
-
 		#text_04 {
 			position: absolute;
-			clip: rect(35px,500px,90px,0px);
+			clip: rect(35px,500px,60px,0px);
 			top: -33px;
-			left: 8px;
-			opacity: 0;
+			left: -260px;
+			opacity: 1;
 		}
 
 
-		/* #text_05 {
+		#text_05 {
 			position: absolute;
-			clip: rect(90px,500px,120px,0px);
-			top: 60px;
-			left: -36px;
-			opacity: 0;
-			transform: scale(0.85);
+			clip: rect(60px,500px,120px,0px);
+			top: -33px;
+			left: -260px;
+			opacity: 1;
 		}
-
-		#text_06 {
-			position: absolute;
-			clip: rect(120px,500px,160px,0px);
-			top: 60px;
-			left: -36px;
-			opacity: 0;
-			transform: scale(0.85);
-		} */
 
 
 		#learn_more {
@@ -215,7 +201,7 @@
 				var text_03 = document.getElementById('text_03');
 				var text_04 = document.getElementById('text_04');
 
-				// var text_05 = document.getElementById('text_05');
+				var text_05 = document.getElementById('text_05');
 				// var text_06 = document.getElementById('text_06');
 
 				var learn_more = document.getElementById('learn_more');
@@ -245,7 +231,9 @@
 				 //FRAME 01 - IN
 				 //========================================================================
 				 tl_main.to(text_01, 0.3, { opacity:1,  ease: Power2.easeOut})
-						 .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.3")
+				 		 .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.3")
+						 .to(bsw_icon_02, 0.8, {opacity:1, ease: Power1.easeOut})
+						 .to(bsw_icon, 0.1, {opacity:0, ease: Power1.easeOut})
 					
 
 						.to(text_02, 0.5, { opacity:1,  ease: Power2.easeOut},"+=1.0")
@@ -254,14 +242,16 @@
 		
 
 						.to(text_01, 0.5, { opacity:0, left:"-200px", ease: Power2.easeOut},"+=1.0")
-				 		.to(text_02, 0.5, { opacity:0, left:"-200px", ease: Power2.easeOut},"-=0.4")
+				 		.to(text_02, 0.5, { opacity:0, left:"-200px", ease: Power2.easeOut},"-=0.45")
 						.to(text_03, 0.5, { opacity:0, left:"-200px", ease: Power2.easeOut},"-=0.5")
 
 
-						.to(text_04, 0.5, { opacity:1,  ease: Power2.easeOut})
+						.to(text_04, 0.5, { opacity:1, left:"8px",  ease: Power2.easeOut})
+						.to(text_05, 0.5, { opacity:1, left:"8px",  ease: Power2.easeOut},"-=0.45")
 
-						.to(text_04, 0.5, { opacity:0,  ease: Power2.easeOut},"+=1.0")
-						.to(bsw_icon, 0.8, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(text_04, 0.5, { opacity:0, left:"-260px",  ease: Power2.easeOut},"+=1.5")
+						.to(text_05, 0.5, { opacity:0, left:"-260px",  ease: Power2.easeOut},"-=0.45")
+						.to(bsw_icon_02, 0.8, {left:"-3px", rotation:"-360", ease: Power1.easeOut},"-=0.5")
 
 						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
 					
@@ -288,22 +278,19 @@
 				   <!--Background Image -->
 				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
-				 
-				   <div id="bsw_logo"><img src="logo_lockup_mobile.png"></div>
-				  
-				
 				   <div id="learn_more"><img src="learnMore.png"></div>
 				   <div id="whiteMask"></div>
 				   <div id="learn_more_sq"><img src="learnMore.png"></div>
 				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
+				   <div id="bsw_icon_02"><img src="BSW_icon_static.png"></div>
+				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
 	
 
 				   <div id="text_01"><img src="text_sheet.png"></div>
 				   <div id="text_02"><img src="text_sheet.png"></div>
 				   <div id="text_03"><img src="text_sheet.png"></div>
 				   <div id="text_04"><img src="text_sheet.png"></div>
-				   <!-- <div id="text_05"><img src="text_sheet.png"></div>
-				   <div id="text_06"><img src="text_sheet.png"></div> -->
+				   <div id="text_05"><img src="text_sheet.png"></div>
 
 				  
 				   			   
