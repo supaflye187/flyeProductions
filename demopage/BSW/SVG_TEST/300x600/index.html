@@ -65,10 +65,10 @@
 
 		#bsw_icon {
 			position: absolute;
-			width: 300px;
-			height: 300px;
+			width: 70px;
+			height: 70px;
 			top: 0px;
-			left: 0px;
+			left: 110px;
 			opacity: 1;
 			/* transform: scale(0.75); */
 		}
@@ -234,8 +234,8 @@
 			var animation = bodymovin.loadAnimation({
 			container: loader,
 			renderer: "svg",
-			loop: true,
-			autoplay: true,
+			loop: false,
+			autoplay: false,
 			path: "data.json"
 			});
 			}
@@ -321,7 +321,8 @@
 
 
 						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
-				 		// .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						 // .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						 .add( function(){ lottie.play() },"-=0.8" )
 
 
 						.to(text_05, 0.5, { opacity:1, left:"36px",  ease: Power2.easeOut})
@@ -358,7 +359,7 @@
 				   <!--Background Image -->
 				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
-				  
+				   <div id="bsw_icon" class="bm"></div>
 				   <!-- <div id="bsw_icon"><img src="BSW_icon.gif"></div> -->
 				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
 				   <div id="learn_more"><img src="learnMore.png"></div>
@@ -366,7 +367,7 @@
 				   <div id="learn_more_sq"><img src="learnMore.png"></div>
 				   <div id="beater"><img src="beater.png"></div>
 				   <div id="snowboard"><img src="snowboard.png"></div>
-				   <div id="flipflop"><img src="flipflop.png"></div>
+				   <div id="flipflop"><img src="flipFlop.png"></div>
 
 				   <div id="text_01"><img src="text_sheet.png"></div>
 				   <div id="text_02"><img src="text_sheet.png"></div>
@@ -377,7 +378,7 @@
 				   <div id="text_07"><img src="text_sheet.png"></div>
 				   <div id="text_08"><img src="text_sheet.png"></div>
 
-				   <div id="bsw_icon" class="bm"></div>
+				  
 
 				 
 				   			   
