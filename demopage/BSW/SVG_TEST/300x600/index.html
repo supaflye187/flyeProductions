@@ -227,22 +227,6 @@
 				console.log("Loading Content...");
 				politeInit();
 
-				var loader = document.getElementsByClassName("bm");
-			
-			function loadBMAnimation(loader) {
-				console.log("this is loading");
-			var animation = bodymovin.loadAnimation({
-			container: loader,
-			renderer: "svg",
-			loop: false,
-			autoplay: false,
-			path: "data.json"
-			});
-			}
-			for (var i = 0; i < loader.length; i++) {
-			loadBMAnimation(loader[i]);
-		}
-
 		}
 
 		var tl = new TimelineLite();
@@ -252,13 +236,28 @@
 			document.getElementById("container").style.display="block";
 			console.log("content loaded...");
 			startAni();
+
+			var loader = document.getElementsByClassName("bm");
+			
+			function loadBMAnimation(loader) {
+				console.log("this is loading");
+			var animation = bodymovin.loadAnimation({
+			container: loader,
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: "bsw_icon.json"
+			});
+			}
+			for (var i = 0; i < loader.length; i++) {
+			loadBMAnimation(loader[i]);
+		}
 			}
 
 			// Set Elements as Variables
 			function startAni(){
 				var BG = document.getElementById('BG');
 				var bsw_logo = document.getElementById('bsw_logo');
-				// var bsw_icon = document.getElementById('bsw_icon');
 				var beater = document.getElementById('beater');
 				var snowboard = document.getElementById('snowboard');
 				var flipflop = document.getElementById('flipflop');
@@ -277,19 +276,6 @@
 
 				var learn_more = document.getElementById('learn_more');
 				var learn_more_sq = document.getElementById('learn_more_sq');
-
-
-				//BSW Icon
-
-				// var ltBlue_left = document.getElementById('ltBlue_left');
-				// var drkBlue_bottom = document.getElementById('drkBlue_bottom');
-				// var drkBlue_right = document.getElementById('drkBlue_right');
-				// var yellow_bottom = document.getElementById('yellow_bottom');
-				// var drkBlue_left = document.getElementById('drkBlue_left');
-				// var yellow_top = document.getElementById('yellow_top');
-				// var ltBlue_right = document.getElementById('ltBlue_right');
-				// var drkBlue_top = document.getElementById('drkBlue_top');
-				// var registration_path = document.getElementById('registration_path');
 
 
 					//Timeline Function - can set multiple Timelines
@@ -321,7 +307,6 @@
 
 
 						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
-						 // .to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
 						 .add( function(){ lottie.play() },"-=0.8" )
 
 
@@ -360,7 +345,6 @@
 				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
 				   <div id="bsw_icon" class="bm"></div>
-				   <!-- <div id="bsw_icon"><img src="BSW_icon.gif"></div> -->
 				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
 				   <div id="learn_more"><img src="learnMore.png"></div>
 				   <div id="whiteMask"></div>
