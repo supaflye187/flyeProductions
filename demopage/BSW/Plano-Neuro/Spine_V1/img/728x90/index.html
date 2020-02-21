@@ -8,7 +8,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie.min.js'></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <style type="text/css">
@@ -54,17 +55,20 @@
 
 		#bsw_logo {
 			position: absolute;
-			top: 13px;
+			width: 173px;
+			height: 61px;
+			top: 12px;
 			left: 529px;
 			opacity: 0;
 		}
 
 		#bsw_icon {
 			position: absolute;
-			top: -11px;
-			left: 457px;
-			opacity: 0;
-			transform: scale(0.57);
+			width: 60px;
+			height: 60px;
+			top: 10px;
+			left: 472px;
+			opacity: 1;
 		}
 
 		#guitar {
@@ -184,24 +188,6 @@
 
     var clickTag = "www.google.com";
 
-		// DOUBLECLICK LOADER FUNCTION
-		// //Initialize Enabler
-		// if (Enabler.isInitialized()) {
-		// 	init();
-		// } else {
-		// 	Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
-		// }
-		// //Run when Enabler is ready
-		// function init(){
-		// 	//politeInit();
-		// 	//Load in Javascript
-		// 	if(Enabler.isPageLoaded()){
-		// 		politeInit();
-		// 	}else{
-		// 		Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);
-		// 	}
-		// }
-
 
 		//DEFAULT LOADER FUNCTION
 		window.onload = function () {
@@ -216,13 +202,28 @@
 			document.getElementById("container").style.display="block";
 			console.log("content loaded...");
 			startAni();
+			var loader = document.getElementsByClassName("bm");
+			
+			function loadBMAnimation(loader) {
+				console.log("this is loading");
+			var animation = bodymovin.loadAnimation({
+			container: loader,
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: "bsw_icon.json"
+			});
+			}
+			for (var i = 0; i < loader.length; i++) {
+			loadBMAnimation(loader[i]);
+		}
 			}
 
 			// Set Elements as Variables
 			function startAni(){
 				var BG = document.getElementById('BG');
 				var bsw_logo = document.getElementById('bsw_logo');
-				var bsw_icon = document.getElementById('bsw_icon');
+			
 				var guitar = document.getElementById('guitar');
 				var kayak = document.getElementById('kayak');
 				var paintbrush = document.getElementById('paintbrush');
@@ -240,13 +241,14 @@
 				var learn_more_sq = document.getElementById('learn_more_sq');
 
 
-							//Timeline Function - can set multiple Timelines
-							let looping = true;
+				//Timeline Function - can set multiple Timelines
+				let looping = true;
 				let counter = 0;
 				tl_main = new TimelineLite({onComplete:function() {
 					if(counter != 100 && looping == true) {
 						counter ++;						
 						setTimeout(restartAd, 3000)
+						
 						
 						} else {
 							return;
@@ -255,8 +257,9 @@
 						
 						function restartAd() {	
 							tl_main.restart();
+							lottie.goToAndStop(1);
+							
 						}
-
 
 
 				//ex.
@@ -282,7 +285,8 @@
 
 
 						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
-				 		.to(bsw_icon, 0.8, {opacity:1, ease: Power1.easeOut},"-=0.8")
+						.add( function(){ lottie.play(); },"-=0.8" )
+
 
 
 						.to(text_04, 0.5, { opacity:1, left:"17px",  ease: Power2.easeOut})
@@ -296,13 +300,6 @@
          
 			}
 
-			/*Clicktag for DC Studio*/
-			// function clickTag() {
-			// 	Enabler.exit('HTML5_Background_Clickthrough');
-			// }
-
-			//DC STUDIO clickTag Event Handler
-			//document.getElementById('linkLayer').addEventListener('click', clickTag, false);
 
 	</script>
 
@@ -313,8 +310,9 @@
 				   <!--Background Image -->
 				   <!-- <div id="TEMP"><img src="temp_02.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
-				   <div id="bsw_icon"><img src="BSW_icon.gif"></div>
-				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
+				   <div id="bsw_icon" class="bm"></div>
+				   <object id="bsw_logo" data="logo_lockup.svg" type="image/svg+xml"></object>
+
 
 				  
 				  
