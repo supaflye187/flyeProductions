@@ -448,6 +448,10 @@ MEDIA QUERIES
   }
     
 
+/* .gallery-image {
+  margin: 10px;
+} */
+
 .image-overlay {
   /* display:none; */
   position: absolute;
