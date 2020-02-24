@@ -12,8 +12,10 @@
 	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie.min.js'></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <style type="text/css">
-
+	
+		
+	<style type="text/css">
+	
 		/*Required Elements
 		====================================================*/
 		#TEMP {position: absolute; opacity:0.5;}
@@ -98,7 +100,7 @@
 			clip: rect(0px,500px,20px,0px);
 			top: 45px;
 			left: 36px;
-			opacity: 1;
+			opacity: 0;
 		}
 
 		#text_02 {
@@ -106,7 +108,7 @@
 			clip: rect(20px,500px,60px,0px);
 			top: 45px;
 			left: 36px;
-			opacity: 1;
+			opacity: 0;
 		}
 
 		#text_03 {
@@ -175,7 +177,7 @@
 		#learn_more_sq {
 			position: absolute;
 			clip: rect(0px,200px,480px,95px);
-			top: 289px;
+			top: 288px;
 			left: 100px;
 			opacity: 0;
 			transform: scale(0.85);
@@ -202,11 +204,11 @@
 
     var clickTag = "www.google.com";
 
-
 		//DEFAULT LOADER FUNCTION
 		window.onload = function () {
 				console.log("Loading Content...");
 				politeInit();
+
 		}
 
 		var tl = new TimelineLite();
@@ -232,14 +234,12 @@
 			for (var i = 0; i < loader.length; i++) {
 			loadBMAnimation(loader[i]);
 		}
-			
 			}
 
 			// Set Elements as Variables
 			function startAni(){
 				var BG = document.getElementById('BG');
 				var bsw_logo = document.getElementById('bsw_logo');
-				
 				var beater = document.getElementById('beater');
 				var snowboard = document.getElementById('snowboard');
 				var flipflop = document.getElementById('flipflop');
@@ -259,7 +259,8 @@
 				var learn_more = document.getElementById('learn_more');
 				var learn_more_sq = document.getElementById('learn_more_sq');
 
-			//Timeline Function - can set multiple Timelines
+
+					//Timeline Function - can set multiple Timelines
 			let looping = true;
 				let counter = 0;
 				tl_main = new TimelineLite({onComplete:function() {
@@ -279,8 +280,6 @@
 							
 						}
 
-
-
 				//ex.
 				 //Frame animations start
 				 //FRAME 01 - IN
@@ -290,14 +289,18 @@
 						.to(flipflop, 0.5, { opacity:1, top:"170px", ease: Power2.easeOut},"-=0.4")
 						.to(flipflop, 0.4, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
 
+
 						.to(snowboard, 0.5, { opacity:1, top:"170px", ease: Power2.easeOut})
+						.to(text_03, 0.5, { opacity:1,  ease: Power2.easeOut},"-=0.5")
 						.to(snowboard, 0.4, { opacity:1, top:"600px", ease: Power2.easeIn},"+=1.0")
 
+						
 						.to(beater, 0.5, { opacity:1, top:"170px", ease: Power2.easeOut})
-						.to(text_03, 0.5, { opacity:1,  ease: Power2.easeOut})
-						.to(text_04, 0.5, { opacity:1,  ease: Power2.easeOut})
+						.to(text_04, 0.5, { opacity:1,  ease: Power2.easeOut},"-=0.5")
+						
+						
 
-						.to(beater, 0.6, { top:"330px", ease: Power2.easeOut},"+=0.5")
+						.to(beater, 0.6, { top:"330px", ease: Power2.easeOut},"+=1.0")
 
 						.to(text_01, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.5")
 				 		.to(text_02, 0.5, { opacity:0, left:"300px", ease: Power2.easeOut},"-=0.45")
@@ -306,7 +309,7 @@
 
 
 						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
-						.add( function(){ lottie.play(); },"-=0.8" )
+						 .add( function(){ lottie.play(); },"-=0.8" )
 
 
 						.to(text_05, 0.5, { opacity:1, left:"36px",  ease: Power2.easeOut})
@@ -318,7 +321,6 @@
 						
 						.to(learn_more_sq, 0.5, { opacity:1,  ease: Power2.easeOut},"-=0.5")
 						.to(learn_more, 0.5, { opacity:1,  left:"98px", ease: Power2.easeOut})
-
          
 			}
 
@@ -339,8 +341,7 @@
 				   <div id="learn_more_sq"><img src="learnMore.png"></div>
 				   <div id="beater"><img src="beater.png"></div>
 				   <div id="snowboard"><img src="snowboard.png"></div>
-				   <div id="flipflop"><img src="flipflop.png"></div>
-
+				   <div id="flipflop"><img src="flipFlop.png"></div>
 				   <div id="text_01"><img src="text_sheet.png"></div>
 				   <div id="text_02"><img src="text_sheet.png"></div>
 				   <div id="text_03"><img src="text_sheet.png"></div>
@@ -349,14 +350,6 @@
 				   <div id="text_06"><img src="text_sheet.png"></div>
 				   <div id="text_07"><img src="text_sheet.png"></div>
 				   <div id="text_08"><img src="text_sheet.png"></div>
-
-				 
-				   			   
-					<!--CTA-->
-					<!-- <div id="ctaBtn"><img src="ctaBtn.png"></div> -->
-					<!--=============CLICKTAGS================-->
-					<!--=============DC Clicktag==============-->
-					<!-- <div id="linkLayer"></div> -->
 
 					<!--==========Default ClickTag============-->
 					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
