@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+	<title>300x250 BSW Southlake Texas - Date Night</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie.min.js'></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {position:absolute; opacity:1; background-color: #7e385e;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:250px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#7e385e;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		#line_rotation {
+			position: absolute;
+			top: -100px;
+			left: -70px;
+			opacity: 0;
+			transform: scale(1.2);
+		}
+
+		#top_gradient {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 1;
+		}
+
+		#SL_Logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+		}
+
+		#SL_tab {
+			position: absolute;
+			top: 30px;
+			left: 0;
+			opacity: 1;
+		}
+
+		#image_01 {
+			position: absolute;
+			top: -70px;
+			left: -35px;
+			opacity: 0;
+			transform: scale(0.8);
+		}
+
+		#image_02 {
+			position: absolute;
+			top: -20px;
+			left: -45px;
+			opacity: 0;
+			transform: scale(0.8);
+		}
+
+		#image_03 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			transform: scale(1);
+		}
+
+		#text_01 {
+			position: absolute;
+			clip: rect(0px 300px 20px 0px);
+			top: 10px;
+			left: 42px;
+			opacity: 0;
+		}
+
+		#text_02 {
+			position: absolute;
+			clip: rect(20px 300px 50px 0px);
+			top: -18px;
+			left: 55px;
+			opacity: 0;
+		}
+
+		#text_03 {
+			position: absolute;
+			clip: rect(50px 300px 100px 0px);
+			top: -48px;
+			left: 17px;
+			opacity: 0;
+		}
+
+		#text_04 {
+			position: absolute;
+			clip: rect(100px 300px 180px 0px);
+			top: -18px;
+			left: 18px;
+			opacity: 0;
+		}
+
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    let clickTag = "https://visitsouthlaketexas.com";
+	let trackingURL = "/?utm_source=trip%20advisor&amp;utm_medium=banner&amp;utm_campaign=perfect";
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+
+				var BG = document.getElementById('BG');
+				var image_01 = document.getElementById('image_01');
+				var image_02 = document.getElementById('image_02');
+				var image_03 = document.getElementById('image_03');
+
+				var text_01 = document.getElementById('text_01');
+				var text_02 = document.getElementById('text_02');
+				var text_03 = document.getElementById('text_03');
+				var text_04 = document.getElementById('text_04');
+
+				var SL_Logo = document.getElementById('SL_Logo');
+				var SL_tab = document.getElementById('SL_tab');
+
+				var line_rotation = document.getElementById('line_rotation');
+				var top_gradient = document.getElementById('top_gradient');
+
+			
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != -1 && looping == true) {
+						counter ++;						
+						setTimeout(restartAd, 3000)
+						
+						
+						} else {
+							return;
+						}
+						}});						
+						
+						function restartAd() {	
+							tl_main.restart();
+							lottie.goToAndStop(1);
+							
+						}
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01
+				 //========================================================================
+				  tl_main.to(text_01, 1, { opacity:1, ease: Power2.easeOut })
+				  		 .to(image_01, 0.5, { opacity:1, ease: Power1.easeOut},"-=1.0")
+				 		 .to(image_01, 4, { x:"-20px" , y:"70px", scaleX:"1.2", scaleY:"1.2", ease: Linear.easeNone, force3D:true},"-=1.0")
+						 .to(SL_tab, 0.5, { opacity:1, top: "0px", ease: Power2.easeOut},"-=4.0")
+
+
+				 //FRAME 02
+				 //========================================================================
+						 .to(image_01, 0.5, { opacity:0, ease: Power2.easeOut },"+=1.5")
+						 .to(text_01, 0.5, { opacity:0, ease: Power1.easeOut},"-=3.2")
+
+						 .to(text_02, 0.5, { opacity:1, ease: Power2.easeOut },"-=3.0")
+						 .to(image_02, 1, { opacity:1, ease: Power1.easeOut},"-=3.0")
+						 .to(image_02, 4, { x:"30px", y:"-20px", scaleX:"1.3", scaleY:"1.3", ease: Linear.easeNone, force3D:true},"-= 3.0")
+
+
+				 //FRAME 03
+				 //========================================================================
+						 .to(image_02, 0.5, { opacity:0, ease: Power2.easeOut },"+=1.5")
+						 .to(text_02, 0.5, { opacity:0, ease: Power1.easeOut},"-=3.2")
+
+						 .to(text_03, 0.5, { opacity:1, ease: Power2.easeOut },"-=3.0")
+						 .to(image_03, 1, { opacity:1, ease: Power1.easeOut},"-=3.0")
+						 .to(image_03, 4, { x:"-20px" , y:"10px", scaleX:"1.3", scaleY:"1.3", ease: Linear.easeNone, force3D:true},"-= 3.0")
+
+
+				 //FRAME 04
+				 //========================================================================
+						 .to(text_03, 0.5, { opacity:0, ease: Power1.easeOut},"+=1.5")
+						 .to(text_03, 0.5, { opacity:0, ease: Power1.easeOut},"-=3.5")
+						 .to(image_03, 0.5, { opacity:0, ease: Power1.easeOut },"-=3.5")
+						 .to(text_04, 0.5, { opacity:1, ease: Power2.easeOut },"-=3.5")
+						 .to(top_gradient, 0.5, { opacity:0, ease: Power1.easeOut},"-=3.5")
+
+						 .to(line_rotation, 0.5, { opacity:1, ease: Power1.easeOut},"-=3.5")
+						 .to(line_rotation, 6, { rotation:"360", ease: Linear.easeNone},"-=3.5")
+						 
+
+				//FRAME 05
+				 //========================================================================
+
+						.to(text_04, 0.5, { opacity:0, ease: Power2.easeOut },"-=3.5")
+						.to(SL_Logo, 0.5, { opacity:1, ease: Power2.easeOut },"-=3.5")
+						.to(line_rotation, 3, { opacity:0, ease: Power2.easeOut },"-=3.0")
+
+
+			}
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <div id="BG"></div>
+				   <!-- <div id="TEMP"><img src="temp_03_b.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+				   <!--Images-->
+				   <div id="image_01"><img src="image_01.jpg"></div>
+				   <div id="image_02"><img src="image_02.jpg"></div>
+				   <div id="image_03"><img src="image_03.jpg"></div>
+
+				   <div id="top_gradient"><img src="gradient_top.png"></div>
+				   <div id="text_01"><img src="text_sheet.png"></div>
+				   <div id="text_02"><img src="text_sheet.png"></div>
+				   <div id="text_03"><img src="text_sheet.png"></div>
+				  
+				   <div id="line_rotation"><img src="line_rotation.jpg"></div>
+				   <div id="text_04"><img src="text_sheet.png"></div>
+				  
+				   <div id="SL_Logo"><img src="SL_Logo.png"></div>
+				   <div id="SL_tab"><img src="tab_visit_SL.png"></div>
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag+trackingURL)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
