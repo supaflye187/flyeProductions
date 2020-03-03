@@ -66,17 +66,26 @@
 			opacity: 1;
 		}
 
-		#SL_Logo {
+		#SL_tab {
 			position: absolute;
-			top: -2px;
+			top: 30px;
 			left: 0;
 			opacity: 0;
 		}
 
-		#SL_tab {
+
+			/* #SL_Logo {
 			position: absolute;
-			top: 30px;
-			left: 1;
+			top: -2px;
+			left: 0;
+			opacity: 0;
+		} */
+
+
+		#SL_Logo {
+			position: absolute;
+			top: -2px;
+			left: 60px;
 			opacity: 0;
 		}
 
@@ -208,7 +217,7 @@
 				  tl_main.to(text_01, 1, { opacity:1, ease: Power2.easeOut })
 				  		 .to(image_01, 0.5, { opacity:1, ease: Power1.easeOut},"-=1.0")
 				 		 .to(image_01, 4, { x:"10px" , y:"30px", scaleX:"0.7", scaleY:"0.7", ease: Linear.easeNone, force3D:true},"-=1.0")
-						 .to(SL_tab, 0.5, { opacity:1, top: "0px", ease: Power2.easeOut},"-=4.0")
+						 //.to(SL_tab, 0.5, { opacity:1, top: "0px", ease: Power2.easeOut},"-=4.0")
 
 
 				 //FRAME 02
@@ -273,7 +282,7 @@
 				   <div id="text_02"><img src="text_sheet.png"></div>
 				   <div id="text_03"><img src="text_sheet.png"></div>
 				  
-				   <div id="SL_tab"><img src="tab_visit_SL.png"></div>
+				   <!-- <div id="SL_tab"><img src="tab_visit_SL.png"></div> -->
 				   <div id="line_rotation"><img src="line_rotation.jpg"></div>
 				   <div id="text_04"><img src="text_sheet.png"></div>
 				  
