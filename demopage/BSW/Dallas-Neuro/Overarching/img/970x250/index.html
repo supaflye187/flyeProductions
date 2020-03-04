@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=970,height=250">
+	<title>970x250 BSW Health - Neuro</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie.min.js'></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {position:absolute; opacity:1;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:970px;
+			height:250px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:968px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		#bsw_logo {
+			position: absolute;
+			width: 235px;
+			height: 83px;
+			top: 138px;
+			left: 80px;
+			opacity: 0;
+		}
+
+		#bsw_icon {
+			position: absolute;
+			width: 78px;
+			height: 78px;
+			top: 140px;
+			left: 7px;
+			opacity: 1;
+		}
+
+		#beater {
+			position: absolute;
+			top: 0px;
+			left: 970px;
+			opacity: 0;
+		}
+
+		#snowboard {
+			position: absolute;
+			top: 0px;
+			left: 970px;
+			opacity: 0;
+		}
+
+		#flipFlop {
+			position: absolute;
+			top: 0px;
+			left: 970px;
+			opacity: 0;
+		}
+
+		#text_01 {
+			position: absolute;
+			clip: rect(0px,600px,30px,0px);
+			top: 39px;
+			left: 73px;
+			opacity: 1;
+		}
+
+		#text_02 {
+			position: absolute;
+			clip: rect(30px,180px,90px,0px);
+			top: 39px;
+			left: 73px;
+			opacity: 0;
+		}
+
+		#text_03 {
+			position: absolute;
+			clip: rect(30px,500px,90px,170px);
+			top: 39px;
+			left: 73px;
+			opacity: 0;
+		}
+
+
+
+
+		#text_04 {
+			position: absolute;
+			clip: rect(90px,728px,130px,0px);
+			top: -58px;
+			left: -710px;
+			opacity: 1;
+		}
+
+
+		#text_05 {
+			position: absolute;
+			clip: rect(130px,728px,180px,0px);
+			top: -58px;
+			left: -710px;
+			opacity: 1;
+		}
+
+
+		#learn_more {
+			position: absolute;
+			clip: rect(0px,145px,480px,0px);
+			top: 188px;
+			left: 520px;
+			opacity: 0;
+		}
+
+
+		#learn_more_sq {
+			position: absolute;
+			clip: rect(0px,200px,480px,145px);
+			top: 188px;
+			left: 363px;
+			opacity: 0;
+		}
+
+
+		#whiteMask {
+			width: 200px;
+			height: 50px;
+			position: absolute;
+			background-color: #fff;
+			top: 163px;
+			left: 522px;
+		}
+
+
+
+		
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+
+			var loader = document.getElementsByClassName("bm");
+			
+			function loadBMAnimation(loader) {
+				console.log("this is loading");
+			var animation = bodymovin.loadAnimation({
+			container: loader,
+			renderer: "svg",
+			loop: false,
+			autoplay: false,
+			path: "bsw_icon.json"
+			});
+			}
+			for (var i = 0; i < loader.length; i++) {
+			loadBMAnimation(loader[i]);
+		}
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var bsw_logo = document.getElementById('bsw_logo');
+				// var bsw_icon = document.getElementById('bsw_icon');
+				var beater = document.getElementById('beater');
+				var snowboard = document.getElementById('snowboard');
+				var flipFlop = document.getElementById('flipFlop');
+
+				var text_01 = document.getElementById('text_01');
+				var text_02 = document.getElementById('text_02');
+
+				var text_03 = document.getElementById('text_03');
+				var text_04 = document.getElementById('text_04');
+
+				var text_05 = document.getElementById('text_05');
+				var text_06 = document.getElementById('text_06');
+
+				var learn_more = document.getElementById('learn_more');
+				var learn_more_sq = document.getElementById('learn_more_sq');
+
+
+					//Timeline Function - can set multiple Timelines
+			let looping = true;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != 100 && looping == true) {
+						counter ++;						
+						setTimeout(restartAd, 3000)
+						
+						
+						} else {
+							return;
+						}
+						}});						
+						
+						function restartAd() {	
+							tl_main.restart();
+							lottie.goToAndStop(1);
+							
+						}
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //========================================================================
+				 tl_main.to(text_01, 0.3, { opacity:1,  ease: Power2.easeOut})
+						.to(flipFlop, 0.5, { opacity:1, left:"522px", ease: Power2.easeOut},"-=0.4")
+						.to(flipFlop, 0.4, { opacity:1, left:"970px", ease: Power2.easeIn},"+=0.5")
+
+						.to(snowboard, 0.5, { opacity:1, left:"522px", ease: Power2.easeOut})
+						.to(text_02, 0.7, { opacity:1,  ease: Power2.easeOut},"-=0.5")
+						.to(snowboard, 0.4, { opacity:1, left:"970px", ease: Power2.easeIn},"+=1.0")
+
+						.to(beater, 0.5, { opacity:1, left:"522px", ease: Power2.easeOut})
+						.to(text_03, 0.7, { opacity:1,  ease: Power2.easeOut},"-=0.5")
+
+						.to(beater, 0.6, { left:"600px", ease: Power2.easeOut},"+=1.0")
+
+						.to(text_01, 0.5, { opacity:0, left:"-580px", ease: Power2.easeOut},"-=0.5")
+				 		.to(text_02, 0.5, { opacity:0, left:"-580px", ease: Power2.easeOut},"-=0.44")
+						.to(text_03, 0.5, { opacity:0, left:"-580px", ease: Power2.easeOut},"-=0.5")
+
+
+						.to(bsw_logo, 0.8, {opacity:1, ease: Power1.easeOut})
+						.add( function(){ lottie.play(); },"-=0.8" )
+
+
+						.to(text_04, 0.5, { opacity:1, left:"17px",  ease: Power2.easeOut})
+						.to(text_05, 0.5, { opacity:1,  left:"16px", ease: Power2.easeOut},"-=0.45")
+
+
+						
+						.to(learn_more_sq, 0.5, { opacity:1,  ease: Power2.easeOut})
+						.to(learn_more, 0.5, { opacity:1,  left:"363px", ease: Power2.easeOut})
+			}
+
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <!-- <div id="TEMP"><img src="temp_02.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+				   <div id="bsw_icon" class="bm"></div>
+				   <object id="bsw_logo" data="logo_lockup.svg" type="image/svg+xml"></object>
+
+				  
+				   <div id="learn_more"><img src="learnMore.png"></div>
+				   <div id="whiteMask"></div>
+				   <div id="beater"><img src="beater.png"></div>
+				  
+				   <div id="learn_more_sq"><img src="learnMore.png"></div>
+				   <div id="snowboard"><img src="snowboard.png"></div>
+				   <div id="flipFlop"><img src="flipFlop.png"></div>
+
+				   <div id="text_01"><img src="text_sheet.png"></div>
+				   <div id="text_02"><img src="text_sheet.png"></div>
+				   <div id="text_03"><img src="text_sheet.png"></div>
+				   <div id="text_04"><img src="text_sheet.png"></div>
+				   <div id="text_05"><img src="text_sheet.png"></div>
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
