@@ -98,45 +98,58 @@
 
 		#f1_text_01 {
 			position: absolute;
-			clip: rect(0px,500px,120px,0px);
-			top: -100px;
-			left: 9px;
+			clip: rect(0px,500px,140px,0px);
+			top: -122px;
+			left: 7px;
 			opacity: 1;
 		}
 
 		#f2_text_01 {
 			position: absolute;
-			clip: rect(120px,500px,280px,0px);
-			top: -260px;
+			clip: rect(140px,500px,260px,0px);
+			top: -240px;
 			left: 9px;
 			opacity: 1;
 		}
 
 		#f3_text_01 {
 			position: absolute;
-			clip: rect(280px,500px,400px,0px);
-			top: -391px;
-			left: 9px;
-			opacity: 1;
-		}
-
-		#f4_text_01 {
-			position: absolute;
-			clip: rect(400px,500px,600px,0px);
-			top: -502px;
+			clip: rect(260px,500px,400px,0px);
+			top: -350px;
 			left: 9px;
 			opacity: 1;
 		}
 
 		#findOut {
 			position: absolute;
+			clip: rect(0px,100px,600px,0px);
+			width: 120px;
+			height: 28px;
+			top: 550px;
+			left: 187px;
+			opacity: 0;
+
+		}
+
+
+		#findOut_sq {
+			position: absolute;
+			clip: rect(0px,500px,600px,100px);
 			width: 120px;
 			height: 28px;
 			top: 550px;
 			left: 87px;
 			opacity: 0;
-			border: 1px solid #008fbe;
 
+		}
+
+		#findOut_mask {
+			position: absolute;
+			top: 560px;
+			left: 200px;
+			width: 100px;
+			height: 14px;
+			background-color: #fff;
 		}
 
 		#white_mask {
@@ -147,10 +160,7 @@
 			height: 14px;
 			background-color: #fff;
 		}
-
-
-
-		
+	
 
 		/*End YOUR CSS
 		=========================================*/
@@ -174,22 +184,6 @@
 			document.getElementById("container").style.display="block";
 			console.log("content loaded...");
 			startAni();
-
-		// 	var loader = document.getElementsByClassName("bm");
-			
-		// 	function loadBMAnimation(loader) {
-		// 		console.log("this is loading");
-		// 	var animation = bodymovin.loadAnimation({
-		// 	container: loader,
-		// 	renderer: "svg",
-		// 	loop: false,
-		// 	autoplay: false,
-		// 	path: "bsw_icon.json"
-		// 	});
-		// 	}
-		// 	for (var i = 0; i < loader.length; i++) {
-		// 	loadBMAnimation(loader[i]);
-		// }
 			}
 
 			// Set Elements as Variables
@@ -207,7 +201,6 @@
 				var f1_text_01 = document.getElementById('f1_text_01');
 				var f2_text_01 = document.getElementById('f2_text_01');
 				var f3_text_01 = document.getElementById('f3_text_01');
-				var f4_text_01 = document.getElementById('f4_text_01');
 			
 				var findOut = document.getElementById('findOut');
 
@@ -238,17 +231,17 @@
 				 //========================================================================
 				 tl_main.to(image_01, 1, { top:"13px", ease: Power2.easeOut})
 				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
-						.to(f1_text_01, 1, { top:"9px", ease: Power2.easeOut},"-=0.5")
+						.to(f1_text_01, 1, { top:"8px", ease: Power2.easeOut},"-=0.5")
 
 						.to(image_02, 1, { top:"13px", ease: Power2.easeOut},"+=1.5")
-						.to(f2_text_01, 1, { top:"-109px", ease: Power2.easeOut},"-=0.5")
+						.to(f2_text_01, 1, { top:"-139px", ease: Power2.easeOut},"-=0.5")
 						
-						.to(image_03, 1, { top:"13px", ease: Power2.easeOut},"+=1.5")
-						.to(f3_text_01, 1, { top:"-271px", ease: Power2.easeOut},"-=0.5")
-
 						.to(blue_box, 0.8, { top:"13px", ease: Power2.easeOut},"+=1.5")
-						.to(f4_text_01, 1.6, { top:"-140px", ease: Power2.easeOut},"-=0.5")
-						.to(findOut, 1, { opacity:"1", ease: Power2.easeOut},"-=0.5")
+						.to(f3_text_01, 1.6, { top:"11px", ease: Power2.easeOut},"-=0.5")
+
+
+						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
+						.to(findOut, 0.8, { opacity:"1", left:"87px", ease: Power2.easeOut})
          
 			}
 
@@ -260,7 +253,7 @@
 <body>
     <div id="container">
 				   <!--Background Image -->
-				   <!-- <div id="TEMP"><img src="temp_01.jpg"></div> -->
+				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
 				   <!-- <div id="bsw_icon" class="bm"></div> -->
 				   <object id="bsw_logo" data="logo_lockup.svg" type="image/svg+xml"></object>
@@ -270,12 +263,12 @@
 				   <div id="image_02"><img src="image_02.jpg"></div>
 				   <div id="f2_text_01"><img src="text_sheet.png"></div>
 				   <div id="image_03"><img src="image_03.jpg"></div>
-				   <div id="f3_text_01"><img src="text_sheet.png"></div>
 				   <div id="blue_box"></div>
-				   <div id="f4_text_01"><img src="text_sheet.png"></div>
+				   <div id="f3_text_01"><img src="text_sheet.png"></div>
 
 				   <object id="findOut" data="findOut.svg" type="image/svg+xml"></object>
-
+				   <object id="findOut_sq" data="findOut.svg" type="image/svg+xml"></object>
+				   <div id="findOut_mask"></div>
 				   <div id="white_mask"></div>
 
 

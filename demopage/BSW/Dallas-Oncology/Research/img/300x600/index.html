@@ -95,30 +95,8 @@
 			opacity: 1;
 		}
 
-		#image_03 {
-			position: absolute;
-			top: -350px;
-			left: 14px;
-			opacity: 1;
-		}
-
-		#image_04 {
-			position: absolute;
-			top: -350px;
-			left: 14px;
-			opacity: 1;
-		}
-
-		#image_05 {
-			position: absolute;
-			top: -350px;
-			left: 14px;
-			opacity: 1;
-		}
-
-
 		
-		#blue_box {
+		#blue_box_01 {
 			position: absolute;
 			background-color: #008fbe;
 			width: 271px;
@@ -129,47 +107,61 @@
 		}
 
 
-		#f1_text_01 {
+		#blue_box_02 {
 			position: absolute;
-			clip: rect(0px,500px,100px,0px);
-			top: -85px;
+			background-color: #008fbe;
+			width: 271px;
+			height: 361px;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+
+		#blue_box_03 {
+			position: absolute;
+			background-color: #008fbe;
+			width: 271px;
+			height: 361px;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+
+		#f1_text {
+			position: absolute;
+			clip: rect(0px,500px,150px,0px);
+			top: -130px;
 			left: 9px;
 			opacity: 1;
 		}
 
-		#f2_text_01 {
+		#f2_text {
 			position: absolute;
-			clip: rect(100px,500px,200px,0px);
-			top: -180px;
+			clip: rect(150px,500px,270px,0px);
+			top: -253px;
 			left: 9px;
 			opacity: 1;
 		}
 
-		#f3_text_01 {
+		#f3_text {
 			position: absolute;
-			clip: rect(200px,500px,300px,0px);
-			top: -280px;
+			clip: rect(270px,500px,400px,0px);
+			top: -380px;
 			left: 9px;
 			opacity: 1;
 		}
 
-		#f4_text_01 {
+		#f4_text {
 			position: absolute;
-			clip: rect(300px,500px,430px,0px);
-			top: -420px;
+			clip: rect(400px,500px,500px,0px);
+			top: -473px;
 			left: 9px;
 			opacity: 1;
 		}
 
-		#f5_text_01 {
-			position: absolute;
-			clip: rect(430px,500px,500px,0px);
-			top: -500px;
-			left: 9px;
-			opacity: 1;
-		}
-
-		#f6_text_01 {
+		#f5_text {
 			position: absolute;
 			clip: rect(500px,500px,600px,0px);
 			top: -580px;
@@ -180,13 +172,34 @@
 
 		#findOut {
 			position: absolute;
+			clip: rect(0px,100px,600px,0px);
+			width: 120px;
+			height: 28px;
+			top: 550px;
+			left: 187px;
+			opacity: 0;
+
+		}
+
+
+		#findOut_sq {
+			position: absolute;
+			clip: rect(0px,500px,600px,100px);
 			width: 120px;
 			height: 28px;
 			top: 550px;
 			left: 87px;
 			opacity: 0;
-			border: 1px solid #008fbe;
 
+		}
+
+		#findOut_mask {
+			position: absolute;
+			top: 560px;
+			left: 200px;
+			width: 100px;
+			height: 14px;
+			background-color: #fff;
 		}
 
 		#white_mask {
@@ -222,22 +235,6 @@
 			document.getElementById("container").style.display="block";
 			console.log("content loaded...");
 			startAni();
-
-		// 	var loader = document.getElementsByClassName("bm");
-			
-		// 	function loadBMAnimation(loader) {
-		// 		console.log("this is loading");
-		// 	var animation = bodymovin.loadAnimation({
-		// 	container: loader,
-		// 	renderer: "svg",
-		// 	loop: false,
-		// 	autoplay: false,
-		// 	path: "bsw_icon.json"
-		// 	});
-		// 	}
-		// 	for (var i = 0; i < loader.length; i++) {
-		// 	loadBMAnimation(loader[i]);
-		// }
 			}
 
 			// Set Elements as Variables
@@ -247,19 +244,17 @@
 
 				var image_01 = document.getElementById('image_01');
 				var image_02 = document.getElementById('image_02');
-				var image_03 = document.getElementById('image_03');
-				var image_04 = document.getElementById('image_04');
-				var image_05 = document.getElementById('image_05');
 
-				var blue_box = document.getElementById('blue_box');
+				var blue_box_01 = document.getElementById('blue_box_01');
+				var blue_box_02 = document.getElementById('blue_box_02');
+				var blue_box_03 = document.getElementById('blue_box_03');
 				var white_mask = document.getElementById('white_mask');
 				
-				var f1_text_01 = document.getElementById('f1_text_01');
-				var f2_text_01 = document.getElementById('f2_text_01');
-				var f3_text_01 = document.getElementById('f3_text_01');
-				var f4_text_01 = document.getElementById('f4_text_01');
-				var f5_text_01 = document.getElementById('f5_text_01');
-				var f6_text_01 = document.getElementById('f6_text_01');
+				var f1_text = document.getElementById('f1_text');
+				var f2_text = document.getElementById('f2_text');
+				var f3_text = document.getElementById('f3_text');
+				var f4_text = document.getElementById('f4_text');
+				var f5_text = document.getElementById('f5_text');
 			
 				var findOut = document.getElementById('findOut');
 
@@ -288,26 +283,25 @@
 				 //Frame animations start
 				 //FRAME 01 - IN
 				 //========================================================================
-				 tl_main.to(image_01, 1, { top:"13px", ease: Power2.easeOut})
+				 tl_main.to(blue_box_01, 1, { top:"13px", ease: Power2.easeOut})
 				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
-						.to(f1_text_01, 1, { top:"9px", ease: Power2.easeOut},"-=0.5")
+						.to(f1_text, 1, { top:"8px", ease: Power2.easeOut},"-=0.5")
+
+						.to(image_01, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f2_text, 1, { top:"-143px", ease: Power2.easeOut},"-=0.5")
+						
+						.to(blue_box_02, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f3_text, 1, { top:"-270px", ease: Power2.easeOut},"-=0.5")
 
 						.to(image_02, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
-						.to(f2_text_01, 1, { top:"-89px", ease: Power2.easeOut},"-=0.5")
-						
-						.to(image_03, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
-						.to(f3_text_01, 1, { top:"-187px", ease: Power2.easeOut},"-=0.5")
+						.to(f4_text, 1, { top:"-393px", ease: Power2.easeOut},"-=0.5")
 
-						.to(image_04, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
-						.to(f4_text_01, 1, { top:"-288px", ease: Power2.easeOut},"-=0.5")
+						.to(blue_box_03, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f5_text, 1.6, { top:"-211px", ease: Power2.easeOut},"-=0.5")
 
-						.to(image_05, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
-						.to(f5_text_01, 1, { top:"-422px", ease: Power2.easeOut},"-=0.5")
 
-						.to(blue_box, 0.8, { top:"13px", ease: Power2.easeOut},"+=1.3")
-						.to(f6_text_01, 1.6, { top:"-215px", ease: Power2.easeOut},"-=0.5")
-
-						.to(findOut, 1, { opacity:"1", ease: Power2.easeOut},"-=0.5")
+						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
+						.to(findOut, 0.8, { opacity:"1", left:"87px", ease: Power2.easeOut})
          
 			}
 
@@ -319,32 +313,31 @@
 <body>
     <div id="container">
 				   <!--Background Image -->
-				   <!-- <div id="TEMP"><img src="temp_01.jpg"></div> -->
+				   <!-- <div id="TEMP"><img src="temp_05.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
 				   <!-- <div id="bsw_icon" class="bm"></div> -->
 				   <object id="bsw_logo" data="logo_lockup.svg" type="image/svg+xml"></object>
 				  
 
+				   <div id="blue_box_01"></div>
+				   <div id="f1_text"><img src="text_sheet.png"></div>
+
 				   <div id="image_01"><img src="image_01.jpg"></div>
-				   <div id="f1_text_01"><img src="text_sheet.png"></div>
+				   <div id="f2_text"><img src="text_sheet.png"></div>
+
+				   <div id="blue_box_02"></div>
+				   <div id="f3_text"><img src="text_sheet.png"></div>
 
 				   <div id="image_02"><img src="image_02.jpg"></div>
-				   <div id="f2_text_01"><img src="text_sheet.png"></div>
+				   <div id="f4_text"><img src="text_sheet.png"></div>
 
-				   <div id="image_03"><img src="image_03.jpg"></div>
-				   <div id="f3_text_01"><img src="text_sheet.png"></div>
-
-				   <div id="image_04"><img src="image_04.jpg"></div>
-				   <div id="f4_text_01"><img src="text_sheet.png"></div>
-
-				   <div id="image_05"><img src="image_05.jpg"></div>
-				   <div id="f5_text_01"><img src="text_sheet.png"></div>
-
-				   <div id="blue_box"></div>
-				   <div id="f6_text_01"><img src="text_sheet.png"></div>
+				   <div id="blue_box_03"></div>
+				   <div id="f5_text"><img src="text_sheet.png"></div>
 
 
 				   <object id="findOut" data="findOut.svg" type="image/svg+xml"></object>
+				   <object id="findOut_sq" data="findOut.svg" type="image/svg+xml"></object>
+				   <div id="findOut_mask"></div>
 				   <div id="white_mask"></div>
 
 
