@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+	<title>300x250 Epson - Mono Banner</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSRulePlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.4;}
+		#BG {background-color: #1cc2ff;}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:250px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#1cc2ff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+		#ctaBtn {
+			position: absolute;
+			top: 195px;
+			left: 188px;
+			width: 97px;
+			height: 32px;
+			background-color: #d3041f;
+			border-radius: 4px;
+			opacity: 0;
+			-webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			overflow: hidden;
+		}
+
+		#ctaBtn img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#ctaBtn:before,
+		#ctaBtn:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -150px;
+			width: 150%;
+			height: 100%;
+			background: #fff;
+			opacity: 0.2;
+			transform: rotate(45deg);
+			transition: all ease 1s;
+		}
+
+		#ctaBtn:hover:before,
+		#ctaBtn:hover:after {
+			left: 100%;
+		}
+
+		/*YOUR CSS
+		=========================================*/
+
+		#shaq_01 {
+			position: absolute;
+			top: 10px;
+			left: -50px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		 #shaq_02 {
+			position: absolute;
+			top: 22px;
+			left: -50px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#shaq_03 {
+			position: absolute;
+			top: 0px;
+			left: -50px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#shaq_04 {
+			position: absolute;
+			top: 10px;
+			left: 205px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#shaq_05 {
+			position: absolute;
+			top: 36px;
+			left: 250px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#printer_01 {
+			position: absolute;
+			top: 48px;
+			left: 35px;
+			opacity: 0;
+		}
+
+		#toner_01 {
+			position: absolute;
+			top: 158px;
+			left: 182px;
+			opacity: 0;
+			transform: scale(0.7);
+		}
+
+		#printer_02 {
+			position: absolute;
+			top: 48px;
+			left: 35px;
+			opacity: 0;
+			transform: scale(0.9);
+		}
+
+		#toner_02 {
+			position: absolute;
+			top: 158px;
+			left: 182px;
+			opacity: 0;
+			transform: scale(0.7);
+		}
+
+
+		#printer_03 {
+			position: absolute;
+			top: 48px;
+			left: 35px;
+			opacity: 0;
+			transform: scale(0.9);
+		}
+
+		#toner_03 {
+			position: absolute;
+			top: 158px;
+			left: 182px;
+			opacity: 0;
+			transform: scale(0.7);
+		}
+
+
+		#printer_end {
+			position: absolute;
+			top: 60px;
+			left: 0px;
+			opacity: 0;
+			transform: scale(0.8);
+		}
+
+		#toner_end {
+			position: absolute;
+			top: 165px;
+			left: -12px;
+			opacity: 0;
+			transform: scale(0.6);
+		}
+
+		#rays {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;	
+
+		}
+
+
+
+
+		#text_01 {
+			position: absolute;
+			clip: rect(0px,300px,70px,0px);
+			top: 172px;
+			left: 19px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_02 {
+			position: absolute;
+			clip: rect(70px,300px,110px,0px);
+			top: -47px;
+			left: 28px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_03 {
+			position: absolute;
+			clip: rect(110px,300px,150px,0px);
+			top: -87px;
+			left: 14px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_04 {
+			position: absolute;
+			clip: rect(150px,300px,200px,0px);
+			top: -94px;
+			left: 96px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_05 {
+			position: absolute;
+			clip: rect(200px,300px,280px,0px);
+			top: -130px;
+			left: 96px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_06 {
+			position: absolute;
+			clip: rect(280px,300px,400px,0px);
+			top: -218px;
+			left: 4px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#epson_logo {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+
+		}
+
+		#epson_logo_02 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+
+		}
+
+
+		#popUp_tab {
+			position: absolute;
+			top:300px;
+			left: 0;
+			opacity: 1;
+			cursor: pointer;
+		}
+
+		#popUp_menu {
+			position: absolute;
+			display: none;
+			top:0px;
+			left: 0px;
+			opacity: 1;
+			cursor: pointer;
+
+		}
+
+		#popUp_menu img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+
+		}
+
+
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var ctaBtn = document.getElementById('ctaBtn');
+				var ctaBtn_shine = document.getElementById('ctaBtn:before');
+
+				var logo = document.getElementById('epson_logo');
+				var text_01 = document.getElementById('text_01');
+				var text_02 = document.getElementById('text_02');
+				var text_03 = document.getElementById('text_03');
+				var text_04 = document.getElementById('text_04');
+				var text_05 = document.getElementById('text_05');
+				var text_06 = document.getElementById('text_06');
+			
+				var rays = document.getElementById('rays');
+
+				var shaq_01 = document.getElementById('shaq_01');
+				var shaq_02 = document.getElementById('shaq_02');
+				var shaq_03 = document.getElementById('shaq_03');
+				var shaq_04 = document.getElementById('shaq_04');
+				var shaq_05 = document.getElementById('shaq_05');
+
+				var printer_01 = document.getElementById('printer_01');
+				var toner_01 = document.getElementById('toner_01');
+
+				var printer_02 = document.getElementById('printer_02');
+				var toner_02 = document.getElementById('toner_02');
+
+				var printer_end = document.getElementById('printer_end');
+				var toner_end = document.getElementById('toner_end');
+
+
+				var popUp_tab = document.getElementById('popUp_tab');
+				var popUp_menu = document.getElementById('popUp_menu');
+
+				popUp_tab.addEventListener('click', menuOpen);
+				popUp_menu.addEventListener('click', menuClose);
+
+				
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != 1 && looping == true) {
+						counter ++;
+						this.restart();
+						} else {
+							return;
+						}
+						}});
+
+
+				function menuOpen() {
+						document.getElementById('popUp_menu').style.display="block";
+						tl_main.pause();
+						console.log("Menu Open");
+					}
+
+					function menuClose() {
+						document.getElementById('popUp_menu').style.display="none";
+						tl_main.play();
+						console.log("Menu Closed");
+					}
+					
+
+					lt_rotation = new TimelineLite();
+					lt_rotation.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
+
+				 tl_main.to(shaq_01, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut})
+						 .to(text_01, 1, {opacity:1, left:"18px", ease: Power1.easeOut},"-=0.4")
+						
+
+						//FRAME 01 - OUT
+						//=========================================================
+
+						 .to(shaq_01, 0.3, {opacity:0, top:"200px", ease: Power1.easeOut},"+=1.4")
+						 .to(text_01, 0.4, {opacity:0, ease: Power1.easeOut},"-=0.4")
+
+						//FRAME 02 - IN
+						//=========================================================
+						
+						.to(text_02, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(printer_01, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(toner_01, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(rays, 0.4, {opacity:1, ease: Linear.easeNone},"-=0.4")
+
+						
+						//FRAME 02 - OUT
+						//========================================================
+			
+						.to(text_02, 0.4, {opacity:0, ease: Power1.easeOut}, "+=1.4")
+						.to(text_03, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(printer_01, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(toner_01, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						
+
+						//FRAME 03 - IN
+						//========================================================
+
+						.to(text_03, 0.4, {opacity:0, ease: Power1.easeOut}, "+=1.4")
+						.to(rays, 0.4, {opacity:0, ease: Linear.easeNone},"-=0.4")
+						.to(epson_logo, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(text_04, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(shaq_02, 0.4, {opacity:1, left:"0", ease: Power1.easeOut},"-=0.4")
+						.to(printer_01, 0.4, {opacity:1, x:"40px;", y:"15px", scaleX:"0.8", scaleY:"0.8", ease: Power1.easeOut},"-=0.4")
+						.to(toner_01, 0.4, {opacity:1, x:"15px;", y:"10px", scaleX:"0.6", scaleY:"0.6", ease: Power1.easeOut},"-=0.4")
+
+
+						//FRAME 03 - OUT
+						//========================================================
+						
+						.to(text_04, 0.4, {opacity:0, ease: Power1.easeOut}, "+=1.4")
+						.to(shaq_02, 0.4, {opacity:0, left:"-50px", ease: Power1.easeOut},"-=0.4")
+						.to(shaq_03, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.4")
+						.to(printer_01, 0.4, {opacity:0, ease: Power1.easeOut},"-=0.4")
+						.to(toner_01, 0.4, {opacity:0, ease: Power1.easeOut},"-=0.4")
+						
+									
+						//FRAME 04 - IN
+						//========================================================
+
+						.to(toner_01, 0.4, {opacity:1,  x:"-45px;", y:"-15px", scaleX:"1", scaleY:"1", ease: Power1.easeOut},"-=0.4")
+						.to(text_05, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(popUp_tab, 0.4, {opacity:1, top:"220px", ease: Power1.easeOut})
+
+
+						//FRAME 04 - OUT
+						//========================================================
+
+						.to(toner_01, 0.4, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(epson_logo_02, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(text_05, 0.4, {opacity:0, ease: Power1.easeOut},"-=0.4")
+						.to(shaq_03, 0.4, {opacity:0, left:"-50px", ease: Power1.easeOut},"-=0.4")
+						.to(text_06, 0.4, {opacity:1, ease: Power1.easeOut})
+
+
+						
+						.to(shaq_04, 0.4, {opacity:1, left:"185px", ease: Power1.easeOut},"-=0.4")
+						
+						.to(printer_end, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.4")
+						.to(toner_end, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.4")
+
+
+						//FRAME 05 - IN
+						//========================================================
+
+						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.4")
+
+			}
+
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <div id="BG"></div>
+				   <!-- <div id="TEMP"><img src="temp_06.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+				   <div id="rays"><img src="rays.jpg"></div> 
+				   <div id="epson_logo"><img src="epson_logo.png"></div>
+				   <div id="epson_logo_02"><img src="epson_logo_02.jpg"></div>
+		  
+				   <div id="shaq_01"><img src="shaq_01.jpg"></div> 	
+				   <div id="shaq_02"><img src="shaq_02.png"></div>
+				   <div id="shaq_03"><img src="shaq_03.jpg"></div>
+				   <div id="shaq_04"><img src="shaq_04.png"></div>
+
+				   <div id="printer_03"><img src="printer.png"></div> 
+				   <div id="printer_02"><img src="printer.png"></div> 
+				   <div id="printer_01"><img src="printer.png"></div> 
+				   <div id="printer_end"><img src="printer.png"></div> 
+
+				   <div id="toner_01"><img src="toner_Bottles.png"></div> 
+				   <div id="toner_02"><img src="toner_Bottles.png"></div> 
+				   <div id="toner_03"><img src="toner_Bottles.png"></div> 
+				   <div id="toner_end"><img src="toner_Bottles.png"></div> 
+
+				   <div id="text_01"><img src="text_sheet.png"></div>
+				   <div id="text_02"><img src="text_sheet.png"></div>
+				   <div id="text_03"><img src="text_sheet.png"></div>
+				   <div id="text_04"><img src="text_sheet.png"></div>
+				   <div id="text_05"><img src="text_sheet.png"></div>
+				   <div id="text_06"><img src="text_sheet.png"></div>
+
+				   
+					<!--CTA-->
+					<!-- <div id="ctaBtn"></div> -->
+					<div id="ctaBtn"><img src="ctaTxt.png"></div>
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+					<div id="popUp_tab"><img src="popUp_tab.png" alt=""></div>
+
+					<div id="popUp_menu">
+						<img src="popUp_txt.png" alt="">
+					</div>
+    </div>
+</body>
+</html>
