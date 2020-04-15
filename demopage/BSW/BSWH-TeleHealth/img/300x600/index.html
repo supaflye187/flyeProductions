@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=600">
+	<title>300x600 BSW Health - Telehealth</title>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie.min.js'></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	
+		
+	<style type="text/css">
+	
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:600px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background: rgb(255,255,255);
+			background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,253,253,1) 50%, rgba(246,246,246,1) 100%, rgba(255,255,255,1) 100%);
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:598px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+
+		}
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+
+			var loader = document.getElementsByClassName("bm");
+			
+			function loadBMAnimation(loader) {
+				console.log("this is loading");
+			var animation = bodymovin.loadAnimation({
+			container: loader,
+			renderer: "svg",
+			loop: false,
+			autoplay: true,
+			path: "data.json"
+			});
+			}
+			for (var i = 0; i < loader.length; i++) {
+			loadBMAnimation(loader[i]);
+		}
+		
+			}
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+		<!--HTML ELEMENTS HERE-->
+		<div id="bsw_main" class="bm"></div>
+		<!--==========Default ClickTag============-->
+		<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
