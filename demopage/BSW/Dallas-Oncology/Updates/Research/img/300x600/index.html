@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=600">
+	<title>300x600 BSW Health - Neuro - Research</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie.min.js'></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	
+		
+	<style type="text/css">
+	
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {position:absolute; opacity:1;}
+
+		html {
+			background-color: #fff;
+		}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:600px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:598px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		/* #bsw_logo {
+			position: absolute;
+			width: 280px;
+			height: 65px;
+			top: 474px;
+			left: 10px;
+			opacity: 0;
+		}
+
+
+		#bsw_icon {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			top: 388px;
+			left: 98px;
+			opacity: 0;
+		} */
+
+		#bsw_logo {
+			position: absolute;
+			width: 280px;
+			height: 151px;
+			top: 394px;
+			left: 10px;
+			opacity: 0;
+		}
+
+		#image_01 {
+			position: absolute;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+		#image_02 {
+			position: absolute;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+		
+		#blue_box_01 {
+			position: absolute;
+			background-color: #008fbe;
+			width: 271px;
+			height: 361px;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+
+		#blue_box_02 {
+			position: absolute;
+			background-color: #008fbe;
+			width: 271px;
+			height: 361px;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+
+		#blue_box_03 {
+			position: absolute;
+			background-color: #008fbe;
+			width: 271px;
+			height: 361px;
+			top: -350px;
+			left: 14px;
+			opacity: 1;
+		}
+
+
+		#f1_text {
+			position: absolute;
+			clip: rect(0px,500px,170px,0px);
+			top: -150px;
+			left: 8px;
+			opacity: 1;
+		}
+
+		#f2_text {
+			position: absolute;
+			clip: rect(170px,500px,300px,0px);
+			top: -282px;
+			left: 8px;
+			opacity: 1;
+		}
+
+		#f3_text {
+			position: absolute;
+			clip: rect(300px,500px,435px,0px);
+			top: -420px;
+			left: 8px;
+			opacity: 1;
+		}
+
+		#f4_text {
+			position: absolute;
+			clip: rect(435px,500px,550px,0px);
+			top: -525px;
+			left: 8px;
+			opacity: 1;
+		}
+
+		#f5_text {
+			position: absolute;
+			clip: rect(550px,500px,680px,0px);
+			top: -630px;
+			left: 8px;
+			opacity: 1;
+		}
+
+
+		#findOut {
+			position: absolute;
+			clip: rect(0px,100px,600px,0px);
+			width: 120px;
+			height: 28px;
+			top: 550px;
+			left: 187px;
+			opacity: 0;
+
+		}
+
+
+		#findOut_sq {
+			position: absolute;
+			clip: rect(0px,500px,600px,100px);
+			width: 120px;
+			height: 28px;
+			top: 550px;
+			left: 87px;
+			opacity: 0;
+
+		}
+
+		#findOut_mask {
+			position: absolute;
+			top: 560px;
+			left: 200px;
+			width: 100px;
+			height: 14px;
+			background-color: #fff;
+		}
+
+		#white_mask {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 14px;
+			background-color: #fff;
+		}
+
+
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var bsw_logo = document.getElementById('bsw_logo');
+
+				var image_01 = document.getElementById('image_01');
+				var image_02 = document.getElementById('image_02');
+
+				var blue_box_01 = document.getElementById('blue_box_01');
+				var blue_box_02 = document.getElementById('blue_box_02');
+				var blue_box_03 = document.getElementById('blue_box_03');
+				var white_mask = document.getElementById('white_mask');
+				
+				var f1_text = document.getElementById('f1_text');
+				var f2_text = document.getElementById('f2_text');
+				var f3_text = document.getElementById('f3_text');
+				var f4_text = document.getElementById('f4_text');
+				var f5_text = document.getElementById('f5_text');
+			
+				var findOut = document.getElementById('findOut');
+
+
+					//Timeline Function - can set multiple Timelines
+			let looping = true;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != -1 && looping == true) {
+						counter ++;						
+						setTimeout(restartAd, 3000)
+						
+						
+						} else {
+							return;
+						}
+						}});						
+						
+						function restartAd() {	
+							tl_main.restart();
+							lottie.goToAndStop(1);
+							
+						}
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //========================================================================
+				 tl_main.to(blue_box_01, 1, { top:"13px", ease: Power2.easeOut})
+				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
+						.to(f1_text, 1, { top:"8px", ease: Power2.easeOut},"-=0.5")
+
+						.to(image_01, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f2_text, 1, { top:"-160px", ease: Power2.easeOut},"-=0.5")
+						
+						.to(blue_box_02, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f3_text, 1, { top:"-296px", ease: Power2.easeOut},"-=0.5")
+
+						.to(image_02, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f4_text, 1, { top:"-431px", ease: Power2.easeOut},"-=0.5")
+
+						.to(blue_box_03, 1, { top:"13px", ease: Power2.easeOut},"+=1.3")
+						.to(f5_text, 1.6, { top:"-257px", ease: Power2.easeOut},"-=0.5")
+
+
+						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
+						.to(findOut, 0.8, { opacity:"1", left:"87px", ease: Power2.easeOut})
+         
+			}
+
+
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <!-- <div id="TEMP"><img src="temp_01.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+				   <!-- <div id="bsw_icon" class="bm"></div> -->
+				   <object id="bsw_logo" data="logo_lockup.svg" type="image/svg+xml"></object>
+				  
+
+				   <div id="blue_box_01"></div>
+				   <div id="f1_text"><img src="text_sheet.png"></div>
+
+				   <div id="image_01"><img src="image_01.jpg"></div>
+				   <div id="f2_text"><img src="text_sheet.png"></div>
+
+				   <div id="blue_box_02"></div>
+				   <div id="f3_text"><img src="text_sheet.png"></div>
+
+				   <div id="image_02"><img src="image_02.jpg"></div>
+				   <div id="f4_text"><img src="text_sheet.png"></div>
+
+				   <div id="blue_box_03"></div>
+				   <div id="f5_text"><img src="text_sheet.png"></div>
+
+
+				   <object id="findOut" data="findOut.svg" type="image/svg+xml"></object>
+				   <object id="findOut_sq" data="findOut.svg" type="image/svg+xml"></object>
+				   <div id="findOut_mask"></div>
+				   <div id="white_mask"></div>
+
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
