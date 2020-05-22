@@ -55,11 +55,15 @@
 
 		#bsw_logo {
 			position: absolute;
-			width: 383px;
-			height: 73px;
-			top: 123px;
-			left: 573px;
+			top: 0px;
+			left: 0px;
 			opacity: 0;
+
+		}
+
+		#bsw_logo img {
+			width: 970px;
+			height: 250px;
 		}
 
 		#image_01 {
@@ -233,7 +237,7 @@
 				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
 						.to(f1_text, 1, { top:"14px", ease: Power2.easeOut},"-=0.5")
 
-						.to(image_02, 1, { top:"20px", ease: Power2.easeOut},"+=1.5")
+						.to(image_02, 1, { top:"20px", ease: Power2.easeOut},"+=3.0")
 						.to(f2_text, 1, { top:"-180px", ease: Power2.easeOut},"-=0.5")
 
 						.to(blue_box, 0.8, { top:"20px", ease: Power2.easeOut},"+=1.5")
@@ -255,7 +259,7 @@
 				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				   <!--HTML ELEMENTS HERE-->
 				   <!-- <div id="bsw_icon" class="bm"></div> -->
-				   <object id="bsw_logo" data="logo_lockup.svg" type="image/svg+xml"></object>
+				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
 				  
 				   <div id="image_01"><img src="image_01.jpg"></div>
 				   <div id="f1_text"><img src="text_sheet.png"></div>
