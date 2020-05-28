@@ -146,14 +146,6 @@
 			/* transform: scale(0.6); */
 		}
 
-		#rays {
-			position: absolute;
-			top: -100px;
-			left: 440px;
-			opacity: 0;
-			-webkit-font-smoothing: antialiased;
-			transform: scale(0.6);
-		}
 
 		#txt_getUnlimited {
 			position: absolute;
@@ -285,7 +277,7 @@
 				var text_05 = document.getElementById('text_05');
 				var text_06 = document.getElementById('text_06');
 					
-				var rays = document.getElementById('rays');
+				
 				var pcBadge = document.getElementById('pcBadge');
 
 				var shaq_01 = document.getElementById('shaq_01');
@@ -331,9 +323,7 @@
 						console.log("Menu Closed");
 					}
 					
-					lt_rotation = new TimelineLite();
-					lt_rotation.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
-
+				
 				//ex.
 				 //Frame animations start
 				 //FRAME 01 - IN
@@ -437,7 +427,6 @@
 				<div id="BG"></div>
 				<!-- <div id="TEMP"><img src="temp_06.jpg"></div> -->
 				<!--HTML ELEMENTS HERE-->
-				<div id="rays"><img src="rays.jpg"></div> 
 			
 				<div id="shaq_01"><img src="shaq_01.jpg"></div> 	
 				<div id="shaq_02"><img src="shaq_02.jpg"></div>

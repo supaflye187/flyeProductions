@@ -163,14 +163,14 @@
 			opacity: 0;
 		}
 
-		#rays {
+		/* #rays {
 			position: absolute;
 			top: 190px;
 			left: -70px;
 			opacity: 0;
 			-webkit-font-smoothing: antialiased;
 
-		}
+		} */
 
 		#txt_getUnlimited {
 			position: absolute;
@@ -316,7 +316,7 @@
 
 				var txt_getUnlimited = document.getElementById('txt_getUnlimited');
 			
-				var rays = document.getElementById('rays');
+				// var rays = document.getElementById('rays');
 
 				var shaq_01 = document.getElementById('shaq_01');
 				var shaq_02 = document.getElementById('shaq_02');
@@ -361,8 +361,8 @@
 						console.log("Menu Closed");
 					}
 
-					lt_rotation = new TimelineLite();
-					lt_rotation.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
+					// lt_rotation = new TimelineLite();
+					// lt_rotation.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
 					
 
 				//ex.
@@ -387,7 +387,7 @@
 						.to(text_02, 0.4, {opacity:1, ease: Power1.easeOut})
 						.to(printer_01, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
 						.to(toner_01, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.4")
-						.to(rays, 0.4, {opacity:1, ease: Linear.easeNone},"-=0.4")
+						// .to(rays, 0.4, {opacity:1, ease: Linear.easeNone},"-=0.4")
 						.to(pcBadge, 0.4, {opacity:1, ease: Linear.easeNone},"-=0.4")
 
 						
@@ -396,7 +396,7 @@
 			
 						.to(text_02, 0.4, {opacity:0, ease: Power1.easeOut}, "+=1.4")
 						.to(pcBadge, 0.4, {opacity:0, ease: Linear.easeNone},"-=0.4")
-					    .to(rays, 0.4, {opacity:0, ease: Linear.easeNone},"-=0.4")
+					    // .to(rays, 0.4, {opacity:0, ease: Linear.easeNone},"-=0.4")
 						.to(printer_01, 0.4, {opacity:0, ease: Power1.easeOut},"-=0.4")
 						.to(toner_01, 0.4, {opacity:0, ease: Power1.easeOut},"-=0.4")
 
@@ -467,7 +467,7 @@
 				<div id="BG"></div>
 				<!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
 				<!--HTML ELEMENTS HERE-->
-				<div id="rays"><img src="rays.jpg"></div> 
+				<!-- <div id="rays"><img src="rays.jpg"></div>  -->
 			
 
 				<div id="shaq_01"><img src="shaq_01.jpg"></div> 	
