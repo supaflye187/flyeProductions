@@ -30,12 +30,6 @@
 			cursor: pointer;
 			}
 
-		#canvas {
-			position: absolute;
-			top: 0px;
-			left: 0px;
-		}
-
 		#container{
 			border:1px solid #000000;
 			background:#fff;
@@ -131,6 +125,13 @@
 			position: absolute;
 			top: 200px;
 			left: 250px;
+			opacity: 0;
+		}
+
+		#starLight_06 {
+			position: absolute;
+			top: 188px;
+			left: 260px;
 			opacity: 0;
 		}
 
@@ -283,10 +284,6 @@
 		}
 
 
-
-
-
-
 		/*End YOUR CSS
 		=========================================*/
 	</style>
@@ -330,6 +327,8 @@
 				var starLight_03 = document.getElementById('starLight_03');
 				var starLight_04 = document.getElementById('starLight_04');
 				var starLight_05 = document.getElementById('starLight_05');
+				var starLight_06 = document.getElementById('starLight_06');
+
 
 				var e_blue = document.getElementById('e_blue');
 				var e_pink = document.getElementById('e_pink');
@@ -355,7 +354,7 @@
 						}});
 
 				lt_starLight = new TimelineLite({onComplete:function() {
-					if(counter != 2  && looping == true) {
+					if(counter != 3  && looping == true) {
 						counter ++;
 						this.restart();
 						} else {
@@ -365,131 +364,19 @@
 						}});
 
 					lt_starLight.to(starLight, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight, 0.5, {opacity: 0, ease:Power1.easeOut})
+								.to(starLight, 0.3, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_02, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight_02, 0.5, {opacity: 0, ease:Power1.easeOut})
+								.to(starLight_02, 0.3, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})
+								.to(starLight_03, 0.3, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_04, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight_04, 0.5, {opacity: 0, ease:Power1.easeOut})
+								.to(starLight_04, 0.3, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_05, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})
-
-
-
-
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-///                                          ///
-///               Properties                 ///
-///                                          ///
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-
-//HTML related
-var canvasElement = document.querySelector("canvas");
-var canvas        = canvasElement.getContext("2d");
-var quantity      = canvasElement.getAttribute("data-starfield");
-
-//Javascript related
-var stars = [];
-
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-///                                          ///
-///               Properties                 ///
-///                                          ///
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-
-function Star (x, y, offset, duration = 100, size = 2) {
-  //constructor
-  this.x            = x;
-  this.y            = y;
-  this.duration     = duration;
-  this.offset       = offset;
-  this.size         = size;
-  this.timer        = offset % duration;
-  
-  //functions
-  this.draw = function () {
-    //Calculate animations
-    if (this.timer > this.duration) {
-      this.timer = 0;
-    }
-    this.timer += 1;
-    
-    //Calculate
-    var framesize = Math.abs((this.timer / this.duration) - 0.5) * this.size + this.size/50;
-    
-    //Update element
-    canvas.beginPath();
-    canvas.arc(this.x, this.y, framesize, 0, Math.PI * 2, false);
-    canvas.fillStyle = "white";
-    canvas.fill();
-  }
-}
-
-function ShootingStar (offset, duration = 100, size = 2) {
-  //Constructor
-  this.offset   = offset;
-  this.duration = duration;
-  this.size     = size;
-}
-
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-///                                          ///
-///                 "Methods"                ///
-///                                          ///
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-
-//Spawn stars
-for (let i = 0; i < quantity; i++) {
-  var positionX = window.innerWidth * Math.random();
-  var positionY = window.innerHeight * Math.random();
-  var offset    = Math.random() * 100;
-  var duration  = Math.random() * 5 + 30;
-  var size      = Math.random() * 3.5;
-  
-  stars.push(new Star(positionX, positionY, offset, duration, size));
-}
-
-//Animate stars
-function renderFrame () {
-  //Clear canvas
-  canvas.clearRect(0, 0, canvasElement.width, canvasElement.height);
-  
-  //Call all stars to update their animation
-  for (let i = 0; i < quantity; i++) {
-    stars[i].draw();
-  }
-  
-  //Loop function
-  setTimeout(renderFrame, 100);
-}
-
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-///                                          ///
-///               Initialize                 ///
-///                                          ///
-////////////////////////////////////////////////
-////////////////////////////////////////////////
-
-//Set canvas size
-canvasElement.width = window.innerWidth;
-canvasElement.height = window.innerHeight;
-
-//Start animation
-// renderFrame();
-
-
+								.to(starLight_05, 0.3, {opacity: 0, ease:Power1.easeOut})
 					
 
 				//ex.
@@ -556,6 +443,8 @@ canvasElement.height = window.innerHeight;
 
 					.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
 					.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.4")
+					.to(starLight_06, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut},"+=0.5")
+					.to(starLight_06, 0.3, {opacity: 0, ease:Power1.easeOut})					
          
 			}
 
@@ -573,10 +462,7 @@ canvasElement.height = window.innerHeight;
 				   <div id="starLight_03"><img src="starLight.png"></div>
 				   <div id="starLight_04"><img src="starLight.png"></div>
 				   <div id="starLight_05"><img src="starLight.png"></div>
-				   <canvas id="canvas" data-starfield="1000"></canvas>
-
-				
-		
+	
 				   <!--HTML ELEMENTS HERE-->	   
 				   <div id="shaq_01"><img src="shaq_full.jpg"></div> 
 				   <div id="shaq_02"><img src="shaq_sideView.png"></div> 
@@ -603,11 +489,8 @@ canvasElement.height = window.innerHeight;
 				   
 					<!--CTA-->
 					<div id="ctaBtn"><img src="ctaTxt.png"></div>
-
-					
-
-
-					
+					<div id="starLight_06"><img src="starLight.png"></div>
+				
 					<!--=============CLICKTAGS================-->
 					<!--=============DC Clicktag==============-->
 					<!-- <div id="linkLayer"></div> -->
