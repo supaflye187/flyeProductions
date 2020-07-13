@@ -48,7 +48,7 @@
 		#ctaBtn {
 			position: absolute;
 			top: 205px;
-			left: 190px;
+			left: 180px;
 			width: 100px;
 			height: 32px;
 			background-color: #1152bd;
@@ -283,6 +283,31 @@
 			opacity: 1;
 		}
 
+		#popUp_tab {
+			position: absolute;
+			top:250px;
+			left: 0px;
+			opacity: 1;
+			cursor: pointer;
+		}
+
+		#popUp_menu {
+			position: absolute;
+			display: none;
+			top:0px;
+			left: 0px;
+			opacity: 1;
+
+		}
+
+		#popUp_menu img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+
+		}
+
 
 		/*End YOUR CSS
 		=========================================*/
@@ -346,6 +371,26 @@
 				var cartridges_c = document.getElementById('catridges_c');
 				var whiteBG = document.getElementById('whiteBG');
 
+				popUp_tab.addEventListener('click', menuOpen);
+				popUp_menu.addEventListener('click', menuClose);
+
+
+					//Timeline Function - can set multiple Timelines
+					tl_main = new TimelineLite();
+
+
+					function menuOpen() {
+				document.getElementById('popUp_menu').style.display="block";
+				tl_main.pause();
+				console.log("Menu Open");
+					}
+
+					function menuClose() {
+						document.getElementById('popUp_menu').style.display="none";
+						tl_main.play();
+						console.log("Menu Closed");
+					}
+
 				//Timeline Function - can set multiple Timelines
 				var looping = true;
 				let counter = 1;
@@ -407,6 +452,8 @@
 					 .to(epson_lg, 1, {opacity:1, ease: Elastic.easeOut.config(1, 0.8)},"-=1.0")
 					 .to(epson_logo, 1, {opacity:1, ease: Elastic.easeOut.config(1, 0.8)},"-=1.0")
 
+					
+
 				 	//FRAME 02 - OUT
 					//========================================================
 
@@ -423,7 +470,8 @@
 					
 					
 					.to(e_yellow, 1, {opacity:0, ease: Power1.easeOut}, "+=1.0")
-					.to(txt_bigTank, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")					
+					.to(txt_bigTank, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")	
+					.to(popUp_tab, 0.5, {opacity:1, top:"193px", ease: Power1.easeOut},"-=0.5")				
 
 					.to(e_group, 1, {opacity:1, ease: Power1.easeOut})
 					.to(e_group_txt, 1, {opacity:1, ease: Power1.easeOut},"-=1.0")
@@ -432,6 +480,8 @@
 					.to(ecoTank_lg, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
 					.to(epson_logo, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
 					.to(epson_lg, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
+
+					
 
 					.to(epsonPrinter, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
 					.to(epson_sm, 1, {opacity:1, ease: Power1.easeOut})
@@ -457,12 +507,13 @@
     <div id="container">
 				   <!--Background Image -->
 				   <div id="BG"><img src="background.jpg"></div>
+
 				   <div id="starLight"><img src="starLight.png"></div>
 				   <div id="starLight_02"><img src="starLight.png"></div>
 				   <div id="starLight_03"><img src="starLight.png"></div>
 				   <div id="starLight_04"><img src="starLight.png"></div>
 				   <div id="starLight_05"><img src="starLight.png"></div>
-	
+				   
 				   <!--HTML ELEMENTS HERE-->	   
 				   <div id="shaq_01"><img src="shaq_full.jpg"></div> 
 				   <div id="shaq_02"><img src="shaq_sideView.png"></div> 
@@ -483,6 +534,9 @@
 				   <div id="catridges_b"><img src="cartridges_b.jpg"></div>
 				   <div id="catridges_a"><img src="cartridges_a.jpg"></div> 
 				   <div id="catridges_01"><img src="cartridges.jpg"></div>
+				   
+				  
+	
 
 				   <div id="e_group"><img src="inkBottles.png"></div>
 				   <div id="e_group_txt"><img src="spriteSheet.png"></div>
@@ -497,6 +551,12 @@
 
 					<!--==========Default ClickTag============-->
 					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+					<div id="popUp_tab"><img src="popUp_tab.png" alt=""></div>
+
+					<div id="popUp_menu">
+						<img src="popUp_txt.png" alt="">
+					</div>
     </div>
 </body>
 </html>
