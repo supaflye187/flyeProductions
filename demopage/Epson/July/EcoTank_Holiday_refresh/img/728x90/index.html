@@ -52,6 +52,7 @@
 			top: 0;
 			left: 10px;
 			opacity: 0;
+			transform: scale(1.4);
 		}
 
 		#starLight_02 {
@@ -59,20 +60,25 @@
 			top: 15px;
 			left: 150px;
 			opacity: 0;
+			transform: scale(1.3);
 		}
 
 		#starLight_03 {
 			position: absolute;
-			top: 30px;
+			top: 60px;
 			left: 200px;
 			opacity: 0;
+			transform: scale(1.4);
+			/* background-color: black; */
 		}
 
 		#starLight_04 {
 			position: absolute;
 			top: 60px;
-			left: 50px;
+			left: 360px;
 			opacity: 0;
+			transform: scale(1.3);
+			/* background-color: black; */
 		}
 
 		#starLight_05 {
@@ -80,6 +86,8 @@
 			top: 10px;
 			left: 250px;
 			opacity: 0;
+			transform: scale(1.4);
+			/* background-color: black; */
 		}
 
 		#starLight_06 {
@@ -87,6 +95,34 @@
 			top: 35px;
 			left: 670px;
 			opacity: 0;
+			transform: scale(1.3);
+		}
+
+		#starLight_07 {
+			position: absolute;
+			top: 5px;
+			left: 570px;
+			opacity: 0;
+			transform: scale(1.4);
+			/* background-color: black; */
+		}
+
+
+		#starLight_08 {
+			position: absolute;
+			top: 55px;
+			left: 690px;
+			opacity: 0;
+			transform: scale(1.4);
+			/* background-color: black; */
+		}
+
+		#starLight_09 {
+			position: absolute;
+			top: 0;
+			left: 10px;
+			opacity: 0;
+			transform: scale(1.4);
 		}
 
 		html {
@@ -336,7 +372,7 @@
 						}});
 
 				lt_starLight = new TimelineLite({onComplete:function() {
-					if(counter != 3  && looping == true) {
+					if(counter != 1  && looping == true) {
 						counter ++;
 						this.restart();
 						} else {
@@ -345,20 +381,33 @@
 						}
 						}});
 
-					lt_starLight.to(starLight, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight, 0.5, {opacity: 0, ease:Power1.easeOut})
-
-								.to(starLight_02, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+					lt_starLight.to(starLight_02, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_02, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight, 0.5, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight_08, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_08, 0.5, {opacity: 0, ease:Power1.easeOut})	
 
 								.to(starLight_04, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_04, 0.5, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_05, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})	
+								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})	
+
+								.to(starLight_07, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_07, 0.5, {opacity: 0, ease:Power1.easeOut})	
+
 				//ex.
 				 //Frame animations start
 				 //FRAME 01 - IN
@@ -371,11 +420,16 @@
 				 
 				 //FRAME 01 - OUT
 					.to(shaq_01, 1, {opacity:0, ease: Power1.easeOut},"+=2.0")
-					.to(popUp_tab, 0.5, {opacity:1, top:"62px", ease: Power1.easeOut},"-=0.5")
+
 					.to(txt_expensive, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					
+					.to(popUp_tab, 0.5, {opacity:1, top:"62px", ease: Power1.easeOut},"-=0.5")
+
 					.to(inkCartridge_frame, 1, {opacity:1, ease: Power1.easeOut})
 					.to(inkCartridge_frame, 1, {opacity:0, ease: Power1.easeOut},"+=2.0")
 
+					
+					
 					.to(epsonPrinter, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
 				 	.to(inkBottles, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
 					 
@@ -391,7 +445,10 @@
 					.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
 
 					.to(starLight_06, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut},"+=0.5")
-					.to(starLight_06, 0.3, {opacity: 0, ease:Power1.easeOut})			
+					.to(starLight_06, 0.3, {opacity: 0, ease:Power1.easeOut})	
+
+					.to(starLight_09, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+					.to(starLight_09, 0.5, {opacity: 0, ease:Power1.easeOut})		
          
          
 			}
@@ -426,6 +483,9 @@
 					<div id="starLight_03"><img src="starLight.png"></div>
 					<div id="starLight_04"><img src="starLight.png"></div>
 					<div id="starLight_05"><img src="starLight.png"></div>
+
+					<div id="starLight_07"><img src="starLight.png"></div>
+					<div id="starLight_08"><img src="starLight.png"></div>
 				   
 				   <div id="txt_getEcoTank"><img src="txt_getEcoTank.png"></div>
 				   <div id="txt_expensive"><img src="txt_expensive.png"></div>
@@ -437,6 +497,7 @@
 					<!--CTA-->
 					<div id="ctaBtn"><img src="ctaTxt.png"></div>
 					<div id="starLight_06"><img src="starLight.png"></div>
+					<div id="starLight_09"><img src="starLight.png"></div>
 					<!--=============CLICKTAGS================-->
 					<!--=============DC Clicktag==============-->
 					<!-- <div id="linkLayer"></div> -->

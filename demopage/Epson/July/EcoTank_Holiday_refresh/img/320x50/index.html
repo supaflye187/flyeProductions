@@ -51,14 +51,14 @@
 		#starLight {
 			position: absolute;
 			top: 0;
-			left: 10px;
+			left: -5px;
 			opacity: 0;
 		}
 
 		#starLight_02 {
 			position: absolute;
 			top: 10px;
-			left: 20px;
+			left: 250px;
 			opacity: 0;
 		}
 
@@ -221,8 +221,8 @@
 
 		#ctaBtn {
 			position: absolute;
-			top: 25px;
-			left: 240px;
+			top: 23px;
+			left: 235px;
 			width: 70px;
 			height: 20px;
 			background-color: #d41919;
@@ -339,7 +339,7 @@
 						}});
 
 				lt_starLight = new TimelineLite({onComplete:function() {
-					if(counter != 3  && looping == true) {
+					if(counter != 2  && looping == true) {
 						counter ++;
 						this.restart();
 						} else {
@@ -348,19 +348,27 @@
 						}
 						}});
 
-					lt_starLight.to(starLight, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight, 0.5, {opacity: 0, ease:Power1.easeOut})
+					lt_starLight.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})
+						
 
-								.to(starLight_02, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_02, 0.5, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_02, 0.5, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})
 
-								.to(starLight_04, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								
+								.to(starLight_04, 0.5, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_04, 0.5, {opacity: 0, ease:Power1.easeOut})
 
-								.to(starLight_05, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_02, 0.5, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_02, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight_05, 0.5, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})	
 
 				//ex.

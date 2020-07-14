@@ -124,8 +124,8 @@
 
 		#starLight_05 {
 			position: absolute;
-			top: 200px;
-			left: 150px;
+			top: 180px;
+			left: 100px;
 			opacity: 0;
 		}
 
@@ -133,6 +133,22 @@
 			position: absolute;
 			top: 530px;
 			left: 85px;
+			opacity: 0;
+		}
+
+
+		#starLight_07 {
+			position: absolute;
+			top: 560px;
+			left: 20px;
+			opacity: 0;
+		}
+
+
+		#starLight_08 {
+			position: absolute;
+			top: 335px;
+			left: 60px;
 			opacity: 0;
 		}
 
@@ -375,7 +391,7 @@
 						}});
 
 				lt_starLight = new TimelineLite({onComplete:function() {
-					if(counter != 3  && looping == true) {
+					if(counter != 2  && looping == true) {
 						counter ++;
 						this.restart();
 						} else {
@@ -393,11 +409,17 @@
 								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})
 
+								.to(starLight_08, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_08, 0.5, {opacity: 0, ease:Power1.easeOut})	
+
 								.to(starLight_04, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_04, 0.5, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_05, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})	
+
+								.to(starLight_07, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_07, 0.5, {opacity: 0, ease:Power1.easeOut})	
 				//ex.
 				 //Frame animations start
 				 //FRAME 01 - IN
@@ -484,12 +506,14 @@
 				   <div id="txt_justFill"><img src="spriteSheet.png"></div>
 				   
 				   <div id="e_group"><img src="epson_group.jpg"></div>
-				   <div id="starLight"><img src="starLight.png"></div>
-				   <div id="starLight_02"><img src="starLight.png"></div>
-				   <div id="starLight_03"><img src="starLight.png"></div>
-				   <div id="starLight_04"><img src="starLight.png"></div>
+				  
+				 
+				  
+				  
 				   <div id="starLight_05"><img src="starLight.png"></div>
+				   <div id="starLight_07"><img src="starLight.png"></div>
 				   
+				   <div id="starLight_08"><img src="starLight.png"></div>
 				   <div id="shaq_sideView"><img src="shaq_sideView.png"></div> 
 				   
 				   <div id="catridges_c"><img src="cartridges_c.jpg"></div>
@@ -497,6 +521,14 @@
 				   <div id="epson_logo"><img src="spriteSheet.png"></div>
 				   <div id="catridges_a"><img src="cartridges_a.jpg"></div> 
 				   <div id="catridges_01"><img src="cartridges.jpg"></div>
+
+				   <div id="starLight"><img src="starLight.png"></div>
+				   <div id="starLight_02"><img src="starLight.png"></div>
+				   <div id="starLight_03"><img src="starLight.png"></div>
+				   <div id="starLight_04"><img src="starLight.png"></div>
+
+				   
+				   
 				   
 				  
 					<!--CTA-->

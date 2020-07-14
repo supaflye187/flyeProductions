@@ -101,6 +101,7 @@
 			top: 0;
 			left: 240px;
 			opacity: 0;
+			transform: scale(1.3);
 		}
 
 		#starLight_02 {
@@ -108,6 +109,7 @@
 			top: 50px;
 			left: 10px;
 			opacity: 0;
+			transform: scale(1.3);
 		}
 
 		#starLight_03 {
@@ -115,6 +117,7 @@
 			top: 380px;
 			left: 20px;
 			opacity: 0;
+			transform: scale(1.3);
 		}
 
 		#starLight_04 {
@@ -122,20 +125,44 @@
 			top: 60px;
 			left: 50px;
 			opacity: 0;
+			transform: scale(1.3);
 		}
+
+
 
 		#starLight_05 {
 			position: absolute;
-			top: 188px;
-			left: 260px;
+			top: 160px;
+			left: 220px;
 			opacity: 0;
+			transform: scale(1.3);
 		}
 
 		#starLight_06 {
 			position: absolute;
-			top: 493px;
-			left: 130px;
+			top: 498px;
+			left: 138px;
 			opacity: 0;
+			transform: scale(1.3);
+		}
+
+
+		#starLight_07 {
+			position: absolute;
+			top: 560px;
+			left: 20px;
+			opacity: 0;
+			transform: scale(1.3);
+		}
+
+
+		#starLight_08 {
+			position: absolute;
+			top: 525px;
+			left: 140px;
+			opacity: 0;
+			/* background-color: black; */
+			transform: scale(1.3);
 		}
 
 		#shaq_sideView {
@@ -384,7 +411,7 @@
 						}});
 
 				lt_starLight = new TimelineLite({onComplete:function() {
-					if(counter != 3  && looping == true) {
+					if(counter != 2  && looping == true) {
 						counter ++;
 						this.restart();
 						} else {
@@ -402,11 +429,20 @@
 								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})
 
+								.to(starLight_08, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_08, 0.5, {opacity: 0, ease:Power1.easeOut})	
+
 								.to(starLight_04, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
 								.to(starLight_04, 0.5, {opacity: 0, ease:Power1.easeOut})
 
 								.to(starLight_05, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
-								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})	
+								.to(starLight_05, 0.5, {opacity: 0, ease:Power1.easeOut})
+
+								.to(starLight_03, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_03, 0.5, {opacity: 0, ease:Power1.easeOut})	
+
+								.to(starLight_07, 1, {opacity: 1, rotation:"360", ease:Power1.easeOut})
+								.to(starLight_07, 0.5, {opacity: 0, ease:Power1.easeOut})	
 
 				//ex.
 				 //Frame animations start
@@ -493,20 +529,23 @@
 				   
 				   
 				   <div id="e_group"><img src="epson_group.jpg"></div>
-	   
+
+				   <div id="starLight_05"><img src="starLight.png"></div>
+				   <div id="starLight_07"><img src="starLight.png"></div>
+				   
+				   <div id="starLight_08"><img src="starLight.png"></div>
 				   <div id="shaq_sideView"><img src="shaq_sideView.png"></div> 
 				   
-				   <!-- <div id="catridges_03"><img src="cartridges_03.jpg"></div> -->
+
 				   <div id="catridges_c"><img src="cartridges_c.jpg"></div>
 				   <div id="catridges_b"><img src="cartridges_b.jpg"></div>
-				   <!-- <div id="catridges_a"><img src="cartridges_a.jpg"></div>  -->
+
 				   <div id="epson_logo"><img src="spriteSheet.png"></div>
 				   <div id="catridges_01"><img src="cartridges.jpg"></div>
 				   <div id="starLight"><img src="starLight.png"></div>
 				   <div id="starLight_02"><img src="starLight.png"></div>
 				   <div id="starLight_03"><img src="starLight.png"></div>
 				   <div id="starLight_04"><img src="starLight.png"></div>
-				   <div id="starLight_05"><img src="starLight.png"></div>
 				  
 					<!--CTA-->
 					<div id="ctaBtn"><img src="ctaTxt.png"></div>
