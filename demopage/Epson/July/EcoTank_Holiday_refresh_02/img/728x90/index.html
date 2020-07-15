@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=728,height=90">
+	<title>728x90 Epson</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSRulePlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		/* #TEMP {position: absolute; opacity:0.5;} */
+		#BG {position:absolute; opacity:1;}
+
+#linkLayer{
+			left:0px;
+			top:0px;
+			width:728px;
+			height:90px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background-color: #fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:726px;
+			height:88px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+		/*YOUR CSS
+		=========================================*/
+		html {
+			background-color: #fff;
+		}
+
+		#shaq_01 {
+			position: absolute;
+			top:0px;
+			left:-50px;
+			opacity: 0;
+		}
+
+		#shaq_02 {
+			position: absolute;
+			top: 0px;
+			left: -150px;
+			opacity: 0;
+		}
+
+		#epsonPrinter {
+			position: absolute;
+			top: 0px;
+			left: -10px;
+			opacity: 0;
+		}
+		#inkBottles{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		/*pink */
+		#cartridge_01 {
+			position: absolute;
+			clip: rect(0px,100px,180px,73px);
+			left: -200px;
+			top: 0px;
+			opacity: 0;
+		}
+
+		/*yellow */
+		#cartridge_02 {
+			position: absolute;
+			clip: rect(0px,73px,180px, 58px);
+			left: -200px;
+			top: 0px;
+			opacity: 0;
+		}
+
+		/*blue */
+		#cartridge_03 {
+			position: absolute;
+			clip: rect(0px,58px,180px,41px);
+			left: -200px;
+			top: 0px;
+			opacity: 0;
+		}
+
+		/*black */
+		#cartridge_04 {
+			position: absolute;
+			clip: rect(0px,41px,180px,0px);
+			left: -200px;
+			top: 0px;
+			opacity: 0;
+		}
+
+		#e_yellow {
+			position: absolute;
+			opacity: 0;
+		}
+
+		#e_blue {
+			position: absolute;
+			opacity: 0;
+		}
+
+		#e_pink {
+			position: absolute;
+			opacity: 0;
+		}
+
+		#txt_sayHello {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+
+		#printer_01 {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#epson_lg {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#ecoTank_sm {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			/* clip: rect(43px,200px,63px,0px); */
+			opacity: 0;
+		}
+
+		#echoTank_logo {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#ecoTank_lg {
+			position: absolute;
+			top: 0px;
+			left: -300px;
+			opacity: 0;
+		}
+	
+		#txt_justFill {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#txt_getEcoTank {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#txt_EcoTankPrinters{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+		
+		#txt_bigTank {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#txt_expensive {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+		}
+
+
+		#inkCartridge_frame {
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+		}
+
+		#popUp_tab {
+			position: absolute;
+			top:300px;
+			left: 0px;
+			opacity: 1;
+			cursor: pointer;
+		}
+
+		#popUp_menu {
+			position: absolute;
+			display: none;
+			top:0px;
+			left: 0px;
+			opacity: 1;
+
+		}
+
+		#popUp_menu img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+
+		}
+
+		#ctaBtn {
+			position: absolute;
+			top: 40px;
+			left: 608px;
+			width: 93px;
+			height: 30px;
+			background-color: #d41919;
+			border-radius: 4px;
+			opacity: 0;
+			/* -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29); */
+			overflow: hidden;
+		}
+
+		#ctaBtn img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#ctaBtn:before,
+		#ctaBtn:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -150px;
+			width: 150%;
+			height: 100%;
+			background: #fff;
+			opacity: 0.2;
+			transform: rotate(45deg);
+			transition: all ease 1s;
+		}
+
+		#ctaBtn:hover:before,
+		#ctaBtn:hover:after {
+			left: 100%;
+		}
+
+		
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+		var clickTag = "www.google.com";
+		
+
+		// JavaScript Document
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			//console.log("content loaded...XX");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var shaq_01 = document.getElementById('shaq_01');
+				var shaq_02 = document.getElementById('shaq_02');
+				var epsonPrinter = document.getElementById('epsonPrinter');
+				var inkBottles = document.getElementById('inkBottles');
+
+				var epson_logo = document.getElementById('epson_logo');
+				var epson_lg = document.getElementById('epson_lg');
+
+				var cartridge_01 = document.getElementById('cartridge_01');
+				var cartridge_02 = document.getElementById('cartridge_02');
+				var cartridge_03 = document.getElementById('cartridge_03');
+				var cartridge_04 = document.getElementById('cartridge_04');
+
+				var txt_justFill = document.getElementById('txt_justFill');
+				var txt_EcoTankPrinters = document.getElementById('txt_EcoTankPrinters');
+				var txt_getEcoTank = document.getElementById('txt_getEcoTank');
+				
+				
+				var txt_bigTank = document.getElementById('txt_bigTank');
+				var txt_expensive = document.getElementById('txt_expensive');
+
+				var popUp_tab = document.getElementById('popUp_tab');
+				var popUp_menu = document.getElementById('popUp_menu');
+
+				var ctaBtn = document.getElementById('ctaBtn');
+
+				popUp_tab.addEventListener('click', menuOpen);
+				popUp_menu.addEventListener('click', menuClose);
+
+
+
+					//Timeline Function - can set multiple Timelines
+					tl_main = new TimelineLite();
+
+					function menuOpen() {
+					document.getElementById('popUp_menu').style.display="block";
+					tl_main.pause();
+					console.log("Menu Open");
+					}
+
+					function menuClose() {
+						document.getElementById('popUp_menu').style.display="none";
+						tl_main.play();
+						console.log("Menu Closed");
+					}
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
+				 tl_main.to(shaq_01, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
+				 		.to(epson_lg, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+				 		.to(txt_expensive, 1, {opacity:1, ease: Power1.easeOut},"-=1.0")
+
+				 
+				 //FRAME 01 - OUT
+					.to(shaq_01, 1, {opacity:0, ease: Power1.easeOut},"+=2.0")
+					.to(txt_expensive, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+
+						//Inserted Frame
+				 //============================================================
+				 .to(txt_sayHello, 1, {opacity:1, ease: Power1.easeOut})
+				 .to(printer_01, 1, {opacity:1, ease: Power1.easeOut},"-=1.0")
+				
+				 
+
+				 .to(printer_01, 1, {opacity:0, ease: Power1.easeOut},"+=2.0")
+				 .to(txt_sayHello, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+				 //============================================================
+	 
+				 
+				 //FRAME 02 - IN
+				 	//=========================================================
+					.to(epson_lg, 0.5, {opacity:0, ease: Power1.easeOut})
+					.to(txt_getEcoTank, 0.3, {opacity:1, ease: Power1.easeOut},'-=0.5')
+					.to(echoTank_logo, 0.5, {opacity:1, ease: Power1.easeOut},'-=0.5')
+
+
+					.to(e_blue, 0.5, {opacity:1, ease: Power1.easeOut},'-=0.5')
+					
+				 	.to(e_blue, 0.5, {opacity:1, ease: Power1.easeOut},'+=0.5')
+					
+				 	.to(e_pink, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
+				 	
+					.to(e_yellow, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
+				 
+
+				 	//FRAME 02 - OUT
+					//========================================================
+				 	.to(e_blue, 0.3, {opacity:1, ease: Power1.easeOut})
+					
+					 
+					 			 	
+
+					.to(e_blue, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
+	
+					.to(e_pink, 0.3, {opacity:1, ease: Power1.easeOut})
+
+					.to(e_pink, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
+
+					.to(e_yellow, 0.3, {opacity:1, ease: Power1.easeOut})
+					
+					
+					.to(e_yellow, 1, {opacity:0, ease: Power1.easeOut}, "+=1.0")
+
+					.to(txt_getEcoTank, 1, {opacity:0, ease: Power1.easeOut},'-=1.0')
+					.to(echoTank_logo, 0.5, {opacity:0, ease: Power1.easeOut},'-=0.5')	
+
+					//========================================================
+
+					.to(inkCartridge_frame, 1, {opacity:1, ease: Power1.easeOut})
+					.to(echoTank_logo, 0.5, {opacity:0, ease: Power1.easeOut},'-=1.0')
+					.to(epson_lg, 0.5, {opacity:1, ease: Power1.easeOut},'-=1.0')
+
+					.to(cartridge_01, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+					.to(cartridge_02, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+					.to(cartridge_03, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+					.to(cartridge_04, 0.4, {opacity:1, left:"0px", ease: Power1.easeOut},"-=0.3")
+
+
+					.to(popUp_tab, 0.5, {opacity:1, top:"62px", ease: Power1.easeOut},"-=0.5")
+					.to(inkCartridge_frame, 1, {opacity:0, ease: Power1.easeOut},"+=2.0")
+
+					.to(cartridge_01, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					.to(cartridge_02, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					.to(cartridge_03, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+					.to(cartridge_04, 1, {opacity:0, ease: Power1.easeOut},"-=1.0")
+
+					.to(epsonPrinter, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
+				 	.to(inkBottles, 0.5, {opacity:1, left:"0px", ease: Power1.easeOut})
+					
+					
+				 	.to(txt_EcoTankPrinters, 1, {opacity:1, ease: Power1.easeOut}, "-=1.0")
+					.to(txt_justFill, 1, {opacity:1, ease: Power1.easeOut}, "-=1.0")
+				 	
+					.to(shaq_02, 0.5, {opacity:1, left:'0px', ease: Power1.easeOut}, "-=1.0")
+					
+		
+				 	// .to(txt_getEcoTank, 1, {opacity:1, ease: Power1.easeOut}, "-=1.0")
+			
+					.to(ctaBtn, 1, {opacity:1, ease: Power1.easeOut})
+					.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
+         
+			}
+
+		
+
+	</script>
+
+	
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				 
+				   <!-- <div id="TEMP"><img src="temp_03.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->	   
+				   
+				   <div id="epsonPrinter"><img src="epson_printer_full.png"></div>
+				   <div id="e_yellow"><img src="epson_yellow.jpg"></div>
+				   <div id="e_pink"><img src="epson_pink.jpg"></div>
+				   <div id="e_blue"><img src="epson_blue.jpg"></div>
+				   <div id="shaq_02"><img src="shaq_sideView.jpg"></div> 
+				   <div id="shaq_01"><img src="shaq_01.jpg"></div> 
+				   
+				   <div id="txt_EcoTankPrinters"><img src="txt_EcoTankPrinters.png"></div>
+				   <div id="txt_justFill"><img src="txt_justFill.png"></div>
+				   			   
+				   <div id="inkBottles"><img src="inkBottles.png"></div> 
+				   <div id="inkCartridge_frame"><img src="inkCartridge_frame.png"></div> 
+
+				   <div id="cartridge_01"><img src="cartridge_group.jpg"></div>
+				   <div id="cartridge_02"><img src="cartridge_group.jpg"></div>
+				   <div id="cartridge_03"><img src="cartridge_group.jpg"></div>
+				   <div id="cartridge_04"><img src="cartridge_group.jpg"></div>
+
+				   <div id="printer_01"><img src="printer_01.jpg"></div>
+				   <div id="txt_sayHello"><img src="txt_sayHello.png"></div>
+				  		   
+					<div id="epson_lg"><img src="epsonLogoWithTag.png"></div>
+					<div id="echoTank_logo"><img src="echoTankLogo.png"></div>
+				   
+				   <div id="txt_getEcoTank"><img src="txt_getEcoTank.png"></div>
+				   <div id="txt_expensive"><img src="txt_expensive.png"></div>
+				  
+				   
+					<!--CTA-->
+					<div id="ctaBtn"><img src="ctaTxt.png"></div>
+					<!--=============CLICKTAGS================-->
+					<!--=============DC Clicktag==============-->
+					<!-- <div id="linkLayer"></div> -->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+					<div id="popUp_tab"><img src="popUp_tab.png" alt=""></div>
+
+					<div id="popUp_menu">
+						<img src="popUp_txt.png" alt="">
+					</div>
+    </div>
+     <!-- <script type="text/javascript" src="728X90_Epsom.js"></script> -->
+</body>
+</html>
