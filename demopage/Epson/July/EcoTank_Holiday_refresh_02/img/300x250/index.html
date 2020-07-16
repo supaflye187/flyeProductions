@@ -193,6 +193,14 @@
 			opacity: 0;
 		}	
 
+		#txt_bigTank_02 {
+			position: absolute;
+			top: -15px;
+			left: 208px;
+			clip: rect(110px,79px,160px,0px);
+			opacity: 0;
+		}	
+
 
 		#txt_save {
 			position: absolute;
@@ -331,6 +339,8 @@
 
 				var txt_justFill = document.getElementById('txt_justFill');
 				var txt_bigTank = document.getElementById('txt_bigTank');
+				var txt_bigTank_02 = document.getElementById('txt_bigTank_02');
+
 				var txt_save = document.getElementById('txt_save');
 				var txt_goodbye = document.getElementById('txt_goodbye');
 
@@ -404,6 +414,8 @@
 
 
 					.to(e_blue, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
+					.to(txt_bigTank, 0.3, {opacity:0, ease: Power1.easeOut},"-=0.3")
+					.to(txt_bigTank_02, 0.3, {opacity:1, ease: Power1.easeOut},"-=0.3")
 	
 					.to(e_pink, 0.3, {opacity:1, ease: Power1.easeOut})
 
@@ -413,7 +425,7 @@
 					
 					
 					.to(e_yellow, 1, {opacity:0, ease: Power1.easeOut}, "+=1.0")
-					.to(txt_bigTank, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
+					.to(txt_bigTank_02, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
 					.to(epson_logo, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
 					.to(epson_lg, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")
 					
@@ -474,6 +486,7 @@
 				   <div id="txt_justFill"><img src="text_sheet.png"></div>
 				   
 				   <div id="txt_bigTank"><img src="text_sheet.png"></div> 
+				   <div id="txt_bigTank_02"><img src="text_sheet.png"></div> 
 				   
 				   <div id="printer_01"><img src="printer_01.jpg"></div>
 				   <div id="txt_sayHello"><img src="txt_sayHello.png"></div>
