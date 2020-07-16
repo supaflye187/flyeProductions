@@ -239,6 +239,14 @@
 			opacity: 0;
 		}
 
+		#txt_bigTank_02 {
+			position: absolute;
+			top: -15px;
+			left: 208px;
+			clip: rect(110px,78px,160px,0px);
+			opacity: 0;
+		}
+
 		#catridges_01 {
 			position: absolute;
 			left: 0;
@@ -364,6 +372,7 @@
 				var ecoTank_lg = document.getElementById('ecoTank_lg');
 				var txt_justFill = document.getElementById('txt_justFill');
 				var txt_bigTank = document.getElementById('txt_bigTank');
+				var txt_bigTank_02 = document.getElementById('txt_bigTank_02');
 				var cartridges_01 = document.getElementById('catridges_01');
 				var cartridges_03 = document.getElementById('catridges_03');
 				var cartridges_a = document.getElementById('catridges_a');
@@ -461,8 +470,11 @@
 
 
 					.to(e_blue, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
-	
+					.to(txt_bigTank, 0.3, {opacity:0, ease: Power1.easeOut}, "-=0.3")
+					.to(txt_bigTank_02, 0.3, {opacity:1, ease: Power1.easeOut}, "-=0.3")
+
 					.to(e_pink, 0.3, {opacity:1, ease: Power1.easeOut})
+					
 
 					.to(e_pink, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
 
@@ -470,7 +482,7 @@
 					
 					
 					.to(e_yellow, 1, {opacity:0, ease: Power1.easeOut}, "+=1.0")
-					.to(txt_bigTank, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")	
+					.to(txt_bigTank_02, 1, {opacity:0, ease: Power1.easeOut}, "-=1.0")	
 					.to(popUp_tab, 0.5, {opacity:1, top:"193px", ease: Power1.easeOut},"-=0.5")				
 
 					.to(e_group, 1, {opacity:1, ease: Power1.easeOut})
@@ -529,6 +541,7 @@
 				   <div id="txt_justFill"><img src="spriteSheet.png"></div>
 				   
 				   <div id="txt_bigTank"><img src="spriteSheet.png"></div> 
+				   <div id="txt_bigTank_02"><img src="spriteSheet.png"></div> 
 				   
 				   <div id="catridges_c"><img src="cartridges_c.jpg"></div>
 				   <div id="catridges_b"><img src="cartridges_b.jpg"></div>

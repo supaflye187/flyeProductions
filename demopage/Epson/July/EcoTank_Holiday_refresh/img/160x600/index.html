@@ -58,9 +58,6 @@
 			background-color: #1760ce;
 			border-radius: 4px;
 			opacity: 0;
-			/* -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
-			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
-			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29); */
 			overflow: hidden;
 		}
 
@@ -152,8 +149,6 @@
 			opacity: 0;
 		}
 
-
-
 		#shaq_sideView {
 			position: absolute;
 			top: 370px;
@@ -216,6 +211,14 @@
 		#txt_getEchoTank {
 			position: absolute;
 			clip: rect(28px,200px,70px,0px);
+			top: 64px;
+			left: 10px;
+			opacity: 0;
+		}
+
+		#txt_getEchoTank_02 {
+			position: absolute;
+			clip: rect(28px,135px,70px,0px);
 			top: 64px;
 			left: 10px;
 			opacity: 0;
@@ -342,6 +345,7 @@
 				var ecoTank_logo_lg = document.getElementById('ecoTank_logo_lg');
 
 				var txt_getEchoTank = document.getElementById('txt_getEchoTank');
+				var txt_getEchoTank_02 = document.getElementById('txt_getEchoTank_02');
 
 				var starLight = document.getElementById('starLight');
 				var starLight_02 = document.getElementById('starLight_02');
@@ -449,13 +453,17 @@
 
 					.to(e_blue, 0.3, {opacity:1, ease: Power1.easeOut})
 					.to(e_blue, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
+					.to(txt_getEchoTank, 0.3, {opacity:0, ease: Power1.easeOut}, "-=0.3")
+					.to(txt_getEchoTank_02, 0.3, {opacity:1, ease: Power1.easeOut}, "-=0.3")
+
+					
 					.to(e_pink, 0.3, {opacity:1, ease: Power1.easeOut})
 					.to(e_pink, 0.3, {opacity:0, ease: Power1.easeOut}, "+=0.3")
 					.to(e_yellow, 0.3, {opacity:1, ease: Power1.easeOut})
 					
 					
 					.to(e_yellow, 1, {opacity:0, ease: Power1.easeOut}, "+=1.0")
-					.to(txt_getEchoTank, 0.5, {opacity:0, ease: Power1.easeOut}, "-=1.0")
+					.to(txt_getEchoTank_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=1.0")
 					.to(popUp_tab, 0.5, {opacity:1, top:"558px", ease: Power1.easeOut},"-=1.0")
 	
 				 	.to(e_group, 1, {opacity:1, ease: Power1.easeOut})
@@ -502,6 +510,8 @@
 				   <div id="ecoTank_logo_lg"><img src="ecoTank_logo.png"></div>
 
 				   <div id="txt_getEchoTank"><img src="spriteSheet.png"></div>
+				   <div id="txt_getEchoTank_02"><img src="spriteSheet.png"></div>
+
 				   <div id="txt_getEchoTankPrinters"><img src="spriteSheet.png"></div>
 				   <div id="txt_justFill"><img src="spriteSheet.png"></div>
 				   
