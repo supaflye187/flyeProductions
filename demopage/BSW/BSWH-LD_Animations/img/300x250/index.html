@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+	<title>300x250 BSW Health </title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSRulePlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	
+		
+	<style type="text/css">
+	
+		/*Required Elements
+		====================================================*/
+		#TEMP { position: absolute; opacity:0.5; }
+		#BG { position:absolute; opacity:1; }
+		html { background-color: #fff; }
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:300px;
+			height:250px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+		#ctaBtn {
+			position: absolute;
+			top: 193px;
+			left: 88px;
+			width: 120px;
+			height: 22px;
+			background-color: #bd7ebd;
+			opacity: 0;
+			-webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+			overflow: hidden;
+			/* transform: scale(0.9); */
+		}
+
+		#ctaBtn img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+			z-index: 10;
+		}
+
+		#ctaBtn:before,
+		#ctaBtn:after {
+			content: '';
+			position: absolute;
+			top: -100px;
+			left: 170px;
+			width: 200px;
+			height: 600px;
+			background: #c283c3;
+			opacity: 1;
+			transform: rotate(-45deg);
+			transition: all ease 1s;
+		}
+
+		#ctaBtn:hover:before,
+		#ctaBtn:hover:after {
+			left: 100%;
+		}
+		
+
+		/*YOUR CSS
+		=========================================*/
+
+		#image_01 { position: absolute; top: 0px; left: 0px; opacity: 0; }
+		#image_02 { position: absolute; top: 0px; left: 0px; opacity: 0; }
+		#image_03 { position: absolute; top: 0px; left: 0px; opacity: 0; }
+		#image_04 { position: absolute; top: 0px; left: 0px; opacity: 0; }
+		
+		#image_01 #img01 {
+			position: relative;
+			left: -50px;
+		}
+
+		#image_02 #img02 {
+			position: relative;
+			left: 50px;
+		}
+
+		#image_03 #img03 {
+			position: relative;
+			left: -50px;
+		}
+
+		#image_04 #img04 {
+			position: relative;
+			left: 0px;
+		}
+
+		#image_01 #blue_overlay {
+			position: absolute;
+			top: 0;	
+			height: 250px;
+			background-color:#98bae8;
+			opacity: 0.85;
+		}
+
+		#image_02 #green_overlay {
+			position: absolute;
+			top: 0;
+			left: -355px;
+			width: 950px;
+			height: 600px;
+			background-color:#7ce0d3;
+			opacity: 0.85;
+		}
+
+		#image_03 #pink_overlay {
+			position: absolute;
+			top: 0;
+			height: 250px;
+			background-color:#f59aa9;
+			opacity: 0.85;
+		}
+
+		#image_04 #purple_overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 600px;
+			background-color:#b482ba;
+			opacity: 0.85;
+		}
+
+		#blue_overlay {
+			clip-path: url(#clipMask);
+			left: 0px;
+			width: 400%;
+		}
+
+		#green_overlay {
+			clip-path: url(#clipMask);
+			width: 400%;
+		}
+
+		#pink_overlay {
+			clip-path: url(#clipMask_02);
+			left: 0px;
+			width: 400%;
+		}
+
+		#white_overlay {
+			position: absolute;
+			top: 300px;
+			left: 0;
+			width: 500px;
+			height: 800px;
+			background: #fff;
+			opacity: 0.15;
+			transform: rotate(45deg); 
+
+		}
+
+		#txt_01 {
+			position: absolute;
+			clip: rect(0px,500px,110px,0px);
+			top: -3px;
+			left: -17px;
+			opacity: 0;
+		}
+
+
+		#txt_02 {
+			position: absolute;
+			clip: rect(120px,500px,200px,0px);
+			top: -100px;
+			left: 40px;
+			opacity: 0;
+		}
+
+		#txt_03 {
+			position: absolute;
+			clip: rect(200px,500px,300px,0px);
+			top: -100px;
+			left: -5px;
+			opacity: 0;
+		}
+
+		#txt_04 {
+			position: absolute;
+			clip: rect(300px,500px,500px,0px);
+			top: -228px;
+			left: 43px;
+			opacity: 0;
+		}
+
+		#bsw_logo {
+			position: absolute;
+			top: 208px;
+			left: 0px;
+			opacity: 1;
+		}
+
+		#bsw_icon {
+			position: absolute;
+			top: 20px;
+			left: 72px;
+			opacity: 0;
+		}
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+
+		}
+
+		var tl = new TimelineLite();
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var bsw_logo = document.getElementById('bsw_logo');
+
+				var image_01 = document.getElementById('image_01');
+				var image_02 = document.getElementById('image_02');
+				var image_03 = document.getElementById('image_03');
+				var image_04 = document.getElementById('image_04');
+
+				var inner_image_01 = document.getElementById('img01');
+				var inner_image_02 = document.getElementById('img02');
+				var inner_image_03 = document.getElementById('img03');
+				var inner_image_04 = document.getElementById('img04');
+
+				var txt_01 = document.getElementById('txt_01');
+				var txt_02 = document.getElementById('txt_02');
+				var txt_03 = document.getElementById('txt_03');
+				var txt_04 = document.getElementById('txt_04');
+
+				var blue_overlay = document.getElementById('blue_overlay');
+				var green_overlay = document.getElementById('green_overlay');
+				var pink_overlay = document.getElementById('pink_overlay');
+				var purple_overlay = document.getElementById('purple_overlay');
+				var white_overlay = document.getElementById('white_overlay');
+
+				var ctaBtn = document.getElementById('ctaBtn');
+
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+					let counter = 0;
+					tl_main = new TimelineLite({onComplete:function() {
+						if(counter != -1 && looping == true) {
+							counter ++;						
+							setTimeout(restartAd, 3000)
+							
+							
+							} else {
+								return;
+							}
+							}});						
+							
+							function restartAd() {	
+								tl_main.restart();
+								lottie.goToAndStop(1);
+								
+							}
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //========================================================================
+				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
+				 tl_main.to(blue_overlay, 1, { x:"-355px", ease: Power1.easeOut})
+						 .to(image_01, 1, { opacity:1},"-=1.0")
+						 .to(txt_01, 2.5, { opacity:1, x:"23px", ease: Power2.easeOut},"-=1.0")
+						 //slide image
+						 .to(inner_image_01, 6, { x:"50px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=3.0")
+
+
+				 //FRAME 01 - OUT
+				 //========================================================================
+						.to(image_01, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
+						.to(txt_01, 1, { opacity:0, ease: Power2.easeOut},"-=1.0")
+
+				 //FRAME 02 - IN
+				 //========================================================================
+				 	     .to(image_02, 1, { opacity:1},"-=3.0")
+						 .to(txt_02, 2.5, { opacity:1, x:"-23px", ease: Power2.easeOut},"-=2.5")
+						 //grow image
+						 .to(inner_image_02, 6, { x:"-50px", ease: Power2.easeOut},"-=3.0")
+
+
+				 //FRAME 02 - OUT
+				 //========================================================================
+						.to(image_02, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
+						.to(txt_02, 1, { opacity:0, ease: Power2.easeOut},"-=1.0")
+
+
+				 //FRAME 03 - IN
+				 //========================================================================
+						//  .set(clipMask_02, {y:"-400px"},"-=3.0")
+				 		 .to(pink_overlay, 1, { x:"-355px", ease: Power2.easeOut},"-=3.0")
+						 .to(image_03, 1, { opacity:1},"-=3.0")
+						 .to(txt_03, 2.5, { opacity:1, x:"23px", ease: Power2.easeOut},"-=2.5")
+						 //shrink image
+						 .to(inner_image_03, 6, { x:"50px", ease: Power2.easeOut},"-=3.0")
+
+
+				 //FRAME 03 - OUT
+				 //========================================================================
+				 		.to(image_03, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
+						.to(txt_03, 1, { opacity:0, ease: Power2.easeOut},"-=2.0")
+						.to(bsw_logo, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
+
+
+				  //FRAME 04 - IN
+				 //========================================================================
+						 .to(image_04, 1, { opacity:1},"-=3.0")
+						 .to(white_overlay, 1, { top:"30px",},"-=3.0")
+						 .to(inner_image_04, 6, { x:"-20px", ease: Power2.easeOut},"-=3.0")
+
+						 .to(bsw_icon, 2, { opacity:1, ease: Power2.easeOut},"-=5.0")
+						 .to(txt_04, 2, { opacity:1, ease: Power2.easeOut},"-=5.0")
+						 .to(ctaBtn, 1, { opacity:1},"-=4.5")
+
+						 .to(shine, 1, {cssRule:{left:"170px"},  ease: Power1.easeOut},"-=5.5")
+						
+			}
+	</script>
+
+</head>
+
+<body>
+    <div id="container">
+				   <!--Background Image -->
+				   <!-- <div id="TEMP"><img src="_temp/temp_04.jpg"></div> -->
+				   <!--HTML ELEMENTS HERE-->
+
+				   <!--HORIZONTAL MASK-->
+				   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				   		viewBox="0 0 950 250" style="enable-background:new 0 0 950 250;" xml:space="preserve">			  
+					  <clipPath id="clipMask">
+						<path class="st1" d="M0,0v250h950V0H0z M638.53,189.15H416.4L587.19,19.47h51.35V189.15z"/>
+					  </clipPath>
+				  </svg>
+
+				 <!--VERTICAL MASK-->
+				 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 950 250" style="enable-background:new 0 0 950 250;" xml:space="preserve">
+					   <clipPath id="clipMask_02">
+						<path class="st1" d="M950,250V0H0v250H950z M638.53,193.53h-51.35L416.4,23.85h222.14V193.53z"/>
+					   </clipPath>
+				 </svg>
+				  
+				   <div id="image_01">
+					   <img id="img01" src="image_01.jpg">
+					   <div id="blue_overlay"></div>
+					</div>
+					<div id="txt_01"><img src="text_sheet.png" alt="We’ve seen a million first moments"></div>
+				
+						<div id="image_02">
+							<img id="img02" src="image_02.jpg">
+							<div id="green_overlay"></div>
+							</div>
+							<div id="txt_02"><img src="text_sheet.png" alt="to make sure we’re ready for"></div>
+
+								<div id="image_03">
+									<img id="img03" src="image_03.jpg">
+									<div id="pink_overlay"></div>
+									</div>
+									<div id="txt_03"><img src="text_sheet.png" alt="We’ve seen a million first moments"></div>
+
+										<div id="image_04">
+											<img id="img04" src="image_04.jpg">
+											<div id="purple_overlay"></div>
+											</div>
+											<div id="white_overlay"></div>
+											<div id="txt_04"><img src="text_sheet.png" alt="this moment right here."></div>
+
+					<div id="bsw_logo"><img src="bswh_logo.png" alt="bswh logo"></div>
+					<div id="bsw_icon"><img src="bsw_icon.png" alt="bsw icon"></div>
+
+					<div id="ctaBtn"><img id="ctaImg" src="ctaTxt.png"></div>
+					<!--=============CLICKTAGS================-->
+
+					<!--==========Default ClickTag============-->
+					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+    </div>
+</body>
+</html>
