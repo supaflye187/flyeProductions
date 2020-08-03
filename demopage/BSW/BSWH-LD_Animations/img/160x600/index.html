@@ -54,9 +54,9 @@
 			height: 23px;
 			background-color: #bd7ebd;
 			opacity: 0;
-			-webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
-			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
-			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2);
+			-webkit-box-shadow: 7px 6px 8px 0pxrgba(95,29,136,0.3);
+			-moz-box-shadow: 7px 6px 8px 0px rgba(95,29,136,0.3);
+			box-shadow: 7px 6px 8px 0px rgba(95,29,136,0.3);
 			overflow: hidden;
 			transform: scale(0.9);
 		}
@@ -101,13 +101,13 @@
 		#image_01 #img01 {
 			position: relative;
 			top: 200px;
-			left: -180px;
+			left: -60px;
 		}
 
 		#image_02 #img02 {
 			position: relative;
 			top: 200px;
-			left: 20px;
+			left: -30px;
 		}
 
 		#image_03 #img03 {
@@ -295,20 +295,12 @@
 					let counter = 0;
 					tl_main = new TimelineLite({onComplete:function() {
 						if(counter != -1 && looping == true) {
-							counter ++;						
-							setTimeout(restartAd, 3000)
-							
+							counter ++;												
 							
 							} else {
 								return;
 							}
-							}});						
-							
-							function restartAd() {	
-								tl_main.restart();
-								lottie.goToAndStop(1);
-								
-							}
+							}});	
 
 				//ex.
 				 //Frame animations start
@@ -319,7 +311,7 @@
 						 .to(image_01, 1, { opacity:1},"-=1.0")
 						 .to(txt_01, 2.5, { opacity:1, x:"35px", ease: Power2.easeOut},"-=1.0")
 						 //slide image
-						 .to(inner_image_01, 6, { x:"120px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=3.0")
+						 .to(inner_image_01, 6, { x:"-10px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=3.0")
 
 
 				 //FRAME 01 - OUT
@@ -332,7 +324,7 @@
 				 	     .to(image_02, 1, { opacity:1},"-=3.0")
 						 .to(txt_02, 2.5, { opacity:1, x:"-35px", ease: Power2.easeOut},"-=2.5")
 						 //grow image
-						 .to(inner_image_02, 6, { x:"-50px", ease: Power2.easeOut},"-=3.0")
+						 .to(inner_image_02, 6, { x:"-10px", ease: Power2.easeOut},"-=3.0")
 
 
 				 //FRAME 02 - OUT
@@ -348,7 +340,7 @@
 						 .to(image_03, 1, { opacity:1},"-=3.0")
 						 .to(txt_03, 2.5, { opacity:1, x:"-35px", ease: Power2.easeOut},"-=2.5")
 						 //shrink image
-						 .to(inner_image_03, 6, { x:"50px", ease: Power2.easeOut},"-=3.0")
+						 .to(inner_image_03, 6, { x:"10px", ease: Power2.easeOut},"-=3.0")
 
 
 				 //FRAME 03 - OUT
@@ -362,7 +354,7 @@
 				 //========================================================================
 						 .to(image_04, 1, { opacity:1},"-=3.0")
 						 .to(white_overlay, 1, { top:"132px",},"-=3.0")
-						 .to(inner_image_04, 6, { x:"-20px", ease: Power2.easeOut},"-=3.0")
+						 .to(inner_image_04, 6, { x:"-10px", ease: Power2.easeOut},"-=3.0")
 
 						 .to(bsw_icon, 2, { opacity:1, ease: Power2.easeOut},"-=5.0")
 						 .to(txt_04, 2, { opacity:1, ease: Power2.easeOut},"-=5.0")
