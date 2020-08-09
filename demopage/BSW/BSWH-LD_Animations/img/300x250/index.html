@@ -9,8 +9,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-	
 		
 	<style type="text/css">
 	
@@ -48,7 +46,7 @@
 
 		#ctaBtn {
 			position: absolute;
-			top: 193px;
+			top: 185px;
 			left: 88px;
 			width: 120px;
 			height: 22px;
@@ -58,7 +56,7 @@
 			-moz-box-shadow: 7px 6px 8px 0px rgba(95,29,136,0.3);
 			box-shadow: 7px 6px 8px 0px rgba(95,29,136,0.3);
 			overflow: hidden;
-			/* transform: scale(0.9); */
+			transform: scale(1.2);
 		}
 
 		#ctaBtn img {
@@ -75,7 +73,7 @@
 			content: '';
 			position: absolute;
 			top: -100px;
-			left: 170px;
+			left: 225px;
 			width: 200px;
 			height: 600px;
 			background: #c283c3;
@@ -100,27 +98,62 @@
 		
 		#image_01 #img01 {
 			position: relative;
-			left: 10px;
+			left: -60px;
 		}
 
 		#image_02 #img02 {
 			position: relative;
-			left: 10px;
+			left: -10px;
 		}
 
 		#image_03 #img03 {
 			position: relative;
-			left: 30px;
+			left: -60px;
 		}
 
 		#image_04 #img04 {
 			position: relative;
 			left: 0px;
+			transform: scale(1.1);
+		}
+
+		#green_overlay_02 {
+			position: absolute;
+			top: -4000px;
+			left: 1200px;
+			width: 3800px;
+			height: 5000px;
+			background-color:#7ce0d3;
+			transform: rotate(45deg);
+			opacity: 1;
+		}
+
+		#pink_overlay_02 {
+			position: absolute;
+			top: -4000px;
+			left: 1200px;
+			width: 3800px;
+			height: 5000px;
+			background-color:#f59aa9;
+			transform: rotate(45deg);
+			opacity: 1;
+		}
+
+		#purple_overlay_02 {
+			position: absolute;
+			top: -350px;
+			left: 1500px;
+			width: 1200px;
+			height: 1200px;
+			background-color:#b482ba;
+			transform: rotate(-45deg);
+			opacity: 1;
 		}
 
 		#image_01 #blue_overlay {
 			position: absolute;
 			top: 0;	
+			left: -355px;
 			height: 250px;
 			background-color:#98bae8;
 			opacity: 0.85;
@@ -139,6 +172,7 @@
 		#image_03 #pink_overlay {
 			position: absolute;
 			top: 0;
+			left: -355px;
 			height: 250px;
 			background-color:#f59aa9;
 			opacity: 0.85;
@@ -173,7 +207,7 @@
 
 		#white_overlay {
 			position: absolute;
-			top: 300px;
+			top: 85px;
 			left: 0;
 			width: 500px;
 			height: 800px;
@@ -187,7 +221,7 @@
 			position: absolute;
 			clip: rect(0px,500px,110px,0px);
 			top: -3px;
-			left: -17px;
+			left: 0px;
 			opacity: 0;
 		}
 
@@ -196,7 +230,7 @@
 			position: absolute;
 			clip: rect(120px,500px,200px,0px);
 			top: -100px;
-			left: 40px;
+			left: -10px;
 			opacity: 0;
 		}
 
@@ -204,17 +238,10 @@
 			position: absolute;
 			clip: rect(200px,500px,300px,0px);
 			top: -100px;
-			left: -5px;
+			left: 10px;
 			opacity: 0;
 		}
 
-		#txt_04 {
-			position: absolute;
-			clip: rect(300px,500px,500px,0px);
-			top: -228px;
-			left: 43px;
-			opacity: 0;
-		}
 
 		#bsw_logo {
 			position: absolute;
@@ -223,12 +250,15 @@
 			opacity: 1;
 		}
 
-		#bsw_icon {
+		#bsw_logo_02 {
 			position: absolute;
-			top: 20px;
-			left: 72px;
+			top: 45px;
+			left: 0px;
 			opacity: 0;
+			transform: scale(0.8);
 		}
+
+		
 
 		/*End YOUR CSS
 		=========================================*/
@@ -299,62 +329,61 @@
 				 //FRAME 01 - IN
 				 //========================================================================
 				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
-				 tl_main.to(blue_overlay, 1, { x:"-355px", ease: Power1.easeOut})
-						 .to(image_01, 1, { opacity:1},"-=1.0")
-						 .to(txt_01, 2.5, { opacity:1, x:"23px", ease: Power2.easeOut},"-=1.0")
-						 //slide image
-						 .to(inner_image_01, 6, { x:"10px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=3.0")
+				  tl_main.to(image_01, 1, { opacity:1, ease: Power2.easeOut})
+				  		.to(txt_01, 1, {  opacity:1, ease: Power2.easeOut},"-=1.0")
+						 .to(txt_01, 6, {  x:"-10px", ease: Power2.easeOut},"-=1.0")
+						 .to(inner_image_01, 6.5, { x:"10px", scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=6.0")
 
 
 				 //FRAME 01 - OUT
 				 //========================================================================
-						.to(image_01, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
-						.to(txt_01, 1, { opacity:0, ease: Power2.easeOut},"-=1.0")
+				 		.to(green_overlay_02, 1, { left:"-300px",},"-=3.3")
+						.to(green_overlay_02, 1, { opacity:0 },"-=0.2")
+						.to(image_01, 1, { opacity:0, ease: Power2.easeOut},"-=3.4")
+						.to(txt_01, 0.3, { opacity:0, ease: Power2.easeOut},"-=3.4")
 
 				 //FRAME 02 - IN
 				 //========================================================================
-				 	     .to(image_02, 1, { opacity:1},"-=3.0")
-						 .to(txt_02, 2.5, { opacity:1, x:"-23px", ease: Power2.easeOut},"-=2.5")
-						 //grow image
-						 .to(inner_image_02, 6, { x:"-10px", ease: Power2.easeOut},"-=3.0")
+				 	     .to(image_02, 1, { opacity:1},"-=3.7")
+						  .to(txt_02, 1, { opacity:1, ease: Power2.easeOut},"-=3.7")
+						 .to(txt_02, 6, { x:"10px", ease: Power2.easeOut},"-=3.7")
+						 .to(inner_image_02, 6.5, { x:"-10px", ease: Power2.easeOut},"-=6.0")
 
 
 				 //FRAME 02 - OUT
 				 //========================================================================
-						.to(image_02, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
-						.to(txt_02, 1, { opacity:0, ease: Power2.easeOut},"-=1.0")
+				 		.to(pink_overlay_02, 1, { left:"-300px",},"-=3.3")
+						.to(pink_overlay_02, 1, { opacity:0 },"-=0.2")
+						.to(image_02, 1, { opacity:0, ease: Power2.easeOut},"-=3.4")
+						.to(txt_02, 0.3, { opacity:0, ease: Power2.easeOut},"-=3.4")
 
 
 				 //FRAME 03 - IN
 				 //========================================================================
-						//  .set(clipMask_02, {y:"-400px"},"-=3.0")
-				 		 .to(pink_overlay, 1, { x:"-355px", ease: Power2.easeOut},"-=3.0")
-						 .to(image_03, 1, { opacity:1},"-=3.0")
-						 .to(txt_03, 2.5, { opacity:1, x:"23px", ease: Power2.easeOut},"-=2.5")
-						 //shrink image
-						 .to(inner_image_03, 6, { x:"-10px", ease: Power2.easeOut},"-=3.0")
+						 .to(image_03, 1, { opacity:1},"-=3.7")
+						 .to(txt_03, 1, { opacity:1, ease: Power2.easeOut},"-=3.7")
+						 .to(txt_03, 6, { x:"-10px", ease: Power2.easeOut},"-=3.7")
+						 .to(inner_image_03, 6, { x:"10px", ease: Power2.easeOut},"-=6.0")
 
 
 				 //FRAME 03 - OUT
 				 //========================================================================
-				 		.to(image_03, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
-						.to(txt_03, 1, { opacity:0, ease: Power2.easeOut},"-=2.0")
-						.to(bsw_logo, 1, { opacity:0, ease: Power2.easeOut},"-=3.0")
+				 		.to(purple_overlay_02, 1, { left:"-300px",},"-=3.3")
+						.to(purple_overlay_02, 1, { opacity:0 },"-=0.2")
+				 		.to(image_03, 1, { opacity:0, ease: Power2.easeOut},"-=3.4")
+						.to(txt_03, 0.3, { opacity:0, ease: Power2.easeOut},"-=3.4")
+						.to(bsw_logo, 0.3, { opacity:0, ease: Power2.easeOut},"-=3.7")
 
 
 				  //FRAME 04 - IN
 				 //========================================================================
-						 .to(image_04, 1, { opacity:1},"-=3.0")
-						 .to(white_overlay, 1, { top:"30px",},"-=3.0")
-						 .to(inner_image_04, 6, { x:"-10px", ease: Power2.easeOut},"-=3.0")
-
-						 .to(bsw_icon, 2, { opacity:1, ease: Power2.easeOut},"-=5.0")
-						 .to(txt_04, 2, { opacity:1, ease: Power2.easeOut},"-=5.0")
-						 .to(ctaBtn, 1, { opacity:1},"-=4.5")
-
-						 .to(shine, 1, {cssRule:{left:"170px"},  ease: Power1.easeOut},"-=5.5")
+						 .to(image_04, 1, { opacity:1},"-=4.0")
+						 .to(bsw_logo_02, 0.3, { opacity:1, ease: Power2.easeOut},"-=3.7")
+						 .to(inner_image_04, 6, { scaleX:"1", scaleY:"1", ease: Power2.easeOut},"-=3.7")
+						 .to(ctaBtn, 1, { opacity:1},"-=5.9")
 						
 			}
+
 	</script>
 
 </head>
@@ -381,39 +410,46 @@
 					   </clipPath>
 				 </svg>
 				  
-				   <div id="image_01">
-					   <img id="img01" src="image_01.jpg">
-					   <div id="blue_overlay"></div>
-					</div>
-					<div id="txt_01"><img src="text_sheet.png" alt="We’ve seen a million first moments"></div>
+				 <div id="image_01">
+					<img id="img01" src="image_01.jpg">
+				   <div id="blue_overlay"></div>
+				   <div id="txt_01"><img src="text_sheet.png" alt="We’ve seen a million first moments"></div>
+				   <div id="green_overlay_02"></div>
+				  
+				</div>
 				
-						<div id="image_02">
-							<img id="img02" src="image_02.jpg">
-							<div id="green_overlay"></div>
-							</div>
-							<div id="txt_02"><img src="text_sheet.png" alt="to make sure we’re ready for"></div>
+			
+					<div id="image_02">
+						<img id="img02" src="image_02.jpg">
+						<div id="green_overlay"></div>
+						<div id="txt_02"><img src="text_sheet.png" alt="to make sure we’re ready for"></div>
+						<div id="pink_overlay_02"></div>
+						</div>
+						
+							<div id="image_03">
+								
+								<img id="img03" src="image_03.jpg">
+								<div id="pink_overlay"></div>
+								<div id="txt_03"><img src="text_sheet.png" alt="We’ve seen a million first moments"></div>
+								
+								<div id="purple_overlay_02"></div>
+								</div>
+								<div id="bsw_logo"><img src="bswh_logo.png" alt="bswh logo"></div>
+									<div id="image_04">
+										<img id="img04" src="image_04.jpg">
+										<div id="purple_overlay"></div>
+										<div id="white_overlay"></div>
+										</div>
+									
+										<div id="txt_04"><img src="text_sheet.png" alt="this moment right here."></div>
+										
+				<div id="bsw_logo_02"><img src="bswh_logo_v02.png" alt="bswh logo"></div>
 
-								<div id="image_03">
-									<img id="img03" src="image_03.jpg">
-									<div id="pink_overlay"></div>
-									</div>
-									<div id="txt_03"><img src="text_sheet.png" alt="We’ve seen a million first moments"></div>
+				<div id="ctaBtn"><img id="ctaImg" src="ctaTxt.png"></div>
+				<!--=============CLICKTAGS================-->
 
-										<div id="image_04">
-											<img id="img04" src="image_04.jpg">
-											<div id="purple_overlay"></div>
-											</div>
-											<div id="white_overlay"></div>
-											<div id="txt_04"><img src="text_sheet.png" alt="this moment right here."></div>
-
-					<div id="bsw_logo"><img src="bswh_logo.png" alt="bswh logo"></div>
-					<div id="bsw_icon"><img src="bsw_icon.png" alt="bsw icon"></div>
-
-					<div id="ctaBtn"><img id="ctaImg" src="ctaTxt.png"></div>
-					<!--=============CLICKTAGS================-->
-
-					<!--==========Default ClickTag============-->
-					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+				<!--==========Default ClickTag============-->
+				<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
     </div>
 </body>
 </html>
