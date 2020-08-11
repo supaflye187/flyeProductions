@@ -58,7 +58,7 @@
 			-moz-box-shadow: 7px 6px 8px 0px rgba(95,29,136,0.3);
 			box-shadow: 7px 6px 8px 0px rgba(95,29,136,0.3);
 			overflow: hidden;
-			/* transform: scale(0.9); */
+	
 		}
 
 		#ctaBtn img {
@@ -179,7 +179,7 @@
 		#bsw_logo {
 			position: absolute;
 			top: 0px;
-			left: 173px;
+			left: 163px;
 			opacity: 1;
 		}
 
@@ -254,7 +254,7 @@
 				 //========================================================================
 				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
 				 tl_main.to(image_01, 1, { opacity:1},"-=1.0")
-						.to(white_overlay_01, 1, { left:"0px"},"-=1.0")
+						.to(white_overlay_01, 1, { left:"-10px"},"-=1.0")
 						.to(txt_01, 1, { opacity:1, y:"-8px", ease: Power2.easeOut},"-=0.5")
 					
 				 //FRAME 01 - OUT
@@ -286,7 +286,8 @@
 				 //========================================================================
 						 .to(image_04, 1, { opacity:1},"-=1.0")
 						 .to(ctaBtn, 1, { opacity:1},"-=0.5")
-						 .to(shine, 1, {cssRule:{left:"180px"},  ease: Power1.easeOut},"-=1.5")
+						 .to(shine, 0.5, {cssRule:{left:"222px"},  ease: Power1.easeOut},"-=2.0")
+						 .to(white_overlay_01, 0.5, { left:"-55px"},"-=1.5")
 						
 			}
 	</script>
