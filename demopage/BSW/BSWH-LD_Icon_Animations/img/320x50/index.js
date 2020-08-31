@@ -81,7 +81,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_4
-	this.text = new cjs.Text("Learn how we’re\nkeeping you safe.", "bold 30px 'Sharp Sans'", "#FFFFFF");
+	this.text = new cjs.Text("Learn how we’re\nkeeping you safe.", "30px 'Sharp Sans Medium'", "#FFFFFF");
 	this.text.lineHeight = 31;
 	this.text.lineWidth = 408;
 	this.text.parent = this;
@@ -106,7 +106,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_3
-	this.text = new cjs.Text("Nervous about your big day?", "bold 30px 'Sharp Sans'", "#FFFFFF");
+	this.text = new cjs.Text("Nervous about your big day?", "30px 'Sharp Sans Medium'", "#FFFFFF");
 	this.text.lineHeight = 34;
 	this.text.lineWidth = 500;
 	this.text.parent = this;
