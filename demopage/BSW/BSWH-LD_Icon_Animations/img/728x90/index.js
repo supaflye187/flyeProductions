@@ -26,8 +26,8 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_2 = function() {
-	this.initialize(img.CachedBmp_2);
+(lib.CachedBmp_5 = function() {
+	this.initialize(img.CachedBmp_5);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2103,376);
 
@@ -991,7 +991,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_2();
+	this.instance = new lib.CachedBmp_5();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1325,7 +1325,7 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(79).to({_off:false},0).to({alpha:1},11).wait(222));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(87).to({_off:false},0).to({alpha:1},11).wait(214));
 
 	// diagonal
 	this.instance_4 = new lib.diagonal_mask();
@@ -1384,8 +1384,9 @@ if (reversed == null) { reversed = false; }
 	this.instance_9 = new lib.text_01("synched",14);
 	this.instance_9.setTransform(125.35,28.6);
 	this.instance_9.alpha = 0;
+	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({alpha:1},18).wait(294));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(7).to({_off:false},0).to({alpha:1},18).wait(287));
 
 	// stork
 	this.instance_10 = new lib.stork_mc("synched",0);
@@ -1414,7 +1415,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_2.png", id:"CachedBmp_2"},
+		{src:"images/CachedBmp_5.png", id:"CachedBmp_5"},
 		{src:"images/index_atlas_1.png", id:"index_atlas_1"}
 	],
 	preloads: []

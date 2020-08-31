@@ -1380,11 +1380,12 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape_6).wait(6).to({_off:false},0).wait(1).to({x:297.375,y:407.7},0).wait(1).to({x:305.725,y:418.6},0).wait(1).to({x:314.025,y:429.55},0).wait(1).to({x:322.325,y:440.45},0).wait(1).to({x:330.675,y:451.35},0).wait(1).to({x:338.975,y:462.25},0).to({_off:true},1).wait(6).to({_off:false,x:397.275,y:538.55},0).wait(1).to({x:405.575,y:549.45},0).wait(1).to({x:413.925,y:560.35},0).to({_off:true},1).wait(1).to({_off:false,x:430.525,y:582.2},0).wait(1).to({x:438.875,y:593.1},0).wait(1).to({x:447.175,y:604},0).to({_off:true},1).wait(6).to({_off:false,x:505.425,y:680.3},0).wait(1).to({x:513.775,y:691.2},0).wait(1).to({x:522.075,y:702.1},0).to({_off:true},1).wait(10).to({_off:false,x:613.625,y:822.05},0).wait(1).to({x:621.975,y:832.95},0).wait(1).to({x:630.275,y:843.85},0).to({_off:true},1).wait(5).to({_off:false,x:680.225,y:909.25},0).to({_off:true},1).wait(4).to({_off:false,x:721.825,y:963.8},0).wait(1).to({x:730.175,y:974.7},0).wait(1).to({x:738.475,y:985.6},0).to({_off:true},1).wait(230));
 
 	// Txt_Frame_01
-	this.instance_9 = new lib.text_01("synched",14);
+	this.instance_9 = new lib.text_01("synched",23);
 	this.instance_9.setTransform(102.35,501.6,1.2832,1.2832);
+	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(12).to({_off:false},0).wait(279));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(24).to({_off:false},0).to({alpha:1,startPosition:36},13).wait(254));
 
 	// stork
 	this.instance_10 = new lib.stork_mc("synched",0);

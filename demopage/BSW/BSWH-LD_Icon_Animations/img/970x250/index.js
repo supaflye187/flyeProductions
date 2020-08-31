@@ -26,7 +26,7 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_3 = function() {
+(lib.CachedBmp_6 = function() {
 	this.initialize(ss["index_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -992,7 +992,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_3();
+	this.instance = new lib.CachedBmp_6();
 	this.instance.setTransform(-129.05,-18.1,0.2851,0.2851);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1319,7 +1319,7 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(77).to({_off:false},0).to({alpha:1},13).wait(229));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(83).to({_off:false},0).to({alpha:1},13).wait(223));
 
 	// diagonal
 	this.instance_4 = new lib.diagonal_mask();
@@ -1375,7 +1375,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(2).to({_off:false},0).to({alpha:1,startPosition:27},13).wait(304));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(8).to({_off:false},0).to({alpha:1,startPosition:27},13).wait(298));
 
 	// stork
 	this.instance_10 = new lib.stork_mc("synched",0);

@@ -26,8 +26,8 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_1 = function() {
-	this.initialize(img.CachedBmp_1);
+(lib.CachedBmp_4 = function() {
+	this.initialize(img.CachedBmp_4);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2103,376);
 
@@ -991,7 +991,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_1();
+	this.instance = new lib.CachedBmp_4();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -1355,7 +1355,7 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(92).to({_off:false},0).to({alpha:1},12).wait(244));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(100).to({_off:false},0).to({alpha:1},12).wait(236));
 
 	// diagonal
 	this.instance_4 = new lib.diagonal_mask();
@@ -1650,7 +1650,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_1.png", id:"CachedBmp_1"},
+		{src:"images/CachedBmp_4.png", id:"CachedBmp_4"},
 		{src:"images/index_atlas_1.png", id:"index_atlas_1"}
 	],
 	preloads: []
