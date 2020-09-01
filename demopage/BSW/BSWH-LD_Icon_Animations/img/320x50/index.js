@@ -537,7 +537,7 @@ if (reversed == null) { reversed = false; }
 
 	// Txt_Frame_02
 	this.instance_3 = new lib.text_02();
-	this.instance_3.setTransform(116.5,42.65,0.4951,0.4951,0,0,0,171.4,35.1);
+	this.instance_3.setTransform(160.05,24.7,0.4951,0.4951,0,0,0,252.2,0);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
@@ -803,7 +803,7 @@ if (reversed == null) { reversed = false; }
 
 	// Txt_Frame_01
 	this.instance_8 = new lib.text_01("synched",29);
-	this.instance_8.setTransform(51.8,18.65,0.4565,0.4565,0,0,0,0.1,0.1);
+	this.instance_8.setTransform(159.75,24.9,0.4565,0.4565,0,0,0,232.3,15.5);
 	this.instance_8.alpha = 0;
 	this.instance_8._off = true;
 

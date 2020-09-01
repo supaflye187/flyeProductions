@@ -1123,13 +1123,13 @@ if (reversed == null) { reversed = false; }
 
 	// shadow
 	this.instance_1 = new lib.ClipGroup_1();
-	this.instance_1.setTransform(195.6,50.2,0.6113,1,0,0,0,235.8,50.2);
+	this.instance_1.setTransform(192.9,47.9,0.6072,1.0274,0,0,0,235.9,50.2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.cta_btn, new cjs.Rectangle(88.4,9.3,217.4,89.4), null);
+}).prototype = getMCSymbolPrototype(lib.cta_btn, new cjs.Rectangle(86.3,5.9,216,91.8), null);
 
 
 // stage content:
@@ -1197,7 +1197,7 @@ if (reversed == null) { reversed = false; }
 
 	// BSWH_Logo
 	this.instance = new lib.bswh_logo();
-	this.instance.setTransform(634.6,98.2,1.7539,1.7539,0,0,0,0.1,0.1);
+	this.instance.setTransform(634.6,109.2,1.7539,1.7539,0,0,0,0.1,0.1);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
@@ -1345,7 +1345,7 @@ if (reversed == null) { reversed = false; }
 
 	// baby
 	this.instance_6 = new lib.baby_mc("synched",0);
-	this.instance_6.setTransform(751.8,121.95,0.9088,0.9088,0,0,0,17.5,56.1);
+	this.instance_6.setTransform(727.8,121.95,0.9088,0.9088,0,0,0,17.5,56.1);
 	this.instance_6._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(109).to({_off:false},0).wait(210));
@@ -1387,7 +1387,7 @@ if (reversed == null) { reversed = false; }
 
 	// stork
 	this.instance_10 = new lib.stork_mc("synched",0);
-	this.instance_10.setTransform(742.35,123.15,1.1324,1.1324,0,0,0,139.6,123.8);
+	this.instance_10.setTransform(718.35,123.15,1.1324,1.1324,0,0,0,139.6,123.8);
 	this.instance_10._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(17).to({_off:false},0).wait(302));

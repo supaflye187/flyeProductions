@@ -1310,7 +1310,7 @@ if (reversed == null) { reversed = false; }
 
 	// Txt_Frame_02
 	this.instance_3 = new lib.text_02();
-	this.instance_3.setTransform(107.9,452.15);
+	this.instance_3.setTransform(101.9,408.15);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
@@ -1338,7 +1338,7 @@ if (reversed == null) { reversed = false; }
 
 	// baby
 	this.instance_6 = new lib.baby_mc("synched",0);
-	this.instance_6.setTransform(149.55,205.7,0.7865,0.7865,0,0,0,17.2,55.8);
+	this.instance_6.setTransform(108.55,165.7,0.7865,0.7865,0,0,0,17.2,55.8);
 	this.instance_6._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(113).to({_off:false},0).wait(178));
@@ -1390,7 +1390,7 @@ if (reversed == null) { reversed = false; }
 
 	// Txt_Frame_01
 	this.instance_9 = new lib.text_01("synched",36);
-	this.instance_9.setTransform(145.45,421.75,1,1,0,0,0,25.1,1.1);
+	this.instance_9.setTransform(143.45,421.75,1,1,0,0,0,25.1,1.1);
 	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 
@@ -1398,7 +1398,7 @@ if (reversed == null) { reversed = false; }
 
 	// stork
 	this.instance_10 = new lib.stork_mc("synched",0);
-	this.instance_10.setTransform(151.7,165.3,0.9036,0.9036,0,0,0,151,124);
+	this.instance_10.setTransform(121.7,166.3,0.9036,0.9036,0,0,0,151,124);
 	this.instance_10._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(7).to({_off:false},0).wait(284));
