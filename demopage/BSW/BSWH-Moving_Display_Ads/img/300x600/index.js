@@ -114,16 +114,16 @@ p.nominalBounds = new cjs.Rectangle(0,0,28,23);
 p.nominalBounds = new cjs.Rectangle(0,0,95,107);
 
 
+(lib.safeCare_logo = function() {
+	this.initialize(img.safeCare_logo);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,191,126);
+
+
 (lib.stairPart = function() {
 	this.initialize(img.stairPart);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,24,65);
-
-
-(lib.staySafe_logo = function() {
-	this.initialize(img.staySafe_logo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,190,126);
 
 
 (lib.trashCan = function() {
@@ -363,15 +363,15 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_1
-	this.instance = new lib.staySafe_logo();
-	this.instance.setTransform(-95,-63);
+	// Layer_2
+	this.instance = new lib.safeCare_logo();
+	this.instance.setTransform(-85,-63);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.BSWH_staySafe, new cjs.Rectangle(-95,-63,190,126), null);
+}).prototype = getMCSymbolPrototype(lib.BSWH_staySafe, new cjs.Rectangle(-85,-63,191,126), null);
 
 
 (lib.BSWH_Logo = function(mode,startPosition,loop,reversed) {
@@ -1569,10 +1569,11 @@ if (reversed == null) { reversed = false; }
 
 	// BSWH_Logo
 	this.instance = new lib.BSWH_staySafe();
-	this.instance.setTransform(-3,-247);
-	this.instance.alpha = 0;
+	this.instance.setTransform(-3.35,-197.2,4.1812,4.1812,-24.6994,0,0,-0.1,-0.1);
+	this.instance.alpha = 0.0508;
+	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({y:-197,alpha:1},13,cjs.Ease.quadOut).wait(462));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(3).to({_off:false},0).to({regX:0,regY:0,scaleX:0.9841,scaleY:0.9841,rotation:0,x:-3,y:-197,alpha:1},4,cjs.Ease.circOut).to({scaleX:1,scaleY:1},3).wait(465));
 
 	// txt_staySafe
 	this.instance_1 = new lib.txt_staySafe_1();
@@ -1609,12 +1610,12 @@ if (reversed == null) { reversed = false; }
 	this.instance_5 = new lib.white_box();
 	this.instance_5.setTransform(2.05,412.05,1,1,0,0,0,0,-0.5);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({y:219.05},16,cjs.Ease.quadOut).wait(459));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).to({y:215.05},16,cjs.Ease.quadOut).to({y:219.05},3).wait(456));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-153.9,-310,312,821.6);
+p.nominalBounds = new cjs.Rectangle(-435.7,-621.4,945.5999999999999,1133);
 
 
 (lib.trashCan_animation = function(mode,startPosition,loop,reversed) {
@@ -2208,7 +2209,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-442,280.3,1634,521.5999999999999);
+p.nominalBounds = new cjs.Rectangle(-442,300,1634,501.9);
 // library properties:
 lib.properties = {
 	id: 'B5667063D0B4493788B67C1C568AC454',
@@ -2233,8 +2234,8 @@ lib.properties = {
 		{src:"images/dr_image.png", id:"dr_image"},
 		{src:"images/dr_stethoscope.png", id:"dr_stethoscope"},
 		{src:"images/magnifyGlass.png", id:"magnifyGlass"},
+		{src:"images/safeCare_logo.png", id:"safeCare_logo"},
 		{src:"images/stairPart.png", id:"stairPart"},
-		{src:"images/staySafe_logo.png", id:"staySafe_logo"},
 		{src:"images/trashCan.png", id:"trashCan"},
 		{src:"images/trashCan_yellow_bar.png", id:"trashCan_yellow_bar"},
 		{src:"images/txt_painful.png", id:"txt_painful"},
