@@ -2540,7 +2540,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_10.setTransform(32.9,43.55,0.31,0.31,0,0,0,17.1,56);
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(78).to({_off:false},0).wait(54).to({regY:55.8,scaleX:0.3799,scaleY:0.3799,x:39.9,y:42.5,startPosition:51},0).to({alpha:0,startPosition:55},5).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(78).to({_off:false},0).wait(54).to({startPosition:79},0).to({alpha:0},5).wait(181));
 
 	// background_pink
 	this.shape_36 = new cjs.Shape();
