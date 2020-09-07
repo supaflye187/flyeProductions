@@ -26,7 +26,7 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_57 = function() {
+(lib.CachedBmp_40 = function() {
 	this.initialize(ss["index_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
@@ -859,7 +859,7 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.CachedBmp_57();
+	this.instance = new lib.CachedBmp_40();
 	this.instance.setTransform(-65.7,-11.2,0.2964,0.2964);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(85));

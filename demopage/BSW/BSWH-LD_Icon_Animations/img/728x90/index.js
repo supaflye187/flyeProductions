@@ -2537,10 +2537,10 @@ if (reversed == null) { reversed = false; }
 
 	// baby
 	this.instance_10 = new lib.baby_mc("synched",0);
-	this.instance_10.setTransform(39.9,42.5,0.3799,0.3799,0,0,0,17.1,55.8);
+	this.instance_10.setTransform(32.9,43.55,0.31,0.31,0,0,0,17.1,56);
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(78).to({_off:false},0).wait(54).to({startPosition:51},0).to({alpha:0,startPosition:55},5).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(78).to({_off:false},0).wait(54).to({regY:55.8,scaleX:0.3799,scaleY:0.3799,x:39.9,y:42.5,startPosition:51},0).to({alpha:0,startPosition:55},5).wait(181));
 
 	// background_pink
 	this.shape_36 = new cjs.Shape();
@@ -2617,7 +2617,7 @@ if (reversed == null) { reversed = false; }
 
 	// Txt_Frame_01
 	this.instance_13 = new lib.text_01("synched",14);
-	this.instance_13.setTransform(227.35,28.6);
+	this.instance_13.setTransform(187.35,28.6);
 	this.instance_13.alpha = 0;
 	this.instance_13._off = true;
 
@@ -2631,7 +2631,7 @@ if (reversed == null) { reversed = false; }
 
 	// stork
 	this.instance_14 = new lib.stork_mc("synched",0);
-	this.instance_14.setTransform(45.35,45.25,0.4327,0.4327,0,0,0,139.7,123.9);
+	this.instance_14.setTransform(33.35,45.25,0.3334,0.3334,0,0,0,139.7,124);
 	this.instance_14._off = true;
 
 	var maskedShapeInstanceList = [this.instance_14];
