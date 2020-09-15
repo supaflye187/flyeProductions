@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+	position:absolute;
+}
+img{
+	border:0;
+}
+body{
+	cursor:pointer;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+#wrapper {
+	width:970px;
+	height:66px;
+	overflow: hidden;
+    border: 1px solid #404041;
+ 	box-sizing: border-box;
+}
+#copy1{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url(../images/copy1.png) no-repeat;
+}
+#copy2{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url(../images/copy2.png) no-repeat;
+}
+#copy3{
+	width:970px;
+	height:66px;
+	top: -66px;
+	background:url(../images/copy3.png) no-repeat;
+}
+#copy4{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url(../images/copy4.png) no-repeat;
+}
+#copy5{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url(../images/copy5.png) no-repeat;
+}
+#logo{
+	width:970px;
+	height:66px;
+	background:url("../images/logo.png") no-repeat;
+}
+#img1{
+	width:970px;
+	height:66px;
+	background:url("../images/img1.jpg") no-repeat;
+}
+#img2{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url("../images/img2.jpg") no-repeat;
+}
+#btl{
+	width:970px;
+	height:66px;
+	bottom: -66px;
+	background:url("../images/btl.png") no-repeat;
+}
+#cta{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url("../images/cta.png") no-repeat;
+}
+#man{
+	width:970px;
+	height:66px;
+	right: -100px;
+	background:url("../images/man.png") no-repeat;
+}
+#last{
+	width:970px;
+	height:66px;
+	opacity: 0;
+	background:url("../images/last.png") no-repeat;
+}

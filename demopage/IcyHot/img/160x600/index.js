@@ -207,9 +207,21 @@ if (reversed == null) { reversed = false; }
 	mask.graphics.p("AzLGyIAAtjMAmXAAAIAANjg");
 	mask.setTransform(-70.2,23.4704);
 
+	// Layer_1
+	this.instance = new lib.text_sheet();
+	this.instance.setTransform(-152,-22);
+
+	var maskedShapeInstanceList = [this.instance];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.txt_peoplePrefer, new cjs.Rectangle(0,0,0,0), null);
+}).prototype = getMCSymbolPrototype(lib.txt_peoplePrefer, new cjs.Rectangle(-152,-19.9,156,86.80000000000001), null);
 
 
 (lib.txt_over = function(mode,startPosition,loop,reversed) {
