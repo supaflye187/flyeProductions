@@ -757,14 +757,14 @@ if (reversed == null) { reversed = false; }
 
 	// shopping_woman
 	this.instance_10 = new lib.ShoppingWoman_PX("synched",0,false);
-	this.instance_10.setTransform(161.2,125.3,0.7594,0.7594,0,0,0,128.4,299.9);
+	this.instance_10.setTransform(161.2,147.3,0.7594,0.7594,0,0,0,128.4,299.9);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).to({x:178.2,y:-8.2,startPosition:97},97).wait(263));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).to({regY:299.8,scaleX:0.6453,scaleY:0.6453,x:150.2,y:157.75,startPosition:97},97).wait(263));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(3.4,-295.7,724.6,649.9);
+p.nominalBounds = new cjs.Rectangle(3.4,-295.7,724.6,686.8);
 // library properties:
 lib.properties = {
 	id: 'A995C96434FB4299A346847C54808D17',
