@@ -191,6 +191,16 @@
 		}
 
 
+		#txt_ownTheRoom {
+			position: absolute;
+			/* clip: rect(0px,300px,110px,0px); */
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
 		#text_01 {
 			position: absolute;
 			/* clip: rect(0px,300px,110px,0px); */
@@ -299,6 +309,7 @@
 				var text_04 = document.getElementById('text_04');
 				var text_05 = document.getElementById('text_05');
 				var txt_box = document.getElementById('txt_box');
+				var txt_ownTheRoom = document.getElementById('txt_ownTheRoom');
 			
 				var rays = document.getElementById('rays');
 				var rays_02 = document.getElementById('rays_02');
@@ -330,13 +341,13 @@
 					lt_rays_02 = new TimelineLite();
 					lt_img_04 = new TimelineLite();
 
-					lt_rays.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
-					lt_rays_02.to(rays_02, 20, {rotation:"720", ease:Power1.easeOut},"+=5.0")
+					lt_rays.to(rays, 15, {rotation:"720", ease:Power1.easeOut})
+					lt_rays_02.to(rays_02, 15, {rotation:"720", ease:Power1.easeOut},"+=5.0")
 					
-					lt_scale.to(img_01, 20, {scaleX:"1.2", scaleY:"1.2", ease:Power1.easeOut})
-					lt_scale.to(img_02, 20, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut},"-=18.5")
-					lt_img_04.to(img_04, 10, {scaleX:"1.2", scaleY:"1.2", x:"10px", y:"10px", ease:Power1.easeOut},"+=10.0")
-					lt_img_03.to(img_03, 10, {scaleX:"1.1", scaleY:"1.1", ease:Power1.easeOut},"+=7.0")
+					lt_scale.to(img_01, 15, {scaleX:"1.2", scaleY:"1.2", ease:Power1.easeOut})
+					lt_scale.to(img_02, 15, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut},"-=18.5")
+					lt_img_04.to(img_04, 10, {scaleX:"1.2", scaleY:"1.2", x:"10px", y:"10px", ease:Power1.easeOut},"+=5.0")
+					lt_img_03.to(img_03, 10, {scaleX:"1.1", scaleY:"1.1", ease:Power1.easeOut},"+=5.0")
 					
 
 				//ex.
@@ -352,13 +363,13 @@
 
 						//FRAME 01 - OUT
 						//=========================================================
-						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.0")
 						.to(text_01, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(text_01a, 0.5, {opacity:1, ease: Power1.easeOut})
 						
 						//FRAME 02 - OUT
 						//========================================================
-						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.0")
 						.to(text_01a, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 
 						//FRAME 03 - IN
@@ -371,7 +382,7 @@
 
 						//FRAME 03 - OUT
 						//========================================================
-						.to(shaq_01, 0.5, {opacity:1, left:"300px", ease: Power1.easeOut}, "+=1.5")
+						.to(shaq_01, 0.5, {opacity:1, left:"300px", ease: Power1.easeOut}, "+=1.0")
 						.to(projector, 0.5, {opacity:0, left:"-225px", ease: Power1.easeOut}, "-=0.5")
 						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
@@ -383,17 +394,19 @@
 
 						//FRAME 04 - OUT
 						//========================================================
-						.to(img_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(img_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 
 
 						//FRAME 06 - IN
 						//========================================================
 						.to(img_04, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(txt_ownTheRoom, 0.5, {opacity:1, ease: Power1.easeOut})
 
 
 						//FRAME 06 - OUT
 						//========================================================
-						.to(img_04, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(txt_ownTheRoom, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
+						.to(img_04, 0.5, {opacity:0, ease: Power1.easeOut})
 
 
 						//FRAME 05 - IN
@@ -404,7 +417,7 @@
 
 						//FRAME 05 - OUT
 						//========================================================
-						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 						.to(projector_02, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(rays_02, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 
@@ -412,10 +425,10 @@
 						//FRAME 07 - IN
 						//========================================================
 						.to(projector_03, 0.5, {opacity:1, left:"-75px", ease: Power1.easeOut})
-						.to(rays_03, 0.5, {opacity:1, left:"-43px", ease: Power1.easeOut},"-=0.5")
-						.to(text_04, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
-						.to(text_05, 0.5, {opacity:1, ease: Power1.easeOut})
-						.to(shaq_02, 0.5, {opacity:1, left:"205px", ease: Power1.easeOut},"-=0.5")
+						.to(rays_03, 0.4, {opacity:1, left:"-43px", ease: Power1.easeOut},"-=0.5")
+						.to(text_04, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(text_05, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(shaq_02, 0.4, {opacity:1, left:"205px", ease: Power1.easeOut},"-=0.5")
 
 
 						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
@@ -450,6 +463,7 @@
 				<div id="shaq_01"><img src="shaq_01.png"></div> 	
 				<div id="shaq_02"><img src="shaq_01.png"></div>
 
+				<div id="txt_ownTheRoom"><img src="ownTheRoom_Txt.png"></div>
 				<div id="text_01"><img src="txt_01.png"></div>
 				<div id="text_01a"><img src="txt_02.png"></div>
 				<div id="text_02"><img src="txt_03.png"></div>

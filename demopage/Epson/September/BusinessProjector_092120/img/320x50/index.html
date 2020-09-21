@@ -173,6 +173,14 @@
 		}
 
 
+		#txt_ownTheRoom {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
 		#text_01 {
 			position: absolute;
 			top: 0px;
@@ -258,6 +266,7 @@
 				var img_02 = document.getElementById('img_02');
 				var img_03 = document.getElementById('img_03');
 
+				var txt_ownTheRoom = document.getElementById('txt_ownTheRoom');
 				var text_01 = document.getElementById('text_01');
 				var text_01a = document.getElementById('text_01a');
 				var text_02 = document.getElementById('text_02');
@@ -309,13 +318,13 @@
 
 						//FRAME 01 - OUT
 						//=========================================================
-						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.0")
 						.to(text_01, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(text_02, 0.5, {opacity:1, ease: Power1.easeOut})
 						
 						//FRAME 02 - OUT
 						//========================================================
-						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.0")
 						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						
 
@@ -330,7 +339,7 @@
 
 						//FRAME 03 - OUT
 						//========================================================
-						.to(shaq_01, 0.5, {opacity:1, left:"320px", ease: Power1.easeOut}, "+=1.5")
+						.to(shaq_01, 0.5, {opacity:1, left:"320px", ease: Power1.easeOut}, "+=1.0")
 						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 									
@@ -340,9 +349,16 @@
 						.to(rays, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
 						.to(text_04, 0.5, {opacity:1, ease: Power1.easeOut})
 
+
+						//FRAME 04 - IN
+						//========================================================
+						.to(text_04, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
+						.to(txt_ownTheRoom, 0.5, {opacity:1, ease: Power1.easeOut})
+
+
 						//FRAME 04 - OUT
 						//========================================================
-						.to(text_04, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(txt_ownTheRoom, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
 						.to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 				
@@ -382,6 +398,7 @@
 				<div id="shaq_01"><img src="shaq_01.jpg"></div> 	
 				<div id="shaq_02"><img src="shaq_01.jpg"></div>
 
+				<div id="txt_ownTheRoom"><img src="txt_ownTheRoom.png"></div>
 				<div id="text_01"><img src="txt_01.png"></div>
 				<div id="text_02"><img src="txt_02.png"></div>
 				<div id="text_03"><img src="txt_03.png"></div>

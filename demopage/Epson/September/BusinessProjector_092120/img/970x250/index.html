@@ -321,13 +321,13 @@
 
 					var tl = new TimelineLite();
 					lt_rotation = new TimelineLite();
-					lt_rotation.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
+					lt_rotation.to(rays, 15, {rotation:"720", ease:Power1.easeOut})
 					lt_scale = new TimelineLite();
 					lt_img_03 = new TimelineLite();
 
-					lt_scale.to(img_01, 20, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut})
-					lt_scale.to(img_02, 20, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut},"-=17.0")
-					lt_img_03.to(img_03, 10, {scaleX:"1.4", scaleY:"1.4", x:"-10px", y:"30px", ease:Power1.easeOut},"+=8.0")
+					lt_scale.to(img_01, 15, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut})
+					lt_scale.to(img_02, 15, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut},"-=15.0")
+					lt_img_03.to(img_03, 10, {scaleX:"1.4", scaleY:"1.4", x:"-10px", y:"30px", ease:Power1.easeOut},"+=5.0")
 					
 
 				//ex.
@@ -343,13 +343,13 @@
 
 						//FRAME 01 - OUT
 						//=========================================================
-						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.0")
 						.to(text_01, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(text_01a, 0.5, {opacity:1, ease: Power1.easeOut})
 						
 						//FRAME 02 - OUT
 						//========================================================
-						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.0")
 						.to(text_01a, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						
 
@@ -363,7 +363,7 @@
 
 						//FRAME 03 - OUT
 						//========================================================
-						.to(shaq_01, 0.5, {opacity:1, left:"970px", ease: Power1.easeOut}, "+=1.5")
+						.to(shaq_01, 0.5, {opacity:1, left:"970px", ease: Power1.easeOut}, "+=1.0")
 						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
@@ -377,13 +377,13 @@
 
 						//FRAME 05 - OUT
 						//========================================================
-						.to(txt_box, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(txt_box, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 						.to(text_03, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
 
 
 						//FRAME 05 - OUT
 						//========================================================
-						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 						.to(img_03, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 
 
@@ -396,7 +396,7 @@
 
 						//FRAME 04 - OUT
 						//========================================================
-						.to(text_03a, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(text_03a, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 						.to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 
@@ -404,11 +404,11 @@
 
 						//FRAME 06 - IN
 						//========================================================
-						.to(projector_02, 0.5, {opacity:1, top:"70px", ease: Power1.easeOut})
-						.to(rays_02, 0.5, {opacity:1, top:"-15px", ease: Power1.easeOut},"-=0.5")
-						.to(text_04, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
-						.to(text_05, 0.5, {opacity:1, ease: Power1.easeOut})
-						.to(shaq_02, 0.5, {opacity:1, left:"866px", ease: Power1.easeOut},"-=0.5")
+						.to(projector_02, 0.4, {opacity:1, top:"70px", ease: Power1.easeOut})
+						.to(rays_02, 0.4, {opacity:1, top:"-15px", ease: Power1.easeOut},"-=0.5")
+						.to(text_04, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(text_05, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(shaq_02, 0.4, {opacity:1, left:"866px", ease: Power1.easeOut},"-=0.5")
 
 						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
 						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
