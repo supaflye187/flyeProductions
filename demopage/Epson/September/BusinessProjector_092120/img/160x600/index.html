@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=160,height=600">
+	<title>160x600 Epson - Projector Business</title>
+	<!--Include for Doubleclick Ads-->
+    <!-- <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSRulePlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+
+		/*Required Elements
+		====================================================*/
+		#TEMP {position: absolute; opacity:0.5;}
+		#BG {background-color: #1cc2ff;}
+
+		#linkLayer{
+			left:0px;
+			top:0px;
+			width:160px;
+			height:600px;
+			display:block;
+			position:absolute;
+			overflow: hidden;
+			cursor: pointer;
+			}
+
+		#container{
+			border:1px solid #000000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:158px;
+			height:598px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+		#ctaBtn {
+			position: absolute;
+			top: 530px;
+			left: 15px;
+			width: 100px;
+			height: 32px;
+			background-color: #d3041f;
+			border-radius: 4px;
+			opacity: 0;
+			/* -webkit-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			-moz-box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29);
+			box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.29); */
+			overflow: hidden;
+		}
+
+		#ctaBtn img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#ctaBtn:before,
+		#ctaBtn:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -150px;
+			width: 150%;
+			height: 100%;
+			background: #fff;
+			opacity: 0.2;
+			transform: rotate(45deg);
+			transition: all ease 1s;
+		}
+
+		#ctaBtn:hover:before,
+		#ctaBtn:hover:after {
+			left: 100%;
+		}
+
+		/*YOUR CSS
+		=========================================*/
+
+		#whiteBox {
+			position:absolute;
+			width: 160px;
+			height: 342px;
+			background-color: #fff;
+			top: 0;
+			left: 0;
+			opacity:1;
+		}
+
+		#whiteBox_bottom {
+			position:absolute;
+			width: 160px;
+			height: 80px;
+			background-color: #fff;
+			top: 520px;
+			left: 0;
+			opacity:1;
+		}
+
+		#whiteBox_02 {
+			position:absolute;
+			width: 160px;
+			height: 321px;
+			background-color: #fff;
+			top: 0;
+			left: 0;
+			opacity:1;
+		}
+
+		#shaq_01 {
+			position: absolute;
+			top: 360px;
+			left: 160px;
+			opacity: 1;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		 #shaq_02 {
+			position: absolute;
+			top: 335px;
+			left: 160px;
+			opacity: 1;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#projector {
+			position: absolute;
+			top: 218px;
+			left: -127px;
+			opacity: 0;
+			transform: scale(1);
+		}
+
+		#projector_02 {
+			position: absolute;
+			top: 215px;
+			left: -145px;
+			opacity: 0;
+			transform: scale(0.8);
+		}
+
+		#img_01 {
+			position: absolute;
+			top: 341px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#img_02 {
+			position: absolute;
+			top: 341px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#img_03 {
+			position: absolute;
+			top: 322px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#rays {
+			position: absolute;
+			top: 120px;
+			left: -85px;
+			opacity: 0;
+			transform: scale(0.65);
+		}
+
+
+		#text_01 {
+			position: absolute;
+			/* clip: rect(0px,300px,130px,0px); */
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_01a {
+			position: absolute;
+			/* clip: rect(0px,300px,130px,0px); */
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_02 {
+			position: absolute;
+			/* clip: rect(130px,300px,208px,0px); */
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_03 {
+			position: absolute;
+			/* clip: rect(208px,300px,310px,0px); */
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#text_03a {
+			position: absolute;
+			/* clip: rect(208px,300px,310px,0px); */
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_04 {
+			position: absolute;
+			clip: rect(310px,300px,380px,0px);
+			top: -189px;
+			left: 22px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+
+		#text_05 {
+			position: absolute;
+			clip: rect(380px,300px,500px,0px);
+			top: 70px;
+			left: 13px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#txt_box {
+			position:absolute;
+			top: 120px;
+			left: 0px;
+			opacity: 0;
+		}
+
+		#epson_logo {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+
+
+		/*End YOUR CSS
+		=========================================*/
+	</style>
+
+    <script language="javascript">
+
+    var clickTag = "www.google.com";
+
+
+		//DEFAULT LOADER FUNCTION
+		window.onload = function () {
+				console.log("Loading Content...");
+				politeInit();
+		}
+
+		
+
+
+		function politeInit() {
+			document.getElementById("container").style.display="block";
+			console.log("content loaded...");
+			startAni();
+			}
+
+			// Set Elements as Variables
+			function startAni(){
+				var BG = document.getElementById('BG');
+				var ctaBtn = document.getElementById('ctaBtn');
+				var ctaBtn_shine = document.getElementById('ctaBtn:before');
+
+				var logo = document.getElementById('epson_logo');
+				var img_01 = document.getElementById('img_01');
+				var img_02 = document.getElementById('img_02');
+				var img_03 = document.getElementById('img_03');
+
+				var text_01 = document.getElementById('text_01');
+				var text_02 = document.getElementById('text_02');
+				var text_03 = document.getElementById('text_03');
+				var text_04 = document.getElementById('text_04');
+				var text_05 = document.getElementById('text_05');
+				var txt_box = document.getElementById('txt_box');
+			
+				var rays = document.getElementById('rays');
+
+				var shaq_01 = document.getElementById('shaq_01');
+				var shaq_02 = document.getElementById('shaq_02');
+
+				var projector = document.getElementById('projector');
+				var projector_02 = document.getElementById('projector_02');
+
+				//Timeline Function - can set multiple Timelines
+				let looping = false;
+				let counter = 0;
+				tl_main = new TimelineLite({onComplete:function() {
+					if(counter != 1 && looping == true) {
+						counter ++;
+						this.restart();
+						} else {
+							return;
+						}
+						}});
+
+
+					var tl = new TimelineLite();
+					lt_rotation = new TimelineLite();
+					lt_rotation.to(rays, 20, {rotation:"720", ease:Power1.easeOut})
+					lt_scale = new TimelineLite();
+					lt_img_03 = new TimelineLite();
+
+					lt_scale.to(img_01, 20, {scaleX:"1.2", scaleY:"1.2", ease:Power1.easeOut})
+					lt_scale.to(img_02, 20, {scaleX:"1.4", scaleY:"1.4", ease:Power1.easeOut},"-=17.0")
+					lt_img_03.to(img_03, 10, {scaleX:"1.2", scaleY:"1.2", x:"-10px", y:"30px", ease:Power1.easeOut},"+=8.0")
+					
+
+				//ex.
+				 //Frame animations start
+				 //FRAME 01 - IN
+				 //============================================================
+				 var shine = CSSRulePlugin.getRule("#ctaBtn::before"); //get the rule
+
+				 tl_main.to(img_01, 0.5, {opacity:1, ease: Power1.easeOut})
+				 		.to(img_02, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.3")
+						.to(text_01, 1, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						
+
+						//FRAME 01 - OUT
+						//=========================================================
+						.to(img_01, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(text_01, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
+						.to(text_01a, 0.5, {opacity:1, ease: Power1.easeOut})
+						
+						
+						//FRAME 02 - OUT
+						//========================================================
+						.to(img_02, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
+						.to(text_01a, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+						
+
+						//FRAME 03 - IN
+						//========================================================
+						.to(text_02, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(shaq_01, 0.3, {opacity:1, left:"55px", ease: Power1.easeOut}, "-=0.5")
+						.to(projector, 0.5, {opacity:1, left:"-87px", ease: Power1.easeOut}, "-=0.5")
+						.to(rays, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
+
+
+						//FRAME 03 - OUT
+						//========================================================
+						.to(shaq_01, 0.5, {opacity:1, left:"300px", ease: Power1.easeOut}, "+=1.5")
+						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+						.to(projector, 0.5, {opacity:0,  ease: Power1.easeOut}, "-=0.5")
+						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+
+						//FRAME 05 - IN
+						//========================================================
+						.to(img_03, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(txt_box, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(projector, 0.5, {opacity:0, left:"-60px", top:"325px", scaleX:"0.8", scaleY:"0.8", ease: Power1.easeOut}, "-=0.5")
+						.to(rays, 0.5, {opacity:0, left:"-90px", top:"225px", ease: Power1.easeOut}, "-=0.5")
+
+
+						//FRAME 05 - OUT
+						//========================================================
+						.to(txt_box, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(text_03, 0.5, {opacity:1, ease: Power1.easeOut})
+
+									
+						//FRAME 04 - IN
+						//========================================================
+						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(img_03, 0.5, {opacity:0, ease: Power1.easeOut},"=-0.5")
+						.to(projector, 0.5, {opacity:1,  ease: Power1.easeOut}, "-=0.5")
+						.to(rays, 0.5, {opacity:1,  ease: Power1.easeOut}, "-=0.5")
+						.to(text_03a, 0.5, {opacity:1, ease: Power1.easeOut})
+
+						//FRAME 04 - OUT
+						//========================================================
+						.to(text_03a, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+						.to(rays, 0.5, {top:"115px", ease: Power1.easeO})
+
+						
+
+						//FRAME 06 - IN
+						//========================================================
+						.to(projector_02, 0.5, {opacity:1, left:"-85px", ease: Power1.easeOut})
+						.to(rays, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.2")
+						.to(text_04, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
+						.to(text_05, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(shaq_02, 0.5, {opacity:1, left:"75px", ease: Power1.easeOut},"-=0.5")
+
+
+						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
+
+			}
+
+	</script>
+
+</head>
+
+<body>
+			<div id="container">
+				<!--Background Image -->
+				<div id="BG"></div>
+				<!-- <div id="TEMP"><img src="temp_04.jpg"></div> -->
+				<!--HTML ELEMENTS HERE-->	
+				<div id="img_02"><img src="img_02.jpg"></div>
+				<div id="img_01"><img src="img_01.jpg"></div>
+				<div id="whiteBox"></div>
+				<div id="whiteBox_bottom"></div>
+				<div id="img_03"><img src="img_03.jpg"></div>
+				<div id="whiteBox_02"></div>
+				
+				<div id="rays"><img src="rays.png"></div> 
+				<div id="projector"><img src="projector.png"></div> 
+				<div id="projector_02"><img src="projector.png"></div> 
+				
+				<div id="shaq_01"><img src="shaq_01.png"></div> 	
+				<div id="shaq_02"><img src="shaq_02.png"></div>
+
+				<div id="text_01"><img src="text_01.png"></div>
+				<div id="text_01a"><img src="text_02.png"></div>
+				<div id="text_02"><img src="text_03.png"></div>
+				<div id="text_03"><img src="text_04.png"></div>
+				<div id="text_03a"><img src="text_05.png"></div>
+
+				<div id="text_04"><img src="text_sheet.png"></div>
+				<div id="text_05"><img src="text_sheet.png"></div>
+				<div id="txt_box"><img src="txt_box.png"></div>
+
+				<div id="epson_logo"><img src="epsonLogo.png"></div>
+		
+				<!--CTA-->
+				<div id="ctaBtn"><img src="ctaTxt.png"></div>
+
+				<!--==========Default ClickTag============-->
+				<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+		</div>
+</body>
+</html>
