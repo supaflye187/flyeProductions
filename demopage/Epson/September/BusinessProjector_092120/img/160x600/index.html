@@ -391,7 +391,7 @@
 
 						//FRAME 05 - OUT
 						//========================================================
-						.to(txt_box, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
+						.to(txt_box, 0.5, {opacity:0, ease: Power1.easeOut},"+=2.5")
 						.to(text_03, 0.5, {opacity:1, ease: Power1.easeOut})
 
 									
@@ -408,20 +408,20 @@
 						.to(text_03a, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 						.to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
-						.to(rays, 0.5, {top:"115px", ease: Power1.easeO})
+						.to(rays, 0.1, {top:"115px", ease: Power1.easeO},"-=0.5")
 
 						
 
 						//FRAME 06 - IN
 						//========================================================
-						.to(projector_02, 0.4, {opacity:1, left:"-85px", ease: Power1.easeOut})
+						.to(projector_02, 0.4, {opacity:1, left:"-85px", ease: Power1.easeOut},"-=0.5")
 						.to(rays, 0.4, {opacity:1, ease: Power1.easeOut}, "-=0.2")
 						.to(text_04, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.5")
-						.to(text_05, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(text_05, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(shaq_02, 0.4, {opacity:1, left:"75px", ease: Power1.easeOut},"-=0.5")
 
 
-						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
 
 			}

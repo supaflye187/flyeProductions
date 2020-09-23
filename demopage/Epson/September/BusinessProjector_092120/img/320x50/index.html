@@ -181,6 +181,14 @@
 			-webkit-font-smoothing: antialiased;
 		}
 
+		#blueBox {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			-webkit-font-smoothing: antialiased;
+		}
+
 		#text_01 {
 			position: absolute;
 			top: 0px;
@@ -266,6 +274,7 @@
 				var img_02 = document.getElementById('img_02');
 				var img_03 = document.getElementById('img_03');
 
+				var blueBox = document.getElementById('blueBox');
 				var txt_ownTheRoom = document.getElementById('txt_ownTheRoom');
 				var text_01 = document.getElementById('text_01');
 				var text_01a = document.getElementById('text_01a');
@@ -342,23 +351,41 @@
 						.to(shaq_01, 0.5, {opacity:1, left:"320px", ease: Power1.easeOut}, "+=1.0")
 						.to(text_02, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(text_03, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
-									
-						//FRAME 04 - IN
+
+
+						
+
+						//FRAME BlueBox - IN
 						//========================================================
-						.to(projector, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
-						.to(rays, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
-						.to(text_04, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(blueBox, 0.5, {opacity:1, ease: Power1.easeOut})
+
+						//FRAME BlueBox - OUT
+						//========================================================
+						.to(blueBox, 0.5, {opacity:0, ease: Power1.easeOut}, "+=1.5")
 
 
 						//FRAME 04 - IN
 						//========================================================
-						.to(text_04, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
+						.to(text_04, 0.5, {opacity:0, ease: Power1.easeOut},"-=0.5")
 						.to(txt_ownTheRoom, 0.5, {opacity:1, ease: Power1.easeOut})
 
 
 						//FRAME 04 - OUT
 						//========================================================
-						.to(txt_ownTheRoom, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.5")
+						.to(txt_ownTheRoom, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
+						// .to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+						// .to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
+
+						 //FRAME 04 - IN
+						//========================================================
+						 .to(projector, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
+						 .to(rays, 0.5, {opacity:1, ease: Power1.easeOut}, "-=0.5")
+						 .to(text_04, 0.5, {opacity:1, ease: Power1.easeOut})
+
+
+						 //FRAME 04 - OUT
+						//========================================================
+						.to(text_04, 0.5, {opacity:0, ease: Power1.easeOut},"+=1.0")
 						.to(projector, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 						.to(rays, 0.5, {opacity:0, ease: Power1.easeOut}, "-=0.5")
 				
@@ -368,10 +395,10 @@
 						.to(projector_02, 0.5, {opacity:1, top:"0px", ease: Power1.easeOut})
 						.to(epson_logo, 0.5, {opacity:1, top:"-2px", ease: Power1.easeOut}, "-=0.7")
 						.to(rays_02, 0.5, {opacity:1, top:"-120px", ease: Power1.easeOut},"-=0.5")
-						.to(text_05, 0.5, {opacity:1, ease: Power1.easeOut})
+						.to(text_05, 0.5, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(shaq_02, 0.5, {opacity:1, left:"287px", ease: Power1.easeOut},"-=0.5")
 
-						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut})
+						.to(ctaBtn, 0.4, {opacity:1, ease: Power1.easeOut},"-=0.5")
 						.to(shine, 1, {cssRule:{left:"100%"},  ease: Power1.easeOut},"-=1.5")
 
 			}
@@ -404,6 +431,7 @@
 				<div id="text_03"><img src="txt_03.png"></div>
 				<div id="text_04"><img src="txt_05.png"></div>
 				<div id="text_05"><img src="txt_06.png"></div>
+				<div id="blueBox"><img src="blueBox_frame.jpg"></div>
 
 				<div id="epson_logo"><img src="epsonLogo.png"></div>
 		
