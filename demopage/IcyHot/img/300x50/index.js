@@ -75,7 +75,13 @@ p.nominalBounds = new cjs.Rectangle(0,0,44,90);
 (lib.text_sheet = function() {
 	this.initialize(img.text_sheet);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,559,264);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,559,264);
+
+
+(lib.txt_theyAgree = function() {
+	this.initialize(img.txt_theyAgree);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,126,31);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -92,6 +98,28 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	prototype.frameBounds = frameBounds;
 	return prototype;
 	}
+
+
+(lib.txt_theyAgreen = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.txt_theyAgree();
+	this.instance.setTransform(-63,-15.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.txt_theyAgreen, new cjs.Rectangle(-63,-15.5,126,31), null);
 
 
 (lib.txt_trademark = function(mode,startPosition,loop,reversed) {
@@ -278,12 +306,12 @@ if (reversed == null) { reversed = false; }
 	// Layer_2 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	mask.graphics.p("AsuEfIAAo+IZdAAIAAI+g");
-	mask.setTransform(36.55,-134.2);
+	mask.graphics.p("Asui9IAAo/IZdAAIAAI/g");
+	mask.setTransform(36.55,-76.475);
 
 	// Layer_1
 	this.instance = new lib.text_sheet();
-	this.instance.setTransform(-37,-268);
+	this.instance.setTransform(-37,-258);
 
 	var maskedShapeInstanceList = [this.instance];
 
@@ -295,7 +323,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.txt_lessMessy, new cjs.Rectangle(-37,-162.9,155.1,57.5), null);
+}).prototype = getMCSymbolPrototype(lib.txt_lessMessy, new cjs.Rectangle(-37,-152.9,155.1,57.5), null);
 
 
 (lib.txt_IcyHot_02 = function(mode,startPosition,loop,reversed) {
@@ -380,12 +408,12 @@ if (reversed == null) { reversed = false; }
 	// Layer_2 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	mask.graphics.p("AwFDyIAAnkMAgLAAAIAAHkg");
-	mask.setTransform(223.55,-136.2);
+	mask.graphics.p("AmqkKIAAnlMAgLAAAIAAHlg");
+	mask.setTransform(163.275,-75.225);
 
 	// Layer_1
 	this.instance = new lib.text_sheet();
-	this.instance.setTransform(-37,-269);
+	this.instance.setTransform(-37,-259);
 
 	var maskedShapeInstanceList = [this.instance];
 
@@ -397,7 +425,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.txt_easyApply, new cjs.Rectangle(120.6,-160.4,206.00000000000003,48.5), null);
+}).prototype = getMCSymbolPrototype(lib.txt_easyApply, new cjs.Rectangle(120.6,-150.4,206.00000000000003,48.5), null);
 
 
 (lib.txt_disclaimer = function(mode,startPosition,loop,reversed) {
@@ -935,8 +963,8 @@ if (reversed == null) { reversed = false; }
 
 	// border
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#FFFFFF").ss(2,2,0,3).p("A41jvMAxrAAAIAAHfMgxrAAAg");
-	this.shape.setTransform(149.9865,25,0.9371,1);
+	this.shape.graphics.f().s("#FFFFFF").ss(1,0,0,3).p("A3RjvMAujAAAIAAHfMgujAAAg");
+	this.shape.setTransform(150,25);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(359));
 
@@ -1002,62 +1030,70 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120).to({startPosition:0},0).to({alpha:0},10).to({_off:true},1).wait(228));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(120).to({startPosition:112},0).to({alpha:0},10).to({_off:true},1).wait(228));
 
-	// txt_lessMessy
-	this.instance_7 = new lib.txt_lessMessy();
-	this.instance_7.setTransform(54.75,91.1,0.4609,0.4609,0,0,0,0.4,0.4);
+	// Layer_1
+	this.instance_7 = new lib.txt_theyAgreen();
+	this.instance_7.setTransform(70.35,14.1,0.5148,0.5148,0,0,0,0.1,0.1);
 	this.instance_7.alpha = 0;
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(151).to({_off:false},0).to({alpha:1},8).wait(57).to({alpha:0},10).to({_off:true},1).wait(132));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(147).to({_off:false},0).to({alpha:1},7).wait(59).to({alpha:0},7).to({_off:true},1).wait(138));
 
-	// txt_easyApply
-	this.instance_8 = new lib.txt_easyApply();
-	this.instance_8.setTransform(54.75,91.6,0.4609,0.4609,0,0,0,0.4,0.6);
+	// txt_lessMessy
+	this.instance_8 = new lib.txt_lessMessy();
+	this.instance_8.setTransform(54.75,91.1,0.4609,0.4609,0,0,0,0.4,0.4);
 	this.instance_8.alpha = 0;
 	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(158).to({_off:false},0).to({alpha:1},8).wait(52).to({alpha:0},10).to({_off:true},1).wait(130));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(151).to({_off:false},0).to({alpha:1},8).wait(57).to({alpha:0},10).to({_off:true},1).wait(132));
 
-	// txt_onTheGo
-	this.instance_9 = new lib.txt_onTheGo();
-	this.instance_9.setTransform(54.1,90.8,0.4609,0.4609,0,0,0,0.5,0.2);
+	// txt_easyApply
+	this.instance_9 = new lib.txt_easyApply();
+	this.instance_9.setTransform(54.75,91.6,0.4609,0.4609,0,0,0,0.4,0.6);
 	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(164).to({_off:false},0).to({alpha:1},8).wait(48).to({alpha:0},10).to({_off:true},1).wait(128));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(158).to({_off:false},0).to({alpha:1},8).wait(52).to({alpha:0},10).to({_off:true},1).wait(130));
 
-	// spray_bottle
-	this.instance_10 = new lib.spray_bottle();
-	this.instance_10.setTransform(150.5,504);
+	// txt_onTheGo
+	this.instance_10 = new lib.txt_onTheGo();
+	this.instance_10.setTransform(54.1,90.8,0.4609,0.4609,0,0,0,0.5,0.2);
+	this.instance_10.alpha = 0;
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(131).to({_off:false},0).to({y:448.5},11,cjs.Ease.quadOut).to({y:449.5},5).wait(212));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(164).to({_off:false},0).to({alpha:1},8).wait(48).to({alpha:0},10).to({_off:true},1).wait(128));
 
-	// txt_rise
-	this.instance_11 = new lib.txt_rise();
-	this.instance_11.setTransform(64.1,52.75,0.42,0.42,0,0,0,0.2,0.4);
-	this.instance_11.alpha = 0;
+	// spray_bottle
+	this.instance_11 = new lib.spray_bottle();
+	this.instance_11.setTransform(150.5,504);
 	this.instance_11._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(231).to({_off:false},0).to({y:44.25,alpha:1},9).wait(119));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(131).to({_off:false},0).to({y:448.5},11,cjs.Ease.quadOut).to({y:449.5},5).wait(212));
 
-	// txt_FromPain
-	this.instance_12 = new lib.txt_fromPain();
-	this.instance_12.setTransform(85,0.45,0.42,0.42,0,0,0,49.8,-103.2);
+	// txt_rise
+	this.instance_12 = new lib.txt_rise();
+	this.instance_12.setTransform(64.1,52.75,0.42,0.42,0,0,0,0.2,0.4);
 	this.instance_12.alpha = 0;
 	this.instance_12._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(240).to({_off:false},0).to({alpha:1},9).wait(110));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(231).to({_off:false},0).to({y:44.25,alpha:1},9).wait(119));
 
-	// txt_icyHot_02
-	this.instance_13 = new lib.txt_IcyHot_02();
-	this.instance_13.setTransform(254.15,27,0.4602,0.4602,0,0,0,448.4,-39);
+	// txt_FromPain
+	this.instance_13 = new lib.txt_fromPain();
+	this.instance_13.setTransform(85,0.45,0.42,0.42,0,0,0,49.8,-103.2);
 	this.instance_13.alpha = 0;
 	this.instance_13._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(249).to({_off:false},0).to({alpha:1},10).wait(100));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(240).to({_off:false},0).to({alpha:1},9).wait(110));
+
+	// txt_icyHot_02
+	this.instance_14 = new lib.txt_IcyHot_02();
+	this.instance_14.setTransform(254.15,27,0.4602,0.4602,0,0,0,448.4,-39);
+	this.instance_14.alpha = 0;
+	this.instance_14._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(249).to({_off:false},0).to({alpha:1},10).wait(100));
 
 	// cta_btn_Mask (mask)
 	var mask_1 = new cjs.Shape();
@@ -1098,18 +1134,18 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape_3).wait(272).to({_off:false},0).to({_off:true},1).wait(2).to({_off:false,x:30.475,y:-2.9},0).wait(1).to({x:32.575,y:-2.1},0).to({_off:true},1).wait(3).to({_off:false,x:53.025,y:5.65},0).wait(1).to({x:62.625,y:9.25},0).to({_off:true},1).wait(1).to({_off:false,x:89.775,y:19.5},0).to({_off:true},1).wait(6).to({_off:false,x:146.925,y:41.1},0).to({_off:true},1).wait(3).to({_off:false,x:151.675,y:42.9},0).to({_off:true},1).wait(1).to({_off:false,x:151.975,y:43},0).wait(63));
 
 	// ctaBtn
-	this.instance_14 = new lib.ctaBtn_1();
-	this.instance_14.setTransform(78.35,28.3,0.504,0.504,0,0,0,44.1,-210.7);
-	this.instance_14.alpha = 0;
-	this.instance_14._off = true;
+	this.instance_15 = new lib.ctaBtn_1();
+	this.instance_15.setTransform(78.35,28.3,0.504,0.504,0,0,0,44.1,-210.7);
+	this.instance_15.alpha = 0;
+	this.instance_15._off = true;
 
-	var maskedShapeInstanceList = [this.instance_14];
+	var maskedShapeInstanceList = [this.instance_15];
 
 	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask_1;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(259).to({_off:false},0).to({alpha:1},9).wait(91));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(259).to({_off:false},0).to({alpha:1},9).wait(91));
 
 	// background
 	this.shape_5 = new cjs.Shape();
@@ -1139,7 +1175,8 @@ lib.properties = {
 		{src:"drip_03.jpg", id:"drip_03"},
 		{src:"drip_image.jpg", id:"drip_image"},
 		{src:"sprayBottle.jpg", id:"sprayBottle"},
-		{src:"text_sheet.png", id:"text_sheet"}
+		{src:"text_sheet.png", id:"text_sheet"},
+		{src:"txt_theyAgree.png", id:"txt_theyAgree"}
 	],
 	preloads: []
 };
