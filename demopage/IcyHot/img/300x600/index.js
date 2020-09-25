@@ -1176,7 +1176,7 @@ p.nominalBounds = new cjs.Rectangle(-215.6,-171,422.5,230.6);
 
 // stage content:
 (lib.ICY_DrySpray_300x600 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
