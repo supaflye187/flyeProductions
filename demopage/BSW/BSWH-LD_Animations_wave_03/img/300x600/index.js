@@ -121,13 +121,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.image_02();
-	this.instance.setTransform(-96,-173);
+	this.instance.setTransform(-96,-185);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_02_1, new cjs.Rectangle(-96,-173,339,385), null);
+}).prototype = getMCSymbolPrototype(lib.image_02_1, new cjs.Rectangle(-96,-185,339,385), null);
 
 
 (lib.image_01_1 = function(mode,startPosition,loop,reversed) {
