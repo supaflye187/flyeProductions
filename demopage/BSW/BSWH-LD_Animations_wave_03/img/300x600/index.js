@@ -100,23 +100,23 @@ if (reversed == null) { reversed = false; }
 	// Layer_2
 	this.shape = new cjs.Shape();
 	this.shape.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0,0.259],54.5,-22.5,54.5,-203.5).s().p("A6PMHIAA4NMA0fAAAIAAYNg");
-	this.shape.setTransform(86,243.6);
+	this.shape.setTransform(86.4037,284.501,1.1431,1.1431);
 
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0.035,0.255],-50.5,73.6,-50.5,254.6).s().p("A63YdMAAAgw5MA1vAAAMAAAAw5g");
-	this.shape_1.setTransform(96,-249.35);
+	this.shape_1.setTransform(97.8344,-278.9736,1.1431,1.1431);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
 
 	// Layer_1
 	this.instance = new lib.image_03();
-	this.instance.setTransform(-101,-172);
+	this.instance.setTransform(-127,-191,1.1431,1.1431);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_03_1, new cjs.Rectangle(-101,-405.8,369,726.9000000000001), null);
+}).prototype = getMCSymbolPrototype(lib.image_03_1, new cjs.Rectangle(-127,-457.8,421.5,830.9000000000001), null);
 
 
 (lib.image_02_1 = function(mode,startPosition,loop,reversed) {
@@ -132,12 +132,12 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_2
 	this.shape = new cjs.Shape();
-	this.shape.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0,0.239],54.5,-12.5,54.5,-193.5).s().p("A6PNrIAA7VMA0fAAAIAAbVg");
-	this.shape.setTransform(50,264.6);
+	this.shape.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0.035,0.255],-50.5,73.6,-50.5,254.6).s().p("A63YdMAAAgw5MA1vAAAMAAAAw5g");
+	this.shape.setTransform(60.0411,-315.35,2.384,1);
 
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0.035,0.255],-50.5,73.6,-50.5,254.6).s().p("A63YdMAAAgw5MA1vAAAMAAAAw5g");
-	this.shape_1.setTransform(60,-315.35);
+	this.shape_1.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0,0.239],209.6,-12.5,209.6,-193.5).s().p("Ehk8ANrIAA7VMDJ5AAAIAAbVg");
+	this.shape_1.setTransform(50.05,264.6);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
 
@@ -149,7 +149,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_02_1, new cjs.Rectangle(-118,-471.8,405.1,860.9000000000001), null);
+}).prototype = getMCSymbolPrototype(lib.image_02_1, new cjs.Rectangle(-596,-471.8,1292.2,860.9000000000001), null);
 
 
 (lib.image_01_1 = function(mode,startPosition,loop,reversed) {
@@ -166,30 +166,30 @@ if (reversed == null) { reversed = false; }
 	// Layer_3
 	this.shape = new cjs.Shape();
 	this.shape.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0,0.38],16.6,-165.5,197.6,-165.5).s().p("EgNCA8oMAAAh5PIaFAAMAAAB5Pg");
-	this.shape.setTransform(-60,50.65);
+	this.shape.setTransform(-93.3523,60.3833,1.2534,1.2534);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 	// Layer_2
 	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0.035,0.255],-50.5,73.6,-50.5,254.6).s().p("A63YdMAAAgw5MA1vAAAMAAAAw5g");
-	this.shape_1.setTransform(96,-257.35);
+	this.shape_1.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0,0.259],54.5,-12.5,54.5,-193.5).s().p("A6PNrIAA7VMA0fAAAIAAbVg");
+	this.shape_1.setTransform(89.64,265.8737,1.2534,1.2534);
 
 	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0,0.259],54.5,-12.5,54.5,-193.5).s().p("A6PNrIAA7VMA0fAAAIAAbVg");
-	this.shape_2.setTransform(86,214.6);
+	this.shape_2.graphics.lf(["#FFFFFF","rgba(255,255,255,0)"],[0.035,0.255],-50.5,73.6,-50.5,254.6).s().p("A63YdMAAAgw5MA1vAAAMAAAAw5g");
+	this.shape_2.setTransform(102.1737,-325.6553,1.2534,1.2534);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).wait(1));
 
 	// Layer_1
 	this.instance = new lib.image_01();
-	this.instance.setTransform(-52,-180);
+	this.instance.setTransform(-83,-229,1.2534,1.2534);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_01_1, new cjs.Rectangle(-143.5,-413.8,430.5,852.5), null);
+}).prototype = getMCSymbolPrototype(lib.image_01_1, new cjs.Rectangle(-198,-521.8,539.9,1068.5), null);
 
 
 (lib.txt_03 = function(mode,startPosition,loop,reversed) {
