@@ -151,15 +151,8 @@
 			background-color: #fff;
 		}
 	
-		#staySafe_logo {
-			position: absolute;
-			top:  -67px;
-			left: 37px;
-			opacity: 0;
-			/* transform: rotate(-45deg); */
-			transform: scale(0.0);
-		}
 
+ */
 
 		/*End YOUR CSS
 		=========================================*/
@@ -200,8 +193,6 @@
 				var f3_text = document.getElementById('f3_text');
 				var f4_text= document.getElementById('f4_text');
 
-				var staySafe_logo = document.getElementById('staySafe_logo');
-
 
 
 			//Timeline Function - can set multiple Timelines
@@ -229,6 +220,7 @@
 				 //FRAME 01 - IN
 				 //========================================================================
 				 tl_main.to(blue_box_01, 1, { top:"0px", ease: Power2.easeOut})
+				 .to(staySafe_logo, 0.1, { rotation:"-30", ease: Power2.easeOut},"-=1.0")
 				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
 						.to(f1_text, 1, { top:"-2px", ease: Power2.easeOut},"-=0.5")
 
@@ -238,10 +230,6 @@
 						.to(blue_box_03, 1, { top:"3px", ease: Power2.easeOut},"+=1.5")
 						.to(f3_text, 1, { top:"-87px", ease: Power2.easeOut},"-=0.5")
 
-						.to(staySafe_logo, 0.8, { opacity:1, scaleX:"0.2", scaleY:"0.2",ease:Back.easeOut.config(1.7) },"-=0.5")
-
-						// .to(blue_box_04, 0.8, { top:"3px", ease: Power2.easeOut},"+=1.5")
-						// .to(f4_text, 1, { top:"-137px", ease: Power2.easeOut},"-=0.5")
 
          
 			}
@@ -270,7 +258,6 @@
 
 				   <div id="white_mask"></div>
 
-				   <div id="staySafe_logo"><img src="staySafe_logo.png"></div>
 
 					<!--==========Default ClickTag============-->
 					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>

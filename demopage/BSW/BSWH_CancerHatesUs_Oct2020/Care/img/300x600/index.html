@@ -236,6 +236,7 @@
 				 //FRAME 01 - IN
 				 //========================================================================
 				 tl_main.to(image_01, 1, { top:"13px", ease: Power2.easeOut})
+				 .to(staySafe_logo, 0.1, { rotation:"-30", ease: Power2.easeOut},"-=1.0")
 				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
 						.to(f1_text_01, 1, { top:"8px", ease: Power2.easeOut},"-=0.5")
 
@@ -245,7 +246,7 @@
 						.to(blue_box, 0.8, { top:"13px", ease: Power2.easeOut},"+=1.5")
 						.to(f3_text_01, 0.8, { top:"-253px", ease: Power2.easeOut},"-=0.5")
 
-						.to(staySafe_logo, 0.8, { opacity:1, scaleX:"0.5", scaleY:"0.5",ease:Back.easeOut.config(1.7) },"-=0.5")
+						.to(staySafe_logo, 0.8, { opacity:1, rotation:"0", scaleX:"0.5", scaleY:"0.5",ease:Back.easeOut.config(1.7) },"-=0.5")
 
 
 						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")

@@ -155,11 +155,11 @@
 
 		#staySafe_logo {
 			position: absolute;
-			top:  -47px;
-			left: 260px;
+			top:  -43px;
+			left: 267px;
 			opacity: 0;
 			/* transform: rotate(-45deg); */
-			transform: scale(0.1);
+			transform: scale(0.0);
 		}
 
 		#findOut {
@@ -287,6 +287,7 @@
 				 //FRAME 01 - IN
 				 //========================================================================
 				 tl_main.to(blue_box_01, 1, { top:"7px", ease: Power2.easeOut})
+				 .to(staySafe_logo, 0.1, { rotation:"-30", ease: Power2.easeOut},"-=1.0")
 				        .to(bsw_logo, 1, { opacity:"1", ease: Power2.easeOut},"-=1.0")
 						.to(f1_text, 1, { top:"2px", ease: Power2.easeOut},"-=0.5")
 
@@ -302,7 +303,7 @@
 						.to(blue_box_03, 1, { top:"7px", ease: Power2.easeOut},"+=1.5")
 						.to(f5_text, 1, { top:"-262px", ease: Power2.easeOut},"-=0.5")
 
-						.to(staySafe_logo, 0.8, { opacity:1, scaleX:"0.35", scaleY:"0.35",ease:Back.easeOut.config(1.7) },"-=0.5")
+						.to(staySafe_logo, 0.8, { opacity:1, rotation:"0", scaleX:"0.32", scaleY:"0.32",ease:Back.easeOut.config(1.7) },"-=0.5")
 
 						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
 						.to(findOut, 0.8, { opacity:"1", left:"512px", ease: Power2.easeOut})
