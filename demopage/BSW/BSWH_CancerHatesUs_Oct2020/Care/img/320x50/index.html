@@ -150,6 +150,15 @@
 			height: 3px;
 			background-color: #fff;
 		}
+
+		#gradient_logo {
+			position: absolute;
+			top: -50px;
+			left: 170px;
+			transform: scale(0.4);
+			/* border: 1px solid black;  */
+
+		}
 	
 
  
@@ -229,7 +238,7 @@
 						.to(blue_box_03, 1, { top:"3px", ease: Power2.easeOut},"+=1.5")
 						.to(f3_text, 1, { top:"-87px", ease: Power2.easeOut},"-=0.5")
 
-
+						.to(gradient_logo, 1.5, { top:"-110px", ease: Power2.easeOut})
          
 			}
 
@@ -245,6 +254,7 @@
 				   <!--HTML ELEMENTS HERE-->
 				   <!-- <div id="bsw_icon" class="bm"></div> -->
 				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
+				   <div id="gradient_logo"><img src="horizontal_logo_gradient.png"></div>
 
 				   <div id="blue_box_01"></div>
 				   <div id="f1_text"><img src="text_sheet.png"></div>
@@ -257,6 +267,7 @@
 
 				   <div id="white_mask"></div>
 
+				  
 
 					<!--==========Default ClickTag============-->
 					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>

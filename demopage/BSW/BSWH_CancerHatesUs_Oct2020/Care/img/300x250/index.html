@@ -181,6 +181,15 @@
 			background-color: #fff;
 		}
 
+		#gradient_logo {
+			position: absolute;
+			top: 170px;
+			left: -15px;
+			transform: scale(0.5);
+			/* border: 1px solid black; */
+
+		}
+
 
 		/*End YOUR CSS
 		=========================================*/
@@ -265,6 +274,8 @@
 
 						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
 						.to(findOut, 0.8, { opacity:"1", left:"110px", ease: Power2.easeOut})
+
+						.to(gradient_logo, 2, { top:"50px", ease: Power2.easeOut})
          
 			}
 
@@ -280,7 +291,7 @@
 				   <!--HTML ELEMENTS HERE-->
 				   <!-- <div id="bsw_icon" class="bm"></div> -->
 				   <div id="bsw_logo"><img src="logo_lockup.png"></div>
-
+				   <div id="gradient_logo"><img src="horizontal_logo_gradient.png"></div>
 				   <div id="image_01"><img src="image_01.jpg"></div>
 				   <div id="f1_text"><img src="text_sheet.png"></div>
 				   <div id="image_02"><img src="image_02.jpg"></div>

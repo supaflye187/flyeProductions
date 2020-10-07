@@ -182,6 +182,15 @@
 			background-color: #fff;
 		}
 
+		#gradient_logo {
+			position: absolute;
+			top: 373px;
+			left: -330px;
+			transform: scale(0.3);
+
+		}
+
+
 
 
 		/*End YOUR CSS
@@ -267,6 +276,8 @@
 
 						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
 						.to(findOut, 0.8, { opacity:"1", left:"20px", ease: Power2.easeOut})
+
+						.to(gradient_logo, 2, { left:"-150px", ease: Power2.easeOut})
          
 			}
 
@@ -298,6 +309,8 @@
 				   <object id="findOut_sq" data="findOut.svg" type="image/svg+xml"></object>
 				   <div id="findOut_mask"></div>
 				   <div id="white_mask"></div>
+
+				   <div id="gradient_logo"><img src="vertical_logo_gradient.png"></div>
 
 					<!--==========Default ClickTag============-->
 					<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>

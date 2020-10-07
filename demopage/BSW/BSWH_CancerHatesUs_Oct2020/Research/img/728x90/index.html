@@ -212,9 +212,16 @@
 			background-color: #fff;
 		}
 
+		#gradient_logo {
+			position: absolute;
+			top: 0px;
+			left: 450px;
+			transform: scale(0.6);
+			/* border: 1px solid black; */
+
+		}
 
 
-		
 
 		/*End YOUR CSS
 		=========================================*/
@@ -307,6 +314,8 @@
 
 						.to(findOut_sq, 0.5, { opacity:"1", ease: Power2.easeOut},"-=0.5")
 						.to(findOut, 0.8, { opacity:"1", left:"512px", ease: Power2.easeOut})
+
+						.to(gradient_logo, 2, { top:"-150px", ease: Power2.easeOut})
          
 			}
 
@@ -346,6 +355,8 @@
 				   <object id="findOut_sq" data="findOut.svg" type="image/svg+xml"></object>
 				   <div id="white_mask"></div>
 				   <div id="white_mask_02"></div>
+
+				   <div id="gradient_logo"><img src="horizontal_logo_gradient.png"></div>
 
 
 					<!--==========Default ClickTag============-->
