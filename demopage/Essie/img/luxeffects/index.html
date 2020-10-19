@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=250">
+    <title>L'Oreal - Luxeffects</title>
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+    <style type="text/css">
+	
+		body, body * {
+			vertical-align: baseline;
+			border: 0;
+			outline: 0;
+			padding: 0;
+			margin: 0;
+		}
+		
+			/*--------------------------CONTENT-------------------------------------*/
+
+		#overlay { position: absolute; width:300px; height: 250px; top: 0px; left: 0px; opacity: 0; background-color:blue; }
+		#name_01 { position: absolute; top: 28px; left: 27px;  opacity:0;}
+		#name_02 { position: absolute; top: 28px; left: 24px; opacity:0;}
+		#name_03 { position: absolute; top: 28px; left: 32px; opacity:0;}
+		#name_04 { position: absolute; top: 28px; left: 27px; opacity:0;}
+
+		#bottle_01 { position: absolute; top: 18px; left: 170px; opacity: 0;}
+		#bottle_02 { position: absolute; top: 18px; left: 170px; opacity: 1;}
+		#bottle_03 { position: absolute; top: 18px; left: 170px; opacity: 0;}
+		#bottle_04 { position: absolute; top: 18px; left: 170px; opacity: 0;}
+
+		#top_01 { position: absolute; top: 100px; left: 46px; cursor: pointer; opacity: 1;}
+		#top_02 { position: absolute; top: 100px; left: 95px; cursor: pointer; opacity: 1;}
+		#top_03 { position: absolute; top: 148px; left: 46px; cursor: pointer; opacity: 1;}
+		#top_04 { position: absolute; top: 148px; left: 95px; cursor: pointer; opacity: 1;}
+
+
+		#txt_theSeason {position: absolute; top: 30px; left: 0px; opacity: 0;  }
+
+		#txt_isFestive { position: absolute; top: 52px; left: 50px; opacity: 0; }
+
+		#txt_dazzle { position: absolute; top: 10px; left: 18px; opacity: 0; }
+
+		#txt_fringe { position: absolute; top: 42px; left: 46px; opacity: 0;}
+
+		#txt_luxEffect { position: absolute; top: 65px; left: 70px; opacity: 0;}
+
+		#txt_RollOver { position: absolute; top: 45px; left: 59px; opacity: 0;}
+
+
+		#ctaBtn { position: absolute; top: 190px; left: 0px; cursor: pointer; z-index: 1; opacity:1 }
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:250px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:248px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		#container{
+			border:1px solid #000000;
+			background:#FFF;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:248px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+.style_prevu_kit
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+
+}
+.style_prevu_kit:hover
+{
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+
+.ctaAnim
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: translateY(0px);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: translateY(0px);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: translateY(0px);
+    transition: all 200ms ease-in;
+    transform: translateY(0px);   
+
+}
+.ctaAnim:hover
+{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: translateY(-10px);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: translateY(-10px);  
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: translateY(-10px);
+    transition: all 200ms ease-in;
+    transform: translateY(-10px);
+}
+
+
+	</style>
+
+    
+    <script language="javascript">
+		//Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				politeInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit);	
+			}
+
+			addListeners(); 
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function politeInit(){	
+
+			document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+			startAni();	
+			}
+	
+			function startAni(){
+				var BG =  document.getElementById('background'),
+					overlay = document.getElementById('overlay'),
+					Logo = document.getElementById('Logo'), 
+					txt_theSeason = document.getElementById('txt_theSeason'), 
+					txt_isFestive = document.getElementById('txt_isFestive'), 
+					txt_dazzle = document.getElementById('txt_dazzle'),
+					txt_Fringe = document.getElementById('txt_fringe'),
+					txt_luxEffect = document.getElementById('txt_luxEffect'), 
+					bottle_01 = document.getElementById('bottle_01'),  
+					bottle_02 = document.getElementById('bottle_02'), 
+					bottle_03 = document.getElementById('bottle_03'),
+					bottle_04 = document.getElementById('bottle_04'), 
+					name_01 = document.getElementById('name_01'),
+					name_02 = document.getElementById('name_02'),
+					name_03 = document.getElementById('name_03'),
+					name_04 = document.getElementById('name_04'),
+					top_01 = document.getElementById('top_01'),
+					top_02 = document.getElementById('top_02'),
+					top_03 = document.getElementById('top_03'),
+					top_04 = document.getElementById('top_04'),
+					txt_rollOver = document.getElementById('txt_RollOver'),
+					ctaBtn = document.getElementById('ctaBtn')
+					tl_01 = new TimelineLite();
+				
+
+				// Frame animations start
+				tl_01.to(txt_theSeason, 1, {opacity:1, left: "25px", ease:Power1.easeOut},"-=1.0")
+				.to(txt_isFestive, 1, {opacity:1, left: "70px", ease:Power1.easeOut})
+
+				//
+				.to(txt_theSeason, 1, {opacity:0, ease:Power1.easeOut},"+=1.5")
+				.to(txt_isFestive, 1, {opacity:0, ease:Power1.easeOut}, "-=1.5")
+				 
+				//
+				.to(txt_dazzle, 1, {opacity:1, top: "20px", ease:Power1.easeOut}, "+=0.2")
+				.to(txt_fringe, 1, {opacity:1, ease:Power1.easeOut})
+				.to(txt_luxEffect, 1, {opacity:1, ease:Power1.easeOut})
+
+				//
+				.to(txt_dazzle, 1, {opacity:0, ease:Power1.easeOut},"+=1.5")
+				.to(txt_fringe, 1, {opacity:0, ease:Power1.easeOut}, "-=1.5")
+				.to(txt_luxEffect, 1, {opacity:0, ease:Power1.easeOut}, "-=1.5")
+
+				//
+				.to(txt_rollOver, 1, {opacity:1, ease:Power1.easeOut})
+				.to(overlay, 0.2, {left: "1000px", ease:Power1.easeOut}, "+=1.0")		  
+
+			}
+
+addListeners = function(e) {
+	
+	//HitArea 1 Events
+	document.getElementById('top_01').addEventListener('mouseover', hitArea_01_MouseOver, false);
+	document.getElementById('top_01').addEventListener('mouseout', hitArea_01_MouseOut, false);
+
+	//HitArea 2 Events
+	document.getElementById('top_02').addEventListener('mouseover', hitArea_02_MouseOver, false);
+	document.getElementById('top_02').addEventListener('mouseout', hitArea_02_MouseOut, false);
+
+	//HitArea 3 Events
+	document.getElementById('top_03').addEventListener('mouseover', hitArea_03_MouseOver, false);
+	document.getElementById('top_03').addEventListener('mouseout', hitArea_03_MouseOut, false);
+
+	//HitArea 4 Events
+	document.getElementById('top_04').addEventListener('mouseover', hitArea_04_MouseOver, false);
+	document.getElementById('top_04').addEventListener('mouseout', hitArea_04_MouseOut, false);
+
+}
+
+hitArea_clickThrough = function () {
+	//Call Exits
+	//Enabler.exit('HTML5_Background_Clickthrough');
+}
+//
+hitArea_01_MouseOver = function() {
+	if(document.getElementById("top_01"))
+	{
+		document.getElementById("bottle_02").style.opacity="0";
+		document.getElementById("name_01").style.opacity="1";
+		document.getElementById("txt_RollOver").style.opacity="0";
+		document.getElementById("bottle_01").style.opacity="1";
+		TweenLite.fromTo(document.getElementById("bottle_01"), 0.5, {x:-1}, {x:1, ease:RoughEase.ease.config({strength:3, points:5, template:Linear.easeNone, randomize:false}) , clearProps:"x"})
+
+	}else{
+		document.getElementById("name_01").style.opacity="0";
+		document.getElementById("bottle_01").style.opacity="0";
+	}
+}
+
+hitArea_01_MouseOut = function() {
+document.getElementById("bottle_02").style.opacity="1";
+document.getElementById("bottle_01").style.opacity="0";
+document.getElementById("name_01").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+}
+
+//
+hitArea_02_MouseOver = function() {
+	if(document.getElementById("top_02"))
+	{
+		document.getElementById("name_02").style.opacity="1";
+		document.getElementById("txt_RollOver").style.opacity="0";
+		document.getElementById("bottle_02").style.opacity="1";
+		TweenLite.fromTo(document.getElementById("bottle_02"),  0.5, {x:-1}, {x:1, ease:RoughEase.ease.config({strength:3, points:5, template:Linear.easeNone, randomize:false}) , clearProps:"x"})
+	}else{
+		document.getElementById("name_02").style.opacity="0";
+		document.getElementById("bottle_02").style.opacity="0";
+	}
+}
+
+hitArea_02_MouseOut = function() {
+document.getElementById("name_02").style.opacity="0";
+document.getElementById("bottle_02").style.opacity="1";
+document.getElementById("txt_RollOver").style.opacity="1";
+}
+
+//
+hitArea_03_MouseOver = function() {
+	if(document.getElementById("top_03"))
+	{
+		document.getElementById("bottle_02").style.opacity="0";
+		document.getElementById("name_03").style.opacity="1";
+		document.getElementById("txt_RollOver").style.opacity="0";
+		document.getElementById("bottle_03").style.opacity="1";
+TweenLite.fromTo(document.getElementById("bottle_03"),  0.5, {x:-1}, {x:1, ease:RoughEase.ease.config({strength:3, points:5, template:Linear.easeNone, randomize:false}) , clearProps:"x"})
+	}else{
+		document.getElementById("name_03").style.opacity="0";
+		document.getElementById("bottle_03").style.opacity="0";
+	}
+}
+hitArea_03_MouseOut = function() {
+document.getElementById("bottle_02").style.opacity="1";
+document.getElementById("name_03").style.opacity="0";
+document.getElementById("bottle_03").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+}
+
+//
+hitArea_04_MouseOver = function() {
+	if(document.getElementById("top_04"))
+	{
+		document.getElementById("bottle_02").style.opacity="0";
+		document.getElementById("name_04").style.opacity="1";
+		document.getElementById("txt_RollOver").style.opacity="0";
+		document.getElementById("bottle_04").style.opacity="1";
+		TweenLite.fromTo(document.getElementById("bottle_04"),  0.5, {x:-1}, {x:1, ease:RoughEase.ease.config({strength:3, points:5, template:Linear.easeNone, randomize:false}) , clearProps:"x"})
+	}else{
+		document.getElementById("name_04").style.opacity="0";
+		document.getElementById("bottle_04").style.opacity="0";
+	}
+}
+//
+hitArea_04_MouseOut = function() {
+document.getElementById("bottle_02").style.opacity="1";
+document.getElementById("bottle_04").style.opacity="0";
+document.getElementById("name_04").style.opacity="0";
+document.getElementById("txt_RollOver").style.opacity="1";
+}
+
+//
+// hitArea_02_MouseOver = function() { document.getElementById("name_02").style.opacity="1";
+// document.getElementById("txt_RollOver").style.opacity="0";
+// }
+// hitArea_02_MouseOut = function() { document.getElementById("name_02").style.opacity="0";
+// document.getElementById("txt_RollOver").style.opacity="1";
+// }
+// //
+// hitArea_03_MouseOver = function() { document.getElementById("name_03").style.opacity="1";
+// document.getElementById("txt_RollOver").style.opacity="0";
+// }
+
+// hitArea_03_MouseOut = function() { document.getElementById("name_03").style.opacity="0";
+// document.getElementById("txt_RollOver").style.opacity="1";
+// }
+
+// //
+// hitArea_04_MouseOver = function() { document.getElementById("name_04").style.opacity="1";
+// document.getElementById("txt_RollOver").style.opacity="0";
+// }
+// hitArea_04_MouseOut = function() { document.getElementById("name_04").style.opacity="0";
+// document.getElementById("txt_RollOver").style.opacity="1";
+// }
+//
+var clickTag = "http://www.google.com";
+			
+//============================================================================================//		
+			
+	</script>
+    
+</head>
+
+<body>
+<div id="loading_dc"><!-- Loading Animation -->
+	<div id="loading_image_dc">
+		<!-- NO IMAGE -->
+	</div>    
+</div>
+    <div id="container">
+    	       	<!--Background Image -->
+          		<!--<div id="background"><img src="300_Winter_Background.jpg" /></div>-->
+          		<div id="background"></div>
+
+          		<!--Name -->
+          		<div id="name_04"><img src="300_Tassel_Name.png" /></div>
+          		<div id="name_03"><img src="300_Fringe_Name.png" /></div>
+          		<div id="name_02"><img src="300_Frilling_Name.png" /></div>
+          		<div id="name_01"><img src="300_Fashion_Name.png" /></div>
+
+          		<!--Bottles -->
+          		<div id="bottle_04"><img src="300_Tassel_Bottle.png" /></div>
+          		<div id="bottle_03"><img src="300_Fringe_Bottle.png" /></div>
+          		<div id="bottle_02"><img src="300_Frilling_Bottle.png" /></div>
+          		<div id="bottle_01"><img src="300_Fashion_Bottle.png" /></div>
+
+          		<!--Text -->
+          		<div id="txt_theSeason"><img src="300_Txt_TheSeason.png" /></div>
+          		<div id="txt_isFestive"><img src="300_Txt_isFestive.png" /></div>
+          		<div id="txt_dazzle"><img src="300_Txt_Dazzling.png" /></div>
+          		<div id="txt_fringe"><img src="300_Txt_Fringe.png" /></div>
+          		<div id="txt_luxEffect"><img src="300_Txt_Luxeffects.png" /></div>
+
+          		<div id="txt_RollOver"><img src="300_Txt_RollOver.png" /></div>
+
+          		<!--Main ClickTAG Layer-->
+          		<a href="javascript:window.open(window.clickTag)"><div id="linkLayer"></div></a>
+
+          		<!--CTA -->
+
+         	 	<a href="javascript:window.open(window.clickTag)"><div id="top_04" class="style_prevu_kit"><img src="300_Tassel_Top.png" /></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div id="top_03" class="style_prevu_kit"><img src="300_Fringe_Top.png" /></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div id="top_02" class="style_prevu_kit"><img src="300_Frilling_Top.png" /></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div id="top_01" class="style_prevu_kit"><img src="300_Fashion_Top.png" /></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div id="overlay"></div></a>
+          		<a href="javascript:window.open(window.clickTag)"><div class="ctaAnim"><img src="300_Bottom_CTA.png" id="ctaBtn" /></div></a>
+
+        </div>
+</body>
+
+</html>
+

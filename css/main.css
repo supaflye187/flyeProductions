@@ -420,7 +420,7 @@ MEDIA QUERIES
 
   .image-container .image-inner {
         display: inline-block;
-        max-width: 33.3333%;
+        max-width: 30.3333%;
         position: relative;
         overflow: hidden;
   }
@@ -448,9 +448,10 @@ MEDIA QUERIES
   }
     
 
-/* .gallery-image {
-  margin: 10px;
-} */
+.gallery-image {
+  padding: 0px;
+  margin:10px;
+}
 
 .image-overlay {
   /* display:none; */

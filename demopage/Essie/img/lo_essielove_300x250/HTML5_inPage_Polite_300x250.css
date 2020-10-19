@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Default style, feel free to remove if not needed. */
+body, body * {
+	vertical-align: baseline;
+	border: 0px;
+	outline: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* Div layer for the entire banner. */
+#container_dc {
+	position: absolute;
+	width: 298px;
+	height: 248px;
+	border:1px solid #666666;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+	overflow:hidden;
+	display:none;
+}
+
+#content_dc {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #FFF;
+	z-index: 100;
+	overflow:hidden;
+}
+
+/* Invisible button for background clickthrough. */
+#background_exit_dc {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 699;
+}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+/* ============ ADDITIONAL ELEMENTS ================ */
+
+
+#bottle_01 {
+	position: absolute;
+	top: 33px;
+	left: 62px;
+	opacity: 0;
+	z-index: 300;
+}
+
+#bottle_02 {
+	position: absolute;
+	top: 33px;
+	left: 62px;
+	opacity: 0;
+	z-index: 400;
+}
+
+#bottle_03 {
+	position: absolute;
+	top: 33px;
+	left: 62px;
+	opacity: 0;
+	z-index: 500;
+}
+
+#bottle_04 {
+	position: absolute;
+	top: 33px;
+	left: 62px;
+	opacity: 0;
+	z-index: 600;
+}
+
+#hitArea_01 {
+	visibility: hidden;
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 0px;
+	left: 0px;
+	background-color: #ccc;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 700;
+}
+
+#hitArea_02 {
+	visibility: hidden;
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 0px;
+	left: 150px;
+	background-color: #3399FF;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 800;
+}
+
+#hitArea_03 {
+	visibility: hidden;
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 125px;
+	left: 0px;
+	background-color: #99FF33;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 900;
+}
+
+#hitArea_04 {
+	visibility: hidden;
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 125px;
+	left: 150px;
+	background-color: #CC0000;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 1000;
+}
+
+#txt_fall {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 0px;
+	left: 74px;
+	opacity: 0;
+	z-index: 692;
+}
+
+#txt_love {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 87px;
+	left: 175px;
+	opacity: 0;
+	z-index: 693;
+}
+
+#txt_essie {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 115px;
+	left: 0px;
+	opacity: 0;
+	z-index: 694;
+}
+
+#txt_youCould {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 56px;
+	left: 0px;
+	opacity: 0;
+	z-index: 695;
+}
+
+#txt_win {
+	position: absolute;
+	width: 85px;
+	height: 29px;
+	top: 80px;
+	left: 83px;
+	opacity: 0;
+	z-index: 696;
+}
+
+#txt_100 {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 124px;
+	left: 0px;
+	opacity: 0;
+	z-index: 697;
+}
+
+#txt_rollOver {
+	position: absolute;
+	width: 150px;
+	height: 125px;
+	top: 13px;
+	left: 72px;
+	opacity: 0;
+	z-index: 699;
+}
+
+#name_01 {
+	position: absolute;
+	width: 89px;
+	height: 19px;
+	top: -23px;
+	left: 38px;
+}
+
+#name_02 {
+	position: absolute;
+	width: 140px;
+	height: 17px;
+	top: -23px;
+	left: 18px;
+}
+
+#name_03 {
+	position: absolute;
+	width: 131px;
+	height: 19px;
+	top: -23px;
+	left: 18px;
+}
+
+#name_04 {
+	position: absolute;
+	width: 141px;
+	height: 17px;
+	top: -23px;
+	left: 18px;
+}
+
+
+#ctaBtn {
+	position: absolute;
+	top: 205px;
+	left: 0px;
+	cursor: pointer;
+	z-index: 2000;
+}
+
+#background {
+	opacity:0;
+}
+
+#border_img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity:1;
+	z-index: 3000;
+}
+
+
+
+
+

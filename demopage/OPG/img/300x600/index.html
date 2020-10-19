@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="ad.size" content="width=300,height=600">
+    <title></title>
+
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+   
+   <!--<script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script>-->
+
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  
+    <style type="text/css">
+		
+	/*--------------------------CONTENT-------------------------------------*/
+
+		/************TEXT***********/
+		#background {
+			position: absolute;
+
+		}
+
+		#footer {
+			position: absolute;
+			top:573px;
+			left:-10px;
+
+		}
+
+		#holder_01 {
+			position:absolute;
+			clip: rect(0px, 600px, 140px, 0px);
+			top:34px;
+			left:80px;
+			opacity: 1;
+		}
+
+		#holder_02 {
+			position:absolute;
+			clip: rect(0px, 600px, 140px, 0px);
+			top:182px;
+			left:80px;
+			opacity: 1;
+		}
+
+		#holder_03 {
+			position:absolute;
+			clip: rect(0px, 600px, 140px, 0px);
+			top:328px;
+			left:80px;
+			opacity: 1;
+		}
+
+		#Logo {
+			position: absolute;
+			top:510px;
+			left:30px;
+
+		}
+
+		#spin_Btn {
+			position: absolute;
+			 display: block;
+			 width: 89px;
+			 height: 68px;
+			 background: url(spin_Btn.png) no-repeat 0 0;
+			 overflow: hidden;
+			 top:510px;
+			 left:194px;
+			 cursor: pointer;
+			 opacity:1;	
+		}
+
+		#spin_Btn_Ref {
+			position: absolute;
+			 width: 154px;
+			 height: 68px;
+			 top:510px;
+			 left:284px;
+			 cursor: pointer;
+			 opacity:0;	
+		}
+
+		#spin_Btn:active {
+			background-position: 0 -68px;
+}
+
+
+		#slotIcons_01 {
+			position:absolute;
+			top:-733px;
+			opacity:1;
+
+		}
+
+		#slotIcons_02 {
+			position:absolute;
+			top:-587px;
+			opacity:1;
+
+		}
+
+		#slotIcons_03 {
+			position:absolute;
+			top:-1028px;
+			opacity:1;
+
+		}
+
+		#slotAnim_01 {
+			position: absolute;
+			opacity:1;
+			top:34px;
+			left:52px;
+			opacity:0;
+
+		}
+
+		#slotAnim_02 {
+			position: absolute;
+			opacity:1;
+			top:180px;
+			left:52px;
+			opacity:0;
+
+		}
+
+		#slotAnim_03 {
+			position: absolute;
+			opacity:1;
+			top:327px;
+			left:52px;
+			opacity:0;
+
+		}
+
+		#shadow {
+			position: absolute;
+			top:34px;
+			left:50px;
+
+		}
+		
+
+		/***********************/
+		/***********************/
+
+		
+
+		/***********************/
+		/***********************/
+	
+			#linkLayer{
+				left:0px;
+				top:0px;
+				width:300px;
+				height:600px;
+				display:block;
+				position:absolute;
+				overflow: hidden;
+				cursor: pointer; cursor: hand;
+			}
+		
+		#loading_dc{
+			position:absolute;
+			background:#FFF;
+			top:0px;
+			left:0px;
+			width:298px;
+			height:598px;
+			z-index:1000000;
+			border:1px solid #000;
+		}
+
+		#loading_image_dc{
+			position:relative;
+			left:50%;
+			margin-left:-25px;
+			top:50%;
+			margin-top:-25px;	
+		}
+		
+		
+		#container{
+			border:1px solid #000;
+			background:#fff;
+			margin-left:0px;
+			margin-top:0px;
+			position:absolute;
+			overflow:hidden;
+			width:298px;
+			height:598px;
+			top:0px;
+			left:0px;
+			margin:auto;
+			display:none;
+		}
+
+
+
+	</style>
+    
+    <script language="javascript">
+
+    var clickTag = "http://www.funimationfilms.com/movie/onepiecegold/#theater_locator";
+    var counter = 0;
+    var timer = setInterval(timerAnimation, 5500);
+    var btnTimer;
+
+    //SIZMEK
+    // function checkInit() {
+    //           if (!EB.isInitialized()) {
+    //              EB.addEventListener(EBG.EventName.EB_INITIALIZED, onInit); 
+    //              // This code checks whether the EB object is initialized, if the object is initialized, it launches the function "onInit", otherwise "EB_INITIALIZED" event. 
+    //           }
+    //           else {
+    //                   onInit();
+    //                   console.log("EB Initialized");
+    //            }         
+    //           //  function onInit() {
+    //           //        // Place your code to start the ad flow here
+    //           // } 
+    //  }
+    //  window.addEventListener('load', checkInit);
+
+    //DOUBLECLICK
+    //Initialize Enabler
+		if (Enabler.isInitialized()) {
+			init();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+		}
+		//Run when Enabler is ready
+		function init(){
+			//politeInit();
+			//Load in Javascript
+			if(Enabler.isPageLoaded()){
+				onInit();
+			}else{
+				Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, onInit);	
+			}
+		}
+
+
+var tl = new TimelineLite();
+
+		
+		function onInit(){	
+
+			// document.getElementById("loading_dc").style.display="none";
+			document.getElementById("container").style.display="block";
+			
+				
+			addListeners();
+			}
+	
+			function startAni(){
+				clearInterval(timer);
+				timer = setInterval(timerAnimation, 3000);
+
+				var Logo = document.getElementById('Logo'),
+					spin_Btn = document.getElementById('spin_Btn'),
+					slotAnim_01 = document.getElementById('slotAnim_01'),
+					slotAnim_02 = document.getElementById('slotAnim_02'),
+					slotAnim_03 = document.getElementById('slotAnim_03'),
+					slotIcons_01 = document.getElementById('slotIcons_01'),
+					slotIcons_02 = document.getElementById('slotIcons_02'),
+					slotIcons_03 = document.getElementById('slotIcons_03')
+					tl_01 = new TimelineLite();
+					tl_02 = new TimelineLite();
+					
+
+				if (counter == 0) {
+					counter++;
+					animation01();
+					buttonChange();
+				}else
+
+				if (counter == 1) {
+					counter++;
+					animation02();
+					buttonChange_02();
+					buttonDown_02();
+
+				}else
+				if (counter == 2) {
+					counter++;
+					animation03();
+					buttonDown_02();
+				}
+
+
+function animation01() {
+					tl_01.to(slotIcons_01, 0.1, {opacity:0, ease:Power0.easeOut})
+				   .to(slotIcons_02, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.2")
+				   .to(slotIcons_03, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.4")
+
+				   .to(slotAnim_01, 0.1, {opacity:1, ease:Power0.easeOut})
+				   .to(slotAnim_02, 0.1, {opacity:1, ease:Power0.easeOut},"-=0.2")
+				   .to(slotAnim_03, 0.1, {opacity:1, ease:Power0.easeOut},"-=0.4")
+
+
+				  .to(slotAnim_01, 0.1, {opacity:0, ease:Power0.easeOut},"+=2.0")
+				   .to(slotAnim_02, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.2")
+				   .to(slotAnim_03, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.4")
+
+				    .to(slotIcons_01, 0.5, {opacity:1,top:"-440px", ease: Elastic.easeOut.config(1, 0.5)},"-=0.2")
+				    .to(slotIcons_02, 0.5, {opacity:1, top:"-440px", ease: Elastic.easeOut.config(1, 0.5)},"-=0.5")
+				    .to(slotIcons_03, 0.5, {opacity:1, top:"-880px", ease: Elastic.easeOut.config(1, 0.5)},"-=0.7")
+				}
+
+				function animation02() {
+					tl_02.to(slotIcons_01, 0.1, {opacity:0, ease:Power0.easeOut})
+				   .to(slotIcons_02, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.2")
+				   .to(slotIcons_03, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.4")
+
+				   .to(slotAnim_01, 0.1, {opacity:1, ease:Power0.easeOut})
+				   .to(slotAnim_02, 0.1, {opacity:1, ease:Power0.easeOut},"-=0.2")
+				   .to(slotAnim_03, 0.1, {opacity:1, ease:Power0.easeOut},"-=0.4")
+
+
+				  .to(slotAnim_01, 0.1, {opacity:0, ease:Power0.easeOut},"+=2.0")
+				   .to(slotAnim_02, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.2")
+				   .to(slotAnim_03, 0.1, {opacity:0, ease:Power0.easeOut},"-=0.4")
+
+				    .to(slotIcons_01, 0.5, {opacity:1,top:"0px", ease: Elastic.easeOut.config(1, 0.5)},"-=0.2")
+				    .to(slotIcons_02, 0.5, {opacity:1, top:"-147px", ease: Elastic.easeOut.config(1, 0.5)},"-=0.5")
+				    .to(slotIcons_03, 0.5, {opacity:1, top:"-293px", ease: Elastic.easeOut.config(1, 0.5)},"-=0.7")
+				}
+
+				function animation03() {
+					clickThroughMainExit();
+					clearInterval(timer);
+					console.log("timer killed");
+				}
+
+				function buttonChange() {
+					spin_Btn.style.backgroundPosition = "-87px 0px";
+					console.log("position Changed.")
+					
+				}
+
+				function buttonDown() {
+					spin_Btn.style.backgroundPosition = "-87px -68px";
+					btnTimer = setInterval(buttonUp, 150);
+				}
+
+				function buttonUp() {
+					spin_Btn.style.backgroundPosition = "-87px 0px";
+					clearInterval(btnTimer);
+				}
+
+//////////////////////////////////////////////////////////////////////////////
+				function buttonChange_02() {
+					spin_Btn.style.backgroundPosition = "-174px 0px";
+					console.log("position Changed.")
+					
+				}
+
+				function buttonDown_02() {
+					spin_Btn.style.backgroundPosition = "-174px -68px";
+					btnTimer = setInterval(buttonUp_02, 150);
+				}
+
+				function buttonUp_02() {
+					spin_Btn.style.backgroundPosition = "-174px 0px";
+					clearInterval(btnTimer);
+				}
+
+	}
+	//END ANIMATION//
+
+	function timerAnimation() {
+					spin_Btn_Ref = document.getElementById('spin_Btn_Ref')
+					counterAnim = new TimelineLite();
+
+					counterAnim.to(spin_Btn_Ref, 0.01, {left:"194px"})
+					.to(spin_Btn_Ref, 0.5, {opacity:0.5})
+					.to(spin_Btn_Ref, 0.5, {opacity:0 },"+=0.5")
+					.to(spin_Btn_Ref, 0.01, {left:"284px"})
+				}
+
+			function clickThroughMainExit()
+			{
+				//EB.clickthrough();
+				//Enabler.exit('HTML5_Background_Clickthrough');
+				window.open(clickTag, '_blank');
+				console.log("Open New Window");
+			}
+
+			function clickTagHandler() {
+				//Enabler.exit('HTML5_Background_Clickthrough');
+				//EB.clickthrough();
+				window.open(clickTag, '_blank');
+				console.log("EB Clicked");
+			}
+
+			addListeners = function (){
+				spin_Btn.addEventListener('click', startAni, false); 
+				linkLayer.addEventListener('click', clickTagHandler, false);
+				// ctaBtn.addEventListener('click', ctaExitHandler, false);
+				console.log(counter);
+			}
+
+	</script>
+    
+</head>
+
+<body>
+
+    <div id="container">
+    	       	<!--Background Image -->  
+    	       	
+
+    	       	<!--OTHER ELEMENTS-->
+    	       	
+
+    	       	
+
+    	       	<div id="holder_01">
+				<div id="slotIcons_01"><img src="slotIcons.png"></div>
+				</div>
+				<div id="holder_02">
+    	       	<div id="slotIcons_02"><img src="slotIcons.png"></div>
+    	       </div>
+    	       <div id="holder_03">
+    	       	<div id="slotIcons_03"><img src="slotIcons.png"></div>
+				</div>
+
+				<div id="slotAnim_01"><img src="slot_Animation.gif"></div>
+    	       	<div id="slotAnim_02"><img src="slot_Animation.gif"></div>
+    	       	<div id="slotAnim_03"><img src="slot_Animation.gif"></div>
+
+    	       	<div id="shadow"><img src="Gradient.png"></div>
+    	       	
+    	       	<div id="Logo"><img src="OPFM_Logo.png"></div>
+
+    	       	<div id="Background"><img src="slot_main.png"></div>
+    	       	<div id="footer"><img src="footer.png"></div>
+    	       	
+    	       	
+
+          		<div id="linkLayer"></div>
+          		<div id="spin_Btn"></div>
+
+          		<div id="spin_Btn_Ref"><img src="spin_Btn_Ref.png"></div>
+
+          		
+        </div>
+
+</body>
+
+</html>
+
