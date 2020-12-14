@@ -28,7 +28,7 @@ lib.ssMetadata = [];
 (lib.Epson_Logo = function() {
 	this.initialize(img.Epson_Logo);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,154,51);
+p.nominalBounds = new cjs.Rectangle(0,0,308,102);
 
 
 (lib.moneySign = function() {
@@ -40,7 +40,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,218,358);
 (lib.printerFullFrame = function() {
 	this.initialize(img.printerFullFrame);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,415,372);
+p.nominalBounds = new cjs.Rectangle(0,0,664,595);
 
 
 (lib.shirtStack = function() {
@@ -475,13 +475,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_3
 	this.instance = new lib.printerFullFrame();
-	this.instance.setTransform(-132.05,-109.7,0.672,0.672);
+	this.instance.setTransform(-131.7,-109.8,0.4191,0.4191);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.printer_mc, new cjs.Rectangle(-132,-109.7,278.9,250), null);
+}).prototype = getMCSymbolPrototype(lib.printer_mc, new cjs.Rectangle(-131.7,-109.8,278.29999999999995,249.39999999999998), null);
 
 
 (lib.Epson_Logo_1 = function(mode,startPosition,loop,reversed) {
@@ -503,7 +503,7 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.Epson_Logo();
-	this.instance.setTransform(-91.75,-38.4,0.6375,0.6375);
+	this.instance.setTransform(-91.8,-38.45,0.3183,0.3183);
 
 	var maskedShapeInstanceList = [this.instance];
 
@@ -515,7 +515,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Epson_Logo_1, new cjs.Rectangle(-91.7,-38.4,98.2,24.2), null);
+}).prototype = getMCSymbolPrototype(lib.Epson_Logo_1, new cjs.Rectangle(-91.8,-38.4,98.1,24.2), null);
 
 
 (lib.ctaBtn = function(mode,startPosition,loop,reversed) {
@@ -1460,7 +1460,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-88.9,31.6,487.20000000000005,391.9);
+p.nominalBounds = new cjs.Rectangle(-88.9,31.6,486.79999999999995,390.9);
 // library properties:
 lib.properties = {
 	id: '3E1D9D289AAA471FB8DD4F28FE5CF1AF',

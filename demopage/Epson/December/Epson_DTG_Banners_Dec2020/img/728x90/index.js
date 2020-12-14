@@ -28,7 +28,7 @@ lib.ssMetadata = [];
 (lib.Epson_Logo = function() {
 	this.initialize(img.Epson_Logo);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,154,51);
+p.nominalBounds = new cjs.Rectangle(0,0,308,102);
 
 
 (lib.moneySign = function() {
@@ -40,7 +40,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,218,358);
 (lib.printerFullFrame = function() {
 	this.initialize(img.printerFullFrame);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,415,372);
+p.nominalBounds = new cjs.Rectangle(0,0,664,595);
 
 
 (lib.shirtStack = function() {
@@ -275,13 +275,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_3
 	this.instance = new lib.printerFullFrame();
-	this.instance.setTransform(-160,23,1.136,1.136);
+	this.instance.setTransform(-160.1,23.45,0.71,0.71);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.printer_mc, new cjs.Rectangle(-160,23,471.5,422.6), null);
+}).prototype = getMCSymbolPrototype(lib.printer_mc, new cjs.Rectangle(-160.1,23.5,471.5,422.4), null);
 
 
 (lib.Epson_Logo_1 = function(mode,startPosition,loop,reversed) {
@@ -297,13 +297,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.Epson_Logo();
-	this.instance.setTransform(-85.3,-35.55,0.7639,0.7639);
+	this.instance.setTransform(-85.1,-35.2,0.3813,0.3813);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Epson_Logo_1, new cjs.Rectangle(-85.3,-35.5,117.69999999999999,38.9), null);
+}).prototype = getMCSymbolPrototype(lib.Epson_Logo_1, new cjs.Rectangle(-85.1,-35.2,117.5,38.900000000000006), null);
 
 
 (lib.ctaBtn = function(mode,startPosition,loop,reversed) {
@@ -1269,7 +1269,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(286,-83.1,509.9,339.4);
+p.nominalBounds = new cjs.Rectangle(286,-83.1,509.9,339.6);
 // library properties:
 lib.properties = {
 	id: '3E1D9D289AAA471FB8DD4F28FE5CF1AF',
