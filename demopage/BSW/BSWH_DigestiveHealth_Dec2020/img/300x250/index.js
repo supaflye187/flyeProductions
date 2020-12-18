@@ -438,7 +438,7 @@ p.nominalBounds = new cjs.Rectangle(-46.7,-18.9,96,40);
 
 
 // stage content:
-(lib.BSWH_DigestiveHealth_300x250 = function(mode,startPosition,loop,reversed) {
+(lib.BSWH_DigestiveHealth_300x250_v02 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -498,19 +498,19 @@ if (reversed == null) { reversed = false; }
 
 	// txt_Talk
 	this.instance_5 = new lib.txt_Talk();
-	this.instance_5.setTransform(173.3,302.1);
+	this.instance_5.setTransform(176.3,304.1);
 	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(174).to({_off:false},0).to({y:291.6,alpha:1},17,cjs.Ease.quadInOut).wait(109));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(174).to({_off:false},0).to({y:292.6,alpha:1},17,cjs.Ease.quadInOut).wait(109));
 
 	// txt_cramps
 	this.instance_6 = new lib.txt_cramps();
-	this.instance_6.setTransform(173.8,227);
+	this.instance_6.setTransform(176.3,227);
 	this.instance_6.alpha = 0;
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(94).to({_off:false},0).to({y:214.4,alpha:1},16,cjs.Ease.quadInOut).wait(56).to({y:190.25,alpha:0},17,cjs.Ease.quadInOut).to({_off:true},1).wait(116));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(94).to({_off:false},0).to({y:215.15,alpha:1},16,cjs.Ease.quadInOut).wait(190));
 
 	// txt_deepBreath
 	this.instance_7 = new lib.txt_deepBreath();
@@ -518,7 +518,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_7.alpha = 0;
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(20).to({_off:false},0).to({y:168.65,alpha:1},17,cjs.Ease.quadInOut).wait(50).to({y:148.7,alpha:0},17,cjs.Ease.quadInOut).to({_off:true},1).wait(195));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(20).to({_off:false},0).to({y:168.65,alpha:1},17,cjs.Ease.quadInOut).wait(263));
 
 	// head_mc
 	this.instance_8 = new lib.head_mc();
