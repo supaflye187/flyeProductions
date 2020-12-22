@@ -464,16 +464,6 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0];
-	// timeline functions:
-	this.frame_0 = function() {
-		tl_main = new gsap.timeline();
-		tl_main.to(this.txt_deepBreath, 12, {x:-85},"+=0.3");
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(338));
-
 	// Border
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f().s("#000000").ss(1,1,1).p("EhLxATiMAAAgnDMCXjAAAMAAAAnD");
@@ -495,7 +485,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(313).to({_off:false},0).to({alpha:1},10).wait(15));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(11).to({_off:false},0).to({alpha:1},10).wait(317));
 
 	// txt_yourGut
 	this.instance_2 = new lib.txt_yourGut();
@@ -503,14 +493,14 @@ if (reversed == null) { reversed = false; }
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(313).to({_off:false},0).to({alpha:1},10).wait(15));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(11).to({_off:false},0).to({alpha:1},10).wait(317));
 
 	// ctaBtn
 	this.instance_3 = new lib.ctaBtn("single",0);
 	this.instance_3.setTransform(357.45,279.95,1.805,1.805,0,0,0,0.4,0.4);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(317).to({_off:false},0).to({y:177.95,mode:"synched",loop:false},11,cjs.Ease.quadOut).wait(9).to({mode:"single",startPosition:9},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(15).to({_off:false},0).to({y:177.95,mode:"synched",loop:false},11,cjs.Ease.quadOut).wait(9).to({mode:"single",startPosition:9},0).wait(303));
 
 	// txt_deepBreath
 	this.txt_deepBreath = new lib.txt_deepBreath();
@@ -525,7 +515,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(302).to({_off:false},0).to({regX:2.1,regY:2.7,scaleX:0.1102,scaleY:0.1102,rotation:15.7416,x:887.55,y:54.7,alpha:1},7,cjs.Ease.quadOut).to({regX:2,regY:3,scaleX:0.1299,scaleY:0.1299,rotation:15.7429,x:887.6},4,cjs.Ease.quadOut).wait(25));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(283).to({_off:false},0).to({regX:2.1,regY:2.7,scaleX:0.1102,scaleY:0.1102,rotation:15.7416,x:887.55,y:54.7,alpha:1},7,cjs.Ease.quadOut).to({regX:2,regY:3,scaleX:0.1299,scaleY:0.1299,rotation:15.7429,x:887.6},4,cjs.Ease.quadOut).wait(44));
 
 	// head_mc
 	this.instance_5 = new lib.head_mc();
