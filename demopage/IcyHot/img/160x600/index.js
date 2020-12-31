@@ -7,6 +7,7 @@ lib.ssMetadata = [];
 
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
+	this.ignorePause = false;
 	this.gotoAndPlay = function(positionOrLabel){
 		cjs.MovieClip.prototype.gotoAndPlay.call(this,positionOrLabel);
 	}
@@ -28,12 +29,6 @@ lib.ssMetadata = [];
 	this.initialize(img.back_image);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,960,314);
-
-
-(lib.ctaBtn = function() {
-	this.initialize(img.ctaBtn);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,100,24);
 
 
 (lib.drip_01 = function() {
@@ -58,6 +53,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,300,115);
 	this.initialize(img.drip_03);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,300,115);
+
+
+(lib.learnMore = function() {
+	this.initialize(img.learnMore);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,270,88);
 
 
 (lib.sprayBottle = function() {
@@ -880,7 +881,7 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.drip_01_1, new cjs.Rectangle(-150,-57.5,300,115), null);
 
 
-(lib.ctaBtn_1 = function(mode,startPosition,loop,reversed) {
+(lib.ctaBtn = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -891,15 +892,15 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_1
-	this.instance = new lib.ctaBtn();
-	this.instance.setTransform(-116,-26);
+	// Layer_2
+	this.instance = new lib.learnMore();
+	this.instance.setTransform(-122,-33,0.4261,0.4261);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.ctaBtn_1, new cjs.Rectangle(-116,-26,100,24), null);
+}).prototype = getMCSymbolPrototype(lib.ctaBtn, new cjs.Rectangle(-122,-33,115.1,37.5), null);
 
 
 (lib.back_mc = function(mode,startPosition,loop,reversed) {
@@ -1339,9 +1340,9 @@ if (reversed == null) { reversed = false; }
 	// cta_btn_Mask (mask)
 	var mask_1 = new cjs.Shape();
 	mask_1._off = true;
-	var mask_1_graphics_259 = new cjs.Graphics().p("AmyBzQg8AAAAg8IAAhtQAAg8A8AAINlAAQA8AAAAA8IAABtQAAA8g8AAg");
+	var mask_1_graphics_259 = new cjs.Graphics().p("AnGBzQgdAAgKgPQgJgMAAghIAAhtQAAghAJgMQAKgPAdAAIONAAQAdAAAKAPQAJAMAAAhIAABtQAAAhgJAMQgKAPgdAAg");
 
-	this.timeline.addTween(cjs.Tween.get(mask_1).to({graphics:null,x:0,y:0}).wait(259).to({graphics:mask_1_graphics_259,x:80.025,y:244.275}).wait(100));
+	this.timeline.addTween(cjs.Tween.get(mask_1).to({graphics:null,x:0,y:0}).wait(259).to({graphics:mask_1_graphics_259,x:81.025,y:244.275}).wait(100));
 
 	// shine
 	this.shape_1 = new cjs.Shape();
@@ -1375,7 +1376,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape_4).wait(275).to({_off:false},0).wait(1).to({x:13.775,y:227.4},0).wait(1).to({x:17.275,y:228.2},0).wait(1).to({x:22.075,y:229.35},0).wait(1).to({x:28.625,y:230.9},0).to({_off:true},1).wait(79));
 
 	// ctaBtn
-	this.instance_16 = new lib.ctaBtn_1();
+	this.instance_16 = new lib.ctaBtn();
 	this.instance_16.setTransform(146,258.5);
 	this.instance_16.alpha = 0;
 	this.instance_16._off = true;
@@ -1423,11 +1424,11 @@ lib.properties = {
 	opacity: 1.00,
 	manifest: [
 		{src:"back_image.jpg", id:"back_image"},
-		{src:"ctaBtn.png", id:"ctaBtn"},
 		{src:"drip_01.jpg", id:"drip_01"},
 		{src:"drip_01a.jpg", id:"drip_01a"},
 		{src:"drip_02.jpg", id:"drip_02"},
 		{src:"drip_03.jpg", id:"drip_03"},
+		{src:"learnMore.png", id:"learnMore"},
 		{src:"sprayBottle.jpg", id:"sprayBottle"},
 		{src:"text_sheet.png", id:"text_sheet"}
 	],
@@ -1526,7 +1527,7 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 an.handleSoundStreamOnTick = function(event) {
 	if(!event.paused){
 		var stageChild = stage.getChildAt(0);
-		if(!stageChild.paused){
+		if(!stageChild.paused || stageChild.ignorePause){
 			stageChild.syncStreamSounds();
 		}
 	}

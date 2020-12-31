@@ -7,6 +7,7 @@ lib.ssMetadata = [];
 
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
+	this.ignorePause = false;
 	this.gotoAndPlay = function(positionOrLabel){
 		cjs.MovieClip.prototype.gotoAndPlay.call(this,positionOrLabel);
 	}
@@ -28,12 +29,6 @@ lib.ssMetadata = [];
 	this.initialize(img.back_image);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,552,250);
-
-
-(lib.ctaBtn = function() {
-	this.initialize(img.ctaBtn);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,173,42);
 
 
 (lib.drip_01 = function() {
@@ -58,6 +53,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,552,250);
 	this.initialize(img.drip_03);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,552,250);
+
+
+(lib.learnMore = function() {
+	this.initialize(img.learnMore);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,270,88);
 
 
 (lib.sprayBottle = function() {
@@ -562,7 +563,7 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.drip_01_1, new cjs.Rectangle(-150,-57.5,552,250), null);
 
 
-(lib.ctaBtn_1 = function(mode,startPosition,loop,reversed) {
+(lib.ctaBtn = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -573,15 +574,15 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_1
-	this.instance = new lib.ctaBtn();
-	this.instance.setTransform(-43,-231);
+	// Layer_2
+	this.instance = new lib.learnMore();
+	this.instance.setTransform(-53,-241,0.719,0.719);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.ctaBtn_1, new cjs.Rectangle(-43,-231,173,42), null);
+}).prototype = getMCSymbolPrototype(lib.ctaBtn, new cjs.Rectangle(-53,-241,194.1,63.30000000000001), null);
 
 
 (lib.back_mc = function(mode,startPosition,loop,reversed) {
@@ -1061,7 +1062,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape_2).wait(270).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false,x:130.4,y:72.35},0).wait(1).to({x:131.65,y:72.8},0).wait(1).to({x:133.9,y:73.6},0).wait(1).to({x:137.6,y:74.9},0).to({_off:true},1).wait(5).to({_off:false,x:225.45,y:105.9},0).wait(1).to({x:258.55,y:117.6},0).to({_off:true},1).wait(1).to({_off:false,x:340.55,y:146.5},0).to({_off:true},1).wait(2).to({_off:false,x:420.4,y:174.7},0).wait(1).to({x:435.95,y:180.2},0).to({_off:true},1).wait(2).to({_off:false,x:461.5,y:189.2},0).wait(1).to({x:465.2,y:190.5},0).wait(1).to({x:467.45,y:191.3},0).wait(1).to({x:468.7,y:191.75},0).to({_off:true},1).wait(2).to({_off:false,x:469.55,y:192.05},0).wait(62));
 
 	// ctaBtn
-	this.instance_15 = new lib.ctaBtn_1();
+	this.instance_15 = new lib.ctaBtn();
 	this.instance_15.setTransform(231.9,416.05,1.323,1.323);
 	this.instance_15.alpha = 0;
 	this.instance_15._off = true;
@@ -1095,11 +1096,11 @@ lib.properties = {
 	opacity: 1.00,
 	manifest: [
 		{src:"back_image.jpg", id:"back_image"},
-		{src:"ctaBtn.png", id:"ctaBtn"},
 		{src:"drip_01.jpg", id:"drip_01"},
 		{src:"drip_01a.jpg", id:"drip_01a"},
 		{src:"drip_02.jpg", id:"drip_02"},
 		{src:"drip_03.jpg", id:"drip_03"},
+		{src:"learnMore.png", id:"learnMore"},
 		{src:"sprayBottle.jpg", id:"sprayBottle"},
 		{src:"text_sheet.png", id:"text_sheet"}
 	],
@@ -1198,7 +1199,7 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 an.handleSoundStreamOnTick = function(event) {
 	if(!event.paused){
 		var stageChild = stage.getChildAt(0);
-		if(!stageChild.paused){
+		if(!stageChild.paused || stageChild.ignorePause){
 			stageChild.syncStreamSounds();
 		}
 	}

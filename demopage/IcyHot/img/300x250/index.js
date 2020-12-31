@@ -7,6 +7,7 @@ lib.ssMetadata = [];
 
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
+	this.ignorePause = false;
 	this.gotoAndPlay = function(positionOrLabel){
 		cjs.MovieClip.prototype.gotoAndPlay.call(this,positionOrLabel);
 	}
@@ -28,12 +29,6 @@ lib.ssMetadata = [];
 	this.initialize(img.back_image);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,960,314);
-
-
-(lib.ctaBtn = function() {
-	this.initialize(img.ctaBtn);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,118,27);
 
 
 (lib.drip_01 = function() {
@@ -58,6 +53,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,300,115);
 	this.initialize(img.drip_03);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,300,115);
+
+
+(lib.learnMore = function() {
+	this.initialize(img.learnMore);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,270,88);
 
 
 (lib.sprayBottle = function() {
@@ -880,7 +881,7 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.drip_01_1, new cjs.Rectangle(-150,-57.5,300,115), null);
 
 
-(lib.ctaBtn_1 = function(mode,startPosition,loop,reversed) {
+(lib.ctaBtn = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -891,15 +892,15 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_1
-	this.instance = new lib.ctaBtn();
-	this.instance.setTransform(-5,-58);
+	// Layer_2
+	this.instance = new lib.learnMore();
+	this.instance.setTransform(-12,-66,0.4979,0.4979);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.ctaBtn_1, new cjs.Rectangle(-5,-58,118,27), null);
+}).prototype = getMCSymbolPrototype(lib.ctaBtn, new cjs.Rectangle(-12,-66,134.4,43.8), null);
 
 
 (lib.back_mc = function(mode,startPosition,loop,reversed) {
@@ -1353,9 +1354,9 @@ if (reversed == null) { reversed = false; }
 	// cta_btn_Mask (mask)
 	var mask_1 = new cjs.Shape();
 	mask_1._off = true;
-	var mask_1_graphics_259 = new cjs.Graphics().p("ACpRzQg8AAAAg8IAAiZQAAg8A8AAIQuAAQA8AAAAA8IAACZQAAA8g8AAg");
+	var mask_1_graphics_259 = new cjs.Graphics().p("AoRCIQg8ABAAg9IAAiYQAAg7A8AAIQjAAQA8AAAAA7IAACYQAAA9g8gBg");
 
-	this.timeline.addTween(cjs.Tween.get(mask_1).to({graphics:null,x:0,y:0}).wait(259).to({graphics:mask_1_graphics_259,x:129.925,y:113.9}).wait(100));
+	this.timeline.addTween(cjs.Tween.get(mask_1).to({graphics:null,x:0,y:0}).wait(259).to({graphics:mask_1_graphics_259,x:200.575,y:214.15}).wait(100));
 
 	// shine
 	this.shape_1 = new cjs.Shape();
@@ -1390,7 +1391,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape_4).wait(276).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false,x:140.225,y:196.5},0).to({_off:true},1).wait(7).to({_off:false,x:254.425,y:213.95},0).to({_off:true},1).wait(4).to({_off:false,x:284.125,y:218.45},0).to({_off:true},1).wait(1).to({_off:false,x:287.025,y:218.9},0).wait(1).to({x:287.625,y:219},0).to({_off:true},1).wait(64));
 
 	// ctaBtn
-	this.instance_18 = new lib.ctaBtn_1();
+	this.instance_18 = new lib.ctaBtn();
 	this.instance_18.setTransform(146,258.5);
 	this.instance_18.alpha = 0;
 	this.instance_18._off = true;
@@ -1424,11 +1425,11 @@ lib.properties = {
 	opacity: 1.00,
 	manifest: [
 		{src:"back_image.jpg", id:"back_image"},
-		{src:"ctaBtn.png", id:"ctaBtn"},
 		{src:"drip_01.jpg", id:"drip_01"},
 		{src:"drip_01a.jpg", id:"drip_01a"},
 		{src:"drip_02.jpg", id:"drip_02"},
 		{src:"drip_03.jpg", id:"drip_03"},
+		{src:"learnMore.png", id:"learnMore"},
 		{src:"sprayBottle.jpg", id:"sprayBottle"},
 		{src:"text_sheet.png", id:"text_sheet"}
 	],
@@ -1527,7 +1528,7 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 an.handleSoundStreamOnTick = function(event) {
 	if(!event.paused){
 		var stageChild = stage.getChildAt(0);
-		if(!stageChild.paused){
+		if(!stageChild.paused || stageChild.ignorePause){
 			stageChild.syncStreamSounds();
 		}
 	}
