@@ -1461,22 +1461,16 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_2 (mask)
-	var mask = new cjs.Shape();
-	mask._off = true;
-	mask.graphics.p("AonECIIFoEIJKAAIAAIEg");
-	mask.setTransform(55.225,25.85);
-
 	// Layer_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#EFEEED").s().p("AonECIIFoEIJKAAIAAIEg");
-	this.shape.setTransform(55.225,25.85);
+	this.shape.graphics.f("#EFEEED").s().p("AosEHIILoNIJOAAIAAINg");
+	this.shape.setTransform(55.275,26);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.ClipGroup, new cjs.Rectangle(0,0,110.5,51.7), null);
+}).prototype = getMCSymbolPrototype(lib.ClipGroup, new cjs.Rectangle(-0.4,-0.3,111.4,52.599999999999994), null);
 
 
 (lib.endFrame_txt = function(mode,startPosition,loop,reversed) {
@@ -3063,14 +3057,13 @@ if (reversed == null) { reversed = false; }
 	// _Path_ (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	var mask_graphics_1 = new cjs.Graphics().p("Au/EEIAAoHId/AAIAAIHg");
-	var mask_graphics_11 = new cjs.Graphics().p("Au/EEIAAoHId/AAIAAIHg");
+	var mask_graphics_11 = new cjs.Graphics().p("AvAEGIAAoLIeBAAIAAILg");
 
-	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(1).to({graphics:mask_graphics_1,x:-0.3,y:0.15}).wait(10).to({graphics:mask_graphics_11,x:-0.3,y:0.15}).wait(1).to({graphics:null,x:0,y:0}).wait(3));
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(11).to({graphics:mask_graphics_11,x:-0.2,y:0}).wait(1).to({graphics:null,x:0,y:0}).wait(3));
 
 	// _Clip_Group_
 	this.instance = new lib.ClipGroup();
-	this.instance.setTransform(149.25,0.05,1,1,0,0,0,55.2,25.9);
+	this.instance.setTransform(40.2,0.05,1,1,0,0,0,55.2,25.9);
 	this.instance._off = true;
 
 	var maskedShapeInstanceList = [this.instance];
@@ -3079,14 +3072,14 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({_off:false},0).wait(1).to({x:143.7},0).wait(1).to({x:134.2},0).wait(1).to({x:120.45},0).wait(1).to({x:103.25},0).wait(1).to({x:85.05},0).wait(1).to({x:68.75},0).wait(1).to({x:56.15},0).wait(1).to({x:47.5},0).wait(1).to({x:42.35},0).wait(1).to({x:40.1},0).to({_off:true},1).wait(3));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(11).to({_off:false},0).to({_off:true},1).wait(3));
 
 	// _Path_
 	this.instance_1 = new lib.Bitmap2();
 	this.instance_1.setTransform(-108.3,-39.85);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({_off:false},0).wait(10).to({_off:true},1).wait(3));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(11).to({_off:false},0).to({_off:true},1).wait(3));
 
 	this._renderFirstFrame();
 
