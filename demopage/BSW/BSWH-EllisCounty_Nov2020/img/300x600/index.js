@@ -4740,7 +4740,7 @@ if (reversed == null) { reversed = false; }
 	this.shape_1.graphics.f("#FFFFFF").s().p("EhJIAmxMAAAhNgMCSRAAAMAAABNgg");
 	this.shape_1.setTransform(320.125,1200.3);
 
-	this.timeline.addTween(cjs.Tween.get(this.shape_1).wait(360));
+	this.timeline.addTween(cjs.Tween.get(this.shape_1).to({_off:true},326).wait(34));
 
 	// BSWH_Element_animation
 	this.instance = new lib.BSWH_Element_animation("synched",0,false);
