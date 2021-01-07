@@ -1463,14 +1463,14 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#EFEEED").s().p("AosEHIILoNIJOAAIAAINg");
-	this.shape.setTransform(55.275,26);
+	this.shape.graphics.f("#EFEEED").s().p("ArnEHIILoNIPEAAIAAINg");
+	this.shape.setTransform(74.025,26);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.ClipGroup, new cjs.Rectangle(-0.4,-0.3,111.4,52.599999999999994), null);
+}).prototype = getMCSymbolPrototype(lib.ClipGroup, new cjs.Rectangle(-0.4,-0.3,148.9,52.599999999999994), null);
 
 
 (lib.endFrame_txt = function(mode,startPosition,loop,reversed) {
@@ -1992,23 +1992,31 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(47).to({_off:true},1).wait(27));
+	this.timeline.addTween(cjs.Tween.get(this.shape).to({_off:true},1).wait(3).to({_off:false},0).wait(43).to({_off:true},1).wait(27));
 
 	// blue_better
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#008FBE").s().p("AguAvQgSgSAAgdQAAgcASgSQASgSAcAAQAdAAASASQASASAAAcQAAAdgSASQgSASgdAAQgdAAgRgSg");
-	this.shape_1.setTransform(116.85,26.475);
+	this.shape_1.setTransform(121.2364,23.5762,1.3362,1.3362);
 
 	this.shape_2 = new cjs.Shape();
-	this.shape_2.graphics.f("#003DA6").s().p("AJGFEQgxgUgigiQgigkgTgvQgSguAAg3QAAg2AUguQATgwAjgjQAjgjAwgUQAwgUA3AAQA4AAAvATQAvAUAiAhQAiAiAUAvQATAtAAA4IAAAvImLAAQANAxAlAcQAmAcA3AAQAsAAAegRQAfgSASgfIBoA9QgmA0g2AgQg2AfhTAAQg8AAgxgUgAJcgnQgjAagPArIEJAAQgNgugigYQgigZgyAAQgxAAgjAagApqFEQgxgUgigiQgigkgTgvQgSguAAg3QAAg2AUguQATgwAjgjQAjgjAwgUQAwgUA3AAQA4AAAvATQAvAUAiAhQAiAiAUAvQATAtAAA4IAAAvImLAAQANAxAlAcQAmAcA3AAQAsAAAegRQAfgSASgfIBoA9QgmA0g2AgQg2AfhTAAQg8AAgxgUgApUgnQgjAagPArIEJAAQgNgugigYQgigZgyAAQgxAAgjAagADdEtQgrgqAAhlIAAjQIhcAAIAAhwIBcAAIAAhsIB9hJIAAC1ICDAAIAABwIiDAAIAADMQAAAnAQAPQAPAQAYAAQAZAAAVgSIA6BjQgYASgeAKQgeAKgjAAQhOAAgsgqgAiKEtQgrgqAAhlIAAjQIhcAAIAAhwIBcAAIAAhsIB9hJIAAC1ICBAAIAABwIiBAAIAADMQAAAnAPAPQAPAQAYAAQAYAAAVgSIA6BjQgXASgfAKQgeAKghAAQhPAAgrgqgAPLFOIAAnwIB9AAIAABMQASgsAkgUQAjgVAwAAQAZAAAWAFIAlAOIguB9IgcgMQgRgFgVAAQgxAAgdAbQgeAaAAA+IAAEHgA0kFOIAAqfIEWAAQBwAAA8AwQA8AxAABbQAAAvgTAiQgUAigmAVQAqAUAXAmQAWAmAAA0QAAAygQAlQgRAlgfAZQgfAZgtAMQgsANg5AAgAykDZICZAAQA2AAAbgXQAbgWAAgoQAAgngagWQgagWg+AAIiTAAgAykhCICaAAQA1AAAXgXQAXgWAAgjQAAgjgZgVQgYgUg0AAIiYAAg");
+	this.shape_2.graphics.f("#003DA6").s().p("AJGFEQgxgUgigiQgigkgTgvQgSguAAg3QAAg2AUguQATgwAjgjQAjgjAwgUQAwgUA3AAQA4AAAvATQAvAUAiAhQAiAiAUAvQATAtAAA4IAAAvImLAAQANAxAlAcQAmAcA3AAQAsAAAegRQAfgSASgfIBoA9QgmA0g2AgQg2AfhTAAQg8AAgxgUgAMzAeQgNgugigYQgigZgyAAQgxAAgjAaQgjAagPArIEJAAIAAAAgApqFEQgxgUgigiQgigkgTgvQgSguAAg3QAAg2AUguQATgwAjgjQAjgjAwgUQAwgUA3AAQA4AAAvATQAvAUAiAhQAiAiAUAvQATAtAAA4IAAAvImLAAQANAxAlAcQAmAcA3AAQAsAAAegRQAfgSASgfIBoA9QgmA0g2AgQg2AfhTAAQg8AAgxgUgAl9AeQgNgugigYQgigZgyAAQgxAAgjAaQgjAagPArIEJAAIAAAAgADdEtQgrgqAAhlIAAjQIhcAAIAAhwIBcAAIAAhsIB9hJIAAC1ICDAAIAABwIiDAAIAADMQAAAnAQAPQAPAQAYAAQAZAAAVgSIA6BjQgYASgeAKQgeAKgjAAQhOAAgsgqgAiKEtQgrgqAAhlIAAjQIhcAAIAAhwIBcAAIAAhsIB9hJIAAC1ICBAAIAABwIiBAAIAADMQAAAnAPAPQAPAQAYAAQAYAAAVgSIA6BjQgXASgfAKQgeAKghAAQhPAAgrgqgAPLFOIAAnwIB9AAIAABMQASgsAkgUQAjgVAwAAQAZAAAWAFIAlAOIguB9IgcgMQgRgFgVAAQgxAAgdAbQgeAaAAA+IAAEHgA0kFOIAAqfIEWAAQBwAAA8AwQA8AxAABbQAAAvgTAiQgUAigmAVQAqAUAXAmQAWAmAAA0QAAAygQAlQgRAlgfAZQgfAZgtAMQgsANg5AAgAykDZICZAAQA2AAAbgXQAbgWAAgoQAAgngagWQgagWg+AAIiTAAgAykhCICaAAQA1AAAXgXQAXgWAAgjQAAgjgZgVQgYgUg0AAIiYAAg");
 	this.shape_2.setTransform(-17.525,-1.025);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).to({state:[{t:this.shape_2},{t:this.shape_1}]},47).to({state:[]},1).wait(27));
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#008FBE").s().p("Ag+A/QgYgYAAgnQAAglAYgZQAYgYAmAAQAnAAAYAYQAYAZAAAlQAAAngYAYQgYAYgnAAQgmAAgYgYg");
+	this.shape_3.setTransform(121.225,23.575);
+
+	this.shape_4 = new cjs.Shape();
+	this.shape_4.graphics.f("#003DA6").s().p("AJGFEQgxgUgigiQgigkgTgvQgSguAAg3QAAg2AUguQATgwAjgjQAjgjAwgUQAwgUA3AAQA4AAAvATQAvAUAiAhQAiAiAUAvQATAtAAA4IAAAvImLAAQANAxAlAcQAmAcA3AAQAsAAAegRQAfgSASgfIBoA9QgmA0g2AgQg2AfhTAAQg8AAgxgUgAJcgnQgjAagPArIEJAAQgNgugigYQgigZgyAAQgxAAgjAagApqFEQgxgUgigiQgigkgTgvQgSguAAg3QAAg2AUguQATgwAjgjQAjgjAwgUQAwgUA3AAQA4AAAvATQAvAUAiAhQAiAiAUAvQATAtAAA4IAAAvImLAAQANAxAlAcQAmAcA3AAQAsAAAegRQAfgSASgfIBoA9QgmA0g2AgQg2AfhTAAQg8AAgxgUgApUgnQgjAagPArIEJAAQgNgugigYQgigZgyAAQgxAAgjAagADdEtQgrgqAAhlIAAjQIhcAAIAAhwIBcAAIAAhsIB9hJIAAC1ICDAAIAABwIiDAAIAADMQAAAnAQAPQAPAQAYAAQAZAAAVgSIA6BjQgYASgeAKQgeAKgjAAQhOAAgsgqgAiKEtQgrgqAAhlIAAjQIhcAAIAAhwIBcAAIAAhsIB9hJIAAC1ICBAAIAABwIiBAAIAADMQAAAnAPAPQAPAQAYAAQAYAAAVgSIA6BjQgXASgfAKQgeAKghAAQhPAAgrgqgAPLFOIAAnwIB9AAIAABMQASgsAkgUQAjgVAwAAQAZAAAWAFIAlAOIguB9IgcgMQgRgFgVAAQgxAAgdAbQgeAaAAA+IAAEHgA0kFOIAAqfIEWAAQBwAAA8AwQA8AxAABbQAAAvgTAiQgUAigmAVQAqAUAXAmQAWAmAAA0QAAAygQAlQgRAlgfAZQgfAZgtAMQgsANg5AAgAykDZICZAAQA2AAAbgXQAbgWAAgoQAAgngagWQgagWg+AAIiTAAgAykhCICaAAQA1AAAXgXQAXgWAAgjQAAgjgZgVQgYgUg0AAIiYAAg");
+	this.shape_4.setTransform(-17.525,-1.025);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_2},{t:this.shape_1}]}).to({state:[]},1).to({state:[{t:this.shape_4},{t:this.shape_3}]},3).to({state:[{t:this.shape_4},{t:this.shape_3}]},43).to({state:[]},1).wait(27));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-149.2,-35.4,272.6,68.8);
+p.nominalBounds = new cjs.Rectangle(-149.2,-35.4,279.1,68.8);
 
 
 (lib.txt_accessResults = function(mode,startPosition,loop,reversed) {
@@ -2612,7 +2620,7 @@ if (reversed == null) { reversed = false; }
 
 	// txt_tapInto
 	this.instance = new lib.txt_tapInto_02();
-	this.instance.setTransform(212.65,190.6);
+	this.instance.setTransform(255.1,184.85,1.3229,1.3229);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
@@ -2662,11 +2670,11 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape}]},7).to({state:[{t:this.shape_1}]},1).to({state:[{t:this.shape_2}]},1).to({state:[{t:this.shape_3}]},1).to({state:[{t:this.shape_4}]},1).to({state:[{t:this.shape_5}]},1).to({state:[{t:this.shape_6}]},1).to({state:[{t:this.shape_7}]},1).to({state:[{t:this.shape_8}]},1).to({state:[{t:this.shape_9}]},1).to({state:[]},1).wait(345));
 
 	// txt_Better
-	this.instance_1 = new lib.txt_Better("synched",0,false);
-	this.instance_1.setTransform(202.85,262.15,0.9928,0.9928);
+	this.instance_1 = new lib.txt_Better("single",4);
+	this.instance_1.setTransform(247.45,282.8,1.3091,1.3091);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(7).to({_off:false},0).wait(6).to({startPosition:4},0).wait(20).to({startPosition:24},0).to({_off:true},1).wait(328));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(7).to({_off:false},0).wait(6).to({mode:"synched",loop:false},0).wait(20).to({startPosition:24},0).to({_off:true},1).wait(328));
 
 	this._renderFirstFrame();
 
@@ -2687,7 +2695,7 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_3
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#C8C7C4").s().p("AEDBTQgRgHgMgMQgMgMgHgRQgHgRAAgSQAAgSAHgQQAHgRAMgMQAMgMARgHQAQgHATAAQASAAARAHQAQAHAMAMQANAMAGARQAIAQAAASQAAASgIARQgGARgMAMQgNAMgQAHQgRAHgSAAQgTAAgQgHgAETgtQgJAFgGAHQgHAGgDAJQgEAJABAJQgBAKAEAJQAEAIAFAHQAHAHAJADQAIAFALAAQAKAAAJgFQAIgDAHgHQAGgHAEgIQAEgJgBgKQABgJgEgJQgEgJgGgGQgHgHgIgFQgJgDgKAAQgLAAgIADgAn6BTQgQgHgMgMQgNgMgGgRQgIgRABgSQgBgSAIgQQAGgRANgMQAMgMAQgHQARgHASAAQATAAAQAHQAQAHANAMQAMAMAHARQAHAQAAASQAAASgHARQgHARgMAMQgMAMgQAHQgRAHgTAAQgSAAgRgHgAnpgtQgJAFgHAHQgGAGgEAJQgDAJAAAJQAAAKADAJQAEAIAGAHQAHAHAIADQAJAFAKAAQAKAAAJgFQAJgDAHgHQAFgHAFgIQADgJAAgKQAAgJgDgJQgFgJgFgGQgIgHgIgFQgIgDgLAAQgKAAgIADgAJDBXIAAitIA+AAQAUAAASAGQAQAHAMAMQAMALAHARQAGAPABASQgBASgGAQQgIARgLALQgNAMgQAHQgQAGgUAAgAJsAxIAUAAQAMAAAJgFQAJgDAGgHQAHgGAEgJQADgJAAgKQAAgKgDgJQgEgIgGgGQgGgIgKgDQgJgEgNAAIgTAAgAIKBXIgKgaIhCAAIgJAaIgrAAIBBitIApAAIBBCtgAH0AZIgUg6IgWA6IAqAAgABEBXIAAitIAqAAIAACGIBMAAIAAAngAACBXIhEhtIAABtIgoAAIAAitIArAAIBCBnIAAhnIAoAAIAACtgAjXBXIgehtIgeBtIgqAAIgwitIAqAAIAbBrIAfhrIAoAAIAeBrIAchrIApAAIgwCtgArbBXIAAitIA+AAQAUAAARAGQARAHALAMQAMALAHARQAHAPAAASQAAASgHAQQgHARgMALQgMAMgQAHQgRAGgTAAgAqyAxIAUAAQALAAAJgFQAKgDAGgHQAHgGADgJQAEgJgBgKQABgKgEgJQgDgIgGgGQgHgIgKgDQgJgEgMAAIgTAAg");
+	this.shape.graphics.f("#C0BFBD").s().p("AEIBVQgQgHgNgNQgMgNgIgQQgGgRgBgTQABgSAGgQQAIgSAMgMQANgMAQgIQARgHATAAQATAAARAHQAQAIANAMQAMAMAIASQAHAQAAASQAAATgHARQgHAQgMANQgOANgQAHQgQAHgUAAQgTAAgRgHgAEZguQgJAFgGAHQgHAHgDAIQgEAKAAAJQAAAKAEAJQADAJAGAHQAHAHAIAEQAJADALABQALgBAJgDQAJgEAGgHQAGgHAFgJQADgJAAgKQAAgJgDgKQgFgIgGgHQgHgHgIgFQgKgDgKAAQgKAAgJADgAoFBVQgRgHgMgNQgMgNgIgQQgGgRAAgTQAAgSAGgQQAIgSAMgMQAMgMARgIQARgHATAAQATAAARAHQAQAIANAMQANAMAGASQAIAQAAASQAAATgIARQgGAQgNANQgMANgRAHQgRAHgTAAQgTAAgRgHgAn0guQgKAFgFAHQgHAHgDAIQgFAKAAAJQAAAKAFAJQADAJAGAHQAHAHAJAEQAIADALABQAKgBAKgDQAJgEAGgHQAGgHAEgJQAEgJAAgKQAAgJgEgKQgEgIgGgHQgHgHgJgFQgJgDgKAAQgKAAgJADgAJPBZIAAixIBAAAQAVAAARAGQARAIANALQAMAMAHARQAGAQAAASQAAATgGAQQgIARgMAMQgNAMgQAHQgRAHgUgBgAJ6AyIAUAAQAMgBAJgDQAJgEAHgHQAHgHADgIQAEgJAAgLQAAgKgEgJQgDgIgGgHQgHgHgKgEQgJgEgNAAIgTAAgAIWBZIgKgaIhEAAIgKAaIgrAAIBCixIApAAIBDCxgAH/AZIgVg6IgWA6IArAAgABFBZIAAixIAsAAIAACJIBNAAIAAAogAACBZIhFhvIAABvIgqAAIAAixIAtAAIBDBqIAAhqIAoAAIAACxgAjbBZIgghvIgeBvIgsAAIgwixIArAAIAcBtIAfhtIApAAIAfBtIAchtIArAAIgyCxgArsBZIAAixIBAAAQAVAAARAGQARAIANALQALAMAIARQAGAQABASQgBATgGAQQgIARgMAMQgMAMgSAHQgQAHgUgBgArBAyIAUAAQALgBAKgDQAKgEAGgHQAHgHADgIQAEgJAAgLQAAgKgEgJQgCgIgIgHQgGgHgKgEQgJgEgNAAIgTAAg");
 	this.shape.setTransform(0.25,0.45);
 	this.shape._off = true;
 
@@ -2702,7 +2710,7 @@ if (reversed == null) { reversed = false; }
 
 	// _Clip_Group_
 	this.instance = new lib.ClipGroup();
-	this.instance.setTransform(40.2,0.05,1,1,0,0,0,55.2,25.9);
+	this.instance.setTransform(26.8,0.05,1,1,0,0,0,55.2,25.9);
 	this.instance._off = true;
 
 	var maskedShapeInstanceList = [this.instance];
@@ -2719,6 +2727,13 @@ if (reversed == null) { reversed = false; }
 	this.instance_1._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(11).to({_off:false},0).to({_off:true},1).wait(3));
+
+	// _Path_
+	this.instance_2 = new lib.Bitmap2();
+	this.instance_2.setTransform(-108.3,-39.85);
+	this.instance_2._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(11).to({_off:false},0).to({_off:true},1).wait(3));
 
 	this._renderFirstFrame();
 
@@ -4486,7 +4501,7 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(90.9,412.6,1,1,0,0,0,1.7,-42.4);
 	this.instance.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1,startPosition:16},16).to({_off:true},34).wait(272).to({_off:false,alpha:0,mode:"single"},0).to({y:419.6,alpha:1},4,cjs.Ease.quadOut).to({y:408.1},5,cjs.Ease.quadOut).wait(29));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1,startPosition:16},16).to({_off:true},34).wait(310));
 
 	// BSWH_logo_txt
 	this.instance_1 = new lib.BSWH_Txt();
@@ -4508,30 +4523,30 @@ if (reversed == null) { reversed = false; }
 	this.instance_3.setTransform(89.55,413.1,1.115,1.115,0,0,0,0.5,0.5);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(50).to({_off:false},0).to({y:420.1},5,cjs.Ease.quadOut).to({y:396.1,mode:"synched",loop:false},5,cjs.Ease.quadInOut).to({y:413.1,startPosition:8},9,cjs.Ease.quadInOut).wait(25).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(74).to({startPosition:49},0).wait(50).to({startPosition:49},0).wait(14).to({startPosition:49},0).to({alpha:0,mode:"single",startPosition:53},4).wait(34));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(50).to({_off:false},0).to({y:420.1},5,cjs.Ease.quadOut).to({y:396.1,mode:"synched",loop:false},5,cjs.Ease.quadInOut).to({y:413.1,startPosition:8},9,cjs.Ease.quadInOut).wait(25).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(74).to({startPosition:49},0).wait(50).to({startPosition:49},0).wait(14).to({startPosition:50},0).to({regX:0.6,regY:0.6,scaleX:0.8729,scaleY:0.8729,x:86.65,y:316.7,mode:"single",startPosition:54},4,cjs.Ease.quadOut).wait(34));
 
 	// cta_btn
 	this.instance_4 = new lib.cta_btn("single",11);
-	this.instance_4.setTransform(235.65,285.45,1,1,0,0,0,0,0.1);
+	this.instance_4.setTransform(228.25,424.15,0.9249,0.9249,0,0,0,0.1,0.2);
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(335).to({_off:false},0).to({alpha:1},5).wait(8).to({startPosition:11},0).wait(11).to({startPosition:11},0).wait(1));
-
-	// Layer_7
-	this.instance_5 = new lib.endFrame_tapInto("synched",0,false);
-	this.instance_5.setTransform(141.2,43.05,0.8724,0.8724,0,0,0,55.3,127.1);
-	this.instance_5._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(326).to({_off:false},0).wait(33).to({mode:"single",startPosition:33},0).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(335).to({_off:false},0).to({alpha:1},5).wait(20));
 
 	// txt_takeHealthcare
-	this.instance_6 = new lib.endFrame_txt("single",0);
-	this.instance_6.setTransform(135,385.35,0.7531,0.7531,0,0,0,-170,14.4);
-	this.instance_6.alpha = 0;
+	this.instance_5 = new lib.endFrame_txt("single",0);
+	this.instance_5.setTransform(142,293.05,0.7531,0.7531,0,0,0,-170,14.4);
+	this.instance_5.alpha = 0;
+	this.instance_5._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(328).to({_off:false},0).to({alpha:1},5).wait(27));
+
+	// Layer_7
+	this.instance_6 = new lib.endFrame_tapInto("synched",0,false);
+	this.instance_6.setTransform(141.2,43.05,0.8724,0.8724,0,0,0,55.3,127.1);
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(328).to({_off:false},0).to({alpha:1},5).wait(27));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(326).to({_off:false},0).wait(33).to({mode:"single",startPosition:33},0).wait(1));
 
 	// scheduleVisit_animation
 	this.instance_7 = new lib.scheduleVisit_animation("synched",0,false);
