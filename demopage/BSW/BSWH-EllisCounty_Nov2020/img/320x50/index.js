@@ -1487,17 +1487,17 @@ if (reversed == null) { reversed = false; }
 	// Layer_1
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#1140A0").s().p("Ak8CQIAuglQA1BUBmAAQA1AAAegZQAdgYAAgnQAAgqgqgVQgZgMhHgPQhIgOgegTQgwgeAAg9QAAg3ArgkQAtgnBGABQA8gBAsAXQAoAUAgApIgrAiQgXgjgegQQghgTgvAAQgzAAgbAXQgZAVAAAlQAAAmAkASQAUAKBDAPQBNAPAhAUQA1AhAABBQAAA5gsApQguAphKAAQiDAAhHhhgAIdDrIh9mGIiEGGIg2AAIiBnWIA4AAIBoGGICEmGIAwAAIB9GHIBymHIA3AAIiNHWgAreDrIAAnWIDKAAQBCABAnAhQAoAjAAA4QAAAjgQAaQgQAbgfAPQAjANATAcQATAdAAAoQAAA9gpAkQgpAjhDAAgAqoC5ICZAAQAsABAagYQAagYgBgkQABgngZgWQgagXgvAAIiXAAgAqogfICXAAQAqABAYgXQAXgVgBgkQAAghgZgWQgZgUgqAAIiTAAg");
-	this.shape.setTransform(-5.8,39.7);
+	this.shape.setTransform(5.6,39.7);
 
 	this.shape_1 = new cjs.Shape();
 	this.shape_1.graphics.f("#3C8EBA").s().p("A7aEcIAigrQAWAYAdAAQAbAAARgPQAQgPAUgrIAHgQIiRlLIA5AAIB1ENIBukNIA6AAIieFrQgaA7gbAYQgcAYgtAAQgzAAgigfgARhCpQgfgcAAgsQAAg1ArgeQAqgdBJAAIBuAAIAAgNQAAgpgZgXQgbgZgxAAQhJAAgmA7IgugdQA5hLBkAAQBJAAApAmQAnAjAAA9IAADcIg0AAIAAg9QgXAggmASQgmASgtAAQg7AAgigegAR5BdQAAAbATAQQAVARAnAAQApAAAjgUQAmgVAUgmIAAgvIhrAAQhqAAAABCgALSCUQgygzAAhNQAAhNA0g0QA0g1BOAAQBNAAAyAyQAyAyAABMIAAAYIkzAAQAGAzAjAfQAlAgA2AAQBPAAAmhDIAtAaQg5BYhpAAQhSAAg0gzgAMBhUQgjAegJAvID8AAQgGgyghgdQghgdgzAAQgxAAgkAfgAaXBXIAAjDIhEAAIAAgvIBEAAIAAhMIA0giIAABuIBmAAIAAAvIhmAAIAADCQAAA+AyAAQAXAAARgRIAcAqQgfAYgpAAQhiAAAAhugEAiHADAIAAjDQAAgzgbgeQgcgegyAAQgvAAgeAgQggAgAAAyIAADAIg1AAIAAn6IA0AAIAADXQATgdAfgQQAggSAnAAQBEAAAoAqQAoAqAABJIAADFgAXeDAIAAn6IA1AAIAAH6gAIaDAIAAjRIj8AAIAADRIg2AAIAAnVIA2AAIAADQID8AAIAAjQIA1AAIAAHVgA80DAIAAmCIitDnIimjiIAAF9Ig1AAIAAnVIA1AAICnDnICtjnIAzAAIAAHVg");
-	this.shape_1.setTransform(52.425,43.975);
+	this.shape_1.setTransform(63.825,43.975);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.endFrame_txt, new cjs.Rectangle(-171.3,12.5,447.5,63), null);
+}).prototype = getMCSymbolPrototype(lib.endFrame_txt, new cjs.Rectangle(-159.9,12.5,447.5,63), null);
 
 
 (lib.dr_head = function(mode,startPosition,loop,reversed) {
@@ -4920,12 +4920,12 @@ if (reversed == null) { reversed = false; }
 	this.instance_3.setTransform(89.55,413.1,1.115,1.115,0,0,0,0.5,0.5);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(50).to({_off:false},0).to({y:420.1},5,cjs.Ease.quadOut).to({y:396.1,mode:"synched",loop:false},5,cjs.Ease.quadInOut).to({y:413.1,startPosition:8},9,cjs.Ease.quadInOut).wait(25).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(74).to({startPosition:49},0).wait(50).to({startPosition:49},0).wait(14).to({mode:"single"},0).to({regY:0.6,scaleX:0.9555,scaleY:0.9555,x:89.6,y:425.1},4,cjs.Ease.quadOut).wait(34));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(50).to({_off:false},0).to({y:420.1},5,cjs.Ease.quadOut).to({y:396.1,mode:"synched",loop:false},5,cjs.Ease.quadInOut).to({y:413.1,startPosition:8},9,cjs.Ease.quadInOut).wait(25).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(45).to({startPosition:49},0).wait(74).to({startPosition:49},0).wait(50).to({startPosition:49},0).wait(9).to({startPosition:58},0).to({y:426.1,startPosition:65},7).wait(36));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-109.6,171.2,572.9,486.3);
+p.nominalBounds = new cjs.Rectangle(-109.6,171.2,572.9,492.59999999999997);
 
 
 // stage content:
