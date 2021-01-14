@@ -1479,9 +1479,9 @@ if (reversed == null) { reversed = false; }
 	// cta_btn_Mask (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	var mask_graphics_345 = new cjs.Graphics().p("AnsCpQgnAAAAgnIAAAAIAAkDQAAgnAnAAIAAAAIPZAAQAnAAAAAnIAAAAIAAEDQAAAngnAAIAAAAg");
+	var mask_graphics_350 = new cjs.Graphics().p("AnsCpQgnAAAAgnIAAAAIAAkDQAAgnAnAAIAAAAIPZAAQAnAAAAAnIAAAAIAAEDQAAAngnAAIAAAAg");
 
-	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(345).to({graphics:mask_graphics_345,x:148.9167,y:528.6663}).wait(15));
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(350).to({graphics:mask_graphics_350,x:148.9167,y:528.6663}).wait(10));
 
 	// shine
 	this.shape_1 = new cjs.Shape();
@@ -1512,7 +1512,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(345).to({_off:false},0).to({alpha:1},6).wait(9));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(352).to({_off:false},0).to({alpha:1},6).wait(2));
 
 	// Frame_10_02
 	this.instance_4 = new lib.Frame_10_02();
@@ -1520,7 +1520,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(345).to({_off:false},0).to({alpha:1},6).wait(9));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(352).to({_off:false},0).to({alpha:1},6).wait(2));
 
 	// Layer_2
 	this.shape_4 = new cjs.Shape();
@@ -1539,7 +1539,7 @@ if (reversed == null) { reversed = false; }
 	this.shape_7.graphics.f("#000000").s().p("A0MN9IAt75MAnJAHyIAjUHg");
 	this.shape_7.setTransform(155.075,282.1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_4}]},342).to({state:[{t:this.shape_5}]},1).to({state:[{t:this.shape_6}]},1).to({state:[{t:this.shape_7}]},1).wait(15));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_4}]},349).to({state:[{t:this.shape_5}]},1).to({state:[{t:this.shape_6}]},1).to({state:[{t:this.shape_7}]},1).wait(8));
 
 	// Frame_10_01
 	this.instance_5 = new lib.Frame_10_01();
