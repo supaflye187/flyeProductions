@@ -85,12 +85,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,300,265);
 p.nominalBounds = new cjs.Rectangle(0,0,300,337);
 
 
-(lib.shaq_frame_06 = function() {
-	this.initialize(img.shaq_frame_06);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,337);
-
-
 (lib.shaq_frame_07 = function() {
 	this.initialize(img.shaq_frame_07);
 }).prototype = p = new cjs.Bitmap();
@@ -228,8 +222,8 @@ if (reversed == null) { reversed = false; }
 	// Layer_3 (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
-	mask.graphics.p("AAwNpQkJgQg2g6Qg3g6AsnKQAXjlAhjZQACgtABgyQABhlgJgaQgPgrgEg5QAIAUgBgKQgGgagBAQIgTg6QgahVAShEQAKgiAQgeQABgNAlgcQAUgPAggWQAPgLAbgNQAbgOALgCQAPgCA8ACQAiAUARANQASAMAtA/QAHATAJATQASAmAIgBQANgDAPANQBIAXAhMEQARGDADF+IhBABQhcAAhigHg");
-	mask.setTransform(2.2923,-2.3484);
+	mask.graphics.p("ACNNJQhhgFgBgYQgCgXgLgJIgLgEQgIgBgCgfIAAgeQgEgeglhaIglhUQgxgugbhRQgNgpgEgfQgchDAdhYQAPgsAUgeQARgYAFgdQABhGATgjQAJgSAJgDQADgRAVgVIgJgfQgWgKhPh4QgGgHgbgSQgVgNgSgiQgRggAGgdQAHgdgFgIQgPgZgPg4IgLgzQgOhMBMhRQAngoAogZQAwgdBCAMQAgAFAXAMQApAKAuBRIAmBPQAJgDAPANIAOAOQAAAEBPD3IgpTAIgwABIgwgBg");
+	mask.setTransform(0.9982,-7.1528);
 
 	// Layer_2
 	this.instance = new lib.shaq_endFrame();
@@ -245,7 +239,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.Shaq_image, new cjs.Rectangle(-27.5,-90.3,46,164.3), null);
+}).prototype = getMCSymbolPrototype(lib.Shaq_image, new cjs.Rectangle(-26.7,-91.3,45.2,165.3), null);
 
 
 (lib.shaq_frame_09_txt = function(mode,startPosition,loop,reversed) {
@@ -490,7 +484,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 	// Layer_2
-	this.instance = new lib.shaq_frame_06();
+	this.instance = new lib.shaq_frame_07();
 	this.instance.setTransform(-152.85,-164.8);
 
 	this.shape_1 = new cjs.Shape();
@@ -1682,7 +1676,6 @@ lib.properties = {
 		{src:"shaq_frame_03.jpg", id:"shaq_frame_03"},
 		{src:"shaq_frame_04.jpg", id:"shaq_frame_04"},
 		{src:"shaq_frame_05.jpg", id:"shaq_frame_05"},
-		{src:"shaq_frame_06.jpg", id:"shaq_frame_06"},
 		{src:"shaq_frame_07.jpg", id:"shaq_frame_07"},
 		{src:"shaq_frame_bottom.jpg", id:"shaq_frame_bottom"},
 		{src:"shaq_frame_bottom_02.jpg", id:"shaq_frame_bottom_02"}
