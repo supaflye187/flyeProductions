@@ -898,28 +898,31 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.blue_paperDoll();
-	this.instance.setTransform(75.35,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance.setTransform(226.25,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
-	this.instance_1 = new lib.yellow_paperDoll();
-	this.instance_1.setTransform(-527.35,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_1 = new lib.blue_paperDoll();
+	this.instance_1.setTransform(75.35,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
-	this.instance_2 = new lib.blue_paperDoll();
-	this.instance_2.setTransform(-75.5,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_2 = new lib.yellow_paperDoll();
+	this.instance_2.setTransform(-527.35,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
 	this.instance_3 = new lib.blue_paperDoll();
-	this.instance_3.setTransform(-226.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_3.setTransform(-75.5,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
 	this.instance_4 = new lib.blue_paperDoll();
-	this.instance_4.setTransform(-678.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_4.setTransform(-226.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
 	this.instance_5 = new lib.blue_paperDoll();
-	this.instance_5.setTransform(-376.7,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_5.setTransform(-678.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.instance_6 = new lib.blue_paperDoll();
+	this.instance_6.setTransform(-376.7,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.paperDoll_group, new cjs.Rectangle(-753.7,0,904.6,199), null);
+}).prototype = getMCSymbolPrototype(lib.paperDoll_group, new cjs.Rectangle(-753.7,0,1055.5,199), null);
 
 
 (lib.bswh_logo = function(mode,startPosition,loop,reversed) {
@@ -1023,7 +1026,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_6.setTransform(524.3,368.25,2.4259,2.4259,0,0,0,-532,99.5);
 	this.instance_6.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({alpha:1},11).wait(17).to({scaleX:2.4258,scaleY:2.4258,x:507.8},7).to({x:-56},118).to({scaleX:2.4259,scaleY:2.4259,x:-111.7,alpha:0},12).to({_off:true},1).wait(98));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({alpha:1},11).wait(17).to({x:496.55},6).to({x:-730.2},120).to({x:-839.7,alpha:0},11).to({_off:true},1).wait(98));
 
 	// Txt_carousel
 	this.instance_7 = new lib.Txt_carousel();
@@ -1216,7 +1219,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-109.5,539,2290.4,542);
+p.nominalBounds = new cjs.Rectangle(-837.4,539,3384.3,542);
 // library properties:
 lib.properties = {
 	id: 'EF812760E3C644B78B4E2355CF606C8E',

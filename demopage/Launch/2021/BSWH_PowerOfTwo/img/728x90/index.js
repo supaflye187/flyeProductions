@@ -854,28 +854,37 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.blue_paperDoll();
-	this.instance.setTransform(75.1,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance.setTransform(526.75,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
-	this.instance_1 = new lib.yellow_paperDoll();
-	this.instance_1.setTransform(-527.35,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_1 = new lib.blue_paperDoll();
+	this.instance_1.setTransform(376.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
 	this.instance_2 = new lib.blue_paperDoll();
-	this.instance_2.setTransform(-75.5,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_2.setTransform(225.85,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
 	this.instance_3 = new lib.blue_paperDoll();
-	this.instance_3.setTransform(-226.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_3.setTransform(75.1,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
-	this.instance_4 = new lib.blue_paperDoll();
-	this.instance_4.setTransform(-678.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_4 = new lib.yellow_paperDoll();
+	this.instance_4.setTransform(-527.35,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
 	this.instance_5 = new lib.blue_paperDoll();
-	this.instance_5.setTransform(-376.7,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+	this.instance_5.setTransform(-75.5,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.instance_6 = new lib.blue_paperDoll();
+	this.instance_6.setTransform(-226.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+
+	this.instance_7 = new lib.blue_paperDoll();
+	this.instance_7.setTransform(-678.3,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+
+	this.instance_8 = new lib.blue_paperDoll();
+	this.instance_8.setTransform(-376.7,99.4,0.9187,0.9187,0,0,0,-82.2,108.2);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_8},{t:this.instance_7},{t:this.instance_6},{t:this.instance_5},{t:this.instance_4},{t:this.instance_3},{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.paperDoll_group, new cjs.Rectangle(-753.7,0,904.3000000000001,199), null);
+}).prototype = getMCSymbolPrototype(lib.paperDoll_group, new cjs.Rectangle(-753.7,0,1356,199), null);
 
 
 (lib.bswh_logo = function(mode,startPosition,loop,reversed) {
@@ -923,14 +932,14 @@ if (reversed == null) { reversed = false; }
 
 	// Border
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#000000").ss(2,1,1).p("A3bzhMAu3AAAMAAAAnDMgu3AAAg");
-	this.shape.setTransform(363.9999,45.0001,2.4267,0.36);
+	this.shape.graphics.f().s("#000000").ss(2,1,1).p("Eg43gHBMBxvAAAIAAODMhxvAAAg");
+	this.shape.setTransform(364,45);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(263));
 
 	// BSWH_Logo
 	this.instance = new lib.bswh_logo("synched",0,false);
-	this.instance.setTransform(599.3,37.35,0.6979,0.6979,0,0,0,136.9,-36.2);
+	this.instance.setTransform(597.35,43.85,0.7145,0.7145,0,0,0,137,-36.1);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(263));
 
@@ -967,7 +976,7 @@ if (reversed == null) { reversed = false; }
 
 	// ctaBtn
 	this.instance_5 = new lib.ctaBtn("synched",0,false);
-	this.instance_5.setTransform(586.45,69.15,0.1919,0.1919,0,0,0,-287.2,50.6);
+	this.instance_5.setTransform(656.95,59.65,0.1951,0.1951,0,0,0,-287,50.8);
 	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
@@ -990,7 +999,7 @@ if (reversed == null) { reversed = false; }
 		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
 	}
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({alpha:1},11).wait(17).to({regX:-531.7,regY:100,x:208},7).to({x:14.25},118).to({regX:-531.8,regY:99.9,x:-3.8,alpha:0},11).to({_off:true},1).wait(98));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({alpha:1},11).wait(17).to({regX:-531.7,regY:100,x:206.5},7).to({x:-147.1},118).to({regX:-531.8,regY:99.9,x:-180.05,alpha:0},11).to({_off:true},1).wait(98));
 
 	// Txt_carousel
 	this.instance_7 = new lib.Txt_carousel();

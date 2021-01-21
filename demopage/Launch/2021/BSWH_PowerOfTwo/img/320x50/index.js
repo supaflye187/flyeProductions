@@ -1017,7 +1017,7 @@ if (reversed == null) { reversed = false; }
 
 	// BSWH_Logo
 	this.instance = new lib.bswh_logo("synched",0,false);
-	this.instance.setTransform(243.05,18.1,0.4313,0.4313,0,0,0,137.6,-35.8);
+	this.instance.setTransform(240.15,23.9,0.4345,0.4345,0,0,0,138,-35.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(263));
 
@@ -1047,7 +1047,7 @@ if (reversed == null) { reversed = false; }
 
 	// ctaBtn
 	this.instance_4 = new lib.ctaBtn("synched",0,false);
-	this.instance_4.setTransform(232.2,37.8,0.1126,0.1126,0,0,0,-286.9,51.5);
+	this.instance_4.setTransform(276.2,33.8,0.1203,0.1203,0,0,0,-286.7,51.5);
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
