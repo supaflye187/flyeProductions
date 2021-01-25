@@ -25,12 +25,6 @@ lib.ssMetadata = [];
 
 
 
-(lib.amazonLogo = function() {
-	this.initialize(img.amazonLogo);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,241,74);
-
-
 (lib.billNye = function() {
 	this.initialize(img.billNye);
 }).prototype = p = new cjs.Bitmap();
@@ -525,15 +519,20 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Layer_1
-	this.instance = new lib.amazonLogo();
-	this.instance.setTransform(-114,0);
+	// Layer_2
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF9900").s().p("Ak8BJQiRg5h1hoQgJgIAGgIQAFgHALAGQB+BJCSAnQCWApCbAAQBsAABvgWQB1gXBpgsQAQgHAJAMQAIANgPAMQhdBDiEAnQh7Alh8AAQilAAiWg7gAHtBTQgHgCAFgIQATgzAJgcQAPg1gKgOQgKgNg3ABQgbABg5AHQgJABgBgHQgCgGAJgGQAwgiBNgBQBFgBAMARQAOARgSBBQgVBKguAmQgFAEgFAAIgEgBg");
+	this.shape.setTransform(-40.3396,56.7972);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#000000").s().p("AH0CKQgng1AAhUQAAhTAng1QAqg5BIAAQBJAAAqA6QAoA2AABVQABBSgsA2QgqA3hGAAQhIAAgqg6gAI5hRQgIAZAAAvQAAA2AHAcQALAyAjAAQAiAAANgpQAIgbAAgxQAAg8gKghQgLghghAAQgiAAgMAngAixCnQgdgdABgyQAAgpATgdQAUgaAhgPQAXgLAogFIBBgHIAAgKQAAgTgBgGQgBgPgHgJQgLgRgbAAQgVAAgOAKQgQALgDATQgBAGgEADQgDAEgEAAIhDgHQgFgBgCgEQgDgDABgGQAKg4AugbQAngWA5AAQAcAAAZAIQAeAJARARQAXAVAFAhQACAPABAwIAABpQgBAWAJAPQADAIAPATQADAEABAFQgBAGgEACIg0AuQgGAGgKgFQgPgMgIgLIgPgWQgcAcgYALQgXALglAAQgtAAgcgbgAhKAUQghAQABAnQAAAXAKAOQALANAUAAQAOAAAMgIQAMgJAKgNQAIgRACgTQACgMAAgZIAAgPQgtAAgYANgAwsCnQgegdAAgyQAAgpAUgdQATgaAhgPQAZgLAngFIBAgHIAAgKIAAgZQgBgPgHgJQgLgRgbAAQgUAAgOAKQgQALgFATQAAAGgEADQgDAEgFAAIhCgHQgEgBgEgEQgDgDABgGQALg4AugbQAogWA4AAQAbAAAbAIQAdAJATARQAWAVAFAhQADAPAAAwIAABpQAAAWAIAPIARAbQAEAEAAAFQAAAGgEACIgzAuQgIAGgKgFIgXgXIgPgWQgdAdgXAKQgYALgkAAQgtAAgbgbgAvHAUQghAQABAnQgBAXAMAOQAKANAUAAQAeAAARgeQAKgRACgTIABglIAAgPQgtAAgYANgAP7C8QgFAAgEgCQgDgEAAgEIAAi+QAAgugFgPQgHggggAAQgLAAgMAIQgJAHgGANQgMAZAAAoIAAC9QABAEgEAFQgEACgFAAIhEAAQgFAAgEgDQgEgEAAgEIAAleIAEgHQAEgEAGAAIA+AAQALACACAIIAAA2IABAAQAPglAVgRQAWgSAiAAQA3AAAZAqQAMASAEAiQABATABAlIAADcQgBAEgDAEQgDACgHAAgAlbC8QgFAAgEgDQgDgEAAgEIAAi5IABghQAAgYgCgJQgHgegiAAQgMAAgMAIQgMAIgFANQgDALgDAVIAAAjIAAC5QAAAEgEAFQgDACgGAAIhDAAQgFAAgFgDQgEgEAAgEIAAi5QAAgygDgNQgGghggAAQggAAgKAgQgFASAAAuIAAC5QAAAEgEAFQgEACgFAAIhFAAQgFAAgCgCQgEgEgBgFIAAlcQABgGAEgDQADgEAGAAIA/AAQAFAAAEAEQADADAAAFIAAAtIABAAQAYhBBCAAQAhAAAUAQQAVARAPAgQALgfAbgSQAYgQAfAAQAYAAATAKQAYAKAMASQAOAUADAhIAAA6IAADcQAAAEgDAFQgEACgFAAgAClCxQgGgEAAgGIAAgyQAAgWAIgNICHjAIh2AAQgEAAgEgDQgEgEAAgFIAAgyQAAgGADgDQAFgEAEAAIDgAAQAGAAADAEQAEADAAAGIAAArQAAAJgQAWIh0ClQBLgCA0AeQALAFABANIAAA1QAAAHgEAEQgHAEgGgDQg0gcg+AAQhCgBg4AeIgEABQgDAAgDgDg");
+	this.shape_1.setTransform(-19.75,23.225);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.amazon_logo, new cjs.Rectangle(-114,0,241,74), null);
+}).prototype = getMCSymbolPrototype(lib.amazon_logo, new cjs.Rectangle(-129.7,3.6,219.89999999999998,66.4), null);
 
 
 (lib.txt_notSticky_animation = function(mode,startPosition,loop,reversed) {
@@ -860,14 +859,14 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(189.65,552.1,0.4708,0.4708,0,0,0,-56.8,19.7);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(191).to({_off:false},0).to({y:435.1},9,cjs.Ease.quadInOut).wait(157));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(88).to({_off:false},0).to({y:449.1},9,cjs.Ease.quadInOut).wait(53).to({y:437.1},8,cjs.Ease.quadOut).wait(199));
 
 	// ctaBtn_mask (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
 	var mask_graphics_210 = new cjs.Graphics().p("AmmD0QiLAAAAiLIAAAAIAAizQAAgoAMgcIAAAAQAKglAagVIAAAAQAigrBNAAIAAAAIM5AAQCLAAAACLIAAAAIAACzQAABEgiAjIAAAAQgdBChgAAIAAAAg");
 
-	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(210).to({graphics:mask_graphics_210,x:78.4769,y:427.4725}).wait(147));
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(210).to({graphics:mask_graphics_210,x:78.4769,y:438.4723}).wait(147));
 
 	// shine_cta
 	this.shape_1 = new cjs.Shape();
@@ -971,7 +970,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_1.setTransform(79.6,543.05,0.9938,0.9938,0,0,0,-55.4,23.1);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(191).to({_off:false},0).to({y:426.05},9,cjs.Ease.quadInOut).wait(157));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(88).to({_off:false},0).to({y:447.05},9,cjs.Ease.quadInOut).wait(53).to({y:437.05},8,cjs.Ease.quadOut).wait(199));
 
 	// bufferin_logo
 	this.instance_2 = new lib.Bufferin_logo_animation("synched",0,false);
@@ -985,7 +984,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3.setTransform(507.9,358.1,0.5183,0.5183,0.2463,0,0,27.1,526.8);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(150).to({_off:false},0).to({x:155.1},14,cjs.Ease.quadOut).wait(27).to({y:383.3},9,cjs.Ease.quadInOut).wait(157));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(150).to({_off:false},0).to({x:169.1},14,cjs.Ease.quadOut).wait(27).to({y:383.3},9,cjs.Ease.quadInOut).wait(157));
 
 	// txt_HealthyHands_animation
 	this.instance_4 = new lib.txt_HealthyHands_animation("synched",0,false);
@@ -1051,8 +1050,8 @@ if (reversed == null) { reversed = false; }
 
 	// background_color
 	this.shape_23 = new cjs.Shape();
-	this.shape_23.graphics.rf(["#1B276A","#142058","#091039"],[0.035,0.514,0.953],-0.1,0,0,-0.1,0,357.1).s().p("EgY8AnkMAAAhPHMAx5AAAMAAABPHg");
-	this.shape_23.setTransform(159.3193,241.025,1.0789,1);
+	this.shape_23.graphics.rf(["#1B276A","#142058","#091039"],[0.035,0.514,0.953],0,0,0,0,0,323).s().p("Ega6AnkMAAAhPHMA11AAAMAAABPHg");
+	this.shape_23.setTransform(159.3,241.025);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape_23).wait(357));
 
@@ -1069,7 +1068,6 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"amazonLogo.png", id:"amazonLogo"},
 		{src:"billNye.jpg", id:"billNye"},
 		{src:"BillNye_02.jpg", id:"BillNye_02"},
 		{src:"Product_bottle.jpg", id:"Product_bottle"},
