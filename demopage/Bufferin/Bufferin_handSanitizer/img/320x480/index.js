@@ -25,6 +25,12 @@ lib.ssMetadata = [];
 
 
 
+(lib.BillNyeTag_NEW_SM = function() {
+	this.initialize(img.BillNyeTag_NEW_SM);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,584,179);
+
+
 (lib.billNye = function() {
 	this.initialize(img.billNye);
 }).prototype = p = new cjs.Bitmap();
@@ -438,6 +444,28 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.ctaBtn, new cjs.Rectangle(-140,-1,168.5,50.1), null);
+
+
+(lib.billNye_name = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.BillNyeTag_NEW_SM();
+	this.instance.setTransform(-133.75,0,0.229,0.229);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.billNye_name, new cjs.Rectangle(-133.7,0,133.7,41), null);
 
 
 (lib.billNye_mc = function(mode,startPosition,loop,reversed) {
@@ -1027,26 +1055,34 @@ if (reversed == null) { reversed = false; }
 	this.instance_9.setTransform(514.25,327.75,0.514,0.514,0,0,0,48.6,506.2);
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(43).to({_off:false},0).to({x:165.95},9,cjs.Ease.quadOut).wait(33).to({x:518.75},9,cjs.Ease.quadInOut).to({_off:true},1).wait(262));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(43).to({_off:false},0).to({x:145.95},9,cjs.Ease.quadOut).wait(33).to({x:518.75},9,cjs.Ease.quadInOut).to({_off:true},1).wait(262));
 
-	// Ribbon_mc
-	this.instance_10 = new lib.Ribbon_mc();
-	this.instance_10.setTransform(-13.05,-26.8,0.7773,0.7773,0,0,0,-93.9,78.8);
+	// Layer_1
+	this.instance_10 = new lib.billNye_name();
+	this.instance_10.setTransform(249.1,248.25,1.0748,1.0748,0,0,0,-66.8,20.6);
+	this.instance_10.alpha = 0;
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(3).to({_off:false},0).to({x:51.7,y:39.7},10,cjs.Ease.quadOut).wait(22).to({x:-16.65,y:-28.65},10,cjs.Ease.quadOut).to({_off:true},1).wait(311));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(47).to({_off:false},0).to({alpha:1},7).wait(31).to({alpha:0},5).to({_off:true},1).wait(266));
+
+	// Ribbon_mc
+	this.instance_11 = new lib.Ribbon_mc();
+	this.instance_11.setTransform(-13.05,-26.8,0.7773,0.7773,0,0,0,-93.9,78.8);
+	this.instance_11._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(3).to({_off:false},0).to({x:51.7,y:39.7},10,cjs.Ease.quadOut).wait(22).to({x:-16.65,y:-28.65},10,cjs.Ease.quadOut).to({_off:true},1).wait(311));
 
 	// Bufferin_logo
-	this.instance_11 = new lib.Bufferin_logo_animation("synched",0,false);
-	this.instance_11.setTransform(159.85,122.9,1.0066,1.0066,0,0,0,155.3,146.6);
+	this.instance_12 = new lib.Bufferin_logo_animation("synched",0,false);
+	this.instance_12.setTransform(159.85,122.9,1.0066,1.0066,0,0,0,155.3,146.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(35).to({startPosition:35},0).to({alpha:0,startPosition:45},10).to({_off:true},1).wait(311));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(35).to({startPosition:35},0).to({alpha:0,startPosition:45},10).to({_off:true},1).wait(311));
 
 	// Product_bottle
-	this.instance_12 = new lib.Product_bottle_1();
-	this.instance_12.setTransform(152.65,663.75,0.4713,0.4713,0,0,0,122.8,537.3);
+	this.instance_13 = new lib.Product_bottle_1();
+	this.instance_13.setTransform(152.65,663.75,0.4713,0.4713,0,0,0,122.8,537.3);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).to({regY:537.2,y:357.7},11,cjs.Ease.quadOut).wait(24).to({regY:537.3,y:663.75},10,cjs.Ease.quadOut).to({_off:true},1).wait(311));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).to({regY:537.2,y:357.7},11,cjs.Ease.quadOut).wait(24).to({regY:537.3,y:663.75},10,cjs.Ease.quadOut).to({_off:true},1).wait(311));
 
 	// background_color
 	this.shape_23 = new cjs.Shape();
@@ -1068,6 +1104,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
+		{src:"BillNyeTag_NEW_SM.png", id:"BillNyeTag_NEW_SM"},
 		{src:"billNye.jpg", id:"billNye"},
 		{src:"BillNye_02.jpg", id:"BillNye_02"},
 		{src:"Product_bottle.jpg", id:"Product_bottle"},

@@ -25,6 +25,12 @@ lib.ssMetadata = [];
 
 
 
+(lib.BillNyeTag_NEW_SM = function() {
+	this.initialize(img.BillNyeTag_NEW_SM);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,584,179);
+
+
 (lib.billNye = function() {
 	this.initialize(img.billNye);
 }).prototype = p = new cjs.Bitmap();
@@ -438,6 +444,28 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.ctaBtn, new cjs.Rectangle(-140,-1,168.5,50.1), null);
+
+
+(lib.billNye_name = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.BillNyeTag_NEW_SM();
+	this.instance.setTransform(-133.75,0,0.229,0.229);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.billNye_name, new cjs.Rectangle(-133.7,0,133.7,41), null);
 
 
 (lib.billNye_mc = function(mode,startPosition,loop,reversed) {
@@ -1029,46 +1057,54 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(89).to({_off:false},0).wait(55).to({startPosition:55},0).to({alpha:0,startPosition:64},9).to({_off:true},1).wait(203));
 
-	// txt_useAsDirected
-	this.instance_8 = new lib.txt_useAsDirected();
-	this.instance_8.setTransform(291,582.75,0.9248,0.9248);
+	// Layer_1
+	this.instance_8 = new lib.billNye_name();
+	this.instance_8.setTransform(229,167.1,1,1,0,0,0,-66.9,20.5);
 	this.instance_8.alpha = 0;
 	this.instance_8._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(43).to({_off:false},0).to({alpha:1},9).wait(33).to({alpha:0},9).to({_off:true},1).wait(262));
 
-	// BillNye_mc
-	this.instance_9 = new lib.billNye_mc();
-	this.instance_9.setTransform(157.5,389.05,0.3648,0.3648,-2.4694,0,0,48.7,506.3);
+	// txt_useAsDirected
+	this.instance_9 = new lib.txt_useAsDirected();
+	this.instance_9.setTransform(291,582.75,0.9248,0.9248);
+	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(43).to({_off:false},0).to({y:227.35},9,cjs.Ease.quadOut).wait(33).to({y:396.05,alpha:0},9).to({_off:true},1).wait(262));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(43).to({_off:false},0).to({alpha:1},9).wait(33).to({alpha:0},9).to({_off:true},1).wait(262));
 
-	// txt_killGerms_animation
-	this.instance_10 = new lib.txt_killGerms_animation("synched",0,false);
-	this.instance_10.setTransform(146.15,57.3,0.7768,0.7768,0,0,0,190.2,96.5);
+	// BillNye_mc
+	this.instance_10 = new lib.billNye_mc();
+	this.instance_10.setTransform(127.5,389.05,0.3648,0.3648,-2.4694,0,0,48.7,506.3);
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(43).to({_off:false},0).wait(42).to({startPosition:42},0).to({alpha:0,startPosition:51},9).to({_off:true},1).wait(262));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(43).to({_off:false},0).to({x:131.5,y:227.35},9,cjs.Ease.quadOut).wait(33).to({y:407.35},9,cjs.Ease.quadOut).to({_off:true},1).wait(262));
+
+	// txt_killGerms_animation
+	this.instance_11 = new lib.txt_killGerms_animation("synched",0,false);
+	this.instance_11.setTransform(146.15,57.3,0.7768,0.7768,0,0,0,190.2,96.5);
+	this.instance_11._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(43).to({_off:false},0).wait(42).to({startPosition:42},0).to({alpha:0,startPosition:51},9).to({_off:true},1).wait(262));
 
 	// Product_bottle
-	this.instance_11 = new lib.Product_bottle_1();
-	this.instance_11.setTransform(357.35,146.5,0.3769,0.3769,0,0,0,123,537.2);
+	this.instance_12 = new lib.Product_bottle_1();
+	this.instance_12.setTransform(357.35,146.5,0.3769,0.3769,0,0,0,123,537.2);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).to({x:235.55},11,cjs.Ease.quadOut).wait(24).to({x:361.55},10,cjs.Ease.quadIn).to({_off:true},1).wait(311));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).to({x:235.55},11,cjs.Ease.quadOut).wait(24).to({x:361.55},10,cjs.Ease.quadIn).to({_off:true},1).wait(311));
 
 	// Ribbon_mc
-	this.instance_12 = new lib.Ribbon_mc();
-	this.instance_12.setTransform(-17.55,-23.45,0.9715,0.9715,0,0,0,-93.8,78.5);
-	this.instance_12._off = true;
+	this.instance_13 = new lib.Ribbon_mc();
+	this.instance_13.setTransform(-17.55,-23.45,0.9715,0.9715,0,0,0,-93.8,78.5);
+	this.instance_13._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(3).to({_off:false},0).to({x:53.85,y:40.25},10,cjs.Ease.quadOut).wait(22).to({x:-16.85,y:-23.45},10,cjs.Ease.quadOut).to({_off:true},1).wait(311));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(3).to({_off:false},0).to({x:53.85,y:40.25},10,cjs.Ease.quadOut).wait(22).to({x:-16.85,y:-23.45},10,cjs.Ease.quadOut).to({_off:true},1).wait(311));
 
 	// Bufferin_logo
-	this.instance_13 = new lib.Bufferin_logo_animation("synched",0,false);
-	this.instance_13.setTransform(96.05,147.45,0.7106,0.7106,0,0,0,155.3,146.6);
+	this.instance_14 = new lib.Bufferin_logo_animation("synched",0,false);
+	this.instance_14.setTransform(96.05,147.45,0.7106,0.7106,0,0,0,155.3,146.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(35).to({startPosition:35},0).to({alpha:0,startPosition:45},10).to({_off:true},1).wait(311));
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).wait(35).to({startPosition:35},0).to({alpha:0,startPosition:45},10).to({_off:true},1).wait(311));
 
 	// background_color
 	this.shape_20 = new cjs.Shape();
@@ -1080,7 +1116,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(32.6,11.9,565.4,591.3000000000001);
+p.nominalBounds = new cjs.Rectangle(32.6,11.9,565.4,602.6);
 // library properties:
 lib.properties = {
 	id: '836AAC3FFB6A4A6F868D8C5ED06E6846',
@@ -1090,6 +1126,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
+		{src:"BillNyeTag_NEW_SM.png", id:"BillNyeTag_NEW_SM"},
 		{src:"billNye.jpg", id:"billNye"},
 		{src:"BillNye_02.jpg", id:"BillNye_02"},
 		{src:"Product_bottle.jpg", id:"Product_bottle"},
