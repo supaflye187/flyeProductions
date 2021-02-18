@@ -1338,21 +1338,28 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).to({alpha:1},8).wait(352));
 
-	// Layer_55
-	this.instance_1 = new lib.txt_cake();
-	this.instance_1.setTransform(115.5,357.15,1,1,0,0,0,-154.6,38);
-	this.instance_1.alpha = 0;
+	// shaq_endFrame
+	this.instance_1 = new lib.shaq_endFrame_1();
+	this.instance_1.setTransform(346,471,1,1,0,0,0,-46,130);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(350).to({_off:false},0).to({alpha:1},6).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(346).to({_off:false},0).to({x:254},7,cjs.Ease.quadOut).wait(7));
 
-	// txt_RR_endFrame
-	this.instance_2 = new lib.txt_RR_endFrame();
-	this.instance_2.setTransform(150,117.55,1,1,0,0,0,-115.7,11.7);
+	// Layer_55
+	this.instance_2 = new lib.txt_cake();
+	this.instance_2.setTransform(115.5,357.15,1,1,0,0,0,-154.6,38);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(343).to({_off:false},0).to({y:139.55,alpha:1},6).wait(11));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(350).to({_off:false},0).to({alpha:1},6).wait(4));
+
+	// txt_RR_endFrame
+	this.instance_3 = new lib.txt_RR_endFrame();
+	this.instance_3.setTransform(150,117.55,1,1,0,0,0,-115.7,11.7);
+	this.instance_3.alpha = 0;
+	this.instance_3._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(343).to({_off:false},0).to({y:139.55,alpha:1},6).wait(11));
 
 	// cta_btn_Mask (mask)
 	var mask = new cjs.Shape();
@@ -1385,27 +1392,20 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.shape_2).wait(351).to({_off:false},0).to({_off:true},1).wait(3).to({_off:false,x:130.975,y:507},0).wait(1).to({x:160.525,y:512.7},0).to({_off:true},1).wait(1).to({_off:false,x:194.325,y:519.25},0).wait(1).to({x:198.525,y:520.05},0).wait(1));
 
 	// ctaBtn
-	this.instance_3 = new lib.ctaBtn();
-	this.instance_3.setTransform(111.15,512.9,0.7158,0.7158,0,0,0,1.1,1.1);
-	this.instance_3.alpha = 0;
-	this.instance_3._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(352).to({_off:false},0).to({alpha:1},7).wait(1));
-
-	// printer_endFrame
-	this.instance_4 = new lib.printer_endFrame();
-	this.instance_4.setTransform(150.9,252.15,0.7625,0.7625,0,0,0,-100,85.5);
+	this.instance_4 = new lib.ctaBtn();
+	this.instance_4.setTransform(111.15,512.9,0.7158,0.7158,0,0,0,1.1,1.1);
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(343).to({_off:false},0).to({scaleX:1.09,scaleY:1.09,x:150.95,y:252.1,alpha:1},7,cjs.Ease.quadOut).wait(10));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(352).to({_off:false},0).to({alpha:1},7).wait(1));
 
-	// shaq_endFrame
-	this.instance_5 = new lib.shaq_endFrame_1();
-	this.instance_5.setTransform(346,471,1,1,0,0,0,-46,130);
+	// printer_endFrame
+	this.instance_5 = new lib.printer_endFrame();
+	this.instance_5.setTransform(150.9,252.15,0.7625,0.7625,0,0,0,-100,85.5);
+	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(346).to({_off:false},0).to({x:254},7,cjs.Ease.quadOut).wait(7));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(343).to({_off:false},0).to({scaleX:1.09,scaleY:1.09,x:150.95,y:252.1,alpha:1},7,cjs.Ease.quadOut).wait(10));
 
 	// txt_relief
 	this.instance_6 = new lib.txt_relief();
