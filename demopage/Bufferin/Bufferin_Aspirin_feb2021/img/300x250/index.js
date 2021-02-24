@@ -1252,7 +1252,7 @@ if (reversed == null) { reversed = false; }
 	this.instance.setTransform(145,136.5,0.0772,0.0772,0,0,0,-343.2,208.5);
 	this.instance.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:-343.3,regY:208.3,scaleX:0.3204,scaleY:0.3204,x:144.95,y:157.75,alpha:1},9,cjs.Ease.quadOut).wait(83).to({regX:-343.2,scaleX:0.2914,scaleY:0.2914,y:177.75},7,cjs.Ease.quadOut).wait(106).to({regX:-343.4,regY:208.1,scaleX:0.4157,scaleY:0.4157,x:149.95,y:367.75},0).to({regX:-343.7,regY:208.8,scaleX:0.0474,scaleY:0.0474,x:158.15,y:321.55,alpha:0},6,cjs.Ease.quadIn).to({_off:true},1).wait(90));
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({regX:-343.3,regY:208.3,scaleX:0.3204,scaleY:0.3204,x:144.95,y:157.75,alpha:1},9,cjs.Ease.quadOut).wait(83).to({regX:-343.2,scaleX:0.2914,scaleY:0.2914,y:177.75},7,cjs.Ease.quadOut).wait(106).to({regX:-343.1,regY:208.2,scaleX:0.1316,scaleY:0.1316,y:185.75,alpha:0},6,cjs.Ease.quadIn).to({_off:true},1).wait(90));
 
 	// txt_advTriple
 	this.instance_1 = new lib.txt_advTriple();
@@ -1335,14 +1335,14 @@ if (reversed == null) { reversed = false; }
 	this.instance_11.setTransform(259.15,118.35,0.9061,0.9061,0,0,0,-61.8,9.1);
 	this.instance_11.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).to({alpha:1},5).wait(297));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).to({alpha:1},5).wait(87).to({alpha:0},7).wait(113).to({alpha:1},8).wait(82));
 
 	// gradientCircle_group
 	this.instance_12 = new lib.gradientCircle_group();
 	this.instance_12.setTransform(154.6,186.05,2.4715,2.4715,0,0,0,-666.1,6.7);
 	this.instance_12.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).to({regX:-666.2,regY:6.5,scaleX:0.9919,scaleY:0.9919,y:185.65,alpha:1},10,cjs.Ease.quadOut).wait(292));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).to({regX:-666.2,regY:6.5,scaleX:0.9919,scaleY:0.9919,y:185.65,alpha:1},10,cjs.Ease.quadOut).wait(195).to({regX:-666.1,regY:6.7,scaleX:2.1118,scaleY:2.1118,y:186.05,alpha:0},6,cjs.Ease.quadOut).wait(1).to({regX:-665.9,regY:6.8,scaleX:0.9961,scaleY:0.9961,x:136.65,y:181.25,alpha:1},8,cjs.Ease.quadOut).wait(82));
 
 	// color_BG
 	this.shape_1 = new cjs.Shape();
