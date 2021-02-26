@@ -773,7 +773,7 @@ if (reversed == null) { reversed = false; }
 	this.shape.graphics.f().s("#000000").ss(2,1,1).p("A3bzhMAu3AAAMAAAAnDMgu3AAAg");
 	this.shape.setTransform(150,125);
 
-	this.timeline.addTween(cjs.Tween.get(this.shape).to({_off:true},207).wait(31));
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(238));
 
 	// BSWH_Logo
 	this.instance = new lib.BSWH_Logo_Dallas();

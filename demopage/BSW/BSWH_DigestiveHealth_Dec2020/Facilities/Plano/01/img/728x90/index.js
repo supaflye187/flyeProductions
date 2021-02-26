@@ -755,16 +755,6 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0];
-	// timeline functions:
-	this.frame_0 = function() {
-		tl_main = new gsap.timeline();
-		tl_main.to(this.txt_deepBreath, 12, {x:-45},"+=0.3");
-	}
-
-	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(338));
-
 	// Border
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f().s("#000000").ss(2,1,1).p("Eg43AHCIAAuDMBxvAAAIAAOD");
