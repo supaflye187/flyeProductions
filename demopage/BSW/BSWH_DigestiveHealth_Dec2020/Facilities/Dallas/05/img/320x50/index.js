@@ -322,7 +322,7 @@ p.nominalBounds = new cjs.Rectangle(-46.7,-18.9,96,40);
 
 
 // stage content:
-(lib.BSWH_DigestiveHealth_05_320x50 = function(mode,startPosition,loop,reversed) {
+(lib.BSWH_DigestiveHealth_05_Dallas_320x50 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
