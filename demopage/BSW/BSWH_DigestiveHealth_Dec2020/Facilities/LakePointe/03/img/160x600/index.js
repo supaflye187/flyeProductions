@@ -646,7 +646,7 @@ if (reversed == null) { reversed = false; }
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(204).to({_off:false},0).to({y:83.2,alpha:1},17,cjs.Ease.quadOut).wait(1).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(116).to({_off:false},0).to({y:83.2,alpha:1},17,cjs.Ease.quadOut).to({_off:true},1).wait(85));
 
 	// talk_txt
 	this.instance_1 = new lib.talk_txt();
@@ -654,7 +654,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(197).to({_off:false},0).to({y:83.2,alpha:1},17,cjs.Ease.quadOut).wait(8).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(112).to({_off:false},0).to({y:83.2,alpha:1},17,cjs.Ease.quadOut).wait(4).to({_off:true},1).wait(85));
 
 	// can_txt
 	this.instance_2 = new lib.can_txt();
@@ -662,7 +662,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(191).to({_off:false},0).to({y:61.9,alpha:1},17,cjs.Ease.quadOut).wait(14).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(108).to({_off:false},0).to({y:61.9,alpha:1},17,cjs.Ease.quadOut).wait(8).to({_off:true},1).wait(85));
 
 	// we_txt
 	this.instance_3 = new lib.we_txt();
@@ -670,7 +670,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(183).to({_off:false},0).to({y:61.9,alpha:1},17,cjs.Ease.quadOut).wait(22).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(104).to({_off:false},0).to({y:61.9,alpha:1},17,cjs.Ease.quadOut).wait(12).to({_off:true},1).wait(85));
 
 	// someone_txt
 	this.instance_4 = new lib.someone_txt();
@@ -678,7 +678,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(177).to({_off:false},0).to({y:41.3,alpha:1},17,cjs.Ease.quadOut).wait(28).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(100).to({_off:false},0).to({y:41.3,alpha:1},17,cjs.Ease.quadOut).wait(16).to({_off:true},1).wait(85));
 
 	// there_txt
 	this.instance_5 = new lib.there_txt();
@@ -686,7 +686,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(170).to({_off:false},0).to({y:20.8,alpha:1},17,cjs.Ease.quadOut).wait(35).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(96).to({_off:false},0).to({y:20.8,alpha:1},17,cjs.Ease.quadOut).wait(20).to({_off:true},1).wait(85));
 
 	// is_txt
 	this.instance_6 = new lib.is_txt();
@@ -694,7 +694,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_6.alpha = 0;
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(163).to({_off:false},0).to({y:20.75,alpha:1},17,cjs.Ease.quadOut).wait(42).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(92).to({_off:false},0).to({y:20.75,alpha:1},17,cjs.Ease.quadOut).wait(24).to({_off:true},1).wait(85));
 
 	// maybe_txt
 	this.instance_7 = new lib.maybe_txt();
@@ -702,7 +702,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_7.alpha = 0;
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(132).to({_off:false},0).to({y:-0.65,alpha:1},17,cjs.Ease.quadOut).wait(73).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(73).to({_off:false},0).to({y:-0.65,alpha:1},17,cjs.Ease.quadOut).wait(43).to({_off:true},1).wait(85));
 
 	// fine_txt
 	this.instance_8 = new lib.fine_txt();
@@ -710,7 +710,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_8.alpha = 0;
 	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(101).to({_off:false},0).to({y:-20.7,alpha:1},17,cjs.Ease.quadOut).wait(104).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(54).to({_off:false},0).to({y:-20.7,alpha:1},17,cjs.Ease.quadOut).wait(62).to({_off:true},1).wait(85));
 
 	// be_txt
 	this.instance_9 = new lib.be_txt();
@@ -718,7 +718,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_9.alpha = 0;
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(95).to({_off:false},0).to({y:-20.8,alpha:1},17,cjs.Ease.quadOut).wait(110).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(50).to({_off:false},0).to({y:-20.8,alpha:1},17,cjs.Ease.quadOut).wait(66).to({_off:true},1).wait(85));
 
 	// ill_txt
 	this.instance_10 = new lib.ill_txt();
@@ -726,7 +726,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_10.alpha = 0;
 	this.instance_10._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(88).to({_off:false},0).to({y:-20.95,alpha:1},17,cjs.Ease.quadOut).wait(117).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(46).to({_off:false},0).to({y:-20.95,alpha:1},17,cjs.Ease.quadOut).wait(70).to({_off:true},1).wait(85));
 
 	// breathe_txt
 	this.instance_11 = new lib.breathe_txt();
@@ -734,7 +734,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_11.alpha = 0;
 	this.instance_11._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(56).to({_off:false},0).to({y:-42,alpha:1},17,cjs.Ease.quadOut).wait(149).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(27).to({_off:false},0).to({y:-42,alpha:1},17,cjs.Ease.quadOut).wait(89).to({_off:true},1).wait(85));
 
 	// just_txt
 	this.instance_12 = new lib.just_txt();
@@ -742,7 +742,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_12.alpha = 0;
 	this.instance_12._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(44).to({_off:false},0).to({y:-42.15,alpha:1},17,cjs.Ease.quadOut).wait(161).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(23).to({_off:false},0).to({y:-42.15,alpha:1},17,cjs.Ease.quadOut).wait(93).to({_off:true},1).wait(85));
 
 	// burns_txt
 	this.instance_13 = new lib.burns_txt();
@@ -750,14 +750,14 @@ if (reversed == null) { reversed = false; }
 	this.instance_13.alpha = 0;
 	this.instance_13._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(12).to({_off:false},0).to({y:-62.45,alpha:1},17,cjs.Ease.quadOut).wait(193).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_13).wait(4).to({_off:false},0).to({y:-62.45,alpha:1},17,cjs.Ease.quadOut).wait(112).to({_off:true},1).wait(85));
 
 	// it_txt
 	this.instance_14 = new lib.it_txt();
 	this.instance_14.setTransform(-157.8,-47.9,1,1,0,0,0,-8.2,7.3);
 	this.instance_14.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_14).to({y:-62.4,alpha:1},17,cjs.Ease.quadOut).wait(205).to({_off:true},1).wait(67));
+	this.timeline.addTween(cjs.Tween.get(this.instance_14).to({y:-62.4,alpha:1},17,cjs.Ease.quadOut).wait(116).to({_off:true},1).wait(85));
 
 	this._renderFirstFrame();
 
@@ -907,20 +907,20 @@ if (reversed == null) { reversed = false; }
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(14).to({_off:false},0).to({y:483.6,alpha:1,mode:"synched",loop:false},11,cjs.Ease.quadOut).wait(271).to({mode:"single",startPosition:31},0).wait(1));
 
-	// safeCare_Logo
-	this.instance_4 = new lib.safeCare_Logo();
-	this.instance_4.setTransform(47.55,352.6,0.1121,0.1121,-14.2444,0,0,1,3.5);
-	this.instance_4.alpha = 0;
+	// txt_deepBreath
+	this.instance_4 = new lib.txt_deepBreath("synched",0,false);
+	this.instance_4.setTransform(173.8,168.65);
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(242).to({_off:false},0).to({regX:1.1,scaleX:0.0794,scaleY:0.0794,rotation:-14.2392,alpha:1},7,cjs.Ease.quadOut).to({regX:1,regY:3.2,scaleX:0.0869,scaleY:0.0869,rotation:-14.2437},4,cjs.Ease.quadOut).wait(44));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(20).to({_off:false},0).wait(133).to({mode:"single",startPosition:133},0).wait(144));
 
-	// txt_deepBreath
-	this.instance_5 = new lib.txt_deepBreath("synched",0,false);
-	this.instance_5.setTransform(173.8,168.65);
+	// safeCare_Logo
+	this.instance_5 = new lib.safeCare_Logo();
+	this.instance_5.setTransform(47.55,352.6,0.1121,0.1121,-14.2444,0,0,1,3.5);
+	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(20).to({_off:false},0).wait(222).to({mode:"single",startPosition:222},0).wait(55));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(153).to({_off:false},0).to({regX:1.1,scaleX:0.0794,scaleY:0.0794,rotation:-14.2392,alpha:1},7,cjs.Ease.quadOut).to({regX:1,regY:3.2,scaleX:0.0869,scaleY:0.0869,rotation:-14.2437},4,cjs.Ease.quadOut).wait(133));
 
 	// head_mc
 	this.instance_6 = new lib.head_mc();
