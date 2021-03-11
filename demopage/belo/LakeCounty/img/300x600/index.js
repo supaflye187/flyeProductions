@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"index_atlas_P_1", frames: [[0,0,344,71]]},
-		{name:"index_atlas_NP_1", frames: [[0,0,600,600],[904,602,300,600],[0,602,600,600],[602,602,300,800],[602,0,500,600],[0,1204,600,600]]}
+		{name:"index_atlas_NP_1", frames: [[0,0,600,600],[904,602,300,600],[0,602,600,600],[602,602,300,621],[602,0,500,600],[0,1204,600,600]]}
 ];
 
 
@@ -113,13 +113,14 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib._300x250_hiking();
+	this.instance.setTransform(4.6,165.85);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,300,800);
+p.nominalBounds = new cjs.Rectangle(4.6,165.9,300,621);
 
 
 (lib.g_headlineTwo = function(mode,startPosition,loop,reversed) {
@@ -610,13 +611,14 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib._300x250_wineTasting();
+	this.instance.setTransform(0,-7.2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,600,600);
+p.nominalBounds = new cjs.Rectangle(0,-7.2,600,600);
 
 
 (lib.cta = function(mode,startPosition,loop,reversed) {
@@ -727,7 +729,7 @@ if (reversed == null) { reversed = false; }
 
 	// End
 	this.instance_1 = new lib.Tween11("synched",0);
-	this.instance_1.setTransform(150,125.45);
+	this.instance_1.setTransform(150,109.45);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
@@ -816,7 +818,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-119,-103.3,599,718.4);
+p.nominalBounds = new cjs.Rectangle(-119,94.9,599,520.2);
 // library properties:
 lib.properties = {
 	id: '416BB6158F164DDD9495C88894A20E18',

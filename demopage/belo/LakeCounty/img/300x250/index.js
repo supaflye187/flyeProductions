@@ -721,11 +721,11 @@ if (reversed == null) { reversed = false; }
 
 	// End
 	this.instance_1 = new lib.Tween11("synched",0);
-	this.instance_1.setTransform(150,125.45);
+	this.instance_1.setTransform(150,112.45);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(313).to({_off:false},0).to({alpha:1},4).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(313).to({_off:false},0).to({y:111.45,alpha:1},4).wait(2));
 
 	// Copy5
 	this.instance_2 = new lib.g_headlineFive("synched",0);

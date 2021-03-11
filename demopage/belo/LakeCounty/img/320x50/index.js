@@ -97,14 +97,14 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.EndFrame();
-	this.instance.setTransform(-481,99);
+	this.instance.setTransform(-469,99);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-481,99,320,50);
+p.nominalBounds = new cjs.Rectangle(-469,99,320,50);
 
 
 (lib.g_slideThree = function(mode,startPosition,loop,reversed) {
@@ -873,7 +873,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(99.1,-63.9,322.1,160);
+p.nominalBounds = new cjs.Rectangle(111.1,-63.9,310.1,160);
 // library properties:
 lib.properties = {
 	id: '416BB6158F164DDD9495C88894A20E18',
