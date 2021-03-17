@@ -417,7 +417,7 @@ if (reversed == null) { reversed = false; }
 		/*this.envelope_mc.colorBG._fill = "#3399CC";*/
 		var direction = "left"; // right, top, bottom;
 		
-		var newMove = stageHeight/2 - ;
+		var newMove = stageHeight/2 - this.envelope_mc.get;
 		this.envelope_mc.play();
 		
 		console.log(this.envelope_mc.card_mc.card_mc_txt);
@@ -483,10 +483,10 @@ lib.properties = {
 	color: "#999999",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Bitmap1.png?1616014741518", id:"Bitmap1"},
-		{src:"images/Bitmap2.png?1616014741518", id:"Bitmap2"},
-		{src:"images/Bitmap4.png?1616014741518", id:"Bitmap4"},
-		{src:"images/img_01.png?1616014741518", id:"img_01"}
+		{src:"images/Bitmap1.png?1616016730561", id:"Bitmap1"},
+		{src:"images/Bitmap2.png?1616016730561", id:"Bitmap2"},
+		{src:"images/Bitmap4.png?1616016730561", id:"Bitmap4"},
+		{src:"images/img_01.png?1616016730561", id:"img_01"}
 	],
 	preloads: []
 };
