@@ -458,7 +458,7 @@ if (reversed == null) { reversed = false; }
 	// envelope_mc
 	this.envelope_mc = new lib.envelope_mc();
 	this.envelope_mc.name = "envelope_mc";
-	this.envelope_mc.setTransform(879.3,990.3,1.4327,1.4327,0,0,0,482.9,416.3);
+	this.envelope_mc.setTransform(879.3,990.35,1.0873,1.0873,0,0,0,482.9,416.3);
 
 	this.timeline.addTween(cjs.Tween.get(this.envelope_mc).wait(150));
 
