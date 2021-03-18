@@ -43,12 +43,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,546,389);
 p.nominalBounds = new cjs.Rectangle(0,0,693,444);
 
 
-(lib.coverImg = function() {
-	this.initialize(img.coverImg);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,900,600);
-
-
 (lib.img_01 = function() {
 	this.initialize(img.img_01);
 }).prototype = p = new cjs.Bitmap();
@@ -182,7 +176,7 @@ if (reversed == null) { reversed = false; }
 	this.card_mc.setTransform(491.1,-152.85,1,1,0,0,0,-323.1,203.1);
 	this.card_mc._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.card_mc).wait(36).to({_off:false},0).to({regY:203,scaleX:1.9039,scaleY:1.9039,rotation:-6.2287,x:518,y:308.65},8,cjs.Ease.circInOut).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.card_mc).wait(36).to({_off:false},0).to({regY:203,scaleX:1.2425,scaleY:1.2425,rotation:-6.2282,x:519.75,y:370.15},8,cjs.Ease.circInOut).wait(13));
 
 	// Layer_4
 	this.instance = new lib.Bitmap1();
@@ -197,7 +191,7 @@ if (reversed == null) { reversed = false; }
 	this.card_mc_1.setTransform(491.1,-152.85,1,1,0,0,0,-323.1,203.1);
 	this.card_mc_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.card_mc_1).wait(36).to({_off:false},0).to({regY:203,scaleX:1.9039,scaleY:1.9039,rotation:-6.2287,x:518,y:308.65},8,cjs.Ease.circInOut).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.card_mc_1).wait(36).to({_off:false},0).to({regY:203,scaleX:1.2425,scaleY:1.2425,rotation:-6.2282,x:519.75,y:370.15},8,cjs.Ease.circInOut).wait(13));
 
 	// card_mask (mask)
 	var mask = new cjs.Shape();
@@ -343,7 +337,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-173.1,-373.9,1403.3,1175.1);
+p.nominalBounds = new cjs.Rectangle(68.7,-373.9,915.9,1065.5);
 
 
 // stage content:
@@ -367,12 +361,14 @@ if (reversed == null) { reversed = false; }
 		
 		*/
 		
+		
+		/*var envelopeMain = this.envelope_mc;
 		var page_body = document.getElementsByTagName("body")[0];
 		page_body.style.backgroundColor = "#ffffff";
 		
-		/*page_body.style.backgroundSize = "cover";*/
-		/*page_body.style.overflow = "hidden";*/
-		/*page_body.style.position = "fixed";*/
+		page_body.style.backgroundSize = "cover";
+		page_body.style.overflow = "hidden";
+		page_body.style.position = "fixed";
 		
 		var page_canvas = document.getElementsByTagName("canvas")[0];
 		stageWidth = page_canvas.width;
@@ -394,9 +390,16 @@ if (reversed == null) { reversed = false; }
 		 var widthToHeight = stageWidth / stageHeight;
 		 var newWidth = window.innerWidth;
 		 var newHeight = window.innerHeight;
-		 var newWidthToHeight = newWidth / newHeight;
+		 var newWidthToHeight = newWidth / newHeight;*/
 		 //
-		 if (newWidthToHeight > widthToHeight) {
+		/*page_canvas.style.height =  "100vh";
+		page_canvas.style.width =  "100vw";
+			
+		envelopeMain.scaleX = 0.5;
+		page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
+		page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";*/
+			
+		/* if (newWidthToHeight > widthToHeight) {
 		 newWidth = newHeight * widthToHeight;
 		 page_canvas.style.height = newHeight + "px";
 		 page_canvas.style.width = newWidth + "px";
@@ -408,13 +411,13 @@ if (reversed == null) { reversed = false; }
 		 scale = newWidthToHeight / widthToHeight;
 		 stage.width = newWidth;
 		 stage.height = newHeight;
-		 page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
-		 page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";
+		page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
+		page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";
 		}
 		
 		window.onresize = function () {
 		 onResize();
-		}
+		}*/
 		
 		/*onResize();*/
 		/*this.stop();*/
@@ -429,12 +432,12 @@ if (reversed == null) { reversed = false; }
 		
 		console.log(this.envelope_mc.card_mc.card_mc_txt);
 		
-		tl_main = new gsap.timeline();
-		/*tl_main.to(this.envelope_mc, 0.5, {y:newMove,ease:"back.out(1)"})*/
+		/*tl_main = new gsap.timeline();
+		tl_main.to(this.envelope_mc, 0.5, {y:newMove,ease:"back.out(1)"})
 		
 		
-		/*root.envelope_mc.play();*/
-		 
+		root.envelope_mc.play();
+		 */
 		
 		
 		this.envelope_mc.addEventListener("click", playAnim.bind(this));
@@ -455,24 +458,18 @@ if (reversed == null) { reversed = false; }
 	// envelope_mc
 	this.envelope_mc = new lib.envelope_mc();
 	this.envelope_mc.name = "envelope_mc";
-	this.envelope_mc.setTransform(534.85,953.5,0.9375,0.9374,0,0,0,490.7,408.4);
+	this.envelope_mc.setTransform(879.3,990.3,1.4327,1.4327,0,0,0,482.9,416.3);
 
 	this.timeline.addTween(cjs.Tween.get(this.envelope_mc).wait(150));
-
-	// Layer_1
-	this.instance = new lib.coverImg();
-	this.instance.setTransform(-1197,-124.95,3.8283,3.6322);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(150));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-657,835.1,2905.5,1219.3000000000002);
+p.nominalBounds = new cjs.Rectangle(-1509.8,715.3,6197.1,3566.3);
 // library properties:
 lib.properties = {
 	id: '23A1D34BD4544662A0DA4F8E227B30BA',
-	width: 1080,
+	width: 1920,
 	height: 1920,
 	fps: 30,
 	color: "#FF0000",
@@ -481,7 +478,6 @@ lib.properties = {
 		{src:"images/Bitmap1.png", id:"Bitmap1"},
 		{src:"images/Bitmap2.png", id:"Bitmap2"},
 		{src:"images/Bitmap4.png", id:"Bitmap4"},
-		{src:"images/coverImg.jpg", id:"coverImg"},
 		{src:"images/img_01.png", id:"img_01"}
 	],
 	preloads: []
