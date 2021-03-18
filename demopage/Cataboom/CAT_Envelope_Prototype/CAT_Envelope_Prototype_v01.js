@@ -43,6 +43,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,546,389);
 p.nominalBounds = new cjs.Rectangle(0,0,693,444);
 
 
+(lib.coverImg = function() {
+	this.initialize(img.coverImg);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,900,600);
+
+
 (lib.img_01 = function() {
 	this.initialize(img.img_01);
 }).prototype = p = new cjs.Bitmap();
@@ -361,11 +367,12 @@ if (reversed == null) { reversed = false; }
 		
 		*/
 		
-		
 		var page_body = document.getElementsByTagName("body")[0];
-		page_body.style.backgroundColor = "#999999";
-		page_body.style.overflow = "hidden";
-		page_body.style.position = "fixed";
+		page_body.style.backgroundColor = "#ffffff";
+		
+		/*page_body.style.backgroundSize = "cover";*/
+		/*page_body.style.overflow = "hidden";*/
+		/*page_body.style.position = "fixed";*/
 		
 		var page_canvas = document.getElementsByTagName("canvas")[0];
 		stageWidth = page_canvas.width;
@@ -409,7 +416,7 @@ if (reversed == null) { reversed = false; }
 		 onResize();
 		}
 		
-		onResize();
+		/*onResize();*/
 		/*this.stop();*/
 		
 		var root = this; //Declared variable for access to global scope.
@@ -437,24 +444,6 @@ if (reversed == null) { reversed = false; }
 			root.envelope_mc.play();
 			console.log("envelope Pressed");
 		}
-		
-		/*
-		this.on("click", function (e) {
-			window.open(clickTag, "_blank");
-			console.log("ClickTag pressed");
-			
-		});
-		
-		
-		
-		
-		
-		function exitPanel(e) {
-			e.stopPropagation();
-			root.panel.x = 300;
-			root.play();
-			console.log("Panel Closed");
-		}*/
 	}
 	this.frame_59 = function() {
 		this.stop();
@@ -466,27 +455,34 @@ if (reversed == null) { reversed = false; }
 	// envelope_mc
 	this.envelope_mc = new lib.envelope_mc();
 	this.envelope_mc.name = "envelope_mc";
-	this.envelope_mc.setTransform(512.05,384.35,0.5,0.5,0,0,0,490.6,408.3);
+	this.envelope_mc.setTransform(534.85,953.5,0.9375,0.9374,0,0,0,490.7,408.4);
 
 	this.timeline.addTween(cjs.Tween.get(this.envelope_mc).wait(150));
+
+	// Layer_1
+	this.instance = new lib.coverImg();
+	this.instance.setTransform(-1197,-124.95,3.8283,3.6322);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(150));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(841.8,446.8,-133.89999999999998,61.5);
+p.nominalBounds = new cjs.Rectangle(-657,835.1,2905.5,1219.3000000000002);
 // library properties:
 lib.properties = {
 	id: '23A1D34BD4544662A0DA4F8E227B30BA',
-	width: 1024,
-	height: 768,
+	width: 1080,
+	height: 1920,
 	fps: 30,
-	color: "#999999",
+	color: "#FF0000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Bitmap1.png?1616016730561", id:"Bitmap1"},
-		{src:"images/Bitmap2.png?1616016730561", id:"Bitmap2"},
-		{src:"images/Bitmap4.png?1616016730561", id:"Bitmap4"},
-		{src:"images/img_01.png?1616016730561", id:"img_01"}
+		{src:"images/Bitmap1.png", id:"Bitmap1"},
+		{src:"images/Bitmap2.png", id:"Bitmap2"},
+		{src:"images/Bitmap4.png", id:"Bitmap4"},
+		{src:"images/coverImg.jpg", id:"coverImg"},
+		{src:"images/img_01.png", id:"img_01"}
 	],
 	preloads: []
 };
