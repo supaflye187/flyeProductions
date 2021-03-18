@@ -176,7 +176,7 @@ if (reversed == null) { reversed = false; }
 	this.card_mc.setTransform(491.1,-152.85,1,1,0,0,0,-323.1,203.1);
 	this.card_mc._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.card_mc).wait(36).to({_off:false},0).to({regY:203,scaleX:1.2425,scaleY:1.2425,rotation:-6.2282,x:519.75,y:370.15},8,cjs.Ease.circInOut).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.card_mc).wait(36).to({_off:false},0).to({regY:203,scaleX:1.9039,scaleY:1.9039,rotation:-6.2287,x:518,y:308.65},8,cjs.Ease.circInOut).wait(13));
 
 	// Layer_4
 	this.instance = new lib.Bitmap1();
@@ -191,7 +191,7 @@ if (reversed == null) { reversed = false; }
 	this.card_mc_1.setTransform(491.1,-152.85,1,1,0,0,0,-323.1,203.1);
 	this.card_mc_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.card_mc_1).wait(36).to({_off:false},0).to({regY:203,scaleX:1.2425,scaleY:1.2425,rotation:-6.2282,x:519.75,y:370.15},8,cjs.Ease.circInOut).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.card_mc_1).wait(36).to({_off:false},0).to({regY:203,scaleX:1.9039,scaleY:1.9039,rotation:-6.2287,x:518,y:308.65},8,cjs.Ease.circInOut).wait(13));
 
 	// card_mask (mask)
 	var mask = new cjs.Shape();
@@ -337,7 +337,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(68.7,-373.9,915.9,1065.5);
+p.nominalBounds = new cjs.Rectangle(-173.1,-373.9,1403.3,1175.1);
 
 
 // stage content:
@@ -361,14 +361,12 @@ if (reversed == null) { reversed = false; }
 		
 		*/
 		
-		
-		/*var envelopeMain = this.envelope_mc;
 		var page_body = document.getElementsByTagName("body")[0];
 		page_body.style.backgroundColor = "#ffffff";
 		
-		page_body.style.backgroundSize = "cover";
+		/*page_body.style.backgroundSize = "cover";*/
 		page_body.style.overflow = "hidden";
-		page_body.style.position = "fixed";
+		/*page_body.style.position = "fixed";*/
 		
 		var page_canvas = document.getElementsByTagName("canvas")[0];
 		stageWidth = page_canvas.width;
@@ -390,16 +388,9 @@ if (reversed == null) { reversed = false; }
 		 var widthToHeight = stageWidth / stageHeight;
 		 var newWidth = window.innerWidth;
 		 var newHeight = window.innerHeight;
-		 var newWidthToHeight = newWidth / newHeight;*/
+		 var newWidthToHeight = newWidth / newHeight;
 		 //
-		/*page_canvas.style.height =  "100vh";
-		page_canvas.style.width =  "100vw";
-			
-		envelopeMain.scaleX = 0.5;
-		page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
-		page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";*/
-			
-		/* if (newWidthToHeight > widthToHeight) {
+		 if (newWidthToHeight > widthToHeight) {
 		 newWidth = newHeight * widthToHeight;
 		 page_canvas.style.height = newHeight + "px";
 		 page_canvas.style.width = newWidth + "px";
@@ -411,15 +402,15 @@ if (reversed == null) { reversed = false; }
 		 scale = newWidthToHeight / widthToHeight;
 		 stage.width = newWidth;
 		 stage.height = newHeight;
-		page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
-		page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";
+		/*page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
+		 page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";*/
 		}
 		
 		window.onresize = function () {
 		 onResize();
-		}*/
+		}
 		
-		/*onResize();*/
+		onResize();
 		/*this.stop();*/
 		
 		var root = this; //Declared variable for access to global scope.
@@ -458,14 +449,14 @@ if (reversed == null) { reversed = false; }
 	// envelope_mc
 	this.envelope_mc = new lib.envelope_mc();
 	this.envelope_mc.name = "envelope_mc";
-	this.envelope_mc.setTransform(879.3,990.35,1.0873,1.0873,0,0,0,482.9,416.3);
+	this.envelope_mc.setTransform(906.6,991.4,1.387,1.387,0,0,0,490.8,408.7);
 
 	this.timeline.addTween(cjs.Tween.get(this.envelope_mc).wait(150));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-1509.8,715.3,6197.1,3566.3);
+p.nominalBounds = new cjs.Rectangle(-1167.9,737.9,5165.3,2914.4);
 // library properties:
 lib.properties = {
 	id: '23A1D34BD4544662A0DA4F8E227B30BA',
