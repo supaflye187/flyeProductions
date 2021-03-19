@@ -865,17 +865,17 @@ lib.properties = {
 	color: "#999999",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Bitmap2.png?1616118023362", id:"Bitmap2"},
-		{src:"images/Bitmap2_1.png?1616118023362", id:"Bitmap2_1"},
-		{src:"images/Bitmap4.png?1616118023362", id:"Bitmap4"},
-		{src:"images/envelope_back.png?1616118023362", id:"envelope_back"},
-		{src:"images/envelope_Bottom_Flap.png?1616118023362", id:"envelope_Bottom_Flap"},
-		{src:"images/envelope_front.png?1616118023362", id:"envelope_front"},
-		{src:"images/envelope_inside.png?1616118023362", id:"envelope_inside"},
-		{src:"images/envelope_Top_Flap.png?1616118023362", id:"envelope_Top_Flap"},
-		{src:"images/img_01.png?1616118023362", id:"img_01"},
-		{src:"images/particle_img.png?1616118023362", id:"particle_img"},
-		{src:"images/sticker.png?1616118023362", id:"sticker"}
+		{src:"images/Bitmap2.png", id:"Bitmap2"},
+		{src:"images/Bitmap2_1.png", id:"Bitmap2_1"},
+		{src:"images/Bitmap4.png", id:"Bitmap4"},
+		{src:"images/envelope_back.png", id:"envelope_back"},
+		{src:"images/envelope_Bottom_Flap.png", id:"envelope_Bottom_Flap"},
+		{src:"images/envelope_front.png", id:"envelope_front"},
+		{src:"images/envelope_inside.png", id:"envelope_inside"},
+		{src:"images/envelope_Top_Flap.png", id:"envelope_Top_Flap"},
+		{src:"images/img_01.png", id:"img_01"},
+		{src:"images/particle_img.png", id:"particle_img"},
+		{src:"images/sticker.png", id:"sticker"}
 	],
 	preloads: []
 };
