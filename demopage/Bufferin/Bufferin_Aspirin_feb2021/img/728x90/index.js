@@ -632,7 +632,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.pill_Txt, new cjs.Rectangle(-602,-325.4,101.60000000000002,101.79999999999998), null);
+}).prototype = getMCSymbolPrototype(lib.pill_Txt, new cjs.Rectangle(-602,-325.3,101.60000000000002,101.70000000000002), null);
 
 
 (lib.pill_plain = function(mode,startPosition,loop,reversed) {
@@ -921,6 +921,33 @@ if (reversed == null) { reversed = false; }
 }).prototype = getMCSymbolPrototype(lib.asprin_box, new cjs.Rectangle(-611.4,116.5,526.6,269.8), null);
 
 
+(lib.amazon_logo = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF9900").s().p("AlKBNQiYg8h6htQgKgJAHgHQAFgHALAFQCDBMCaAqQCdAqChAAQByAAB0gXQB6gZBtgtQARgIAKAOQAIANgPANQhhBGiKAoQiCAniBAAQisAAidg9gAIEBXQgIgCAFgIQAVg1AJgeQAQg3gLgPQgKgOg6ABQgcABg8AIQgJABgBgIQgCgGAJgFQAzgmBRgBQBHgBANASQAOASgTBEQgWBOgwAnQgFAFgEAAQgBAAAAAAQgBAAgBAAQAAAAgBgBQAAAAgBAAg");
+	this.shape.setTransform(-136.5887,55.6224);
+
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#000000").s().p("AILCQQgpg3AAhYQAAhXApg3QAsg8BKAAQBOAAArA9QAqA4AABZQAABVgtA6QgsA5hKAAQhKAAgsg9gAJThVQgIAbAAAwQAAA5AGAdQAMA2AkAAQAkAAAOgsQAJgcAAg0QAAg+gMgiQgLgjgjAAQgiAAgNAogAi6CvQgdgfAAg1QAAgpAUgfQAVgbAigQQAYgLAqgGIBEgIIAAgJQAAgVAAgGQgCgPgHgJQgLgTgdAAQgWAAgOALQgRAMgEATQgBAGgEAEQgDAEgEAAIhGgIQgEgBgDgEQgEgDABgGQAMg6AwgdQAogXA9AAQAcAAAaAJQAfAJAUASQAWAWAGAiQADAPAAAzIAABuQAAAXAIAQQADAIAQAUQADAEAAAFQABAHgFACIg2AvQgIAHgJgFQgQgNgIgLQgCgBgNgWQgeAcgaANQgYALgmAAQgvAAgegcgAhOAUQgiARAAAqQAAAYALAOQAMAOAUAAQAPAAANgJQAMgIAKgPQALgRABgUQABgMAAgbIAAgQQguAAgaANgAxeCvQgfgfAAg1QAAgpAVgfQAUgbAigQQAagLApgGIBDgIIAAgJIAAgbQAAgPgJgJQgLgTgcAAQgVAAgPALQgRAMgFATQAAAGgDAEQgFAEgEAAIhFgIQgEgBgDgEQgFgDABgGQAMg6AxgdQApgXA6AAQAcAAAcAJQAgAJAUASQAWAWAHAiQACAPAAAzIAABuQAAAXAIAQQAEAHAOAVQAEAEAAAFQAAAHgEACIg2AvQgIAHgKgFQgPgNgJgLIgPgXQgfAfgYAKQgaALglAAQgvAAgdgcgAv0AUQghARgBAqQAAAYAMAOQALAOAUAAQAgAAASggQAKgRACgUIABgnIAAgQQgvAAgZANgAQpDEQgFAAgEgCQgDgDAAgFIAAjGQAAgwgFgQQgIghghAAQgMAAgMAHQgKAIgGANQgMAbAAAqIAADFQAAAFgEAEQgEACgFAAIhIAAQgEAAgDgDQgGgDAAgFIAAluQACgEAEgDQACgEAIAAIBAAAQALABACAIIAAA6IABAAQAQgnAWgTQAYgSAjAAQA5AAAbAsQALATAEAjQADAVAAAmIAADmQAAAFgFADQgDACgGAAgAlrDEQgGAAgDgDQgFgDABgFIAAjBIABgiQAAgagCgJQgHgfgkAAQgNAAgNAIQgKAJgIAMQgDAMgCAWIAAAlIAADBQAAAFgEAEQgDACgHAAIhHAAQgEAAgFgDQgEgDAAgFIAAjBQAAg0gEgNQgGgjghAAQgiAAgKAiQgGASAAAwIAADBQABAFgEAEQgEACgGAAIhIAAQgFAAgCgCQgGgDAAgGIAAlrQAAgHAGgDQADgEAGAAIBBAAQAGAAAEAEQAEADAAAGIAAAuIABAAQAZhEBEAAQAiAAAWARQAXARAPAiQALghAcgSQAZgRAiAAQAYAAAVAKQAXAMAOATQAOAUAEAjIAAA8IAADmQAAAFgEAEQgDACgHAAgACsC5QgGgDAAgHIAAg1QAAgXAIgNICNjJIh7AAQgFAAgDgDQgEgEAAgGIAAgzQAAgHADgEQAEgDAFAAIDrAAQAFAAAEADQAFAEAAAHIAAAsQAAAKgRAWIh7CtQBPgCA2AfQAMAGABAOIAAA3QAAAIgEADQgHAFgGgEQg3gdhCAAQhEgBg6AfIgEABQgEAAgDgDg");
+	this.shape_1.setTransform(-115,20.525);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.amazon_logo, new cjs.Rectangle(-230,0,230,69.4), null);
+
+
 (lib.Frame_03_animation = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -1119,76 +1146,84 @@ if (reversed == null) { reversed = false; }
 
 	// txt_advTriple
 	this.instance = new lib.txt_advTriple();
-	this.instance.setTransform(529.55,87.8,1,1,0,0,0,-486.9,37.4);
+	this.instance.setTransform(489.05,64.85,0.8943,0.8943,0,0,0,-486.9,37.4);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(216).to({_off:false},0).to({y:110.9,alpha:1},8,cjs.Ease.quadOut).wait(78));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(216).to({_off:false},0).to({y:104.85,alpha:1},8,cjs.Ease.quadOut).wait(78));
 
 	// txt_bufferedAspirin
 	this.instance_1 = new lib.txt_bufferedAspirin();
-	this.instance_1.setTransform(385.9,203.15,1,1,0,0,0,-346.7,35.6);
+	this.instance_1.setTransform(360.65,190.75,0.8943,0.8943,0,0,0,-346.6,35.6);
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(224).to({_off:false},0).wait(1).to({regX:-435.1,regY:-87.2,x:297.5,y:77.7,alpha:0.1407},0).wait(1).to({y:75.1,alpha:0.282},0).wait(1).to({y:72.55,alpha:0.419},0).wait(1).to({y:70.15,alpha:0.5473},0).wait(1).to({y:68,alpha:0.6638},0).wait(1).to({y:66.1,alpha:0.7671},0).wait(1).to({y:64.45,alpha:0.8571},0).wait(1).to({y:63,alpha:0.9344},0).wait(1).to({regX:-346.7,regY:35.6,x:385.9,y:184.6,alpha:1},0).wait(69));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(224).to({_off:false},0).to({y:170.75,alpha:1},9,cjs.Ease.quadOut).wait(69));
 
-	// cta_btn
-	this.instance_2 = new lib.cta_btn();
-	this.instance_2.setTransform(613.55,45.25,0.5604,0.5604,0,0,0,288.7,-358.8);
+	// amazon_logo
+	this.instance_2 = new lib.amazon_logo();
+	this.instance_2.setTransform(648.95,50.55,0.4427,0.4427,0,0,0,-114.8,34.9);
 	this.instance_2.alpha = 0;
 	this.instance_2._off = true;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(231).to({_off:false},0).to({alpha:1},10).wait(61));
 
-	// product_Group
-	this.instance_3 = new lib.product_Group();
-	this.instance_3.setTransform(84.35,46.45,0.0905,0.0905,0,0,0,-259,296);
+	// cta_btn
+	this.instance_3 = new lib.cta_btn();
+	this.instance_3.setTransform(539.2,45.65,0.3575,0.3575,0,0,0,288.9,-358.4);
 	this.instance_3.alpha = 0;
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(211).to({_off:false},0).to({regX:-259.1,regY:296.4,scaleX:0.3764,scaleY:0.3764,x:93.2,y:26.15,alpha:1},5,cjs.Ease.quadOut).wait(86));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(231).to({_off:false},0).to({alpha:1},10).wait(61));
 
-	// Layer_53
-	this.instance_4 = new lib.Frame_03_animation("synched",0,false);
-	this.instance_4.setTransform(361.45,142.15,0.9294,0.9294,0,0,0,181.8,102.5);
+	// product_Group
+	this.instance_4 = new lib.product_Group();
+	this.instance_4.setTransform(84.35,46.45,0.0905,0.0905,0,0,0,-259,296);
+	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(156).to({_off:false},0).wait(146));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(211).to({_off:false},0).to({regX:-259.1,regY:296.4,scaleX:0.3764,scaleY:0.3764,x:93.2,y:26.15,alpha:1},5,cjs.Ease.quadOut).wait(86));
 
-	// Frame_02_animation
-	this.instance_5 = new lib.Frame_02_animation("synched",0,false);
-	this.instance_5.setTransform(492.95,103.85,1.3556,1.3556,0,0,0,234.6,95.4);
+	// Layer_53
+	this.instance_5 = new lib.Frame_03_animation("synched",0,false);
+	this.instance_5.setTransform(361.45,142.15,0.9294,0.9294,0,0,0,181.8,102.5);
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(100).to({_off:false},0).wait(202));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(156).to({_off:false},0).wait(146));
+
+	// Frame_02_animation
+	this.instance_6 = new lib.Frame_02_animation("synched",0,false);
+	this.instance_6.setTransform(492.95,103.85,1.3556,1.3556,0,0,0,234.6,95.4);
+	this.instance_6._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(100).to({_off:false},0).wait(202));
 
 	// asprin_box
-	this.instance_6 = new lib.asprin_box();
-	this.instance_6.setTransform(139.5,43.5,0.0479,0.0479,0,0,0,-342.2,208.7);
-	this.instance_6.alpha = 0;
+	this.instance_7 = new lib.asprin_box();
+	this.instance_7.setTransform(139.5,43.5,0.0479,0.0479,0,0,0,-342.2,208.7);
+	this.instance_7.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({regX:-343.1,regY:208.4,scaleX:0.5283,scaleY:0.5283,x:138.9,y:36.25,alpha:1},9,cjs.Ease.quadOut).wait(196).to({regX:-342.9,regY:208.6,scaleX:0.1254,scaleY:0.1254,x:138.85,y:36.2,alpha:0},5,cjs.Ease.quadIn).to({_off:true},1).wait(91));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).to({regX:-343.1,regY:208.4,scaleX:0.5283,scaleY:0.5283,x:138.9,y:36.25,alpha:1},9,cjs.Ease.quadOut).wait(196).to({regX:-342.9,regY:208.6,scaleX:0.1254,scaleY:0.1254,x:138.85,y:36.2,alpha:0},5,cjs.Ease.quadIn).to({_off:true},1).wait(91));
 
 	// Frame_01_animation
-	this.instance_7 = new lib.Frame_01_animation("synched",0,false);
-	this.instance_7.setTransform(471.1,42.25,0.6171,0.6171,0,0,0,538.8,228.1);
+	this.instance_8 = new lib.Frame_01_animation("synched",0,false);
+	this.instance_8.setTransform(471.1,42.25,0.6171,0.6171,0,0,0,538.8,228.1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).to({_off:true},100).wait(202));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).to({_off:true},100).wait(202));
 
 	// disclaimer_txt
-	this.instance_8 = new lib.disclaimer_txt();
-	this.instance_8.setTransform(715.9,45.5,0.645,0.645,90,0,0,-78,140.6);
-	this.instance_8.alpha = 0;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).to({alpha:1},5).wait(86).to({alpha:0},8).wait(112).to({alpha:1},5).wait(86));
-
-	// gradientCircle_group
-	this.instance_9 = new lib.gradientCircle_group();
-	this.instance_9.setTransform(103.55,44.7,4.5042,4.5042,0,0,0,-665.6,7);
+	this.instance_9 = new lib.disclaimer_txt();
+	this.instance_9.setTransform(715.9,45.5,0.645,0.645,90,0,0,-78,140.6);
 	this.instance_9.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({regY:6.9,scaleX:2.0477,scaleY:2.0477,x:103.7,y:44.4,alpha:1},10,cjs.Ease.quadOut).wait(195).to({regY:7,scaleX:4.8372,scaleY:4.8372,x:103.45,y:44.6,alpha:0},5,cjs.Ease.quadOut).wait(1).to({regY:7.1,scaleX:1.7506,scaleY:1.7506,x:97.4,y:57.15,alpha:1},5,cjs.Ease.quadOut).wait(86));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({alpha:1},5).wait(86).to({alpha:0},8).wait(112).to({alpha:1},5).wait(86));
+
+	// gradientCircle_group
+	this.instance_10 = new lib.gradientCircle_group();
+	this.instance_10.setTransform(103.55,44.7,4.5042,4.5042,0,0,0,-665.6,7);
+	this.instance_10.alpha = 0;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).to({regY:6.9,scaleX:2.0477,scaleY:2.0477,x:103.7,y:44.4,alpha:1},10,cjs.Ease.quadOut).wait(195).to({regY:7,scaleX:4.8372,scaleY:4.8372,x:103.45,y:44.6,alpha:0},5,cjs.Ease.quadOut).wait(1).to({regY:7.1,scaleX:1.7506,scaleY:1.7506,x:97.4,y:57.15,alpha:1},5,cjs.Ease.quadOut).wait(86));
 
 	// color_BG
 	this.shape_1 = new cjs.Shape();
