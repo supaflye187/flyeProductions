@@ -753,62 +753,6 @@ if (reversed == null) { reversed = false; }
 	this.actionFrames = [0,149];
 	// timeline functions:
 	this.frame_0 = function() {
-		/* 
-		
-		responsive scale code as expressed by @davegamez 
-		
-		*/
-		
-		var page_body = document.getElementsByTagName("body")[0];
-		page_body.style.backgroundColor = "#ffffff";
-		
-		/*page_body.style.backgroundSize = "cover";*/
-		page_body.style.overflow = "hidden";
-		/*page_body.style.position = "fixed";*/
-		
-		var page_canvas = document.getElementsByTagName("canvas")[0];
-		stageWidth = page_canvas.width;
-		stageHeight = page_canvas.height;
-		
-		var viewport = document.querySelector('meta[name=viewport]');
-		var viewportContent = 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0';
-		
-		if (viewport === null) {
-		 var head = document.getElementsByTagName('head')[0];
-		 viewport = document.createElement('meta');
-		 viewport.setAttribute('name', 'viewport');
-		 head.appendChild(viewport);
-		}
-		
-		viewport.setAttribute('content', viewportContent);
-		
-		function onResize() {
-		 var widthToHeight = stageWidth / stageHeight;
-		 var newWidth = window.innerWidth;
-		 var newHeight = window.innerHeight;
-		 var newWidthToHeight = newWidth / newHeight;
-		 //
-		 if (newWidthToHeight > widthToHeight) {
-		 newWidth = newHeight * widthToHeight;
-		 page_canvas.style.height = newHeight + "px";
-		 page_canvas.style.width = newWidth + "px";
-		 } else {
-		 newHeight = newWidth / widthToHeight;
-		 page_canvas.style.height = newHeight + "px";
-		 page_canvas.style.width = newWidth + "px";
-		 }
-		 scale = newWidthToHeight / widthToHeight;
-		 stage.width = newWidth;
-		 stage.height = newHeight;
-		/*page_canvas.style.marginTop = ((window.innerHeight - newHeight) / 2) + "px";
-		 page_canvas.style.marginLeft = ((window.innerWidth - newWidth) / 2) + "px";*/
-		}
-		
-		window.onresize = function () {
-		 onResize();
-		}
-		
-		/*onResize();*/
 		/*this.stop();*/
 		
 		var root = this; //Declared variable for access to global scope.
@@ -865,17 +809,17 @@ lib.properties = {
 	color: "#999999",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Bitmap2.png?1616183217050", id:"Bitmap2"},
-		{src:"images/Bitmap2_1.png?1616183217050", id:"Bitmap2_1"},
-		{src:"images/Bitmap4.png?1616183217050", id:"Bitmap4"},
-		{src:"images/envelope_back.png?1616183217050", id:"envelope_back"},
-		{src:"images/envelope_Bottom_Flap.png?1616183217050", id:"envelope_Bottom_Flap"},
-		{src:"images/envelope_front.png?1616183217050", id:"envelope_front"},
-		{src:"images/envelope_inside.png?1616183217050", id:"envelope_inside"},
-		{src:"images/envelope_Top_Flap.png?1616183217050", id:"envelope_Top_Flap"},
-		{src:"images/img_01.png?1616183217050", id:"img_01"},
-		{src:"images/particle_img.png?1616183217050", id:"particle_img"},
-		{src:"images/sticker.png?1616183217050", id:"sticker"}
+		{src:"images/Bitmap2.png", id:"Bitmap2"},
+		{src:"images/Bitmap2_1.png", id:"Bitmap2_1"},
+		{src:"images/Bitmap4.png", id:"Bitmap4"},
+		{src:"images/envelope_back.png", id:"envelope_back"},
+		{src:"images/envelope_Bottom_Flap.png", id:"envelope_Bottom_Flap"},
+		{src:"images/envelope_front.png", id:"envelope_front"},
+		{src:"images/envelope_inside.png", id:"envelope_inside"},
+		{src:"images/envelope_Top_Flap.png", id:"envelope_Top_Flap"},
+		{src:"images/img_01.png", id:"img_01"},
+		{src:"images/particle_img.png", id:"particle_img"},
+		{src:"images/sticker.png", id:"sticker"}
 	],
 	preloads: []
 };
