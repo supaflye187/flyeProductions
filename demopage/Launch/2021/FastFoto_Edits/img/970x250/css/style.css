@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+	position:absolute;
+}
+img{
+	border:0;
+}
+body{
+	cursor:pointer;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+#wrapper {
+	width:970px;
+	height:250px;
+	overflow: hidden;
+    border: 1px solid #404041;
+ 	box-sizing: border-box;
+	 background-color: #fff;
+}
+#bg1{
+	width:970px;
+	height:250px;
+	background:url("../images/bg1.jpg") no-repeat;
+}
+#bg2{
+	width:970px;
+	height:250px;
+	bottom: -250px;
+	background:url("../images/bg2.png") no-repeat;
+}
+#cover{
+	width:970px;
+	height:250px;
+	bottom: -250px;
+	background:url("../images/cover.png") no-repeat;
+}
+#cover-img{
+	width:970px;
+	height:250px;
+	bottom: -250px;
+	background:url("../images/cover-img.png") no-repeat;
+}
+#cover-img2{
+	width:970px;
+	height:250px;
+	bottom: -250px;
+	background:url("../images/cover-img2.png") no-repeat;
+}
+#copy{
+	width:970px;
+	height:250px;
+	background:url(../images/copy.png) no-repeat;
+}
+#logo{
+	width:970px;
+	height:250px;
+	background:url("../images/logo.png") no-repeat;
+}
+#img1{
+	width:970px;
+	height:250px;
+	background:url("../images/img1.png") no-repeat;
+}
+#img2{
+	width:970px;
+	height:250px;
+	background:url("../images/img2.png") no-repeat;
+}
+#img3{
+	width:970px;
+	height:250px;
+	background:url("../images/img3.png") no-repeat;
+}
+#img4{
+	width:970px;
+	height:250px;
+	background:url("../images/img4.png") no-repeat;
+}
+#img5{
+	width:970px;
+	height:250px;
+	background:url("../images/img5.png") no-repeat;
+}
+#img6{
+	width:970px;
+	height:250px;
+	background:url("../images/img6.png") no-repeat;
+}
+#img7{
+	width:970px;
+	height:250px;
+	background:url("../images/img7.png") no-repeat;
+}
+#copy2{
+	width:970px;
+	height:250px;
+	bottom: -250px;
+	background:url("../images/copy2.png") no-repeat;
+}
+#printer{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/printer.png") no-repeat;
+}
+#copy3{
+	width:970px;
+	height:250px;
+	top: -250px;
+	background:url("../images/copy3.png") no-repeat;
+}
+#copy4{
+	width:970px;
+	height:250px;
+	bottom: -250px;
+	background:url("../images/copy4.png") no-repeat;
+}
+#copy5{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/copy5.png") no-repeat;
+}
+#copy6{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/copy6.png") no-repeat;
+}
+#photo{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/photo.png") no-repeat;
+}
+#copy7{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/copy7.png") no-repeat;
+}
+#copy8{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/copy8.png") no-repeat;
+}
+#last-printer{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/last-printer.png") no-repeat;
+}
+#l-lady{
+	width:970px;
+	height:250px;
+	left: -970px;
+	background:url("../images/l-lady.png") no-repeat;
+}
+#r-man{
+	width:970px;
+	height:250px;
+	right: -970px;
+	background:url("../images/r-man.png") no-repeat;
+}
+#cta{
+	width:970px;
+	height:250px;
+	opacity: 0;
+	background:url("../images/cta.png") no-repeat;
+}
