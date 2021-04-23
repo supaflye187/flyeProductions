@@ -189,10 +189,10 @@ if (reversed == null) { reversed = false; }
 	// scratch_icon
 	this.mouse_img = new lib.marker_placeholder();
 	this.mouse_img.name = "mouse_img";
-	this.mouse_img.setTransform(-452.35,-486.85);
+	this.mouse_img.setTransform(-196.35,-320.45);
 	this.mouse_img.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.mouse_img).to({x:-324.35,y:-307.65,alpha:1},7).to({x:-160.3,y:841.25},6,cjs.Ease.quadIn).to({x:-0.3,y:-202.75},5).to({x:159.7,y:917.25},5).to({x:279.7,y:-122.75},4).to({x:479.7,y:893.25},5).to({x:723.7,y:-130.75},5).to({x:883.7,y:1085.25},6).to({x:1120.15,y:-405.15},9).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.mouse_img).to({alpha:1},7).to({x:-160.3,y:841.25},6,cjs.Ease.quadIn).to({x:-0.3,y:-202.75},5).to({x:159.7,y:917.25},5).to({x:279.7,y:-122.75},4).to({x:479.7,y:893.25},5).to({x:723.7,y:-130.75},5).to({x:883.7,y:1085.25},6).to({x:1120.15,y:-405.15},9).wait(4));
 
 	// Layer_21
 	this.instance = new lib.dust_1();
@@ -537,10 +537,10 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/dust.png", id:"dust"},
-		{src:"images/front_img.png", id:"front_img"},
-		{src:"images/scratchIcon.png", id:"scratchIcon"},
-		{src:"images/win_01.png", id:"win_01"}
+		{src:"images/dust.png?1619200841761", id:"dust"},
+		{src:"images/front_img.png?1619200841761", id:"front_img"},
+		{src:"images/scratchIcon.png?1619200841761", id:"scratchIcon"},
+		{src:"images/win_01.png?1619200841761", id:"win_01"}
 	],
 	preloads: []
 };
