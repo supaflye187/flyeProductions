@@ -28,19 +28,19 @@ lib.ssMetadata = [];
 (lib.image_01 = function() {
 	this.initialize(img.image_01);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,434);
+p.nominalBounds = new cjs.Rectangle(0,0,300,431);
 
 
 (lib.image_02 = function() {
 	this.initialize(img.image_02);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,434);
+p.nominalBounds = new cjs.Rectangle(0,0,300,431);
 
 
 (lib.image_03 = function() {
 	this.initialize(img.image_03);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,434);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,300,431);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -210,12 +210,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.image_03();
+	this.instance.setTransform(0,2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_03_1, new cjs.Rectangle(0,0,300,434), null);
+}).prototype = getMCSymbolPrototype(lib.image_03_1, new cjs.Rectangle(0,2,300,431), null);
 
 
 (lib.image_02_1 = function(mode,startPosition,loop,reversed) {
@@ -231,12 +232,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.image_02();
+	this.instance.setTransform(0,2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_02_1, new cjs.Rectangle(0,0,300,434), null);
+}).prototype = getMCSymbolPrototype(lib.image_02_1, new cjs.Rectangle(0,2,300,431), null);
 
 
 (lib.image_01_1 = function(mode,startPosition,loop,reversed) {
@@ -252,12 +254,13 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.image_01();
+	this.instance.setTransform(0,2);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.image_01_1, new cjs.Rectangle(0,0,300,434), null);
+}).prototype = getMCSymbolPrototype(lib.image_01_1, new cjs.Rectangle(0,2,300,431), null);
 
 
 (lib.ctaBtn = function(mode,startPosition,loop,reversed) {
@@ -545,7 +548,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(149,299,425.20000000000005,741);
+p.nominalBounds = new cjs.Rectangle(149,299,425.20000000000005,740);
 // library properties:
 lib.properties = {
 	id: '4CB3FE4512EC4F04AD1A078CE62F288A',
@@ -555,9 +558,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"image_01.jpg?1620231492830", id:"image_01"},
-		{src:"image_02.jpg?1620231492830", id:"image_02"},
-		{src:"image_03.jpg?1620231492830", id:"image_03"}
+		{src:"image_01.jpg", id:"image_01"},
+		{src:"image_02.jpg", id:"image_02"},
+		{src:"image_03.jpg", id:"image_03"}
 	],
 	preloads: []
 };
