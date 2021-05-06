@@ -1,30 +1,13 @@
 <!DOCTYPE html>
-<!--
-	NOTES:
-	1. All tokens are represented by '$' sign in the template.
-	2. You can write your code only wherever mentioned.
-	3. All occurrences of existing tokens will be replaced by their appropriate values.
-	4. Blank lines will be removed automatically.
-	5. Remove unnecessary comments before creating your template.
--->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="authoring-tool" content="Adobe_Animate_CC">
 <title>index</title>
-<!-- write your code here -->
-<style>
-  #animation_container {
-	position:absolute;
-	margin:auto;
-	left:0;right:0;
-	top:0;bottom:0;
-  }
-</style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="index.js"></script>
-<script type='text/javascript' src='https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/MotionPathPlugin.min.js'></script>
+<script src="js/canvasMask.js"></script>
+<link rel="stylesheet" href="css/main.css">
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -41,7 +24,7 @@ function init() {
 }
 function handleFileLoad(evt, comp) {
 	var images=comp.getImages();	
-	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
 }
 function handleComplete(evt,comp) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
@@ -52,7 +35,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.RECOVER_CAT_ScratchOff_Prototype_v04_Static();
+	exportRoot = new lib.CAT_ScratchOff_Prototype_v06_Static();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
@@ -61,18 +44,70 @@ function handleComplete(evt,comp) {
 		createjs.Ticker.addEventListener("tick", stage);
 	}	    
 	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(true,'both',true,1,[canvas,anim_container,dom_overlay_container]);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
+
+	var paths = [
+					{ src: "images/alpha.png", type: "alpha" }, 
+					{ src: "images/front_img.jpg", type: "base" }
+				],
+				images = {},
+				
+				outputCanvas = document.getElementById('master'),
+				output = outputCanvas.getContext && outputCanvas.getContext('2d'),
+
+				width = 1080,
+				height = 1080;	
+	
+	loadImages(function() {
+				output.globalCompositeOperation = "lighter";
+				output.putImageData(
+				applyCanvasMask(images['base'], images['alpha'], width, height), 0, 0, 0, 0, width, height
+				);
+				document.getElementById("background_image").style.backgroundImage = "url('images/win_01.png')";
+			});
+			
+			function loadImages(callback) {
+				i = paths.length;
+				while (i--) {
+					loadImage(paths[i], function(type) {
+						images[type] = this;
+						
+						c = 0;
+						for (o in images) c++;
+						c === paths.length && callback();
+					});
+				}
+			};
+			
+			function loadImage(obj, callback) {
+				var image = new Image();
+
+				// set onload actions
+				image.onload = function() {
+					typeof callback === 'function' && callback.call(this, obj.type);
+				};
+
+				// kick off image load
+				image.src = obj.src;
+
+				return this;
+			};
+			
 }
 </script>
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(204, 204, 204, 1.00); width:2160px; height:2160px">
-		<canvas id="canvas" width="2160" height="2160" style="position: absolute; display: block; background-color:rgba(204, 204, 204, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:2160px; height:2160px; position: absolute; left: 0px; top: 0px; display: block;">
-		</div>
+	<div id="animation_container">			
+			<canvas id="canvas" width="2160" height="2160" style="position: absolute; display: block;"></canvas>
+					<div id="background_image" style="background-image: url(); width: 1080px; height: 1080; background-size: 50% 50%; background-repeat:no-repeat; background-size:cover;">
+						<canvas id="master" width="1080" height="1080"></canvas>
+					</div>
+			</div>
+			<!-- <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1080px; height:1080px; position: absolute; left: 0px; top: 0px; display: block;">
+			
+			</div> -->
 	</div>
 </body>
 </html>
