@@ -46,13 +46,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,318,149);
 (lib.purplePrinter = function() {
 	this.initialize(img.purplePrinter);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,459,279);
-
-
-(lib.yellow_print = function() {
-	this.initialize(img.yellow_print);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,149,103);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,459,279);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -1100,8 +1094,8 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.yellow_print();
-	this.instance.setTransform(-65.3,-46.85,1.1705,1.1705);
+	this.instance = new lib.pinkPrint();
+	this.instance.setTransform(-58.35,-43.1,0.6504,0.6504);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -1433,23 +1427,23 @@ if (reversed == null) { reversed = false; }
 
 	// printer_01_mc
 	this.instance_4 = new lib.printer_03();
-	this.instance_4.setTransform(296.6,353.35,0.5373,0.5373,0,0,0,0.3,0.4);
+	this.instance_4.setTransform(385.6,353.35,0.5373,0.5373,0,0,0,0.3,0.4);
 	this.instance_4.alpha = 0;
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(241).to({_off:false},0).to({x:196.6,alpha:1},9,cjs.Ease.quadOut).wait(39));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(241).to({_off:false},0).wait(1).to({regX:-12.9,regY:-18.7,x:340.5,y:343.1,alpha:0.2907},0).wait(1).to({x:304.1,alpha:0.5692},0).wait(1).to({scaleX:0.5372,scaleY:0.5372,x:272.8,alpha:0.809},0).wait(1).to({regX:0.4,regY:0.5,x:255,y:353.35,alpha:1},0).wait(1).to({regX:-12.9,regY:-18.7,scaleX:0.5373,scaleY:0.5373,x:226.55,y:343},0).wait(1).to({x:211.05},0).wait(1).to({x:200.25},0).wait(1).to({x:193.3},0).wait(1).to({regX:0.3,regY:0.4,x:196.6,y:353.35},0).wait(39));
 
 	// fortyFour_in
 	this.instance_5 = new lib.fortyFour_in();
-	this.instance_5.setTransform(415.8,53.75,0.9297,0.9297);
+	this.instance_5.setTransform(504.8,53.75,0.9297,0.9297);
 	this.instance_5.alpha = 0;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(241).to({_off:false},0).to({x:315.8,alpha:1},9,cjs.Ease.quadOut).wait(39));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(241).to({_off:false},0).wait(1).to({regX:-26.5,regY:224.2,x:442.15,y:262.2,alpha:0.2907},0).wait(1).to({x:405.75,alpha:0.5692},0).wait(1).to({x:374.45,alpha:0.809},0).wait(1).to({regX:0.1,regY:0.1,x:374.2,y:53.85,alpha:1},0).wait(1).to({regX:-26.5,regY:224.2,x:328.15,y:262.15},0).wait(1).to({x:312.7},0).wait(1).to({x:301.9},0).wait(1).to({x:294.95},0).wait(1).to({regX:0,regY:0,x:315.8,y:53.75},0).wait(39));
 
 	// printer_02_mc
 	this.instance_6 = new lib.printer_02_mc();
-	this.instance_6.setTransform(-9.55,249.1,0.8657,0.8657,0,0,0,0.2,0.1);
+	this.instance_6.setTransform(-109.55,249.1,0.8657,0.8657,0,0,0,0.2,0.1);
 	this.instance_6.alpha = 0;
 	this.instance_6._off = true;
 
@@ -1457,7 +1451,7 @@ if (reversed == null) { reversed = false; }
 
 	// sixtyFour_in
 	this.instance_7 = new lib.sixtyFour_in();
-	this.instance_7.setTransform(-126.4,142.55);
+	this.instance_7.setTransform(-226.4,142.55);
 	this.instance_7.alpha = 0;
 	this.instance_7._off = true;
 
@@ -1608,7 +1602,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-170.6,129,596.2,486.6);
+p.nominalBounds = new cjs.Rectangle(-170.6,129,685.2,486.6);
 // library properties:
 lib.properties = {
 	id: 'B61A9D64C8DF436F89671266C87EE568',
@@ -1621,8 +1615,7 @@ lib.properties = {
 		{src:"items.jpg", id:"items"},
 		{src:"pinkPrint.png", id:"pinkPrint"},
 		{src:"printer.png", id:"printer"},
-		{src:"purplePrinter.jpg", id:"purplePrinter"},
-		{src:"yellow_print.jpg", id:"yellow_print"}
+		{src:"purplePrinter.jpg", id:"purplePrinter"}
 	],
 	preloads: []
 };

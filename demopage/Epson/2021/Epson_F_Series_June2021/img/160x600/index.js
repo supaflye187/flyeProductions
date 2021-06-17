@@ -46,13 +46,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,318,149);
 (lib.purplePrinter = function() {
 	this.initialize(img.purplePrinter);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,459,279);
-
-
-(lib.yellow_print = function() {
-	this.initialize(img.yellow_print);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,149,103);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,459,279);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -1084,8 +1078,8 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.yellow_print();
-	this.instance.setTransform(-65.3,-46.85,1.1705,1.1705);
+	this.instance = new lib.pinkPrint();
+	this.instance.setTransform(-57.35,-43.05,0.6494,0.6494);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -1403,7 +1397,7 @@ if (reversed == null) { reversed = false; }
 	this.shape_15.setTransform(166.2,582.925);
 
 	this.shape_16 = new cjs.Shape();
-	this.shape_16.graphics.lf(["rgba(255,255,255,0)","rgba(255,255,255,0.369)","rgba(255,255,255,0)"],[0,0.51,1],-13.7,-9,13.6,8.9).s().p("AoYIJIMfzFIESC0IsfTFg");
+	this.shape_16.graphics.lf(["rgba(255,255,255,0)","rgba(255,255,255,0.369)","rgba(255,255,255,0)"],[0,0.51,1],-13.7,-9,13.6,8.9).s().p("AoYIKIMfzFIESCzIsfTFg");
 	this.shape_16.setTransform(167.75,583.4);
 
 	var maskedShapeInstanceList = [this.shape_1,this.shape_2,this.shape_3,this.shape_4,this.shape_5,this.shape_6,this.shape_7,this.shape_8,this.shape_9,this.shape_10,this.shape_11,this.shape_12,this.shape_13,this.shape_14,this.shape_15,this.shape_16];
@@ -1636,8 +1630,7 @@ lib.properties = {
 		{src:"items.jpg", id:"items"},
 		{src:"pinkPrint.png", id:"pinkPrint"},
 		{src:"printer.png", id:"printer"},
-		{src:"purplePrinter.jpg", id:"purplePrinter"},
-		{src:"yellow_print.jpg", id:"yellow_print"}
+		{src:"purplePrinter.jpg", id:"purplePrinter"}
 	],
 	preloads: []
 };

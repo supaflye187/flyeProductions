@@ -46,13 +46,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,265,141);
 (lib.purplePrinter = function() {
 	this.initialize(img.purplePrinter);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,552,368);
-
-
-(lib.yellow_print = function() {
-	this.initialize(img.yellow_print);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,149,105);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,552,368);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -1093,8 +1087,8 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.yellow_print();
-	this.instance.setTransform(-91.35,-50.5,1.1046,1.1046);
+	this.instance = new lib.pinkPrint();
+	this.instance.setTransform(-80.25,-45.05,1.1878,1.1878);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -1610,8 +1604,7 @@ lib.properties = {
 		{src:"items.jpg", id:"items"},
 		{src:"pinkPrint.png", id:"pinkPrint"},
 		{src:"printer.png", id:"printer"},
-		{src:"purplePrinter.jpg", id:"purplePrinter"},
-		{src:"yellow_print.jpg", id:"yellow_print"}
+		{src:"purplePrinter.jpg", id:"purplePrinter"}
 	],
 	preloads: []
 };

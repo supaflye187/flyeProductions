@@ -52,13 +52,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,459,279);
 (lib.shirt = function() {
 	this.initialize(img.shirt);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,141,90);
-
-
-(lib.yellow_print = function() {
-	this.initialize(img.yellow_print);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,149,103);// helper functions:
+p.nominalBounds = new cjs.Rectangle(0,0,141,90);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop, this.reversed));
@@ -1090,8 +1084,8 @@ if (reversed == null) { reversed = false; }
 	cjs.MovieClip.apply(this,[props]);
 
 	// Layer_2
-	this.instance = new lib.yellow_print();
-	this.instance.setTransform(-65.3,-46.85,1.1705,1.1705);
+	this.instance = new lib.pinkPrint();
+	this.instance.setTransform(-58.4,-43.55,0.6581,0.6581);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
@@ -1590,8 +1584,8 @@ if (reversed == null) { reversed = false; }
 
 	// background
 	this.shape_17 = new cjs.Shape();
-	this.shape_17.graphics.f("#FFFFFF").s().p("EgMfAu4MAAAhdvIY/AAMAAABdvg");
-	this.shape_17.setTransform(364.0002,44.9982,4.55,0.15);
+	this.shape_17.graphics.f("#FFFFFF").s().p("Eg43AHCIAAuDMBxvAAAIAAODg");
+	this.shape_17.setTransform(364,45);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape_17).wait(289));
 
@@ -1612,8 +1606,7 @@ lib.properties = {
 		{src:"pinkPrint.png", id:"pinkPrint"},
 		{src:"printer.png", id:"printer"},
 		{src:"purplePrinter.jpg", id:"purplePrinter"},
-		{src:"shirt.jpg", id:"shirt"},
-		{src:"yellow_print.jpg", id:"yellow_print"}
+		{src:"shirt.jpg", id:"shirt"}
 	],
 	preloads: []
 };
