@@ -1386,8 +1386,8 @@ if (reversed == null) { reversed = false; }
 	this.shape_15.setTransform(211.625,249.15);
 
 	this.shape_16 = new cjs.Shape();
-	this.shape_16.graphics.lf(["rgba(255,255,255,0)","rgba(255,255,255,0.369)","rgba(255,255,255,0)"],[0,0.51,1],-14.6,-9.6,14.7,9.5).s().p("Ao9ItINW0YIElC/ItWUYg");
-	this.shape_16.setTransform(212.7072,249.5635,0.7528,0.7528);
+	this.shape_16.graphics.lf(["rgba(255,255,255,0)","rgba(255,255,255,0.369)","rgba(255,255,255,0)"],[0,0.51,1],-11,-7.2,11,7.2).s().p("AmvGkIKCvWIDdCQIqDPWg");
+	this.shape_16.setTransform(212.7,249.55);
 
 	var maskedShapeInstanceList = [this.shape_1,this.shape_2,this.shape_3,this.shape_4,this.shape_5,this.shape_6,this.shape_7,this.shape_8,this.shape_9,this.shape_10,this.shape_11,this.shape_12,this.shape_13,this.shape_14,this.shape_15,this.shape_16];
 
