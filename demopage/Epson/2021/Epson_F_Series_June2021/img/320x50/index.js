@@ -1473,11 +1473,11 @@ if (reversed == null) { reversed = false; }
 
 	// purple_Printer_mc
 	this.instance_11 = new lib.purple_Printer_mc();
-	this.instance_11.setTransform(136,145.05);
+	this.instance_11.setTransform(74.15,109.85,0.7484,0.7484);
 	this.instance_11.alpha = 0;
 	this.instance_11._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(166).to({_off:false},0).to({x:76,alpha:1},9,cjs.Ease.quadOut).wait(55).to({x:131,alpha:0},7,cjs.Ease.quadIn).to({_off:true},1).wait(51));
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(166).to({_off:false},0).to({x:94.15,alpha:1},9,cjs.Ease.quadOut).wait(55).to({x:124.15,alpha:0},7,cjs.Ease.quadIn).to({_off:true},1).wait(51));
 
 	// txt_highSpeed
 	this.instance_12 = new lib.txt_highSpeed();
@@ -1513,11 +1513,11 @@ if (reversed == null) { reversed = false; }
 
 	// printer_01_mc
 	this.instance_16 = new lib.printer_01_mc();
-	this.instance_16.setTransform(259.9,-19.8,0.4763,0.4763,0,0,0,0.5,0);
+	this.instance_16.setTransform(250.9,-12.8,0.3193,0.3193,0,0,0,0.7,0);
 	this.instance_16.alpha = 0;
 	this.instance_16._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(65).to({_off:false},0).to({x:219.9,alpha:1},10,cjs.Ease.quadOut).wait(83).to({x:259.4,alpha:0},8,cjs.Ease.quadIn).to({_off:true},1).wait(122));
+	this.timeline.addTween(cjs.Tween.get(this.instance_16).wait(65).to({_off:false},0).to({x:220.9,alpha:1},10,cjs.Ease.quadOut).wait(83).to({x:260.9,alpha:0},8,cjs.Ease.quadIn).to({_off:true},1).wait(122));
 
 	// socks_mc
 	this.instance_17 = new lib.socks_mc();
