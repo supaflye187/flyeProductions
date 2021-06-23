@@ -1313,7 +1313,7 @@ if (reversed == null) { reversed = false; }
 
 
 // stage content:
-(lib.Epson_EcoTank_BTS_300x250 = function(mode,startPosition,loop,reversed) {
+(lib.Epson_EcoTank_BTS_300x250_v02 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -1323,6 +1323,15 @@ if (reversed == null) { reversed = false; }
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
+
+	this.actionFrames = [271];
+	// timeline functions:
+	this.frame_271 = function() {
+		this.stop();
+	}
+
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).wait(271).call(this.frame_271).wait(33));
 
 	// border
 	this.shape = new cjs.Shape();
