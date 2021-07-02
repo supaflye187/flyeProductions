@@ -46,7 +46,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,320,480);
 (lib.frame_06 = function() {
 	this.initialize(img.frame_06);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,320,400);
+p.nominalBounds = new cjs.Rectangle(0,0,320,480);
 
 
 (lib.paper = function() {
@@ -980,7 +980,7 @@ if (reversed == null) { reversed = false; }
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.frame_06_1, new cjs.Rectangle(-150,-124.5,320,400), null);
+}).prototype = getMCSymbolPrototype(lib.frame_06_1, new cjs.Rectangle(-150,-124.5,320,480), null);
 
 
 (lib.frame_02_1 = function(mode,startPosition,loop,reversed) {
@@ -1639,7 +1639,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_18.setTransform(150,125.05);
 	this.instance_18.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_18).to({alpha:1},6,cjs.Ease.quadOut).wait(83).to({alpha:0},5).to({_off:true},1).wait(208));
+	this.timeline.addTween(cjs.Tween.get(this.instance_18).to({alpha:1},6,cjs.Ease.quadOut).wait(76).to({alpha:0},5).to({_off:true},1).wait(215));
 
 	// background
 	this.shape_16 = new cjs.Shape();
