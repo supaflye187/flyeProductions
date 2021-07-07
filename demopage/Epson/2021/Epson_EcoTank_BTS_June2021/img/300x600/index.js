@@ -1302,7 +1302,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_15.alpha = 0;
 	this.instance_15._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(48).to({_off:false},0).to({regX:0,scaleX:0.7169,scaleY:0.7169,x:243,y:141.55,alpha:1},9,cjs.Ease.quadOut).wait(31).to({regX:0.1,regY:0.1,scaleX:1.2265,scaleY:1.2265,x:206.55,y:69.05},9,cjs.Ease.quadOut).wait(54).to({scaleX:1.0131,scaleY:1.0131,x:223.6,y:120.05},0).to({x:323.6,alpha:0},9,cjs.Ease.quadIn).to({_off:true},1).wait(111));
+	this.timeline.addTween(cjs.Tween.get(this.instance_15).wait(48).to({_off:false},0).to({regX:0,scaleX:0.7169,scaleY:0.7169,x:243,y:141.55,alpha:1},9,cjs.Ease.quadOut).wait(31).to({regX:0.1,regY:0.1,scaleX:1.2265,scaleY:1.2265,x:206.55,y:69.05},9,cjs.Ease.quadOut).wait(54).to({x:306.55,alpha:0},9,cjs.Ease.quadIn).to({_off:true},1).wait(111));
 
 	// printer_mc
 	this.instance_16 = new lib.printer_mc();
@@ -1376,7 +1376,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(46.1,299,367.9,313.5);
+p.nominalBounds = new cjs.Rectangle(46.1,299,369.9,313.5);
 // library properties:
 lib.properties = {
 	id: 'DB8868308261408A88177DE9F03467FE',
